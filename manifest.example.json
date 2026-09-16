@@ -1,0 +1,12 @@
+[
+  {
+    "image": "images/shelf_001.jpg",
+    "sku_refs": {
+      "25000001": ["sku_refs/25000001.jpg"],
+      "25000002": ["sku_refs/25000002.jpg"]
+    }
+  },
+  {
+    "image": "images/shelf_002.jpg"
+  }
+]

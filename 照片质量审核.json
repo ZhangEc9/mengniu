@@ -1,0 +1,575 @@
+{
+  "data": {
+    "nodes": [
+      {
+        "id": "InputDictNew-WtLdY",
+        "data": {
+          "id": "InputDictNew-WtLdY",
+          "node": {
+            "beta": true,
+            "error": null,
+            "template": {
+              "code": {
+                "list": false,
+                "name": "code",
+                "show": false,
+                "type": "code",
+                "value": "from engine import CustomComponent\nfrom langchain.schema import Document\n\nclass InputDictNew(CustomComponent):\n    display_name: str = \"结构化输入\"\n    description: str = \"输入源是一个挂载器，在流程开始前，其实数据已经被要求输入。便于流程内调用。外部数据可以增加，在被API调用，是要求被传入的数据。\"\n    documentation = \"https://alidocs.dingtalk.com/i/nodes/ydxXB52LJq73bNkAswGGMymQWqjMp697?cid=438043529:1947991365&corpId=dingc60f3ee02b83212535c2f4657eb6378f&doc_type=wiki_doc&iframeQuery=utm_medium=im_card&utm_source=im&utm_medium=im_card&utm_scene=team_space&utm_source=im\"\n    beta = True\n    def build_config(self):\n        return {\n            \"inputs\": {\n                \"inputs\": \"inputs\",\n                \"field_type\": \"code\",\n            },\n            \"code\": {\"show\": False},\n        }\n\n    def build(\n        self,\n        inputs: Document\n    ) -> Document:\n        self.repr_value = str(inputs)\n        return Document(page_content=str(inputs))\n",
+                "dynamic": true,
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": true,
+                "placeholder": ""
+              },
+              "_type": "CustomComponent",
+              "inputs": {
+                "info": "",
+                "list": false,
+                "name": "inputs",
+                "show": true,
+                "type": "code",
+                "value": "{\"target_sku_img\":\"https://sjimgpub.slicejobs.com/algapp/order/type_4/100/7064/40001863/40001863_8_first_normal_1767078846132_0AFB340B.jpg\"}",
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": false,
+                "fieldValue": {
+                  "field0": {
+                    "name": "target_sku_img",
+                    "type": "string",
+                    "multiFile": false,
+                    "testValue": "https://sjimgpub.slicejobs.com/algapp/order/type_4/100/7064/40001863/40001863_8_first_normal_1767078846132_0AFB340B.jpg",
+                    "description": ""
+                  }
+                },
+                "placeholder": "",
+                "display_name": "inputs"
+              }
+            },
+            "description": "输入源是一个挂载器，在流程开始前，其实数据已经被要求输入。便于流程内调用。外部数据可以增加，在被API调用，是要求被传入的数据。",
+            "base_classes": [
+              "Document"
+            ],
+            "display_name": "结构化输入",
+            "output_types": [
+              "target_sku_img"
+            ],
+            "custom_fields": {
+              "inputs": null
+            },
+            "documentation": "https://alidocs.dingtalk.com/i/nodes/ydxXB52LJq73bNkAswGGMymQWqjMp697?cid=438043529:1947991365&corpId=dingc60f3ee02b83212535c2f4657eb6378f&doc_type=wiki_doc&iframeQuery=utm_medium=im_card&utm_source=im&utm_medium=im_card&utm_scene=team_space&utm_source=im"
+          },
+          "type": "InputDictNew"
+        },
+        "type": "genericNode",
+        "position": {
+          "x": 62.193362902088666,
+          "y": 162
+        }
+      },
+      {
+        "id": "JsonParse-onnhV",
+        "data": {
+          "id": "JsonParse-onnhV",
+          "node": {
+            "beta": false,
+            "error": null,
+            "template": {
+              "code": {
+                "list": false,
+                "name": "code",
+                "show": false,
+                "type": "code",
+                "value": "from langchain.schema import Document\nfrom typing import Optional, Union, Any, List\nimport ast\nimport json\nfrom engine import CustomComponent\nfrom config.settings import environment\n\n\nclass JsonParse(CustomComponent):\n    display_name: str = \"Json 解析器\"\n    description: str = \"根据输入文档和指定的字段路径截取 JSON 中的部分内容\"\n    beta = False\n    documentation = (\n        \"https://alidocs.dingtalk.com/i/nodes/ydxXB52LJq73bNkAswGGMymQWqjMp697?\"\n        \"cid=438043529:1947991365&corpId=dingc60f3ee02b83212535c2f4657eb6378f&\"\n        \"doc_type=wiki_doc&iframeQuery=utm_medium=im_card&utm_source=im&utm_medium=\"\n        \"im_card&utm_scene=team_space&utm_source=im\"\n    )\n\n    def build_config(self) -> dict:\n        # 此处 input 配置为单个输入框，用于填写 JSON 字段的 key 路径，\n        # 若需访问嵌套的键请使用英文逗号分隔，例如 \"person,name\"\n        return {\n            \"document\": {\"required\": True},\n            \"code\": {\"show\": True if environment != \"prod\" else False},\n            \"input\": {\n                \"display_name\": \"JSON Key Path\",\n                \"info\": (\n                    \"请输入 JSON 中相关的 key 值，若需访问嵌套的键，请使用英文逗号分隔，例如 'person,name'\"\n                ),\n                \"is_list\": False  # 单个输入框\n            }\n        }\n\n    def get_value_from_json(self, json_data: Union[dict, list, None], keys: List[str]) -> Any:\n        \"\"\"\n        根据给定的嵌套 key 路径获取 JSON 数据中的值\n\n        参数:\n            json_data: JSON 数据（通常为字典或列表）\n            keys: key 路径列表，例：[\"person\", \"name\"]\n\n        返回:\n            Any: 对应的值；若路径不存在则返回 None\n        \"\"\"\n        current_data = json_data\n        if current_data is None or not keys:\n            return current_data\n\n        for key in keys:\n            key = key.strip()\n            if not key:\n                continue\n            try:\n                # 如果当前数据为列表，则 key 应是索引\n                if isinstance(current_data, list):\n                    try:\n                        index = int(key)\n                    except ValueError:\n                        return None\n                    if 0 <= index < len(current_data):\n                        current_data = current_data[index]\n                    else:\n                        return None\n                # 如果当前数据为字典，则直接通过 key 访问\n                elif isinstance(current_data, dict):\n                    if key in current_data:\n                        current_data = current_data[key]\n                    else:\n                        return None\n                else:\n                    return None\n            except Exception:\n                return None\n\n        return current_data\n\n    def parse_document(self, document: Union[str, dict, Document]) -> dict:\n        \"\"\"\n        将输入的文档解析为字典格式\n\n        参数:\n            document: 可为 JSON 字符串、字典或 Document 对象\n\n        返回:\n            dict: 解析后的 JSON 对象\n\n        异常:\n            ValueError: 当文档为空或格式无效时\n        \"\"\"\n        if document is None:\n            raise ValueError(\"Document is required but received None.\")\n\n        if isinstance(document, dict):\n            return document\n        elif isinstance(document, str):\n            if not document.strip():\n                raise ValueError(\"Empty document string provided.\")\n            try:\n                return json.loads(document)\n            except json.JSONDecodeError as exc:\n                raise ValueError(\"Invalid JSON string.\") from exc\n        elif isinstance(document, Document):\n            content = document.page_content\n            if not content or not content.strip():\n                raise ValueError(\"Document content is empty.\")\n            # 先尝试使用 ast.literal_eval 解析（适用于 Python 格式的字典字符串）\n            try:\n                result = ast.literal_eval(content)\n                if isinstance(result, dict):\n                    return result\n            except Exception:\n                pass\n            try:\n                return json.loads(content)\n            except json.JSONDecodeError as exc:\n                raise ValueError(\"Invalid document content format.\") from exc\n        else:\n            raise ValueError(\"Unsupported document type. Must be str, dict, or Document.\")\n\n    def build(self, input: Optional[str] = None, document: Optional[Document] = None) -> Document:\n        \"\"\"\n        构建处理结果：\n          1. 解析输入的 document，获得 JSON 对象；\n          2. 根据 input 中填写的 JSON key path（例如 \"person,name\"）截取特定数据，\n             若 input 为空则返回整个 JSON 对象；\n          3. 如果提取结果为字符串，则直接返回其原始值，避免因 json.dumps 导致的额外双引号；\n             否则转换成标准 JSON 格式，确保键使用双引号（符合 [stackoverflow.com](https://stackoverflow.com/questions/949449/do-the-json-keys-have-to-be-surrounded-by-quotes) 的规范）。\n\n        参数:\n            input: 用于指定 JSON 需要抽取的 key 路径（单个输入框），例如 \"person,name\"\n            document: 包含原始 JSON 数据的 Document 对象\n\n        返回:\n            Document: 包含处理后结果的 Document 对象\n\n        异常:\n            ValueError: 处理过程中出现错误时\n        \"\"\"\n        if document is None:\n            raise ValueError(\"Document is required.\")\n\n        try:\n            parsed_document = self.parse_document(document)\n\n            if input in (None, \"\", []):\n                # 未指定 key path 时，返回整个 JSON 对象\n                result = parsed_document\n                result_json = json.dumps(result, ensure_ascii=False)\n            else:\n                # 拆分输入框内容，按逗号拆分为嵌套的 key 列表\n                keys = [k.strip() for k in input.split(\",\") if k.strip()]\n                result = self.get_value_from_json(parsed_document, keys)\n\n                # 如果提取结果为字符串，则直接返回原始值，\n                # 避免使用 json.dumps 让字符串产生多余的双引号（参见 [stackoverflow.com](https://stackoverflow.com/questions/21405357/using-double-quotes-inside-json-keys-or-values)）\n                if isinstance(result, str):\n                    result_json = result\n                else:\n                    result_json = json.dumps(result, ensure_ascii=False)\n\n            self.repr_value = result_json\n            return Document(page_content=result_json)\n        except Exception as e:\n            raise ValueError(f\"Error processing document: {str(e)}\") from e\n",
+                "dynamic": true,
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": true,
+                "placeholder": ""
+              },
+              "_type": "CustomComponent",
+              "input": {
+                "info": "请输入 JSON 中相关的 key 值，若需访问嵌套的键，请使用英文逗号分隔，例如 'person,name'",
+                "list": false,
+                "name": "input",
+                "show": true,
+                "type": "str",
+                "value": "target_sku_img",
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": false,
+                "multiline": false,
+                "placeholder": "",
+                "display_name": "JSON Key Path"
+              },
+              "document": {
+                "info": "",
+                "list": false,
+                "name": "document",
+                "show": true,
+                "type": "Document",
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": false,
+                "placeholder": "",
+                "display_name": "document"
+              },
+              "dynamic_fields": {
+                "info": "",
+                "list": true,
+                "name": "dynamic_fields",
+                "show": false,
+                "type": "str",
+                "value": {
+                  "input": []
+                },
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": false,
+                "placeholder": ""
+              }
+            },
+            "description": "根据输入文档和指定的字段路径截取 JSON 中的部分内容",
+            "base_classes": [
+              "Document"
+            ],
+            "display_name": "Json 解析器",
+            "output_types": [
+              "JsonParse"
+            ],
+            "custom_fields": {
+              "input": null,
+              "document": null
+            },
+            "documentation": "https://alidocs.dingtalk.com/i/nodes/ydxXB52LJq73bNkAswGGMymQWqjMp697?cid=438043529:1947991365&corpId=dingc60f3ee02b83212535c2f4657eb6378f&doc_type=wiki_doc&iframeQuery=utm_medium=im_card&utm_source=im&utm_medium=im_card&utm_scene=team_space&utm_source=im"
+          },
+          "type": "JsonParse"
+        },
+        "type": "genericNode",
+        "position": {
+          "x": 510.7360373361863,
+          "y": 35.163684187151375
+        }
+      },
+      {
+        "id": "AiImageLoader-9rWdn",
+        "data": {
+          "id": "AiImageLoader-9rWdn",
+          "node": {
+            "beta": false,
+            "error": null,
+            "template": {
+              "code": {
+                "list": false,
+                "name": "code",
+                "show": false,
+                "type": "code",
+                "value": "import json\nimport random\nfrom typing import Optional\nimport base64\nimport openai\nimport requests\nfrom langchain import LLMChain, PromptTemplate\nfrom langchain.chat_models import AzureChatOpenAI\nfrom langchain.schema import Document, HumanMessage, SystemMessage\nfrom engine import CustomComponent\nimport os\nfrom config.settings import settings, environment\nfrom agent.tools.oss_tools import OssTool\nimport uuid\nfrom typing import List\nimport re\nimport ast\nfrom engine.interface.utils import json_prompt_format\nfrom engine.services.database.models.base import orjson_dumps\n\n\nclass AiImageLoader(CustomComponent):\n    display_name: str = \"AI图片解析\"\n    description: str = \"调用大模型进行图片内容解析\"\n    beta = False\n    documentation = \"https://alidocs.dingtalk.com/i/nodes/ydxXB52LJq73bNkAswGGMymQWqjMp697?cid=438043529:1947991365&corpId=dingc60f3ee02b83212535c2f4657eb6378f&doc_type=wiki_doc&iframeQuery=utm_medium=im_card&utm_source=im&utm_medium=im_card&utm_scene=team_space&utm_source=im\"\n\n    field_config = {\n        \"model_name_new\": {\n            \"display_name\": \"模型选择\",\n            \"type\": \"select\",\n            \"options\": [1]\n        },\n        \"message\": {\n            \"display_name\": \"输入\",\n            \"info\": \"传入图像接收用户输入指导模型推理\"\n        },\n        \"thinking_budget\": {\n            \"display_name\": \"思考长度\"\n        },\n        \"image\": {\n            \"display_name\": \"图像\",\n            \"info\": \"接受一张图像链接作为输入\"\n        },\n        \"prompt\": {\n            \"display_name\": \"系统提示词\",\n            \"info\": \"需要定义提示模板\"\n        },\n        \"code\": {\"show\": True if environment != \"prod\" else False},\n        \"isVal\": {\n            \"display_name\": \"内容安全过滤\"\n        },\n        \"maxTokens\": {\n            \"display_name\": \"最大输出Token\"\n        }\n    }\n\n    def build(\n            self,\n            model_name_new: str = \"\",\n            prompt: Optional[PromptTemplate] = None,\n            message: Optional[PromptTemplate] = None,\n            image: Optional[List[Document]] = None,\n            thinking_budget: Optional[str] = None,\n            isVal: bool = True,\n            maxTokens: str = \"4000\",\n            temperature: str = \"0.7\"\n    ) -> Document:\n        image_url_list = []\n\n        def is_url(path):\n            return path.startswith('http://') or path.startswith('https://')\n\n        def is_file_path(path):\n            return os.path.isfile(path)\n\n        def is_base64_image(data: str) -> bool:\n            pattern = r'^data:image\\/[a-zA-Z]+;base64,'\n            return re.match(pattern, data) is not None\n\n        def is_oss_address(path):\n            return path.startswith('http://ossaism') or path.startswith('https://ossaism') or path.startswith(\n                'https://aism-test')\n\n        def get_mime_type(file_path):\n            _, file_ext = os.path.splitext(file_path)\n            if file_ext.lower() in ['.jpg', '.jpeg']:\n                return 'data:image/jpeg;base64,'\n            elif file_ext.lower() == '.png':\n                return 'data:image/png;base64,'\n            else:\n                return 'data:image/jpeg;base64,'\n\n        image_url_list = []\n\n        for img_doc in image or []:\n            try:\n                contents = img_doc.page_content\n\n                # 处理字符串形式的列表或普通字符串\n                if isinstance(contents, str):\n                    try:\n                        parsed = ast.literal_eval(contents)\n                        if isinstance(parsed, list) and all(isinstance(x, str) for x in parsed):\n                            contents = parsed\n                        else:\n                            contents = [contents]\n                    except (ValueError, SyntaxError):\n                        contents = [contents]\n                else:\n                    print(f\"[跳过] 非法 page_content 类型: {type(contents)}\")\n                    continue\n\n                # 遍历实际的字符串列表\n                for content in contents:\n                    try:\n                        if is_url(content):\n                            image_url_list.append(content)\n                        elif is_oss_address(content):\n                            oss_tool = OssTool()\n                            remote_key = oss_tool.extract_key_from_url(content)\n                            unique_id = uuid.uuid4()\n                            file_path = f\".cache/{unique_id}\"\n                            oss_tool.download(remote_key, file_path)\n                            with open(file_path, 'rb') as file:\n                                file_content = file.read()\n                                mime_type = get_mime_type(content)\n                                encoded_string = mime_type + base64.b64encode(file_content).decode()\n                                image_url_list.append(encoded_string)\n                        elif is_file_path(content):\n                            with open(content, 'rb') as file:\n                                file_content = file.read()\n                                mime_type = get_mime_type(content)\n                                encoded_string = mime_type + base64.b64encode(file_content).decode()\n                                image_url_list.append(encoded_string)\n                        elif is_base64_image(content):\n                            image_url_list.append(content)\n                        else:\n                            print(f\"[跳过] 无效图像格式: {content}\")\n                    except Exception as e:\n                        print(f\"[跳过] 图像处理异常: {e}\")\n            except Exception as e:\n                print(f\"[跳过] 文档处理异常: {e}\")\n\n        if not image_url_list:\n            raise ValueError(\"所有图像均处理失败，未能生成有效的图像输入。\")\n        callData = {}  # 接口内运行时替换成具体的值\n        messages = [\n            {\"role\": \"system\", \"content\": (\"系统人设\" if prompt is None else json_prompt_format(prompt))},\n            {\"role\": \"user\", \"content\": [\n                                            {\"type\": \"text\",\n                                             \"text\": (\n                                                 \"请使用中文对图像进行描述\" if message is None else json_prompt_format(\n                                                     message))}\n                                        ] + [{\"type\": \"image_url\", \"image_url\": {\"url\": url}} for url in\n                                             image_url_list]}\n        ]\n        payload = {\n            \"modelName\": model_name_new,\n            \"messages\": messages,\n            \"max_tokens\": str(maxTokens),\n            \"isVal\": isVal,\n            \"temperature\": float(temperature),\n        }\n\n        # 增加模型思考字段如果传入，则添加到model_payload中\n        if thinking_budget is not None:\n            try:\n                thinking_budget = int(thinking_budget)\n            except Exception:\n                pass\n            if isinstance(thinking_budget, int):\n                if thinking_budget > 0:\n                    thinking_type = \"enabled\"\n                else:\n                    thinking_type = \"disabled\"\n                payload[\"thinking\"] = {\"type\": thinking_type}\n                payload[\"thinkingBudget\"] = thinking_budget\n\n        payload.update(callData)\n        url = settings.MODEL_SERVICE_URL_5\n        headers = {'Content-Type': 'application/json'}\n        # self.logs(f\"请求URL: {url}\")\n        # self.logs(f\"请求头: {headers}\")\n        # self.logs(f\"请求体: {json.dumps(payload, ensure_ascii=False)}\")\n        documents = self.send_request_with_payload(payload, url, headers)\n        response = json.loads(documents.page_content)\n        if response.get(\"code\") == 200:\n            result = response.get(\"content\")\n        else:\n            result = response.get(\"msg\")\n        self.repr_value = str(result)\n        return Document(page_content=str(result))\n\n    def send_request_with_payload(\n            self,\n            payload: dict,\n            url: str,\n            headers: dict\n    ) -> Document:\n        # print(payload)\n        document = Document(page_content=str(json.dumps(payload)))\n        with requests.Session() as session:\n            documents = self.post_document(session, document, url, headers)\n        return documents\n\n    def post_document(\n            self,\n            session: requests.Session,\n            document: Document,\n            url: str,\n            headers: Optional[Document] = None,\n    ) -> Document:\n        response = session.post(url, headers=headers, data=document.page_content)\n        # 检查HTTP请求的状态码是否表示成功\n        if response.status_code < 300 or response.status_code > 511:\n            try:\n                response_json = response.json()\n                result = orjson_dumps(response_json, indent_2=False)  # 假设orjson_dumps是已经定义好的函数\n            except Exception:\n                result = response.text\n            return Document(\n                page_content=result,\n                metadata={\n                    \"source\": url,\n                    \"headers\": headers,\n                    \"status_code\": response.status_code,\n                },\n            )\n        else:\n            # 如果状态码不是正常的，抛出异常\n            response.raise_for_status()",
+                "dynamic": true,
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": true,
+                "placeholder": ""
+              },
+              "_type": "CustomComponent",
+              "image": {
+                "info": "接受一张图像链接作为输入",
+                "list": true,
+                "name": "image",
+                "show": true,
+                "type": "Document",
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": false,
+                "multiline": false,
+                "placeholder": "",
+                "display_name": "图像"
+              },
+              "isVal": {
+                "info": "",
+                "list": false,
+                "name": "isVal",
+                "show": true,
+                "type": "bool",
+                "value": true,
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": false,
+                "placeholder": "",
+                "display_name": "内容安全过滤"
+              },
+              "prompt": {
+                "info": "需要定义提示模板",
+                "list": false,
+                "name": "prompt",
+                "show": true,
+                "type": "PromptTemplate",
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": false,
+                "multiline": false,
+                "placeholder": "",
+                "display_name": "系统提示词"
+              },
+              "message": {
+                "info": "传入图像接收用户输入指导模型推理",
+                "list": false,
+                "name": "message",
+                "show": true,
+                "type": "PromptTemplate",
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": false,
+                "multiline": false,
+                "placeholder": "",
+                "display_name": "输入"
+              },
+              "maxTokens": {
+                "info": "",
+                "list": false,
+                "name": "maxTokens",
+                "show": true,
+                "type": "str",
+                "value": 4000,
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": false,
+                "placeholder": "",
+                "display_name": "最大输出Token"
+              },
+              "temperature": {
+                "info": "",
+                "list": false,
+                "name": "temperature",
+                "show": true,
+                "type": "str",
+                "value": 0.7,
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": false,
+                "placeholder": "",
+                "display_name": "temperature"
+              },
+              "dynamic_fields": {
+                "info": "",
+                "list": true,
+                "name": "dynamic_fields",
+                "show": false,
+                "type": "str",
+                "value": {
+                  "model_name_new": [],
+                  "thinking_budget": []
+                },
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": false,
+                "placeholder": ""
+              },
+              "model_name_new": {
+                "info": "",
+                "list": true,
+                "name": "model_name_new",
+                "show": true,
+                "type": "str",
+                "value": "蒙牛G5.1",
+                "dynamic": false,
+                "options": [
+                  "1"
+                ],
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": false,
+                "placeholder": "",
+                "display_name": "模型选择"
+              },
+              "thinking_budget": {
+                "info": "",
+                "list": false,
+                "name": "thinking_budget",
+                "show": true,
+                "type": "str",
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": false,
+                "multiline": false,
+                "placeholder": "",
+                "display_name": "思考长度",
+                "value": "0"
+              }
+            },
+            "description": "调用大模型进行图片内容解析",
+            "base_classes": [
+              "Document"
+            ],
+            "display_name": "AI图片解析",
+            "output_types": [
+              "AiImageLoader"
+            ],
+            "custom_fields": {
+              "image": null,
+              "isVal": null,
+              "prompt": null,
+              "message": null,
+              "maxTokens": null,
+              "temperature": null,
+              "model_name_new": null,
+              "thinking_budget": null
+            },
+            "documentation": "https://alidocs.dingtalk.com/i/nodes/ydxXB52LJq73bNkAswGGMymQWqjMp697?cid=438043529:1947991365&corpId=dingc60f3ee02b83212535c2f4657eb6378f&doc_type=wiki_doc&iframeQuery=utm_medium=im_card&utm_source=im&utm_medium=im_card&utm_scene=team_space&utm_source=im"
+          },
+          "type": "AiImageLoader"
+        },
+        "type": "genericNode",
+        "position": {
+          "x": 1042.602031863972,
+          "y": 224.24912330634527
+        }
+      },
+      {
+        "id": "PromptTemplate-N77Fl",
+        "data": {
+          "id": "PromptTemplate-N77Fl",
+          "node": {
+            "beta": false,
+            "name": "",
+            "error": null,
+            "template": {
+              "_type": "PromptTemplate",
+              "template": {
+                "info": "",
+                "list": false,
+                "name": "template",
+                "show": true,
+                "type": "prompt",
+                "value": "你是图片质量审核员。仅根据输入图片判断其是否可进入后续识别，不判断图片内容是否为陈列图、是否翻拍、是否有价签或竞品。\n\n审核标准仅包含以下四项，除此之外不得新增不通过原因：\n1. 图片模糊：整体或承载主要识别信息的区域明显失焦、运动模糊、马赛克化，导致内容无法可靠辨认。轻微模糊但主要内容仍可辨认时，不判定为图片模糊。\n2. 过度曝光：大面积高光溢出、发白，且遮蔽主要识别信息。局部反光但不影响主要内容辨认时，不判定为过度曝光。\n3. 光线不足：整体或主要识别区域明显过暗，导致内容无法可靠辨认。正常阴影或暗部但主要内容仍可辨认时，不判定为光线不足。\n4. 文件损坏：图片无法正常打开或渲染，存在明显解码异常、严重花屏、大片缺失等，使内容不可用。\n\n判定规则：\n- 必须逐项检查四个标准，并且无论通过或不通过，都在 quality_checks 中返回全部四项。\n- 每个检查项的值只能是“合格”或“不合格”；“不合格”表示该图片命中了对应质量问题。\n- 四项均为“合格”时，审核通过，允许进入后续识别。\n- 任意一项为“不合格”时，审核不通过，不允许进入后续识别。\n- 可同时命中多项，invalid_reasons 必须完整列出所有“不合格”的项目名称，顺序与 quality_checks 保持一致。\n- invalid_reason 为 invalid_reasons 用中文顿号“、”拼接的字符串；通过时为空字符串。\n- 不确定时，若主要内容仍可辨认，应将该项判定为“合格”。\n\n只输出合法 JSON，不要输出 Markdown、解释或其他文字。输出结构必须严格如下：\n{\n  \"qc_result\": {\n    \"is_valid\": true,\n    \"should_continue\": true,\n    \"quality_checks\": {\n      \"图片模糊\": \"合格\",\n      \"过度曝光\": \"合格\",\n      \"光线不足\": \"合格\",\n      \"文件损坏\": \"合格\"\n    },\n    \"invalid_reason\": \"\",\n    \"invalid_reasons\": []\n  }\n}\n\n不通过示例：\n{\n  \"qc_result\": {\n    \"is_valid\": false,\n    \"should_continue\": false,\n    \"quality_checks\": {\n      \"图片模糊\": \"不合格\",\n      \"过度曝光\": \"合格\",\n      \"光线不足\": \"不合格\",\n      \"文件损坏\": \"合格\"\n    },\n    \"invalid_reason\": \"图片模糊、光线不足\",\n    \"invalid_reasons\": [\"图片模糊\", \"光线不足\"]\n  }\n}",
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": true,
+                "placeholder": ""
+              },
+              "output_parser": {
+                "info": "",
+                "list": false,
+                "name": "output_parser",
+                "show": false,
+                "type": "BaseOutputParser",
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": false,
+                "multiline": false,
+                "placeholder": ""
+              },
+              "input_variables": {
+                "info": "",
+                "list": true,
+                "name": "input_variables",
+                "show": false,
+                "type": "str",
+                "value": [],
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": true,
+                "multiline": false,
+                "placeholder": ""
+              },
+              "template_format": {
+                "info": "",
+                "list": false,
+                "name": "template_format",
+                "show": false,
+                "type": "str",
+                "value": "f-string",
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": false,
+                "multiline": false,
+                "placeholder": ""
+              },
+              "partial_variables": {
+                "info": "",
+                "list": false,
+                "name": "partial_variables",
+                "show": false,
+                "type": "dict",
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": false,
+                "multiline": false,
+                "placeholder": ""
+              },
+              "validate_template": {
+                "info": "",
+                "list": false,
+                "name": "validate_template",
+                "show": false,
+                "type": "bool",
+                "value": true,
+                "dynamic": false,
+                "advanced": false,
+                "password": false,
+                "required": false,
+                "multiline": false,
+                "placeholder": ""
+              }
+            },
+            "description": "A prompt template for a language model.",
+            "base_classes": [
+              "BasePromptTemplate",
+              "PromptTemplate",
+              "StringPromptTemplate"
+            ],
+            "display_name": "PromptTemplate",
+            "output_types": [],
+            "custom_fields": {
+              "": []
+            },
+            "documentation": "https://alidocs.dingtalk.com/i/nodes/ydxXB52LJq73bNkAswGGMymQWqjMp697?cid=438043529:1947991365&corpId=dingc60f3ee02b83212535c2f4657eb6378f&doc_type=wiki_doc&iframeQuery=utm_medium=im_card&utm_source=im&utm_medium=im_card&utm_scene=team_space&utm_source=im",
+            "field_formatters": {
+              "formatters": {
+                "openai_api_key": {}
+              },
+              "base_formatters": {
+                "dict": {},
+                "list": {},
+                "show": {},
+                "union": {},
+                "kwargs": {},
+                "default": {},
+                "headers": {},
+                "optional": {},
+                "password": {},
+                "multiline": {},
+                "model_fields": {
+                  "MODEL_DICT": {
+                    "OpenAI": [
+                      "text-davinci-003",
+                      "text-davinci-002",
+                      "text-curie-001",
+                      "text-babbage-001",
+                      "text-ada-001"
+                    ],
+                    "Anthropic": [
+                      "claude-v1",
+                      "claude-v1-100k",
+                      "claude-instant-v1",
+                      "claude-instant-v1-100k",
+                      "claude-v1.3",
+                      "claude-v1.3-100k",
+                      "claude-v1.2",
+                      "claude-v1.0",
+                      "claude-instant-v1.1",
+                      "claude-instant-v1.1-100k",
+                      "claude-instant-v1.0"
+                    ],
+                    "ChatOpenAI": [
+                      "gpt-3.5-turbo-0613",
+                      "gpt-3.5-turbo",
+                      "gpt-3.5-turbo-16k-0613",
+                      "gpt-3.5-turbo-16k",
+                      "gpt-4-0613",
+                      "gpt-4-32k-0613",
+                      "gpt-4",
+                      "gpt-4-32k"
+                    ],
+                    "ChatAnthropic": [
+                      "claude-v1",
+                      "claude-v1-100k",
+                      "claude-instant-v1",
+                      "claude-instant-v1-100k",
+                      "claude-v1.3",
+                      "claude-v1.3-100k",
+                      "claude-v1.2",
+                      "claude-v1.0",
+                      "claude-instant-v1.1",
+                      "claude-instant-v1.1-100k",
+                      "claude-instant-v1.0"
+                    ]
+                  }
+                },
+                "dict_code_file": {}
+              }
+            },
+            "promptVariableMap": {},
+            "placeholderVariables": {}
+          },
+          "type": "PromptTemplate"
+        },
+        "type": "genericNode",
+        "position": {
+          "x": 515.4707693026577,
+          "y": 562.5447043620462
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "reactflow__edge-InputDictNew-WtLdYInputDictNew|InputDictNew-WtLdY|Document|0-JsonParse-onnhVDocument|document|JsonParse-onnhV",
+        "source": "InputDictNew-WtLdY",
+        "target": "JsonParse-onnhV",
+        "animated": false,
+        "className": "stroke-foreground  stroke-connection",
+        "sourceHandle": "InputDictNew|InputDictNew-WtLdY|Document|0",
+        "targetHandle": "Document|document|JsonParse-onnhV"
+      },
+      {
+        "id": "reactflow__edge-JsonParse-onnhVJsonParse|JsonParse-onnhV|Document|0-AiImageLoader-9rWdnDocument|image|AiImageLoader-9rWdn",
+        "source": "JsonParse-onnhV",
+        "target": "AiImageLoader-9rWdn",
+        "animated": false,
+        "className": "stroke-foreground  stroke-connection",
+        "sourceHandle": "JsonParse|JsonParse-onnhV|Document|0",
+        "targetHandle": "Document|image|AiImageLoader-9rWdn"
+      },
+      {
+        "id": "reactflow__edge-PromptTemplate-N77FlPromptTemplate|PromptTemplate-N77Fl|BasePromptTemplate|PromptTemplate|StringPromptTemplate-AiImageLoader-9rWdnPromptTemplate|prompt|AiImageLoader-9rWdn",
+        "source": "PromptTemplate-N77Fl",
+        "target": "AiImageLoader-9rWdn",
+        "animated": false,
+        "className": "stroke-foreground  stroke-connection",
+        "sourceHandle": "PromptTemplate|PromptTemplate-N77Fl|BasePromptTemplate|PromptTemplate|StringPromptTemplate",
+        "targetHandle": "PromptTemplate|prompt|AiImageLoader-9rWdn"
+      }
+    ],
+    "viewport": {
+      "x": 276.2753454328206,
+      "y": 90.22925718041284,
+      "zoom": 0.7499999999999999
+    }
+  },
+  "name": "照片质量审核",
+  "version": "0.2.1",
+  "description": "识别铺市照片是否符合质量标准",
+  "id": "4641c4ac-a106-4ed5-8143-9794234ffabd",
+  "flowId": "091915bd-f09c-4f72-b018-01f4d00dd630",
+  "rootId": "2028725004396912641",
+  "workflowKey": "fbe5e46fcd",
+  "status": 0
+}

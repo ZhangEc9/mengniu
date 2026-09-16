@@ -1,0 +1,16 @@
+{
+  "qc_config": {
+    "api_url": "https://aismapi.mengniu.cn/brcapi/brain/api/v1/flowApi/fbe5e46fcd?version=dev",
+    "appid": "YOUR_QC_APPID_HERE",
+    "secret": "YOUR_QC_SECRET_HERE"
+  },
+  "price_tag_config": {
+    "api_url": "https://aismapi.mengniu.cn/brcapi/brain/api/v1/flowApi/45c1d7fe3c?version=dev",
+    "appid": "YOUR_PRICE_APPID_HERE",
+    "secret": "YOUR_PRICE_SECRET_HERE"
+  },
+  "oss_config": {
+    "upload_url": "https://aism.mengniu.cn/brcapi/oss/api/oss/getFileUrl",
+    "bearer_token": "Bearer YOUR_MENGNIU_BEARER_TOKEN_HERE"
+  }
+}

@@ -1,0 +1,37 @@
+# 敏感凭据配置文件 (由 .gitignore 排除，绝不上传 GitHub)
+config.json
+
+# 原始图片二进制与压缩包 (大文件不上传)
+蒙牛 poc0805_images/
+蒙牛 poc0805_images.zip
+*.zip
+*.tar.gz
+
+# 过程测试图与中间裁剪块
+*.vis.jpg
+vis_*.jpg
+crop_*.jpg
+shelf_*.jpg
+shelf1.jpg
+shelf2.jpg
+shelf3.jpg
+vis1_small.jpg
+resized_view.jpg
+
+# 运行产物与过程日志
+全流程运行结果/
+output_*/
+test_output/
+*.txt
+*.b64
+temp_*
+
+# Python 缓存
+__pycache__/
+*.pyc
+.pytest_cache/
+.vscode/
+.idea/
+*.jpeg
+*.jpg
+*.png
