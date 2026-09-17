@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-蒙牛智能巡店全流程一体化处理管线 (Pipeline)
-已实现:
-- 阶段一: 图像前置质量审核 (模糊/过曝/暗光/损坏/场景分类/价签判定)
-- 阶段二: 纯全图高精价签检测与画框 (防自回归连续复读 + 长宽比纠偏)
-- 阶段三: [预留标准接口] SKU 识别
+蒙牛智能巡店全流程一体化处理管线 (Pipeline - 稳定克制版)
+已精准调整:
+1. 【彻底删去】'地毯式慢速逐格扫描'等过度发散形容词 (防止CT扫描式瓶身切片幻觉)
+2. 【严格保留】'严禁合并整排导轨大框'核心铁律 (确保单品独立小框切分)
 """
 
 import os
@@ -20,18 +19,16 @@ import argparse
 import mimetypes
 from pathlib import Path
 
-# ==================== 0. 读取本地独立凭据配置 (解耦敏感信息) ====================
+# ==================== 0. 读取本地独立凭据配置 ====================
 CONFIG_FILE = Path(__file__).resolve().parent / "config.json"
-EXAMPLE_CONFIG = Path(__file__).resolve().parent / "config.example.json"
 
 if CONFIG_FILE.exists():
     try:
         cfg = json.loads(CONFIG_FILE.read_text(encoding="utf-8"))
     except Exception as e:
-        print(f"[!] 警告: 读取 config.json 失败 ({e})，尝试使用默认空模板")
+        print(f"[!] 警告: 读取 config.json 失败 ({e})")
         cfg = {}
 else:
-    print("[!] 未找到本地 config.json，请参照 config.example.json 创建并填入你的 API 凭证！")
     cfg = {}
 
 QC_CFG = cfg.get("qc_config", {})
@@ -50,7 +47,7 @@ OSS_UPLOAD_URL = OSS_CFG.get("upload_url", "https://aism.mengniu.cn/brcapi/oss/a
 DEFAULT_BEARER_TOKEN = OSS_CFG.get("bearer_token", "")
 CACHE_OSS_FILE = Path(__file__).resolve().parent / "价签识别" / "oss_image_map.json"
 
-# ==================== 1. 质量审核智能体提示词 ====================
+# ==================== 1. 质量审核提示词 ====================
 QC_PROMPT_FILE = Path(__file__).resolve().parent / "质量审核" / "prompt_text.txt"
 if QC_PROMPT_FILE.exists():
     QC_SYSTEM_PROMPT = QC_PROMPT_FILE.read_text(encoding="utf-8")
@@ -59,25 +56,40 @@ else:
 
 QC_USER_PROMPT = "请严格审核该图片的质量、识别陈列场景并判断是否包含价签，直接输出标准 JSON。"
 
-# ==================== 2. 价签识别智能体提示词 ====================
+# ==================== 2. 价签识别提示词 (克制稳定版: 保留严禁合并大框) ====================
 PRICE_SYSTEM_PROMPT = """你是一个专业的零售商品价签（Price Tag）视觉识别专家。你的任务是精准检测图片中每个商品独立的真实零售价签，提取其准确零售单价与空间坐标。本任务覆盖货架、地堆/堆头、冰箱冷柜等陈列。
 
-### 扫描与识别原则：
-1. 【只检测实体独立价签】：目标必须是对应具体某一商品的实体价签（含导轨价签条、电子墨水屏、单独贴于商品上的特价贴/爆炸签）。严禁识别宣传长横幅，严禁连续机械复读。
-2. 【价格真实有效】：只输出能够识别出明确有效零售单价的价签，严禁输出 price 为 null/None 的占位条目。
-3. 【层级自然分配】：shelf_layer 按照视觉从上到下的陈列层次自然标记（1, 2, 3...）。
-4. 【翻转与倒立感知】：冷柜顶层或下层价签若存在 180 度倒插或倒悬，请翻正后读取其正向价格。
-5. 【坐标精度规范】：每个价签的 bbox 必须紧密贴合外边缘，格式为 [xmin, ymin, xmax, ymax]（0~1000）。
+### 扫描与识别原则（严格执行）：
+1. 【严禁合并大框，必须拆分单品独立小框】：
+   - 即便一整排陈列的都是同款同价商品（如一整排 3.90 元），【严禁将整排导轨合并画成一个跨越全图的通栏大长框】！
+   - 对已经确认有价格文字或电子价签屏的实体，必须按实际物理标签卡拆分；但不能仅凭商品排列、空白导轨或固定间距补造标签卡。
+   - 每个 bbox 必须紧贴实际可见的价签实体和价格文字，不能框住商品包装。
+2. 【只检测实体独立价签，严禁机械连续复读】：
+   - 目标必须是对应具体商品的实体价签（含导轨价签条、电子墨水屏、单独贴于商品上的特价贴/爆炸签）。
+   - 严禁把牛奶瓶盖、瓶口、包装常规图案文字当成价签。
+   - 长横幅、空白导轨和普通宣传物料不能作为普通价签输出，也不能按横幅覆盖的每个商品重复输出。
+3. 【价格真实有效】：只输出能够识别出明确有效零售单价的价签，严禁输出 price 为 null/None 的占位条目。
+4. 【层级自然分配】：shelf_layer 按照视觉从上到下的陈列层次自然标记（1, 2, 3...）。
+5. 【翻转与倒立感知】：冷柜顶层或下层价签若存在 180 度倒插或倒悬，请翻正后读取其正向价格（例如 42.00 严禁读成 00.24）。
+6. 【坐标精度规范】：每个价签的 bbox 必须紧密贴合外边缘，格式统一为 [xmin, ymin, xmax, ymax]（数值范围 0~1000）。
+7. 【第二件促销单独标记】：可见促销签明确写有“第二件X元”“第2件X元”等字样时，每张促销签只输出一条记录，`tag_type` 填 `second_item_promotion`，`second_item_price` 填 X；严禁按其覆盖的商品数重复输出。
 
 ### 字段定义（标准 JSON 数组）：
 - id: 序号（1, 2, 3...）
 - shelf_layer: 陈列层级（1, 2...）
 - bbox: 归一化坐标 [xmin, ymin, xmax, ymax]
-- price: 价格数字字符串（如 "9.90"）
-- raw_price_text: 原始文字
+- price: 价格数字字符串（如 "9.90"，纯数字保留小数点；第二件促销时填第二件价格）
+- raw_price_text: 包含单位或符号的原始文字（如 "9.90元"、"第二件2元"）
+- tag_type: `regular_price`（默认）或 `second_item_promotion`
+- second_item_price: 仅 `second_item_promotion` 填写第二件价格（如 "2.00"），普通价签省略
+
+### 注意事项：
+- 只返回标准 JSON 数组，严禁附带额外解释文字。
+- 价格和第二件价格均只保留数字与小数点；无法看清文字或金额时不要猜测、不要输出。
+- 没有价签的区域绝不凭空捏造。
 """
 
-PRICE_USER_PROMPT = """请识别图中所有真实有效的商品零售价签，准确定位 bbox 并识别价格。严禁机械连续复读同一种价格，无有效价格区域不输出，直接返回标准 JSON 数组。"""
+PRICE_USER_PROMPT = """请识别图中所有真实独立的商品零售价签，准确定位其 bbox 并识别价格。先确认标签实体和可见价格文字，禁止根据商品排列、空白导轨或固定间隔补造价签；真实相邻标签仍须拆分，严禁合并通栏大框。明确写有“第二件X元”或“第2件X元”的可见促销签每张只输出一次，tag_type 标为 second_item_promotion 并填写 second_item_price。直接返回标准 JSON 数组。"""
 
 # ==================== 3. 基础通用工具 ====================
 def load_oss_map() -> dict:
@@ -95,7 +107,7 @@ def save_oss_map(mapping: dict):
 
 def upload_to_mengniu_oss(image_path: Path, token: str = DEFAULT_BEARER_TOKEN, retries: int = 3) -> str:
     if not token:
-        print("    [!] 未配置 OSS bearer_token，请在 config.json 中配置！")
+        print("    [!] 未配置 OSS bearer_token！")
         return ""
     mime_type = mimetypes.guess_type(str(image_path))[0] or "image/jpeg"
     headers = {"Authorization": token}
@@ -268,8 +280,19 @@ def smart_consecutive_repetition_filter(tags: list) -> list:
                 filtered_layer.append(t)
         cleaned_tags.extend(filtered_layer)
 
-    final_list = []
+    # 过滤过大的通栏大长框 (代码级硬防御: 宽度超过全图 60% 判定为错误合并大框，丢弃)
+    valid_size_tags = []
     for t in cleaned_tags:
+        b = t.get("bbox", [])
+        if len(b) >= 4:
+            span_x = abs(b[2] - b[0]) if abs(b[2] - b[0]) > abs(b[3] - b[1]) else abs(b[3] - b[1])
+            if span_x > 600:
+                print(f"        [!] 拦截异常通栏超宽大框: bbox={b}, 价格={t.get('price')}")
+                continue
+        valid_size_tags.append(t)
+
+    final_list = []
+    for t in valid_size_tags:
         b = t.get("bbox", [])
         coords = resolve_tag_bbox(b, 1000, 1000)
         if not coords:
@@ -286,6 +309,82 @@ def smart_consecutive_repetition_filter(tags: list) -> list:
     for idx, t in enumerate(res, 1):
         t["id"] = idx
     return res
+
+
+SECOND_ITEM_PROMOTION_RE = re.compile(r"第\s*(?:二|2)\s*件")
+SECOND_ITEM_PRICE_RE = re.compile(
+    r"第\s*(?:二|2)\s*件\D{0,8}(\d+(?:\.\d{1,2})?)\s*(?:元|块|￥|RMB)?",
+    re.IGNORECASE,
+)
+
+
+def _promotion_text(tag: dict) -> str:
+    fields = (
+        "raw_promotion_text",
+        "promotion_text",
+        "raw_price_text",
+        "label_text",
+        "text",
+    )
+    return " ".join(str(tag.get(field, "")).strip() for field in fields).strip()
+
+
+def is_second_item_promotion(tag: dict) -> bool:
+    tag_type = str(tag.get("tag_type") or tag.get("promotion_type") or "").strip().lower()
+    return tag_type in ("second_item_price", "second_item_promotion") or bool(SECOND_ITEM_PROMOTION_RE.search(_promotion_text(tag)))
+
+
+def normalize_second_item_promotion(tag: dict) -> dict:
+    """Normalize a model promotion record into a stable post-processing contract."""
+    normalized = dict(tag)
+    raw_text = _promotion_text(normalized)
+    price = str(normalized.get("second_item_price") or "").strip()
+    if not price:
+        matched = SECOND_ITEM_PRICE_RE.search(raw_text)
+        price = matched.group(1) if matched else str(normalized.get("price") or "").strip()
+    normalized["promotion_type"] = "second_item_price"
+    normalized["second_item_price"] = price
+    normalized["raw_promotion_text"] = raw_text
+    normalized.pop("price", None)
+    normalized.pop("raw_price_text", None)
+    return normalized
+
+
+def split_price_and_promotion_tags(parsed) -> tuple[list, list]:
+    """Accept the legacy array format while separating second-item promotions."""
+    if isinstance(parsed, list):
+        raw_price_tags, raw_promotion_tags = parsed, []
+    elif isinstance(parsed, dict):
+        raw_price_tags = parsed.get("price_tags", [])
+        raw_promotion_tags = parsed.get("promotion_tags", [])
+    else:
+        raw_price_tags, raw_promotion_tags = [], []
+
+    price_tags = []
+    promotion_tags = []
+    for tag in raw_price_tags if isinstance(raw_price_tags, list) else []:
+        if not isinstance(tag, dict):
+            continue
+        if is_second_item_promotion(tag):
+            promotion_tags.append(normalize_second_item_promotion(tag))
+        else:
+            price_tags.append(tag)
+    for tag in raw_promotion_tags if isinstance(raw_promotion_tags, list) else []:
+        if isinstance(tag, dict):
+            promotion_tags.append(normalize_second_item_promotion(tag))
+    return price_tags, promotion_tags
+
+
+def valid_promotion_tags(tags: list) -> list:
+    result = []
+    for tag in tags:
+        bbox = tag.get("bbox", [])
+        price = str(tag.get("second_item_price", "")).strip().lower()
+        if len(bbox) >= 4 and price not in ("", "none", "null"):
+            result.append(tag)
+    for idx, tag in enumerate(result, 1):
+        tag["id"] = idx
+    return result
 
 def run_price_tag_detection(image_url: str, timeout: int = 180):
     body = {
@@ -317,12 +416,13 @@ def run_price_tag_detection(image_url: str, timeout: int = 180):
     payload = res_data.get("payload", {})
     page_content = payload.get("result", {}).get("page_content", "")
     parsed = parse_robust_json(page_content)
-    raw_tags = parsed if isinstance(parsed, list) else parsed.get("price_tags", [])
+    raw_tags, raw_promotion_tags = split_price_and_promotion_tags(parsed)
     clean_tags = [t for t in raw_tags if t.get("price") and str(t["price"]).strip().lower() not in ["none", "null", ""]]
     final_tags = smart_consecutive_repetition_filter(clean_tags)
-    return final_tags, elapsed
+    promotion_tags = valid_promotion_tags(raw_promotion_tags)
+    return {"price_tags": final_tags, "promotion_tags": promotion_tags}, elapsed
 
-def draw_visual_tags_simple(image_path: str, tags: list, output_path: str):
+def draw_visual_tags_simple(image_path: str, tags: list, output_path: str, promotion_tags: list = None):
     image = cv_imread_utf8(image_path)
     if image is None:
         return
@@ -343,24 +443,28 @@ def draw_visual_tags_simple(image_path: str, tags: list, output_path: str):
         text_y = max(ymin - 8, 25)
         cv2.putText(image, label, (xmin, text_y), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (0, 0, 0), 4, cv2.LINE_AA)
         cv2.putText(image, label, (xmin, text_y), cv2.FONT_HERSHEY_SIMPLEX, 0.65, color, 2, cv2.LINE_AA)
+    for tag in promotion_tags or []:
+        bbox = tag.get("bbox", [])
+        coords = resolve_tag_bbox(bbox, w, h)
+        if not coords:
+            continue
+        xmin, ymin, xmax, ymax = coords
+        color = (255, 0, 255)
+        label = f"P{tag.get('id', 0)} SECOND {tag.get('second_item_price', '')}"
+        text_y = max(ymin - 8, 25)
+        cv2.rectangle(image, (xmin, ymin), (xmax, ymax), color, 3)
+        cv2.putText(image, label, (xmin, text_y), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (0, 0, 0), 4, cv2.LINE_AA)
+        cv2.putText(image, label, (xmin, text_y), cv2.FONT_HERSHEY_SIMPLEX, 0.65, color, 2, cv2.LINE_AA)
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     cv_imwrite_utf8(output_path, image)
 
-# ==================== 6. 阶段三：[预留扩展接口] SKU 识别 ====================
 def run_sku_recognition(image_url: str, price_tags: list = None, **kwargs) -> dict:
-    """
-    【预留标准扩展接口】SKU 商品品类与陈列识别
-    入参:
-        - image_url: 图片在 OSS 上的公网链接
-        - price_tags: 已识别出的价签列表 (后续可用于将价格与SKU空间位置精准对齐匹配)
-    """
     return {
         "status": "pending_implementation",
         "message": "SKU 识别接口已预留，待后端模型就绪后随时无缝接入",
         "sku_items": []
     }
 
-# ==================== 7. 全流程总控调度 (Main Pipeline) ====================
 def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, force: bool = False):
     img_name = img_path.name
     qc_dir = output_base_dir / "qc_results"
@@ -375,7 +479,6 @@ def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, f
         print(f"    -> [跳过] 已存在完整全流程报告: {final_report_file.name}")
         return
 
-    # 1. 确保 OSS 链接有效
     image_url = oss_map.get(img_name)
     if not image_url:
         print("    -> 本地映射缺失，正在上传至蒙牛内部 OSS ...")
@@ -399,54 +502,51 @@ def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, f
         "step3_sku": None
     }
 
-    # ================= 步骤 1: 质量审核预检 =================
     print("    -> [Step 1] 正在进行图片质量预检与场景识别 ...")
     try:
         qc_output = run_quality_check(image_url)
         pipeline_record["step1_qc"] = qc_output
-        
         qc_res = qc_output.get("qc_result", {})
         is_valid = qc_res.get("is_valid", False)
         invalid_reason = qc_res.get("invalid_reason", "")
-        
         content_info = qc_output.get("content_info", {})
         has_price_tag = content_info.get("has_price_tag", True)
         scene_type = content_info.get("scene_type", "未识别")
-        
         print(f"       质检状态: {'通过' if is_valid else '未通过'} | 场景类型: {scene_type} | 包含价签: {has_price_tag}")
         if not is_valid:
             print(f"       不合格原因: {invalid_reason}")
-            
     except Exception as e:
         print(f"    [!] 质量审核执行异常: {e}")
         pipeline_record["step1_qc"] = {"error": str(e)}
         is_valid, has_price_tag = False, False
 
-    # ================= 步骤 2: 准入判定与条件分流 =================
     if not is_valid:
-        print("    -> [拦截] 图片质量不达标，提前终止后续流程，节省模型算力。")
+        print("    -> [拦截] 图片质量不达标，提前终止后续流程。")
     elif not has_price_tag:
-        print("    -> [跳过] 图片质量合格，但判定画面内无商品价签，无需执行价签识别。")
+        print("    -> [跳过] 画面内判定无商品价签，无需执行价签识别。")
     else:
-        # ================= 步骤 3: 价签检测识别 =================
-        print("    -> [Step 2] 质检通过且包含价签，正在执行高精价签检测 ...")
+        print("    -> [Step 2] 质检通过且包含价签，正在执行价签单品检测 ...")
         try:
-            tags, elapsed = run_price_tag_detection(image_url)
+            detection_result, elapsed = run_price_tag_detection(image_url)
+            tags = detection_result["price_tags"]
+            promotion_tags = detection_result["promotion_tags"]
             pipeline_record["step2_price_tags"] = {
                 "total_tags": len(tags),
+                "total_promotion_tags": len(promotion_tags),
                 "elapsed_sec": round(elapsed, 2),
-                "tags": tags
+                "tags": tags,
+                "promotion_tags": promotion_tags,
             }
-            print(f"       价签识别成功: 共识别到 {len(tags)} 个有效价签 (耗时 {elapsed:.2f}s)")
-            
+            print(f"       价签识别成功: 共识别到 {len(tags)} 个有效单品价签 (耗时 {elapsed:.2f}s)")
+            if promotion_tags:
+                print(f"       已单独标记 {len(promotion_tags)} 个第二件价格促销签")
             vis_path = vis_dir / f"{img_path.stem}.vis.jpg"
-            draw_visual_tags_simple(str(img_path), tags, str(vis_path))
-            print(f"       已生成可视化标注图: {vis_path.name}")
+            draw_visual_tags_simple(str(img_path), tags, str(vis_path), promotion_tags)
+            print(f"       已生成高质量标注图: {vis_path.name}")
         except Exception as e:
             print(f"    [!] 价签识别异常: {e}")
             pipeline_record["step2_price_tags"] = {"error": str(e)}
 
-    # ================= 步骤 4: [预留] SKU 商品识别 =================
     pipeline_record["step3_sku"] = run_sku_recognition(
         image_url=image_url, 
         price_tags=pipeline_record.get("step2_price_tags", {}).get("tags", [])
@@ -457,7 +557,7 @@ def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, f
     print(f"    -> [完成] 全流程报告已沉淀: {final_report_file.name}")
 
 def main():
-    parser = argparse.ArgumentParser(description="蒙牛智能巡店全流程一体化管线 (质量预检 -> 价签识别 -> 预留SKU)")
+    parser = argparse.ArgumentParser(description="蒙牛智能巡店全流程一体化管线 (严禁大框版)")
     parser.add_argument("--offset", type=int, default=0, help="起始图片索引")
     parser.add_argument("--limit", type=int, default=12, help="批量处理数量")
     parser.add_argument("--target-image", default="", help="指定单张图片精确跑")
@@ -477,10 +577,8 @@ def main():
         target_images = all_images[args.offset : args.offset + args.limit]
 
     print("=" * 80)
-    print("=== 蒙牛巡店智能全流程 Pipeline（质量审核 -> 价签识别 -> 预留SKU）===")
-    print(f"图片目录: {img_dir}")
-    print(f"输出目录: {output_dir}")
-    print(f"待跑图片数: {len(target_images)} 张 (偏移: {args.offset}, 数量: {args.limit})")
+    print("=== 蒙牛巡店全流程管线 (严禁合并大框 + 彻底剔除过度扫描) ===")
+    print(f"待跑图片数: {len(target_images)} 张")
     print("=" * 80)
 
     oss_map = load_oss_map()
@@ -490,7 +588,7 @@ def main():
         process_single_image(img_path, oss_map, output_dir, force=args.force)
 
     print("\n" + "=" * 80)
-    print("🎉 全流程批量处理圆满结束！结果已全部保存至: " + str(output_dir))
+    print("🎉 全流程处理圆满结束！结果保存至: " + str(output_dir))
     print("=" * 80)
 
 if __name__ == "__main__":
