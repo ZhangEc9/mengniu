@@ -588,7 +588,7 @@ def main():
         process_single_image(img_path, oss_map, output_dir, force=args.force)
 
     print("\n" + "=" * 80)
-    print("🎉 全流程处理圆满结束！结果保存至: " + str(output_dir))
+    print("全流程处理完成，结果保存至: " + str(output_dir))
     print("=" * 80)
 
 if __name__ == "__main__":
