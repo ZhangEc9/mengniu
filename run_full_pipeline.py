@@ -510,10 +510,15 @@ def main():
     parser.add_argument("--target-image", default="", help="指定单张图片精确跑")
     parser.add_argument("--force", action="store_true", help="强制重新执行，覆盖已有全流程报告")
     parser.add_argument("--img-dir", default="", help="specify image dir")
+    parser.add_argument(
+        "--output-dir",
+        default="",
+        help="指定结果输出目录，默认使用 D:\\Shixi\\mengniu\\全流程运行结果",
+    )
     args = parser.parse_args()
 
     img_dir = Path(args.img_dir) if args.img_dir else Path(r"D:\Shixi\mengniu\蒙牛 poc0805_images")
-    output_dir = Path(r"D:\Shixi\mengniu\全流程运行结果")
+    output_dir = Path(args.output_dir) if args.output_dir else Path(r"D:\Shixi\mengniu\全流程运行结果")
     output_dir.mkdir(parents=True, exist_ok=True)
 
     valid_exts = {".jpg", ".jpeg", ".png", ".webp"}

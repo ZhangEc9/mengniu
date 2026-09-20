@@ -23,6 +23,7 @@ resized_view.jpg
 output_*/
 test_output/
 *.txt
+!prompts/*.txt
 *.b64
 temp_*
 
