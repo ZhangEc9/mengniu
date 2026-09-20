@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
 蒙牛智能巡店全流程一体化处理管线 (Pipeline - 稳定克制版)
 已精准调整:
@@ -47,49 +47,30 @@ OSS_UPLOAD_URL = OSS_CFG.get("upload_url", "https://aism.mengniu.cn/brcapi/oss/a
 DEFAULT_BEARER_TOKEN = OSS_CFG.get("bearer_token", "")
 CACHE_OSS_FILE = Path(__file__).resolve().parent / "价签识别" / "oss_image_map.json"
 
-# ==================== 1. 质量审核提示词 ====================
-QC_PROMPT_FILE = Path(__file__).resolve().parent / "质量审核" / "prompt_text.txt"
-if QC_PROMPT_FILE.exists():
-    QC_SYSTEM_PROMPT = QC_PROMPT_FILE.read_text(encoding="utf-8")
-else:
-    QC_SYSTEM_PROMPT = "你是一个专业的零售巡店图片质检与场景识别专家，请审核图片质量、识别陈列场景并判断是否包含价签。"
+# ==================== 1. 提示词加载接口 (提示词与代码完全分离) ====================
+PROMPTS_DIR = Path(__file__).resolve().parent / "prompts"
 
-QC_USER_PROMPT = "请严格审核该图片的质量、识别陈列场景并判断是否包含价签，直接输出标准 JSON。"
+def load_prompt(filename: str, default: str = "") -> str:
+    """从 prompts/ 目录动态读取外部提示词文件，支持用户随时直接在文本文件中修改并热更新。"""
+    target = PROMPTS_DIR / filename
+    if target.is_file():
+        try:
+            content = target.read_text(encoding="utf-8").strip()
+            if content:
+                return content
+        except Exception as e:
+            print(f"    [!] 读取提示词文件 {filename} 失败: {e}，使用默认兜底")
+    return default.strip()
 
-# ==================== 2. 价签识别提示词 (克制稳定版: 保留严禁合并大框) ====================
-PRICE_SYSTEM_PROMPT = """你是一个专业的零售商品价签（Price Tag）视觉识别专家。你的任务是精准检测图片中每个商品独立的真实零售价签，提取其准确零售单价与空间坐标。本任务覆盖货架、地堆/堆头、冰箱冷柜等陈列。
+def get_quality_prompts() -> tuple[str, str]:
+    sys_p = load_prompt("quality_system_prompt.txt", "你是一个专业的蒙牛巡店图片质检与场景识别专家，请对图片进行质检，识别陈列场景，判断是否包含价签。")
+    usr_p = load_prompt("quality_user_prompt.txt", "请评估图片质量与场景，输出标准 JSON。")
+    return sys_p, usr_p
 
-### 扫描与识别原则（严格执行）：
-1. 【严禁合并大框，必须拆分单品独立小框】：
-   - 即便一整排陈列的都是同款同价商品（如一整排 3.90 元），【严禁将整排导轨合并画成一个跨越全图的通栏大长框】！
-   - 对已经确认有价格文字或电子价签屏的实体，必须按实际物理标签卡拆分；但不能仅凭商品排列、空白导轨或固定间距补造标签卡。
-   - 每个 bbox 必须紧贴实际可见的价签实体和价格文字，不能框住商品包装。
-2. 【只检测实体独立价签，严禁机械连续复读】：
-   - 目标必须是对应具体商品的实体价签（含导轨价签条、电子墨水屏、单独贴于商品上的特价贴/爆炸签）。
-   - 严禁把牛奶瓶盖、瓶口、包装常规图案文字当成价签。
-   - 长横幅、空白导轨和普通宣传物料不能作为普通价签输出，也不能按横幅覆盖的每个商品重复输出。
-3. 【价格真实有效】：只输出能够识别出明确有效零售单价的价签，严禁输出 price 为 null/None 的占位条目。
-4. 【层级自然分配】：shelf_layer 按照视觉从上到下的陈列层次自然标记（1, 2, 3...）。
-5. 【翻转与倒立感知】：冷柜顶层或下层价签若存在 180 度倒插或倒悬，请翻正后读取其正向价格（例如 42.00 严禁读成 00.24）。
-6. 【坐标精度规范】：每个价签的 bbox 必须紧密贴合外边缘，格式统一为 [xmin, ymin, xmax, ymax]（数值范围 0~1000）。
-7. 【第二件促销单独标记】：可见促销签明确写有“第二件X元”“第2件X元”等字样时，每张促销签只输出一条记录，`tag_type` 填 `second_item_promotion`，`second_item_price` 填 X；严禁按其覆盖的商品数重复输出。
-
-### 字段定义（标准 JSON 数组）：
-- id: 序号（1, 2, 3...）
-- shelf_layer: 陈列层级（1, 2...）
-- bbox: 归一化坐标 [xmin, ymin, xmax, ymax]
-- price: 价格数字字符串（如 "9.90"，纯数字保留小数点；第二件促销时填第二件价格）
-- raw_price_text: 包含单位或符号的原始文字（如 "9.90元"、"第二件2元"）
-- tag_type: `regular_price`（默认）或 `second_item_promotion`
-- second_item_price: 仅 `second_item_promotion` 填写第二件价格（如 "2.00"），普通价签省略
-
-### 注意事项：
-- 只返回标准 JSON 数组，严禁附带额外解释文字。
-- 价格和第二件价格均只保留数字与小数点；无法看清文字或金额时不要猜测、不要输出。
-- 没有价签的区域绝不凭空捏造。
-"""
-
-PRICE_USER_PROMPT = """请识别图中所有真实独立的商品零售价签，准确定位其 bbox 并识别价格。先确认标签实体和可见价格文字，禁止根据商品排列、空白导轨或固定间隔补造价签；真实相邻标签仍须拆分，严禁合并通栏大框。明确写有“第二件X元”或“第2件X元”的可见促销签每张只输出一次，tag_type 标为 second_item_promotion 并填写 second_item_price。直接返回标准 JSON 数组。"""
+def get_price_prompts() -> tuple[str, str]:
+    sys_p = load_prompt("price_system_prompt.txt", "你是一个专业的零售商品价签（Price Tag）视觉识别专家。请识别图中所有真实独立的商品零售价签。")
+    usr_p = load_prompt("price_user_prompt.txt", "请识别图中所有真实独立的商品零售价签，准确定位其 bbox 并识别价格。直接返回标准 JSON 数组。")
+    return sys_p, usr_p
 
 # ==================== 3. 基础通用工具 ====================
 def load_oss_map() -> dict:
@@ -146,13 +127,51 @@ def parse_robust_json(text: str):
     except Exception:
         start = min([idx for idx in (clean_text.find("{"), clean_text.find("[")) if idx >= 0], default=-1)
         if start >= 0:
+            is_array = (clean_text[start] == "[")
             for end in range(len(clean_text) - 1, start, -1):
-                if clean_text[end] in "}]":
-                    try:
-                        return json.loads(clean_text[start:end+1])
-                    except Exception:
-                        continue
+                char = clean_text[end]
+                if char in "}]":
+                    candidates = [clean_text[start:end+1]]
+                    if is_array and char == "}":
+                        candidates.append(clean_text[start:end+1] + "\n]")
+                    for cand in candidates:
+                        try:
+                            return json.loads(cand)
+                        except Exception:
+                            continue
     return clean_text
+
+def coerce_bool(value, default: bool = False) -> bool:
+    """将模型可能返回的布尔值/字符串安全转换为 bool。"""
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, float)):
+        return bool(value)
+    if isinstance(value, str):
+        normalized = value.strip().lower()
+        if normalized in {"true", "1", "yes", "y", "是", "有", "合格"}:
+            return True
+        if normalized in {"false", "0", "no", "n", "否", "无", "不合格"}:
+            return False
+    return default
+
+# 质量四项：名称与 prompts/quality_system_prompt.txt 严格保持一致
+QC_QUALITY_KEYS = ["图片模糊", "过度曝光", "光线不足", "文件损坏"]
+
+# 兼容模型返回的历史别名（模型偶尔输出旧版字段名）
+QC_QUALITY_KEY_ALIASES = {"严重过曝": "过度曝光"}
+
+def normalize_quality_checks(quality_checks) -> dict:
+    """将模型返回的质量项键名归一化为 prompts/quality_system_prompt.txt 中的标准名称。"""
+    normalized = {}
+    if not isinstance(quality_checks, dict):
+        return normalized
+    for raw_key, raw_val in quality_checks.items():
+        key = str(raw_key).strip()
+        key = QC_QUALITY_KEY_ALIASES.get(key, key)
+        if key not in normalized:
+            normalized[key] = raw_val
+    return normalized
 
 def cv_imread_utf8(path: str):
     try:
@@ -173,11 +192,12 @@ def cv_imwrite_utf8(path: str, img):
 
 # ==================== 4. 阶段一：质量审核执行器 ====================
 def run_quality_check(image_url: str, timeout: int = 60) -> dict:
+    qc_sys, qc_usr = get_quality_prompts()
     body = {
         "target_sku_img": image_url,
         "image": image_url,
-        "system_text": QC_SYSTEM_PROMPT,
-        "text": QC_USER_PROMPT,
+        "system_text": qc_sys,
+        "text": qc_usr,
         "userId": "",
         "envSystemName": "",
         "userName": "",
@@ -209,188 +229,19 @@ def run_quality_check(image_url: str, timeout: int = 60) -> dict:
     return parsed
 
 # ==================== 5. 阶段二：价签识别执行器 ====================
-def resolve_tag_bbox(bbox: list, img_w: int, img_h: int):
-    if len(bbox) < 4:
-        return None
-    v0, v1, v2, v3 = bbox[:4]
-    xmin_A, xmax_A = min(v0, v2), max(v0, v2)
-    ymin_A, ymax_A = min(v1, v3), max(v1, v3)
-    w_px_A = (xmax_A - xmin_A) / 1000.0 * img_w
-    h_px_A = (ymax_A - ymin_A) / 1000.0 * img_h
-    
-    ymin_B, ymax_B = min(v0, v2), max(v0, v2)
-    xmin_B, xmax_B = min(v1, v3), max(v1, v3)
-    w_px_B = (xmax_B - xmin_B) / 1000.0 * img_w
-    h_px_B = (ymax_B - ymin_B) / 1000.0 * img_h
-
-    if h_px_A > img_h * 0.45 or (h_px_A > w_px_A * 2.5 and w_px_B > h_px_B * 0.5):
-        xmin = int(xmin_B / 1000.0 * img_w)
-        ymin = int(ymin_B / 1000.0 * img_h)
-        xmax = int(xmax_B / 1000.0 * img_w)
-        ymax = int(ymax_B / 1000.0 * img_h)
-    else:
-        xmin = int(xmin_A / 1000.0 * img_w)
-        ymin = int(ymin_A / 1000.0 * img_h)
-        xmax = int(xmax_A / 1000.0 * img_w)
-        ymax = int(ymax_A / 1000.0 * img_h)
-        
-    ymin = max(0, min(img_h - 1, ymin))
-    ymax = max(0, min(img_h - 1, ymax))
-    xmin = max(0, min(img_w - 1, xmin))
-    xmax = max(0, min(img_w - 1, xmax))
-    return xmin, ymin, xmax, ymax
-
-def _compute_iou(b1, b2):
-    x1 = max(b1[0], b2[0])
-    y1 = max(b1[1], b2[1])
-    x2 = min(b1[2], b2[2])
-    y2 = min(b1[3], b2[3])
-    inter = max(0, x2 - x1) * max(0, y2 - y1)
-    area1 = (b1[2] - b1[0]) * (b1[3] - b1[1])
-    area2 = (b2[2] - b2[0]) * (b2[3] - b2[1])
-    union = area1 + area2 - inter
-    return inter / union if union > 0 else 0
-
-def smart_consecutive_repetition_filter(tags: list) -> list:
-    if not tags:
-        return []
-    layer_groups = {}
-    for t in tags:
-        l = t.get("shelf_layer", 1)
-        layer_groups.setdefault(l, []).append(t)
-
-    cleaned_tags = []
-    for layer, ltags in layer_groups.items():
-        distinct_p = {str(t.get("price", "")).strip() for t in ltags}
-        if len(ltags) >= 6 and len(distinct_p) == 1:
-            print(f"        [!] 触发整行自回归虚构熔断: 层级 {layer} 纯同价 {distinct_p} 数量达 {len(ltags)} 个，整行剔除！")
-            continue
-
-        filtered_layer = []
-        last_price = None
-        consecutive_count = 0
-        for t in ltags:
-            curr_price = str(t.get("price", "")).strip()
-            if curr_price == last_price:
-                consecutive_count += 1
-            else:
-                last_price = curr_price
-                consecutive_count = 1
-            if consecutive_count <= 3:
-                filtered_layer.append(t)
-        cleaned_tags.extend(filtered_layer)
-
-    # 过滤过大的通栏大长框 (代码级硬防御: 宽度超过全图 60% 判定为错误合并大框，丢弃)
-    valid_size_tags = []
-    for t in cleaned_tags:
-        b = t.get("bbox", [])
-        if len(b) >= 4:
-            span_x = abs(b[2] - b[0]) if abs(b[2] - b[0]) > abs(b[3] - b[1]) else abs(b[3] - b[1])
-            if span_x > 600:
-                print(f"        [!] 拦截异常通栏超宽大框: bbox={b}, 价格={t.get('price')}")
-                continue
-        valid_size_tags.append(t)
-
-    final_list = []
-    for t in valid_size_tags:
-        b = t.get("bbox", [])
-        coords = resolve_tag_bbox(b, 1000, 1000)
-        if not coords:
-            continue
-        is_dup = False
-        for _, existing_coords in final_list:
-            if _compute_iou(coords, existing_coords) > 0.65:
-                is_dup = True
-                break
-        if not is_dup:
-            final_list.append((t, coords))
-
-    res = [item[0] for item in final_list]
-    for idx, t in enumerate(res, 1):
-        t["id"] = idx
-    return res
-
-
-SECOND_ITEM_PROMOTION_RE = re.compile(r"第\s*(?:二|2)\s*件")
-SECOND_ITEM_PRICE_RE = re.compile(
-    r"第\s*(?:二|2)\s*件\D{0,8}(\d+(?:\.\d{1,2})?)\s*(?:元|块|￥|RMB)?",
-    re.IGNORECASE,
+from price_postprocess import (
+    resolve_tag_bbox,
+    split_price_and_promotion_tags,
+    smart_consecutive_repetition_filter,
+    valid_promotion_tags,
 )
 
-
-def _promotion_text(tag: dict) -> str:
-    fields = (
-        "raw_promotion_text",
-        "promotion_text",
-        "raw_price_text",
-        "label_text",
-        "text",
-    )
-    return " ".join(str(tag.get(field, "")).strip() for field in fields).strip()
-
-
-def is_second_item_promotion(tag: dict) -> bool:
-    tag_type = str(tag.get("tag_type") or tag.get("promotion_type") or "").strip().lower()
-    return tag_type in ("second_item_price", "second_item_promotion") or bool(SECOND_ITEM_PROMOTION_RE.search(_promotion_text(tag)))
-
-
-def normalize_second_item_promotion(tag: dict) -> dict:
-    """Normalize a model promotion record into a stable post-processing contract."""
-    normalized = dict(tag)
-    raw_text = _promotion_text(normalized)
-    price = str(normalized.get("second_item_price") or "").strip()
-    if not price:
-        matched = SECOND_ITEM_PRICE_RE.search(raw_text)
-        price = matched.group(1) if matched else str(normalized.get("price") or "").strip()
-    normalized["promotion_type"] = "second_item_price"
-    normalized["second_item_price"] = price
-    normalized["raw_promotion_text"] = raw_text
-    normalized.pop("price", None)
-    normalized.pop("raw_price_text", None)
-    return normalized
-
-
-def split_price_and_promotion_tags(parsed) -> tuple[list, list]:
-    """Accept the legacy array format while separating second-item promotions."""
-    if isinstance(parsed, list):
-        raw_price_tags, raw_promotion_tags = parsed, []
-    elif isinstance(parsed, dict):
-        raw_price_tags = parsed.get("price_tags", [])
-        raw_promotion_tags = parsed.get("promotion_tags", [])
-    else:
-        raw_price_tags, raw_promotion_tags = [], []
-
-    price_tags = []
-    promotion_tags = []
-    for tag in raw_price_tags if isinstance(raw_price_tags, list) else []:
-        if not isinstance(tag, dict):
-            continue
-        if is_second_item_promotion(tag):
-            promotion_tags.append(normalize_second_item_promotion(tag))
-        else:
-            price_tags.append(tag)
-    for tag in raw_promotion_tags if isinstance(raw_promotion_tags, list) else []:
-        if isinstance(tag, dict):
-            promotion_tags.append(normalize_second_item_promotion(tag))
-    return price_tags, promotion_tags
-
-
-def valid_promotion_tags(tags: list) -> list:
-    result = []
-    for tag in tags:
-        bbox = tag.get("bbox", [])
-        price = str(tag.get("second_item_price", "")).strip().lower()
-        if len(bbox) >= 4 and price not in ("", "none", "null"):
-            result.append(tag)
-    for idx, tag in enumerate(result, 1):
-        tag["id"] = idx
-    return result
-
-def run_price_tag_detection(image_url: str, timeout: int = 180):
+def run_price_tag_detection(image_url: str, img_w: int = 1000, img_h: int = 1000, timeout: int = 360):
+    price_sys, price_usr = get_price_prompts()
     body = {
         "image": image_url,
-        "system_text": PRICE_SYSTEM_PROMPT,
-        "text": PRICE_USER_PROMPT,
+        "system_text": price_sys,
+        "text": price_usr,
         "userId": "",
         "envSystemName": "",
         "userName": "",
@@ -406,7 +257,19 @@ def run_price_tag_detection(image_url: str, timeout: int = 180):
         "Content-Type": "application/json",
     }
     t0 = time.time()
-    resp = requests.post(PRICE_API_URL, headers=headers, json=body, timeout=timeout)
+    resp = None
+    max_retries = 2
+    for attempt in range(1, max_retries + 1):
+        try:
+            resp = requests.post(PRICE_API_URL, headers=headers, json=body, timeout=timeout)
+            if resp.status_code == 200:
+                break
+            print(f"    [!] 价签识别第 {attempt} 次请求返回状态码 {resp.status_code}，准备重试...")
+        except Exception as err:
+            if attempt == max_retries:
+                raise RuntimeError(f"价签识别网络异常（重试已达上限）: {err}")
+            print(f"    [!] 价签识别第 {attempt} 次网络超时/抖动，正在重试: {err}")
+            time.sleep(2)
     elapsed = time.time() - t0
     if resp.status_code != 200:
         raise RuntimeError(f"价签识别 HTTP 异常: {resp.status_code}")
@@ -418,7 +281,7 @@ def run_price_tag_detection(image_url: str, timeout: int = 180):
     parsed = parse_robust_json(page_content)
     raw_tags, raw_promotion_tags = split_price_and_promotion_tags(parsed)
     clean_tags = [t for t in raw_tags if t.get("price") and str(t["price"]).strip().lower() not in ["none", "null", ""]]
-    final_tags = smart_consecutive_repetition_filter(clean_tags)
+    final_tags = smart_consecutive_repetition_filter(clean_tags, img_w=img_w, img_h=img_h)
     promotion_tags = valid_promotion_tags(raw_promotion_tags)
     return {"price_tags": final_tags, "promotion_tags": promotion_tags}, elapsed
 
@@ -450,7 +313,10 @@ def draw_visual_tags_simple(image_path: str, tags: list, output_path: str, promo
             continue
         xmin, ymin, xmax, ymax = coords
         color = (255, 0, 255)
-        label = f"P{tag.get('id', 0)} SECOND {tag.get('second_item_price', '')}"
+        if tag.get("promotion_type") == "bundle_promotion":
+            label = f"P{tag.get('id', 0)} {tag.get('bundle_quantity', 2)}PCS {tag.get('bundle_price', '')}"
+        else:
+            label = f"P{tag.get('id', 0)} SECOND {tag.get('second_item_price', '')}"
         text_y = max(ymin - 8, 25)
         cv2.rectangle(image, (xmin, ymin), (xmax, ymax), color, 3)
         cv2.putText(image, label, (xmin, text_y), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (0, 0, 0), 4, cv2.LINE_AA)
@@ -503,53 +369,134 @@ def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, f
     }
 
     print("    -> [Step 1] 正在进行图片质量预检与场景识别 ...")
+    qc_file = qc_dir / f"{img_path.stem}.qc.json"
     try:
         qc_output = run_quality_check(image_url)
         pipeline_record["step1_qc"] = qc_output
         qc_res = qc_output.get("qc_result", {})
-        is_valid = qc_res.get("is_valid", False)
+        
+        # 1. 质量四项严格校验（必须全部合格）
+        quality_checks = normalize_quality_checks(qc_res.get("quality_checks", {}))
+        required_keys = QC_QUALITY_KEYS
+        is_quality_pass = all(
+            str(quality_checks.get(k, "")).strip() == "合格" for k in required_keys
+        ) and coerce_bool(qc_res.get("is_valid"), False)
         invalid_reason = qc_res.get("invalid_reason", "")
+
+        # 2. 场景类型与价签判定
         content_info = qc_output.get("content_info", {})
-        has_price_tag = content_info.get("has_price_tag", True)
-        scene_type = content_info.get("scene_type", "未识别")
-        print(f"       质检状态: {'通过' if is_valid else '未通过'} | 场景类型: {scene_type} | 包含价签: {has_price_tag}")
-        if not is_valid:
+        has_price_tag = coerce_bool(
+            content_info.get("has_price_tag") if isinstance(content_info, dict) else None,
+            False,
+        )
+        scene_type = str(content_info.get("scene_type", "未识别")).strip()
+        valid_scene_keywords = ["货架", "冰箱", "堆头", "冷柜", "地堆"]
+        is_scene_valid = any(kw in scene_type for kw in valid_scene_keywords)
+
+        # 综合准入判断：质量合格 AND 识别出价签 AND 场景满足
+        can_proceed_to_price = is_quality_pass and is_scene_valid and has_price_tag
+
+        # 3. 输出独立质检 JSON 文件
+        rejection_reasons = []
+        if not is_quality_pass:
+            reason_desc = invalid_reason if invalid_reason else "存在不合格检测项"
+            rejection_reasons.append(f"质量不合格: {reason_desc}")
+        if not is_scene_valid:
+            rejection_reasons.append(f"非目标巡店场景: {scene_type} (仅限货架照/冰箱照/堆头照)")
+        if not has_price_tag:
+            rejection_reasons.append("画面内未检出有效商品价签")
+
+        qc_record = {
+            "image_name": img_name,
+            "image_url": image_url,
+            "checked_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "qc_result": qc_res,
+            "content_info": content_info,
+            "decision": {
+                "is_quality_pass": is_quality_pass,
+                "is_scene_valid": is_scene_valid,
+                "scene_type": scene_type,
+                "has_price_tag": has_price_tag,
+                "can_proceed_to_price_tag": can_proceed_to_price,
+                "rejection_reasons": rejection_reasons
+            }
+        }
+
+        with open(qc_file, "w", encoding="utf-8") as qf:
+            json.dump(qc_record, qf, ensure_ascii=False, indent=2)
+        print(f"       [质检单出] 独立质检报告已沉淀: {qc_file.name}")
+        status_str = "通过" if is_quality_pass else "未通过"
+        scene_str = "合规" if is_scene_valid else "非目标场景"
+        print(f"       质检状态: {status_str} | 场景: {scene_type} ({scene_str}) | 包含价签: {has_price_tag}")
+        if not is_quality_pass:
             print(f"       不合格原因: {invalid_reason}")
     except Exception as e:
         print(f"    [!] 质量审核执行异常: {e}")
         pipeline_record["step1_qc"] = {"error": str(e)}
-        is_valid, has_price_tag = False, False
+        is_quality_pass, has_price_tag, is_scene_valid = False, False, False
+        qc_record = {
+            "image_name": img_name,
+            "image_url": image_url,
+            "checked_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+            "error": str(e),
+            "decision": {"can_proceed_to_price_tag": False, "rejection_reasons": [str(e)]}
+        }
+        with open(qc_file, "w", encoding="utf-8") as qf:
+            json.dump(qc_record, qf, ensure_ascii=False, indent=2)
 
-    if not is_valid:
-        print("    -> [拦截] 图片质量不达标，提前终止后续流程。")
-    elif not has_price_tag:
-        print("    -> [跳过] 画面内判定无商品价签，无需执行价签识别。")
-    else:
-        print("    -> [Step 2] 质检通过且包含价签，正在执行价签单品检测 ...")
-        try:
-            detection_result, elapsed = run_price_tag_detection(image_url)
-            tags = detection_result["price_tags"]
-            promotion_tags = detection_result["promotion_tags"]
-            pipeline_record["step2_price_tags"] = {
-                "total_tags": len(tags),
-                "total_promotion_tags": len(promotion_tags),
-                "elapsed_sec": round(elapsed, 2),
-                "tags": tags,
-                "promotion_tags": promotion_tags,
-            }
-            print(f"       价签识别成功: 共识别到 {len(tags)} 个有效单品价签 (耗时 {elapsed:.2f}s)")
-            if promotion_tags:
-                print(f"       已单独标记 {len(promotion_tags)} 个第二件价格促销签")
-            vis_path = vis_dir / f"{img_path.stem}.vis.jpg"
-            draw_visual_tags_simple(str(img_path), tags, str(vis_path), promotion_tags)
-            print(f"       已生成高质量标注图: {vis_path.name}")
-        except Exception as e:
-            print(f"    [!] 价签识别异常: {e}")
-            pipeline_record["step2_price_tags"] = {"error": str(e)}
+    # 4. 严格三道门槛拦截流转
+    if not is_quality_pass:
+        print("    -> [拦截并跳过] 图片质量不达标，跳过此图，继续下一张。")
+        pipeline_record["status"] = "skipped_invalid_quality"
+        with open(final_report_file, "w", encoding="utf-8") as f:
+            json.dump(pipeline_record, f, ensure_ascii=False, indent=2)
+        print(f"    -> [标记完成] 全流程报告已沉淀: {final_report_file.name}")
+        return
+
+    if not is_scene_valid:
+        print(f"    -> [拦截并跳过] 场景类型不符合要求 ({scene_type})，仅支持货架/冰箱/堆头，跳过此图。")
+        pipeline_record["status"] = "skipped_invalid_scene"
+        with open(final_report_file, "w", encoding="utf-8") as f:
+            json.dump(pipeline_record, f, ensure_ascii=False, indent=2)
+        print(f"    -> [标记完成] 全流程报告已沉淀: {final_report_file.name}")
+        return
+
+    if not has_price_tag:
+        print("    -> [跳过] 画面内判定无有效商品价签，跳过此图，继续下一张。")
+        pipeline_record["status"] = "skipped_no_price_tag"
+        with open(final_report_file, "w", encoding="utf-8") as f:
+            json.dump(pipeline_record, f, ensure_ascii=False, indent=2)
+        print(f"    -> [标记完成] 全流程报告已沉淀: {final_report_file.name}")
+        return
+    
+    img_cv = cv_imread_utf8(str(img_path))
+    img_h, img_w = img_cv.shape[:2] if img_cv is not None else (1000, 1000)
+
+    print("    -> [Step 2] 质检通过且包含价签，正在执行价签单品检测 ...")
+    try:
+        detection_result, elapsed = run_price_tag_detection(image_url, img_w=img_w, img_h=img_h)
+        tags = detection_result["price_tags"]
+        promotion_tags = detection_result["promotion_tags"]
+        pipeline_record["step2_price_tags"] = {
+            "total_tags": len(tags),
+            "total_promotion_tags": len(promotion_tags),
+            "elapsed_sec": round(elapsed, 2),
+            "tags": tags,
+            "promotion_tags": promotion_tags,
+        }
+        print(f"       价签识别成功: 共识别到 {len(tags)} 个有效单品价签 (耗时 {elapsed:.2f}s)")
+        if promotion_tags:
+            print(f"       已单独标记 {len(promotion_tags)} 个第二件价格促销签")
+        vis_path = vis_dir / f"{img_path.stem}.vis.jpg"
+        draw_visual_tags_simple(str(img_path), tags, str(vis_path), promotion_tags)
+        print(f"       已生成高质量标注图: {vis_path.name}")
+    except Exception as e:
+        print(f"    [!] 价签识别异常: {e}")
+        pipeline_record["step2_price_tags"] = {"error": str(e)}
 
     pipeline_record["step3_sku"] = run_sku_recognition(
         image_url=image_url, 
-        price_tags=pipeline_record.get("step2_price_tags", {}).get("tags", [])
+        price_tags=(pipeline_record.get("step2_price_tags") or {}).get("tags", [])
     )
 
     with open(final_report_file, "w", encoding="utf-8") as f:
@@ -562,9 +509,10 @@ def main():
     parser.add_argument("--limit", type=int, default=12, help="批量处理数量")
     parser.add_argument("--target-image", default="", help="指定单张图片精确跑")
     parser.add_argument("--force", action="store_true", help="强制重新执行，覆盖已有全流程报告")
+    parser.add_argument("--img-dir", default="", help="specify image dir")
     args = parser.parse_args()
 
-    img_dir = Path(r"D:\Shixi\mengniu\蒙牛 poc0805_images")
+    img_dir = Path(args.img_dir) if args.img_dir else Path(r"D:\Shixi\mengniu\蒙牛 poc0805_images")
     output_dir = Path(r"D:\Shixi\mengniu\全流程运行结果")
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -585,7 +533,10 @@ def main():
 
     for idx, img_path in enumerate(target_images, 1):
         print(f"\n[{idx}/{len(target_images)}] 处理图片: {img_path.name}")
-        process_single_image(img_path, oss_map, output_dir, force=args.force)
+        try:
+            process_single_image(img_path, oss_map, output_dir, force=args.force)
+        except Exception as e:
+            print(f"    [!] 单图处理异常已捕获，跳过继续下一张: {e}")
 
     print("\n" + "=" * 80)
     print("全流程处理完成，结果保存至: " + str(output_dir))
