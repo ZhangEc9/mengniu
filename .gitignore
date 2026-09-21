@@ -24,6 +24,7 @@ output_*/
 test_output/
 *.txt
 !prompts/*.txt
+*.db
 *.b64
 temp_*
 
