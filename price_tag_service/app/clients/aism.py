@@ -28,9 +28,13 @@ class AismClient:
         return content
 
     @staticmethod
-    def _make_sign(body: dict[str, Any], secret: str, timestamp: str) -> str:
-        sign_str = json.dumps(body) + secret + timestamp
+    def _make_sign(request_body: str, secret: str, timestamp: str) -> str:
+        sign_str = request_body + secret + timestamp
         return hashlib.md5(sign_str.encode("utf-8")).hexdigest()
+
+    @staticmethod
+    def _serialize_body(body: dict[str, Any]) -> str:
+        return json.dumps(body)
 
     @staticmethod
     def _build_body(image_url: str, system_text: str, user_text: str) -> dict[str, Any]:
@@ -74,6 +78,14 @@ class AismClient:
         digest = hashlib.sha256((system_text + "\n" + user_text).encode("utf-8")).hexdigest()
         return f"sha256:{digest[:12]}"
 
+    @staticmethod
+    def _normalize_parsed_payload(ability: str, parsed: Any) -> dict[str, Any]:
+        if ability == "PRICE_TAG_DETECT" and isinstance(parsed, list):
+            return {"price_tags": parsed}
+        if not isinstance(parsed, dict):
+            raise ValueError("page_content is not a JSON object")
+        return parsed
+
     def _invoke(self, ability: str, body: dict[str, Any], prompt_version: str) -> AismCallResult:
         self.config.prompt_version = prompt_version
         if not self.config.api_url or not self.config.appid or not self.config.secret.get_secret_value():
@@ -85,16 +97,21 @@ class AismClient:
             for attempt in range(1, self.config.retries + 1):
                 started = time.perf_counter()
                 timestamp = str(int(time.time() * 1000))
-                headers = {
-                    "X-MN-APP-ID": self.config.appid,
-                    "X-MN-SIGN": self._make_sign(
-                        body, self.config.secret.get_secret_value(), timestamp
-                    ),
-                    "X-MN-TIMESTAMP": timestamp,
-                    "Content-Type": "application/json",
-                }
                 try:
-                    response = client.post(self.config.api_url, headers=headers, json=body)
+                    request_body = self._serialize_body(body)
+                    headers = {
+                        "X-MN-APP-ID": self.config.appid,
+                        "X-MN-SIGN": self._make_sign(
+                            request_body, self.config.secret.get_secret_value(), timestamp
+                        ),
+                        "X-MN-TIMESTAMP": timestamp,
+                        "Content-Type": "application/json",
+                    }
+                    response = client.post(
+                        self.config.api_url,
+                        headers=headers,
+                        content=request_body.encode("utf-8"),
+                    )
                     cost_sec = round(time.perf_counter() - started, 3)
                     try:
                         raw_response = response.json()
@@ -211,7 +228,9 @@ class AismClient:
                         "page_content", ""
                     )
                     parsed = parse_robust_json(page_content)
-                    if not isinstance(parsed, dict):
+                    try:
+                        parsed = self._normalize_parsed_payload(ability, parsed)
+                    except ValueError:
                         logs.append(
                             CallLog(
                                 ability=ability,

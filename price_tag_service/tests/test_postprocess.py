@@ -1,7 +1,7 @@
 from app.processing.postprocess import postprocess_price_payload
 
 
-def test_postprocess_keeps_bundle_and_second_item_promotions():
+def test_postprocess_excludes_bundle_and_second_item_promotions():
     parsed = {
         "price_tags": [
             {
@@ -30,11 +30,15 @@ def test_postprocess_keeps_bundle_and_second_item_promotions():
         min_price=2,
         max_price=99,
     )
-    assert len(result.price_tags) == 2
-    assert result.price_tags[0]["bundle_quantity"] == 2
-    assert result.price_tags[0]["bundle_price"] == "19.90"
+    assert len(result.price_tags) == 1
+    assert result.price_tags[0]["id"] == 1
+    assert result.price_tags[0]["price"] == "9.90"
+    assert result.price_tags[0]["unit"] == "元"
     assert len(result.promotion_tags) == 2
     assert result.promotion_tags[-1]["second_item_price"] == "1"
+    rules = {event["rule"] for event in result.filter_events}
+    assert "BUNDLE_PROMOTION_EXCLUDED" in rules
+    assert "SECOND_ITEM_PROMOTION_EXCLUDED" in rules
     assert not any(event["rule"] == "PRICE_OUT_OF_RANGE" for event in result.filter_events)
 
 

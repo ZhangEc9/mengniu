@@ -9,7 +9,16 @@ from app.clients.models import AismCallResult
 from app.core.config import Settings
 from app.db.session import Database
 from app.main import create_app
-from app.models.entities import PhotoOutcome, PhotoStatus, PriceTagDetail, QcResult, RecognitionPhoto
+from app.models.entities import (
+    PhotoOutcome,
+    PhotoStatus,
+    PriceResult,
+    PriceTagDetail,
+    QcResult,
+    ProcessStage,
+    RecognitionPhoto,
+)
+from app.services.task_service import reset_photo_for_retry
 from app.worker.processor import PhotoProcessor
 from app.worker.queue import claim_next_photo
 
@@ -50,9 +59,28 @@ class FakePriceClient:
                         "raw_price_text": "8.90元",
                         "tag_type": "regular_price",
                         "confidence": 0.9,
+                        "unit": "元",
+                    },
+                    {
+                        "id": 2,
+                        "bbox": [200, 100, 280, 130],
+                        "price": "19.90",
+                        "raw_price_text": "两件19.90元",
+                        "tag_type": "bundle_promotion",
+                        "bundle_quantity": 2,
+                        "bundle_price": "19.90",
+                        "confidence": 0.9,
                     }
                 ],
-                "promotion_tags": [],
+                "promotion_tags": [
+                    {
+                        "id": 1,
+                        "bbox": [300, 100, 380, 130],
+                        "price": "1",
+                        "raw_price_text": "第二件1元",
+                        "tag_type": "second_item_promotion",
+                    }
+                ],
             },
             raw_response={"status": 0},
             page_content="{}",
@@ -125,6 +153,8 @@ def test_worker_completes_fake_flow(tmp_path: Path, monkeypatch):
     )
     processor.process_photo_id(photo_id)
 
+    app = create_app(settings)
+
     with database.session_factory() as session:
         photo = session.get(RecognitionPhoto, photo_id)
         assert photo.status == PhotoStatus.COMPLETED
@@ -134,3 +164,61 @@ def test_worker_completes_fake_flow(tmp_path: Path, monkeypatch):
         detail = session.scalar(select(PriceTagDetail).where(PriceTagDetail.photo_id == photo_id))
         assert qc is not None and qc.can_proceed_to_price is True
         assert detail is not None and float(detail.price) == 8.90
+        assert detail.tag_type == "regular_price"
+        assert detail.bundle_quantity is None
+        assert detail.bundle_price is None
+        assert detail.second_item_price is None
+        assert detail.is_promotion is False
+        price_result = session.scalar(
+            select(PriceResult).where(PriceResult.photo_id == photo_id)
+        )
+        assert price_result is not None
+        assert price_result.total_tags == 1
+        assert price_result.total_promotion_tags == 2
+        exclusion_rules = {event["rule"] for event in price_result.filter_events}
+        assert "BUNDLE_PROMOTION_EXCLUDED" in exclusion_rules
+        assert "SECOND_ITEM_PROMOTION_EXCLUDED" in exclusion_rules
+
+    with TestClient(app) as client:
+        tags_response = client.get(f"/v1/photos/{photo_id}/tags")
+        assert tags_response.status_code == 200
+        tags_payload = tags_response.json()
+        assert tags_payload["price_tag_count"] == 1
+        assert tags_payload["price_tags"] == [
+            {
+                "id": 1,
+                "bbox": [100, 100, 180, 130],
+                "coordinate_scale": 1000,
+                "price": "8.90",
+                "raw_price_text": "8.90元",
+                "unit": "元",
+            }
+        ]
+
+
+def test_manual_retry_resets_retry_count(tmp_path: Path):
+    database_url = f"sqlite:///{tmp_path/'retry.db'}"
+    settings = make_settings(database_url)
+    database = Database(settings)
+    database.create_all()
+    from app.schemas.tasks import PhotoCreate
+    from app.services.task_service import create_task
+
+    with database.session_factory() as session:
+        task, _ = create_task(
+            session,
+            source_type="TEST",
+            photos=[PhotoCreate(image_url="https://example.com/retry.jpg")],
+        )
+        photo = session.scalars(
+            select(RecognitionPhoto).where(RecognitionPhoto.task_id == task.id)
+        ).one()
+        photo.retry_count = 3
+        photo.status = PhotoStatus.FAILED
+        photo.outcome = PhotoOutcome.FAILED
+        session.commit()
+
+        reset_photo_for_retry(session, photo, from_stage=ProcessStage.PRICE_RECOGNITION)
+        assert photo.retry_count == 0
+        assert photo.status == PhotoStatus.QUEUED
+        assert photo.outcome == PhotoOutcome.PENDING

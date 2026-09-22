@@ -6,6 +6,52 @@
 
 import re
 
+
+def _amount(value) -> float | None:
+    try:
+        return float(re.sub(r"[^\d.]", "", str(value)))
+    except (TypeError, ValueError):
+        return None
+
+
+def filter_price_range(tags: list, min_price: float = None, max_price: float = None) -> list:
+    """剔除明显不在合理零售价区间的价签；第二件促销价不参与下限过滤。"""
+    if min_price is None and max_price is None:
+        return tags
+
+    filtered_tags = []
+    for tag in tags:
+        tag_type = str(tag.get("tag_type") or tag.get("promotion_type") or "")
+        is_second_item = tag_type == "second_item_promotion"
+
+        min_amounts = [_amount(tag.get("price"))]
+        if tag.get("bundle_price") is not None:
+            min_amounts.append(_amount(tag.get("bundle_price")))
+        if is_second_item:
+            min_amounts = []
+
+        max_amounts = min_amounts.copy()
+        if tag.get("second_item_price") is not None:
+            max_amounts.append(_amount(tag.get("second_item_price")))
+
+        valid_min_amounts = [amount for amount in min_amounts if amount is not None]
+        valid_max_amounts = [amount for amount in max_amounts if amount is not None]
+        below_min = min_price is not None and any(
+            amount <= min_price for amount in valid_min_amounts
+        )
+        above_max = max_price is not None and any(
+            amount > max_price for amount in valid_max_amounts
+        )
+        is_out_of_range = below_min or above_max
+        if is_out_of_range:
+            print(
+                f"        [!] 剔除价格范围外价签: "
+                f"price={tag.get('price')}, 保留区间=({min_price}, {max_price}]"
+            )
+            continue
+        filtered_tags.append(tag)
+    return filtered_tags
+
 # 1. 组合促销正则（如：两件18元、2件20.9元）
 BUNDLE_PROMOTION_RE = re.compile(
     r"(\d+|两)\s*件\s*(\d+(?:\.\d{1,2})?)\s*(?:元|块|￥|RMB)?", 

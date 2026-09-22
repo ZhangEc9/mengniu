@@ -77,41 +77,26 @@ def qc_result(qc: QcResult) -> dict[str, Any]:
 
 def price_tag_detail(detail: PriceTagDetail) -> dict[str, Any]:
     return {
-        "id": detail.id,
-        "tag_id": detail.tag_id,
-        "shelf_layer": detail.shelf_layer,
+        "id": detail.tag_id,
         "bbox": [detail.bbox_xmin, detail.bbox_ymin, detail.bbox_xmax, detail.bbox_ymax],
         "coordinate_scale": detail.coordinate_scale,
-        "price": float(detail.price) if detail.price is not None else None,
+        "price": f"{detail.price:.2f}" if detail.price is not None else None,
         "raw_price_text": detail.raw_price_text,
-        "tag_type": detail.tag_type,
-        "promotion_type": detail.promotion_type,
-        "bundle_quantity": detail.bundle_quantity,
-        "bundle_price": float(detail.bundle_price) if detail.bundle_price is not None else None,
-        "second_item_price": (
-            float(detail.second_item_price) if detail.second_item_price is not None else None
-        ),
         "unit": detail.unit,
-        "confidence": detail.confidence,
-        "price_confidence": detail.price_confidence,
-        "confidence_reason": detail.confidence_reason,
-        "is_promotion": detail.is_promotion,
     }
 
 
-def price_result(result: PriceResult, details: list[PriceTagDetail]) -> dict[str, Any]:
+def price_result(
+    photo: RecognitionPhoto,
+    qc: QcResult | None,
+    result: PriceResult,
+    details: list[PriceTagDetail],
+) -> dict[str, Any]:
     return {
-        "total_raw_tags": result.total_raw_tags,
-        "total_tags": result.total_tags,
-        "total_promotion_tags": result.total_promotion_tags,
-        "image_width": result.image_width,
-        "image_height": result.image_height,
-        "recognition_mode": result.recognition_mode,
-        "model_name": result.model_name,
-        "prompt_version": result.prompt_version,
-        "postprocess_version": result.postprocess_version,
-        "model_cost_sec": result.model_cost_sec,
-        "filter_events": result.filter_events,
+        "image_name": photo.image_name,
+        "image_url": photo.image_url,
+        "scene_type": qc.scene_type if qc is not None else None,
+        "price_tag_count": len(details),
         "price_tags": [price_tag_detail(detail) for detail in details],
     }
 

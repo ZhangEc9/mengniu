@@ -7,7 +7,7 @@ from decimal import Decimal, InvalidOperation
 from typing import Any
 
 
-POSTPROCESS_VERSION = "service-postprocess-v2"
+POSTPROCESS_VERSION = "service-postprocess-v3-deliver-regular-only"
 BUNDLE_PROMOTION_RE = re.compile(
     r"(\d+|两)\s*件\s*(\d+(?:\.\d{1,2})?)\s*(?:元|块|￥|RMB)?", re.IGNORECASE
 )
@@ -220,11 +220,27 @@ def _split_price_and_promotion(
             )
             continue
         if is_second_item_promotion(tag):
-            promotion_tags.append(normalize_second_item_promotion(tag))
+            normalized_promotion = normalize_second_item_promotion(tag)
+            promotion_tags.append(normalized_promotion)
+            events.append(
+                FilterEvent(
+                    "SECOND_ITEM_PROMOTION_EXCLUDED",
+                    "第二件促销不进入交付结果",
+                    tag.get("id"),
+                    str(normalized_promotion.get("second_item_price", "")),
+                )
+            )
         elif is_bundle_promotion(tag):
             normalized_bundle = normalize_bundle_promotion(tag)
-            price_tags.append(normalized_bundle)
-            promotion_tags.append(dict(normalized_bundle))
+            promotion_tags.append(normalized_bundle)
+            events.append(
+                FilterEvent(
+                    "BUNDLE_PROMOTION_EXCLUDED",
+                    "组合促销不进入交付结果",
+                    tag.get("id"),
+                    str(normalized_bundle.get("bundle_price", "")),
+                )
+            )
         else:
             price_tags.append(tag)
 
@@ -237,9 +253,27 @@ def _split_price_and_promotion(
             events.append(FilterEvent("INVALID_PROMOTION", "无效促销宣传", tag.get("id")))
             continue
         if is_bundle_promotion(tag):
-            promotion_tags.append(normalize_bundle_promotion(tag))
+            normalized_bundle = normalize_bundle_promotion(tag)
+            promotion_tags.append(normalized_bundle)
+            events.append(
+                FilterEvent(
+                    "BUNDLE_PROMOTION_EXCLUDED",
+                    "组合促销不进入交付结果",
+                    tag.get("id"),
+                    str(normalized_bundle.get("bundle_price", "")),
+                )
+            )
         else:
-            promotion_tags.append(normalize_second_item_promotion(tag))
+            normalized_promotion = normalize_second_item_promotion(tag)
+            promotion_tags.append(normalized_promotion)
+            events.append(
+                FilterEvent(
+                    "SECOND_ITEM_PROMOTION_EXCLUDED",
+                    "第二件促销不进入交付结果",
+                    tag.get("id"),
+                    str(normalized_promotion.get("second_item_price", "")),
+                )
+            )
 
     return price_tags, promotion_tags, total_raw_tags
 
@@ -478,6 +512,9 @@ def postprocess_price_payload(
     for index, tag in enumerate(final_price_tags, 1):
         tag["id"] = index
         tag.pop("_normalized_bbox", None)
+        amount = parse_amount(tag.get("price"))
+        tag["price"] = f"{amount:.2f}" if amount is not None else str(tag.get("price") or "")
+        tag["unit"] = str(tag.get("unit") or "元").strip() or "元"
     for index, tag in enumerate(final_promotion_tags, 1):
         tag["id"] = index
         tag.pop("_normalized_bbox", None)

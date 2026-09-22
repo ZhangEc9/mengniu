@@ -198,6 +198,7 @@ def reset_photo_for_retry(
     photo.stop_reason = None
     photo.last_error_type = None
     photo.last_error_message = None
+    photo.retry_count = 0
     photo.current_stage = from_stage or ProcessStage.QUALITY_CHECK
     photo.next_run_at = utc_now()
     photo.locked_by = None

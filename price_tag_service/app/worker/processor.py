@@ -254,13 +254,7 @@ class PhotoProcessor:
             max_price=max_price,
         )
         session.execute(delete(PriceTagDetail).where(PriceTagDetail.price_result_id == price_result.id))
-        promotion_bboxes = {tuple(tag.get("bbox", [])) for tag in postprocessed.promotion_tags}
         detail_tags = list(postprocessed.price_tags)
-        detail_tags.extend(
-            tag
-            for tag in postprocessed.promotion_tags
-            if tuple(tag.get("bbox", [])) not in {tuple(price_tag.get("bbox", [])) for price_tag in postprocessed.price_tags}
-        )
         for tag in detail_tags:
             bbox = tag.get("bbox") or [None, None, None, None]
             amount = parse_amount(tag.get("price"))
@@ -288,7 +282,7 @@ class PhotoProcessor:
                     confidence=tag.get("confidence"),
                     price_confidence=tag.get("price_confidence"),
                     confidence_reason=tag.get("confidence_reason"),
-                    is_promotion=tuple(tag.get("bbox", [])) in promotion_bboxes,
+                    is_promotion=False,
                 )
             )
         price_result.total_raw_tags = (

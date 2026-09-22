@@ -66,7 +66,9 @@ def get_photo(photo_id: str, db: DbDep):
     return {
         **photo_summary(photo),
         "qc": qc_result(qc) if qc is not None else None,
-        "price": price_result(price, details) if price is not None else None,
+        "price": (
+            price_result(photo, qc, price, details) if price is not None else None
+        ),
         "sku": {"status": "NOT_CONFIGURED", "message": "SKU识别服务暂未接入", "sku_items": []},
     }
 
@@ -91,7 +93,7 @@ def get_photo_tags(photo_id: str, db: DbDep):
         .where(PriceTagDetail.price_result_id == price.id)
         .order_by(PriceTagDetail.tag_id)
     ).all()
-    return {"photo_id": photo.id, **price_result(price, details)}
+    return price_result(photo, _latest_qc(db, photo_id), price, details)
 
 
 @router.get("/{photo_id}/sku")

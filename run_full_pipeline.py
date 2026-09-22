@@ -160,6 +160,7 @@ QC_QUALITY_KEYS = ["图片模糊", "过度曝光", "光线不足", "文件损坏
 
 # 兼容模型返回的历史别名（模型偶尔输出旧版字段名）
 QC_QUALITY_KEY_ALIASES = {"严重过曝": "过度曝光"}
+QC_QUALITY_VALUE_ALIASES = {"合": "合格"}
 
 def normalize_quality_checks(quality_checks) -> dict:
     """将模型返回的质量项键名归一化为 prompts/quality_system_prompt.txt 中的标准名称。"""
@@ -169,6 +170,7 @@ def normalize_quality_checks(quality_checks) -> dict:
     for raw_key, raw_val in quality_checks.items():
         key = str(raw_key).strip()
         key = QC_QUALITY_KEY_ALIASES.get(key, key)
+        raw_val = QC_QUALITY_VALUE_ALIASES.get(str(raw_val).strip(), raw_val)
         if key not in normalized:
             normalized[key] = raw_val
     return normalized
@@ -191,7 +193,7 @@ def cv_imwrite_utf8(path: str, img):
         return False
 
 # ==================== 4. 阶段一：质量审核执行器 ====================
-def run_quality_check(image_url: str, timeout: int = 60) -> dict:
+def run_quality_check(image_url: str, timeout: int = 60, retries: int = 3) -> dict:
     qc_sys, qc_usr = get_quality_prompts()
     body = {
         "target_sku_img": image_url,
@@ -213,10 +215,19 @@ def run_quality_check(image_url: str, timeout: int = 60) -> dict:
         "Content-Type": "application/json",
     }
     t0 = time.time()
-    resp = requests.post(QC_API_URL, headers=headers, json=body, timeout=timeout)
+    last_error = None
+    for attempt in range(1, retries + 1):
+        try:
+            resp = requests.post(QC_API_URL, headers=headers, json=body, timeout=timeout)
+            resp.raise_for_status()
+            break
+        except requests.RequestException as exc:
+            last_error = exc
+            print(f"    [!] 质检请求第 {attempt}/{retries} 次失败: {exc}")
+            if attempt == retries:
+                raise
+            time.sleep(2 * attempt)
     elapsed = time.time() - t0
-    if resp.status_code != 200:
-        raise RuntimeError(f"质量审核 HTTP 异常: {resp.status_code}")
     res_data = resp.json()
     if res_data.get("status") != 0:
         raise RuntimeError(f"质量审核业务错误: {res_data.get('message')}")
@@ -230,13 +241,21 @@ def run_quality_check(image_url: str, timeout: int = 60) -> dict:
 
 # ==================== 5. 阶段二：价签识别执行器 ====================
 from price_postprocess import (
+    filter_price_range,
     resolve_tag_bbox,
     split_price_and_promotion_tags,
     smart_consecutive_repetition_filter,
     valid_promotion_tags,
 )
 
-def run_price_tag_detection(image_url: str, img_w: int = 1000, img_h: int = 1000, timeout: int = 360):
+def run_price_tag_detection(
+    image_url: str,
+    img_w: int = 1000,
+    img_h: int = 1000,
+    timeout: int = 360,
+    min_price: float = None,
+    max_price: float = None,
+):
     price_sys, price_usr = get_price_prompts()
     body = {
         "image": image_url,
@@ -282,7 +301,9 @@ def run_price_tag_detection(image_url: str, img_w: int = 1000, img_h: int = 1000
     raw_tags, raw_promotion_tags = split_price_and_promotion_tags(parsed)
     clean_tags = [t for t in raw_tags if t.get("price") and str(t["price"]).strip().lower() not in ["none", "null", ""]]
     final_tags = smart_consecutive_repetition_filter(clean_tags, img_w=img_w, img_h=img_h)
+    final_tags = filter_price_range(final_tags, min_price=min_price, max_price=max_price)
     promotion_tags = valid_promotion_tags(raw_promotion_tags)
+    promotion_tags = filter_price_range(promotion_tags, min_price=min_price, max_price=max_price)
     return {"price_tags": final_tags, "promotion_tags": promotion_tags}, elapsed
 
 def draw_visual_tags_simple(image_path: str, tags: list, output_path: str, promotion_tags: list = None):
@@ -331,7 +352,15 @@ def run_sku_recognition(image_url: str, price_tags: list = None, **kwargs) -> di
         "sku_items": []
     }
 
-def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, force: bool = False):
+def process_single_image(
+    img_path: Path,
+    oss_map: dict,
+    output_base_dir: Path,
+    force: bool = False,
+    skip_price_gate: bool = False,
+    min_price: float = None,
+    max_price: float = None,
+):
     img_name = img_path.name
     qc_dir = output_base_dir / "qc_results"
     vis_dir = output_base_dir / "vis_images"
@@ -370,6 +399,7 @@ def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, f
 
     print("    -> [Step 1] 正在进行图片质量预检与场景识别 ...")
     qc_file = qc_dir / f"{img_path.stem}.qc.json"
+    qc_api_error = False
     try:
         qc_output = run_quality_check(image_url)
         pipeline_record["step1_qc"] = qc_output
@@ -394,7 +424,7 @@ def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, f
         is_scene_valid = any(kw in scene_type for kw in valid_scene_keywords)
 
         # 综合准入判断：质量合格 AND 识别出价签 AND 场景满足
-        can_proceed_to_price = is_quality_pass and is_scene_valid and has_price_tag
+        can_proceed_to_price = is_quality_pass and is_scene_valid and (has_price_tag or skip_price_gate)
 
         # 3. 输出独立质检 JSON 文件
         rejection_reasons = []
@@ -405,6 +435,8 @@ def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, f
             rejection_reasons.append(f"非目标巡店场景: {scene_type} (仅限货架照/冰箱照/堆头照)")
         if not has_price_tag:
             rejection_reasons.append("画面内未检出有效商品价签")
+
+        price_gate_skipped = skip_price_gate and not has_price_tag
 
         qc_record = {
             "image_name": img_name,
@@ -417,6 +449,7 @@ def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, f
                 "is_scene_valid": is_scene_valid,
                 "scene_type": scene_type,
                 "has_price_tag": has_price_tag,
+                "price_gate_skipped": price_gate_skipped,
                 "can_proceed_to_price_tag": can_proceed_to_price,
                 "rejection_reasons": rejection_reasons
             }
@@ -432,17 +465,33 @@ def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, f
             print(f"       不合格原因: {invalid_reason}")
     except Exception as e:
         print(f"    [!] 质量审核执行异常: {e}")
-        pipeline_record["step1_qc"] = {"error": str(e)}
+        pipeline_record["step1_qc"] = {
+            "error": str(e),
+            "error_type": "qc_api_error",
+        }
+        qc_api_error = True
         is_quality_pass, has_price_tag, is_scene_valid = False, False, False
         qc_record = {
             "image_name": img_name,
             "image_url": image_url,
             "checked_at": time.strftime("%Y-%m-%d %H:%M:%S"),
             "error": str(e),
-            "decision": {"can_proceed_to_price_tag": False, "rejection_reasons": [str(e)]}
+            "decision": {
+                "status": "qc_api_error",
+                "can_proceed_to_price_tag": False,
+                "rejection_reasons": ["质检服务调用失败，待重跑"],
+            }
         }
         with open(qc_file, "w", encoding="utf-8") as qf:
             json.dump(qc_record, qf, ensure_ascii=False, indent=2)
+
+    if qc_api_error:
+        print("    -> [待重跑] 质检服务调用失败，该图不计入质量不合格。")
+        pipeline_record["status"] = "skipped_qc_api_error"
+        with open(final_report_file, "w", encoding="utf-8") as f:
+            json.dump(pipeline_record, f, ensure_ascii=False, indent=2)
+        print(f"    -> [标记待重跑] 全流程报告已沉淀: {final_report_file.name}")
+        return pipeline_record
 
     # 4. 严格三道门槛拦截流转
     if not is_quality_pass:
@@ -451,7 +500,7 @@ def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, f
         with open(final_report_file, "w", encoding="utf-8") as f:
             json.dump(pipeline_record, f, ensure_ascii=False, indent=2)
         print(f"    -> [标记完成] 全流程报告已沉淀: {final_report_file.name}")
-        return
+        return pipeline_record
 
     if not is_scene_valid:
         print(f"    -> [拦截并跳过] 场景类型不符合要求 ({scene_type})，仅支持货架/冰箱/堆头，跳过此图。")
@@ -459,22 +508,31 @@ def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, f
         with open(final_report_file, "w", encoding="utf-8") as f:
             json.dump(pipeline_record, f, ensure_ascii=False, indent=2)
         print(f"    -> [标记完成] 全流程报告已沉淀: {final_report_file.name}")
-        return
+        return pipeline_record
 
     if not has_price_tag:
-        print("    -> [跳过] 画面内判定无有效商品价签，跳过此图，继续下一张。")
-        pipeline_record["status"] = "skipped_no_price_tag"
-        with open(final_report_file, "w", encoding="utf-8") as f:
-            json.dump(pipeline_record, f, ensure_ascii=False, indent=2)
-        print(f"    -> [标记完成] 全流程报告已沉淀: {final_report_file.name}")
-        return
+        if skip_price_gate:
+            print("    -> [跳过价签门槛] 质检未检出价签，但已按要求继续执行价签识别。")
+        else:
+            print("    -> [跳过] 画面内判定无有效商品价签，跳过此图，继续下一张。")
+            pipeline_record["status"] = "skipped_no_price_tag"
+            with open(final_report_file, "w", encoding="utf-8") as f:
+                json.dump(pipeline_record, f, ensure_ascii=False, indent=2)
+            print(f"    -> [标记完成] 全流程报告已沉淀: {final_report_file.name}")
+            return pipeline_record
     
     img_cv = cv_imread_utf8(str(img_path))
     img_h, img_w = img_cv.shape[:2] if img_cv is not None else (1000, 1000)
 
     print("    -> [Step 2] 质检通过且包含价签，正在执行价签单品检测 ...")
     try:
-        detection_result, elapsed = run_price_tag_detection(image_url, img_w=img_w, img_h=img_h)
+        detection_result, elapsed = run_price_tag_detection(
+            image_url,
+            img_w=img_w,
+            img_h=img_h,
+            min_price=min_price,
+            max_price=max_price,
+        )
         tags = detection_result["price_tags"]
         promotion_tags = detection_result["promotion_tags"]
         pipeline_record["step2_price_tags"] = {
@@ -502,49 +560,101 @@ def process_single_image(img_path: Path, oss_map: dict, output_base_dir: Path, f
     with open(final_report_file, "w", encoding="utf-8") as f:
         json.dump(pipeline_record, f, ensure_ascii=False, indent=2)
     print(f"    -> [完成] 全流程报告已沉淀: {final_report_file.name}")
+    pipeline_record["status"] = "completed"
+    return pipeline_record
 
 def main():
     parser = argparse.ArgumentParser(description="蒙牛智能巡店全流程一体化管线 (严禁大框版)")
     parser.add_argument("--offset", type=int, default=0, help="起始图片索引")
     parser.add_argument("--limit", type=int, default=12, help="批量处理数量")
-    parser.add_argument("--target-image", default="", help="指定单张图片精确跑")
+    parser.add_argument(
+        "--target-image",
+        nargs="+",
+        default=[],
+        help="一个或多个目标图片名片段",
+    )
     parser.add_argument("--force", action="store_true", help="强制重新执行，覆盖已有全流程报告")
-    parser.add_argument("--img-dir", default="", help="specify image dir")
+    parser.add_argument(
+        "--img-dir",
+        nargs="+",
+        default=[],
+        help="一个或多个图片目录；传入多个目录时，会在输出目录下按目录名分别生成结果",
+    )
     parser.add_argument(
         "--output-dir",
         default="",
         help="指定结果输出目录，默认使用 D:\\Shixi\\mengniu\\全流程运行结果",
     )
+    parser.add_argument(
+        "--skip-price-gate",
+        action="store_true",
+        help="质检未检出价签时仍继续执行价签识别；只跳过门槛，不改变质检记录",
+    )
+    parser.add_argument("--min-price", type=float, default=None, help="保留 price > 该值；不传则不过滤")
+    parser.add_argument("--max-price", type=float, default=None, help="保留 price <= 该值；不传则不过滤")
     args = parser.parse_args()
 
-    img_dir = Path(args.img_dir) if args.img_dir else Path(r"D:\Shixi\mengniu\蒙牛 poc0805_images")
-    output_dir = Path(args.output_dir) if args.output_dir else Path(r"D:\Shixi\mengniu\全流程运行结果")
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    valid_exts = {".jpg", ".jpeg", ".png", ".webp"}
-    all_images = sorted([p for p in img_dir.iterdir() if p.suffix.lower() in valid_exts])
-
-    if args.target_image:
-        target_images = [p for p in all_images if args.target_image.lower() in p.name.lower()]
-    else:
-        target_images = all_images[args.offset : args.offset + args.limit]
-
-    print("=" * 80)
-    print("=== 蒙牛巡店全流程管线 (严禁合并大框 + 彻底剔除过度扫描) ===")
-    print(f"待跑图片数: {len(target_images)} 张")
-    print("=" * 80)
+    img_dirs = [Path(path) for path in args.img_dir] if args.img_dir else [
+        Path(r"D:\Shixi\mengniu\蒙牛 poc0805_images")
+    ]
+    output_root = Path(args.output_dir) if args.output_dir else Path(r"D:\Shixi\mengniu\全流程运行结果")
+    output_root.mkdir(parents=True, exist_ok=True)
 
     oss_map = load_oss_map()
 
-    for idx, img_path in enumerate(target_images, 1):
-        print(f"\n[{idx}/{len(target_images)}] 处理图片: {img_path.name}")
-        try:
-            process_single_image(img_path, oss_map, output_dir, force=args.force)
-        except Exception as e:
-            print(f"    [!] 单图处理异常已捕获，跳过继续下一张: {e}")
+    for img_dir in img_dirs:
+        valid_exts = {".jpg", ".jpeg", ".png", ".webp"}
+        all_images = sorted([p for p in img_dir.iterdir() if p.suffix.lower() in valid_exts])
+
+        if args.target_image:
+            target_terms = [term.lower() for term in args.target_image]
+            target_images = [
+                p for p in all_images
+                if any(term in p.name.lower() for term in target_terms)
+            ]
+        else:
+            target_images = all_images[args.offset : args.offset + args.limit]
+
+        output_dir = output_root / img_dir.name if len(img_dirs) > 1 else output_root
+        output_dir.mkdir(parents=True, exist_ok=True)
+        failed_images = []
+
+        print("\n" + "=" * 80)
+        print(f"图片目录: {img_dir}")
+        print(f"结果目录: {output_dir}")
+        print(f"待跑图片数: {len(target_images)} 张")
+        print("=" * 80)
+
+        for idx, img_path in enumerate(target_images, 1):
+            print(f"\n[{idx}/{len(target_images)}] 处理图片: {img_path.name}")
+            try:
+                record = process_single_image(
+                    img_path,
+                    oss_map,
+                    output_dir,
+                    force=args.force,
+                    skip_price_gate=args.skip_price_gate,
+                    min_price=args.min_price,
+                    max_price=args.max_price,
+                )
+                if record and record.get("status") != "completed":
+                    failed_images.append(record)
+            except Exception as e:
+                print(f"    [!] 单图处理异常已捕获，跳过继续下一张: {e}")
+                failed_images.append(
+                    {
+                        "image_name": img_path.name,
+                        "status": "unhandled_exception",
+                        "error": str(e),
+                    }
+                )
+
+        failed_file = output_dir / "failed_images.json"
+        with open(failed_file, "w", encoding="utf-8") as f:
+            json.dump(failed_images, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print("全流程处理完成，结果保存至: " + str(output_dir))
+    print("全流程处理完成，结果保存至: " + str(output_root))
     print("=" * 80)
 
 if __name__ == "__main__":

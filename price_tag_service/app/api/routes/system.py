@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Request
 from sqlalchemy import func, select
 
 from app.models.entities import RecognitionPhoto
@@ -20,7 +20,7 @@ def ready() -> dict:
 
 
 @router.get("/v1/queue/stats", dependencies=[Depends(require_api_key)])
-def queue_stats(request) -> dict:
+def queue_stats(request: Request) -> dict:
     session_factory = request.app.state.db.session_factory
     with session_factory() as session:
         rows = session.execute(

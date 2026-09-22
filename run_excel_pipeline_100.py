@@ -16,7 +16,8 @@ from run_full_pipeline import (
     run_quality_check,
     run_price_tag_detection,
     coerce_bool,
-    draw_visual_tags_simple
+    draw_visual_tags_simple,
+    normalize_quality_checks
 )
 
 EXCEL_PATH = Path(r"D:/Shixi/mengniu/2026-09-18-14-38-17_EXPORT_XLSX_27962701_827/2026-09-18-14-38-17_EXPORT_XLSX_27962701_917_0.xlsx")
@@ -101,7 +102,7 @@ def main():
         try:
             qc_output = run_quality_check(url)
             qc_res = qc_output.get("qc_result", {})
-            quality_checks = qc_res.get("quality_checks", {})
+            quality_checks = normalize_quality_checks(qc_res.get("quality_checks", {}))
             required_keys = ["图片模糊", "过度曝光", "光线不足", "文件损坏"]
             is_quality_pass = all(
                 str(quality_checks.get(k, "")).strip() == "合格" for k in required_keys
@@ -186,7 +187,13 @@ def main():
                 pass
 
         try:
-            detection_res, elapsed = run_price_tag_detection(url, img_w=img_w, img_h=img_h)
+            detection_res, elapsed = run_price_tag_detection(
+                url,
+                img_w=img_w,
+                img_h=img_h,
+                min_price=2.0,
+                max_price=99.0
+            )
             tags = detection_res.get("price_tags", [])
             promotion_tags = detection_res.get("promotion_tags", [])
             print(f"       识别成功: 检出 {len(tags)} 个有效单品价签 (耗时 {elapsed:.2f}s)")

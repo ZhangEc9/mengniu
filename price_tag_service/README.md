@@ -22,6 +22,35 @@
 
 质检不合格、非目标场景、无价签都视为“处理成功但业务拦截”，不会进入失败重试。
 
+## 交付口径
+
+提示词仍要求模型识别普通价签、`第二件X元` 和组合促销；这样做的目的是减少普通单价误读。后处理继续识别并规范化这两类促销，但它们不进入最终交付结果。
+
+`/v1/photos/{photo_id}/tags` 的交付结构固定为：
+
+```json
+{
+  "image_name": "example.jpg",
+  "image_url": "https://example.com/example.jpg",
+  "scene_type": "货架照",
+  "price_tag_count": 1,
+  "price_tags": [
+    {
+      "id": 1,
+      "bbox": [120, 320, 230, 365],
+      "coordinate_scale": 1000,
+      "price": "9.90",
+      "raw_price_text": "9.90元",
+      "unit": "元"
+    }
+  ]
+}
+```
+
+促销候选、模型 confidence、剔除原因和原始响应仍保留在数据库中，用于审计和回归分析，但不作为交付字段输出。AISM 签名与 HTTP 请求体使用同一条序列化 JSON 字符串，避免因 `requests` 与 `httpx` 序列化差异导致验签失败。
+
+AISM 价签接口可能返回 JSON 数组，也可能用 Markdown 代码块包裹数组。服务端会先提取合法 JSON，再把数组规范化为内部 `{ "price_tags": [...] }` 结构；质检接口仍要求 JSON 对象。
+
 ## 项目结构
 
 ```text
@@ -138,6 +167,7 @@ curl.exe -X POST http://127.0.0.1:8000/v1/tasks `
 - AISM 每次调用 attempt 留痕，不保存签名密钥
 - 业务拦截与系统失败分离
 - 价签后处理独立成正式阶段，并保存 `filter_events`
+- 第二件促销和组合促销只识别、不计入交付结果
 - 本地上传 OSS 缓存
 - Excel 异步导入与导入任务查询
 - API Key 鉴权
@@ -161,7 +191,8 @@ D:\Anaconda\python.exe -m pytest tests -q --basetemp=.pytest_tmp
 测试覆盖：
 
 - 质检别名、严格门槛、业务拦截
-- 组合价、第二件促销、价格区间豁免
+- 组合价和第二件促销识别后剔除
+- AISM 签名与实际请求体一致
 - 营销语/规格误读过滤
 - IoU 去重与等距幻觉熔断
 - API 建任务和查询
