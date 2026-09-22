@@ -44,6 +44,7 @@ def extract_photos(
         worksheet = workbook.active
         if worksheet is None:
             return [], 0, 0
+        worksheet.reset_dimensions()
         headers = {
             _cell_value(cell.value): column_index
             for column_index, cell in enumerate(next(worksheet.iter_rows(min_row=1, max_row=1)))

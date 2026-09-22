@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import re
+import zipfile
 from pathlib import Path
 
 from fastapi.testclient import TestClient
@@ -38,6 +40,36 @@ def test_extract_photos_splits_urls_and_filters_deleted(tmp_path: Path):
     assert [photo.source_photo_type for photo in photos] == [
         "priceTagPhotos", "priceTagPhotos", "productCloseupPhotos"
     ]
+
+
+def test_extract_photos_ignores_invalid_worksheet_dimension(tmp_path: Path):
+    path = tmp_path / "export.xlsx"
+    workbook = Workbook()
+    worksheet = workbook.active
+    worksheet.append(
+        [
+            "id", "storeCode", "storeName", "storeRegion", "firstChannel", "secondChannel",
+            "xlOrderId", "xlMarketId", "visitStartTime", "visitFinishTime", "deletedAt",
+            "priceTagPhotos", "productCloseupPhotos",
+        ]
+    )
+    worksheet.append([1, "S1", "门店", "华东", "A", "B", "O1", "M1", None, None, None, "https://a/1.jpg", ""])
+    workbook.save(path)
+
+    malformed_path = tmp_path / "malformed.xlsx"
+    with zipfile.ZipFile(path, "r") as source, zipfile.ZipFile(malformed_path, "w") as target:
+        for item in source.infolist():
+            data = source.read(item.filename)
+            if item.filename.startswith("xl/worksheets/sheet"):
+                data = re.sub(rb'<dimension ref="[^"]+"/>', b'<dimension ref="A1"/>', data)
+            target.writestr(item, data)
+
+    photos, total_rows, valid_rows = extract_photos(
+        malformed_path, photo_sources=["priceTagPhotos", "productCloseupPhotos"], max_photos=10
+    )
+    assert total_rows == 1
+    assert valid_rows == 1
+    assert str(photos[0].image_url) == "https://a/1.jpg"
 
 
 def test_import_endpoint_commits_job_before_background_task(tmp_path, monkeypatch):
