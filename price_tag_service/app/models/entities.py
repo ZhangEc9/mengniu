@@ -159,6 +159,7 @@ class QcResult(Base):
     id: Mapped[str] = mapped_column(String(32), primary_key=True, default=new_uuid)
     photo_id: Mapped[str] = mapped_column(ForeignKey("recognition_photo.id"), index=True)
     run_id: Mapped[str] = mapped_column(ForeignKey("recognition_run.id"), index=True)
+    qc_status: Mapped[str] = mapped_column(String(16), nullable=False, default="SKIPPED", server_default="SKIPPED")
     is_valid: Mapped[bool] = mapped_column(Boolean)
     should_continue: Mapped[bool | None] = mapped_column(Boolean, nullable=True)
     qc_blur: Mapped[str | None] = mapped_column(String(32), nullable=True)

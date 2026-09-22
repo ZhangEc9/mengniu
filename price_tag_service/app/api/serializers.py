@@ -52,6 +52,8 @@ def photo_summary(photo: RecognitionPhoto) -> dict[str, Any]:
 
 def qc_result(qc: QcResult) -> dict[str, Any]:
     return {
+        "qc_status": qc.qc_status,
+        "skipped": qc.qc_status == "SKIPPED",
         "is_valid": qc.is_valid,
         "should_continue": qc.should_continue,
         "quality_checks": {

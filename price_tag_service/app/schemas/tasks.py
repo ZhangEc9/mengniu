@@ -11,11 +11,20 @@ class PhotoCreate(BaseModel):
     source_metadata: dict = Field(default_factory=dict)
 
 
+class QualityCheckConfig(BaseModel):
+    enabled: bool = True
+
+
+class AgentConfig(BaseModel):
+    quality_check: QualityCheckConfig = Field(default_factory=QualityCheckConfig)
+
+
 class TaskCreate(BaseModel):
     photos: list[PhotoCreate] = Field(min_length=1)
     photo_sources: list[str] | None = None
     min_price: float | None = None
     max_price: float | None = None
+    agent_config: AgentConfig | None = None
     created_by: str = Field(default="api", max_length=128)
     remark: str | None = None
 

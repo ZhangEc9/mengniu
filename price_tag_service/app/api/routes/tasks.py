@@ -29,6 +29,11 @@ def create_recognition_task(payload: TaskCreate, db: DbDep, settings: SettingsDe
             "min_price": payload.min_price,
             "max_price": payload.max_price,
             "photo_sources": payload.photo_sources,
+            "agent_config": (
+                payload.agent_config.model_dump()
+                if payload.agent_config is not None
+                else {"quality_check": {"enabled": True}}
+            ),
         },
         created_by=payload.created_by,
         remark=payload.remark,
@@ -82,6 +87,7 @@ def import_excel(
     request: Request,
     file: UploadFile = File(...),
     max_photos: int | None = None,
+    quality_check_enabled: bool = True,
 ):
     if not file.filename or not file.filename.lower().endswith((".xlsx", ".xlsm")):
         raise HTTPException(400, "只支持 .xlsx / .xlsm 巡店导出表")
@@ -112,6 +118,7 @@ def import_excel(
         excel_path=saved_path,
         photo_sources=settings.photo_sources,
         max_photos=limited_max,
+        quality_check_enabled=quality_check_enabled,
     )
     return import_job_result(job)
 

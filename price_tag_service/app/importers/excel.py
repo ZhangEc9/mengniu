@@ -100,6 +100,7 @@ def run_import_job(
     excel_path: Path,
     photo_sources: list[str],
     max_photos: int,
+    quality_check_enabled: bool = True,
 ) -> None:
     with session_factory() as session:
         job = session.get(ImportJob, import_job_id)
@@ -117,7 +118,13 @@ def run_import_job(
                 session,
                 source_type="EXCEL_IMPORT",
                 photos=photos,
-                task_config={"photo_sources": photo_sources, "max_photos": max_photos},
+                task_config={
+                    "photo_sources": photo_sources,
+                    "max_photos": max_photos,
+                    "agent_config": {
+                        "quality_check": {"enabled": quality_check_enabled}
+                    },
+                },
                 created_by="excel-import",
             )
             job.task_id = task.id

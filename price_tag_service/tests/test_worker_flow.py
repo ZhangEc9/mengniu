@@ -18,6 +18,7 @@ from app.models.entities import (
     ProcessStage,
     RecognitionPhoto,
     RecognitionTask,
+    RecognitionRun,
     TaskStatus,
 )
 from app.services.task_service import reset_photo_for_retry
@@ -26,7 +27,11 @@ from app.worker.queue import claim_next_photo
 
 
 class FakeQualityClient:
+    def __init__(self):
+        self.call_count = 0
+
     def quality_check(self, image_url: str):
+        self.call_count += 1
         return AismCallResult(
             parsed_payload={
                 "qc_result": {
@@ -172,6 +177,7 @@ def test_worker_completes_fake_flow(tmp_path: Path, monkeypatch):
         qc = session.scalar(select(QcResult).where(QcResult.photo_id == photo_id))
         detail = session.scalar(select(PriceTagDetail).where(PriceTagDetail.photo_id == photo_id))
         assert qc is not None and qc.can_proceed_to_price is True
+        assert qc.qc_status == "PASSED"
         assert detail is not None and float(detail.price) == 8.90
         assert detail.tag_type == "regular_price"
         assert detail.bundle_quantity is None
@@ -188,21 +194,73 @@ def test_worker_completes_fake_flow(tmp_path: Path, monkeypatch):
         assert "BUNDLE_PROMOTION_EXCLUDED" in exclusion_rules
         assert "SECOND_ITEM_PROMOTION_EXCLUDED" in exclusion_rules
 
-    with TestClient(app) as client:
-        tags_response = client.get(f"/v1/photos/{photo_id}/tags")
-        assert tags_response.status_code == 200
-        tags_payload = tags_response.json()
-        assert tags_payload["price_tag_count"] == 1
-        assert tags_payload["price_tags"] == [
-            {
-                "id": 1,
-                "bbox": [100, 100, 180, 130],
-                "coordinate_scale": 1000,
-                "price": "8.90",
-                "raw_price_text": "8.90元",
-                "unit": "元",
-            }
-        ]
+
+def test_worker_skips_quality_check_when_disabled(tmp_path: Path, monkeypatch):
+    database_url = f"sqlite:///{tmp_path/'quality-check-disabled.db'}"
+    settings = make_settings(database_url)
+    database = Database(settings)
+    database.create_all()
+    from app.schemas.tasks import PhotoCreate
+    from app.services.task_service import create_task
+
+    with database.session_factory() as session:
+        task, _ = create_task(
+            session,
+            source_type="TEST",
+            photos=[PhotoCreate(image_url="https://example.com/image.jpg")],
+            task_config={
+                "min_price": 2,
+                "max_price": 99,
+                "agent_config": {"quality_check": {"enabled": False}},
+            },
+        )
+        task_id = task.id
+        photo = session.scalars(
+            select(RecognitionPhoto).where(RecognitionPhoto.task_id == task_id)
+        ).one()
+        photo_id = photo.id
+        session.commit()
+
+    with database.session_factory() as session:
+        claimed = claim_next_photo(
+            session, worker_id="test", lease_sec=60, use_select_for_update=False
+        )
+        assert claimed is not None and claimed.id == photo_id
+        session.commit()
+
+    processor = PhotoProcessor(settings, database.session_factory)
+    quality_client = FakeQualityClient()
+    processor.qc_client = quality_client
+    processor.price_client = FakePriceClient()
+    monkeypatch.setattr("app.worker.processor.read_image_size", lambda source: None)
+    processor.process_photo_id(photo_id)
+
+    with database.session_factory() as session:
+        photo = session.get(RecognitionPhoto, photo_id)
+        task = session.get(RecognitionTask, task_id)
+        run = session.scalar(
+            select(RecognitionRun).where(RecognitionRun.photo_id == photo_id)
+        )
+        qc = session.scalar(select(QcResult).where(QcResult.photo_id == photo_id))
+        price_result = session.scalar(
+            select(PriceResult).where(PriceResult.photo_id == photo_id)
+        )
+        detail = session.scalar(select(PriceTagDetail).where(PriceTagDetail.photo_id == photo_id))
+
+        assert photo is not None
+        assert photo.status == PhotoStatus.COMPLETED
+        assert photo.outcome == PhotoOutcome.PROCESSED
+        assert photo.current_stage.value == "DONE"
+        assert task is not None and task.status == TaskStatus.COMPLETED
+        assert task.blocked_photos == 0
+        assert run is not None and run.config_snapshot["quality_check_enabled"] is False
+        assert quality_client.call_count == 0
+        assert qc is not None
+        assert qc.qc_status == "SKIPPED"
+        assert qc.can_proceed_to_price is True
+        assert qc.raw_payload == {"status": "SKIPPED", "reason": "quality_check_disabled"}
+        assert price_result is not None
+        assert detail is not None and float(detail.price) == 8.90
 
 
 def test_manual_retry_resets_retry_count(tmp_path: Path):

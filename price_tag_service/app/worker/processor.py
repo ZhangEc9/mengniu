@@ -60,6 +60,15 @@ class PhotoProcessor:
             config.get("max_price", self.settings.max_price),
         )
 
+    def _quality_check_enabled(
+        self, session: Session, photo: RecognitionPhoto
+    ) -> bool:
+        task = session.get(RecognitionTask, photo.task_id)
+        config = task.task_config if task is not None else {}
+        agent_config = config.get("agent_config") or {}
+        quality_config = agent_config.get("quality_check") or {}
+        return bool(quality_config.get("enabled", True))
+
     def process_photo_id(self, photo_id: str) -> None:
         with self.session_factory() as session:
             photo = session.get(RecognitionPhoto, photo_id)
@@ -109,6 +118,7 @@ class PhotoProcessor:
                 "min_price": self._effective_limits(session, photo)[0],
                 "max_price": self._effective_limits(session, photo)[1],
                 "photo_sources": self.settings.photo_sources,
+                "quality_check_enabled": self._quality_check_enabled(session, photo),
             },
             started_at=utc_now(),
         )
@@ -149,6 +159,42 @@ class PhotoProcessor:
         photo.updated_at = utc_now()
         session.commit()
 
+        if not self._quality_check_enabled(session, photo):
+            session.execute(delete(QcResult).where(QcResult.run_id == run.id))
+            session.add(
+                QcResult(
+                    photo_id=photo.id,
+                    run_id=run.id,
+                    qc_status="SKIPPED",
+                    is_valid=False,
+                    should_continue=True,
+                    qc_blur=None,
+                    qc_over_exposure=None,
+                    qc_low_light=None,
+                    qc_file_corrupted=None,
+                    invalid_reason=None,
+                    invalid_reasons=[],
+                    scene_type=None,
+                    scene_group=None,
+                    has_price_tag=False,
+                    is_quality_pass=False,
+                    is_target_scene=False,
+                    can_proceed_to_price=True,
+                    rejection_reasons=[],
+                    model_name=None,
+                    prompt_version=None,
+                    model_cost_sec=0.0,
+                    raw_payload={
+                        "status": "SKIPPED",
+                        "reason": "quality_check_disabled",
+                    },
+                )
+            )
+            photo.current_stage = ProcessStage.PRICE_RECOGNITION
+            photo.updated_at = utc_now()
+            session.commit()
+            return True
+
         result = self.qc_client.quality_check(photo.oss_url or "")
         self._save_call_logs(session, photo, run, result.call_logs)
         run.model_version = result.model_name
@@ -156,9 +202,10 @@ class PhotoProcessor:
         normalized = normalize_quality_payload(result.parsed_payload)
         session.execute(delete(QcResult).where(QcResult.run_id == run.id))
         session.add(
-            QcResult(
-                photo_id=photo.id,
-                run_id=run.id,
+                QcResult(
+                    photo_id=photo.id,
+                    run_id=run.id,
+                    qc_status="PASSED" if normalized.can_proceed_to_price else "BLOCKED",
                 is_valid=normalized.is_valid,
                 should_continue=normalized.should_continue,
                 qc_blur=normalized.qc_blur,
