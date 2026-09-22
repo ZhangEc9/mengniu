@@ -34,6 +34,7 @@ scene_type 只能概括主要场景，例如“冰箱照”“货架照”“堆
   "qc_result": {
     "is_valid": true,
     "should_continue": true,
+    "confidence": 0.95,
     "quality_checks": {
       "图片模糊": "合格",
       "过度曝光": "合格",
@@ -48,3 +49,5 @@ scene_type 只能概括主要场景，例如“冰箱照”“货架照”“堆
     "scene_type": "货架照"
   }
 }
+
+qc_result.confidence 是本次质量审核结论的单一整体置信度，范围为 0~1，保留两位小数；它反映 is_valid、quality_checks、has_price_tag 和 scene_type 判断的可靠程度。

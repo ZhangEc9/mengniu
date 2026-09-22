@@ -14,6 +14,7 @@ def test_normalize_quality_aliases_and_strict_gate():
             },
             "invalid_reason": "",
             "invalid_reasons": [],
+            "confidence": 0.87,
         },
         "content_info": {"has_price_tag": True, "scene_type": "冷柜"},
     }
@@ -22,6 +23,7 @@ def test_normalize_quality_aliases_and_strict_gate():
     assert result.scene_group == "冰箱照"
     assert result.is_target_scene is True
     assert result.can_proceed_to_price is True
+    assert result.confidence == 0.87
     assert result.stop_reason is None
 
 

@@ -27,6 +27,7 @@ class NormalizedQualityResult:
     is_quality_pass: bool
     is_target_scene: bool
     can_proceed_to_price: bool
+    confidence: float | None
     stop_reason: str | None
     rejection_reasons: list[str] = field(default_factory=list)
 
@@ -68,6 +69,20 @@ def normalize_scene(scene_type: Any) -> str:
     return "其他"
 
 
+def normalize_confidence(value: Any) -> float | None:
+    if value is None or isinstance(value, bool):
+        return None
+    try:
+        confidence = float(value)
+    except (TypeError, ValueError):
+        return None
+    if confidence < 0:
+        return 0.0
+    if confidence > 1:
+        return 1.0
+    return confidence
+
+
 def _string_list(value: Any) -> list[str]:
     if isinstance(value, list):
         return [str(item).strip() for item in value if str(item).strip()]
@@ -88,6 +103,7 @@ def normalize_quality_payload(payload: dict[str, Any]) -> NormalizedQualityResul
     scene_group = normalize_scene(scene_type)
     is_target_scene = scene_group in TARGET_SCENES
     has_price_tag = coerce_bool(content_info.get("has_price_tag"), False)
+    confidence = normalize_confidence(qc_result.get("confidence"))
     should_continue = (
         coerce_bool(qc_result.get("should_continue"), is_quality_pass)
         if qc_result.get("should_continue") is not None
@@ -131,6 +147,7 @@ def normalize_quality_payload(payload: dict[str, Any]) -> NormalizedQualityResul
         is_quality_pass=is_quality_pass,
         is_target_scene=is_target_scene,
         can_proceed_to_price=can_proceed,
+        confidence=confidence,
         stop_reason=stop_reason,
         rejection_reasons=rejection_reasons,
     )

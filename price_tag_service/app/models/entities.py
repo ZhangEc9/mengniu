@@ -174,6 +174,7 @@ class QcResult(Base):
     is_quality_pass: Mapped[bool] = mapped_column(Boolean)
     is_target_scene: Mapped[bool] = mapped_column(Boolean)
     can_proceed_to_price: Mapped[bool] = mapped_column(Boolean)
+    confidence: Mapped[float | None] = mapped_column(Float, nullable=True)
     rejection_reasons: Mapped[list] = mapped_column(JSON, default=list)
     model_name: Mapped[str | None] = mapped_column(String(128), nullable=True)
     prompt_version: Mapped[str | None] = mapped_column(String(128), nullable=True)

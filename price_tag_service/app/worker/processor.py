@@ -220,6 +220,7 @@ class PhotoProcessor:
                 is_quality_pass=normalized.is_quality_pass,
                 is_target_scene=normalized.is_target_scene,
                 can_proceed_to_price=normalized.can_proceed_to_price,
+                confidence=normalized.confidence,
                 rejection_reasons=normalized.rejection_reasons,
                 model_name=result.model_name,
                 prompt_version=result.prompt_version,

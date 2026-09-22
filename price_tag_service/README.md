@@ -49,7 +49,9 @@
 }
 ```
 
-促销候选、模型 confidence、剔除原因和原始响应仍保留在数据库中，用于审计和回归分析，但不作为交付字段输出。AISM 签名与 HTTP 请求体使用同一条序列化 JSON 字符串，避免因 `requests` 与 `httpx` 序列化差异导致验签失败。
+质检结果对外输出一个 `confidence` 整体置信度。价签候选模型内部可保留 `confidence`、`price_confidence` 和 `confidence_reason` 用于审计；交付 API 只输出一个 `confidence`，取 bbox/候选置信度和金额读取置信度中的较低值，避免高估整体风险。
+
+促销候选、剔除原因和原始响应仍保留在数据库中，用于审计和回归分析，但不作为交付字段输出。AISM 签名与 HTTP 请求体使用同一条序列化 JSON 字符串，避免因 `requests` 与 `httpx` 序列化差异导致验签失败。
 
 AISM 价签接口可能返回 JSON 数组，也可能用 Markdown 代码块包裹数组。服务端会先提取合法 JSON，再把数组规范化为内部 `{ "price_tags": [...] }` 结构；质检接口仍要求 JSON 对象。
 

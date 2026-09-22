@@ -36,6 +36,7 @@ class FakeQualityClient:
             parsed_payload={
                 "qc_result": {
                     "is_valid": True,
+                    "confidence": 0.93,
                     "quality_checks": {
                         "图片模糊": "合格",
                         "过度曝光": "合格",
@@ -66,6 +67,7 @@ class FakePriceClient:
                         "raw_price_text": "8.90元",
                         "tag_type": "regular_price",
                         "confidence": 0.9,
+                        "price_confidence": 0.88,
                         "unit": "元",
                     },
                     {
@@ -178,6 +180,7 @@ def test_worker_completes_fake_flow(tmp_path: Path, monkeypatch):
         detail = session.scalar(select(PriceTagDetail).where(PriceTagDetail.photo_id == photo_id))
         assert qc is not None and qc.can_proceed_to_price is True
         assert qc.qc_status == "PASSED"
+        assert qc.confidence == 0.93
         assert detail is not None and float(detail.price) == 8.90
         assert detail.tag_type == "regular_price"
         assert detail.bundle_quantity is None
@@ -193,6 +196,27 @@ def test_worker_completes_fake_flow(tmp_path: Path, monkeypatch):
         exclusion_rules = {event["rule"] for event in price_result.filter_events}
         assert "BUNDLE_PROMOTION_EXCLUDED" in exclusion_rules
         assert "SECOND_ITEM_PROMOTION_EXCLUDED" in exclusion_rules
+
+    with TestClient(app) as client:
+        qc_response = client.get(f"/v1/photos/{photo_id}/qc")
+        assert qc_response.status_code == 200
+        assert qc_response.json()["confidence"] == 0.93
+
+        tags_response = client.get(f"/v1/photos/{photo_id}/tags")
+        assert tags_response.status_code == 200
+        tags_payload = tags_response.json()
+        assert tags_payload["price_tag_count"] == 1
+        assert tags_payload["price_tags"] == [
+            {
+                "id": 1,
+                "bbox": [100, 100, 180, 130],
+                "coordinate_scale": 1000,
+                "price": "8.90",
+                "confidence": 0.88,
+                "raw_price_text": "8.90元",
+                "unit": "元",
+            }
+        ]
 
 
 def test_worker_skips_quality_check_when_disabled(tmp_path: Path, monkeypatch):
@@ -258,6 +282,7 @@ def test_worker_skips_quality_check_when_disabled(tmp_path: Path, monkeypatch):
         assert qc is not None
         assert qc.qc_status == "SKIPPED"
         assert qc.can_proceed_to_price is True
+        assert qc.confidence is None
         assert qc.raw_payload == {"status": "SKIPPED", "reason": "quality_check_disabled"}
         assert price_result is not None
         assert detail is not None and float(detail.price) == 8.90
