@@ -104,6 +104,7 @@ def import_excel(
     job = ImportJob(status="PENDING", source_file=str(saved_path))
     db.add(job)
     db.flush()
+    db.commit()
     background_tasks.add_task(
         run_import_job,
         session_factory=request.app.state.db.session_factory,
