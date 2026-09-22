@@ -5,6 +5,7 @@ description = "Price tag recognition orchestration service"
 requires-python = ">=3.11"
 dependencies = [
   "fastapi>=0.110",
+  "alembic>=1.13",
   "uvicorn[standard]>=0.27",
   "SQLAlchemy>=2.0",
   "pydantic>=2.6",

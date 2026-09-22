@@ -32,6 +32,12 @@ temp_*
 __pycache__/
 *.pyc
 .pytest_cache/
+.pytest-tmp/
+.workbuddy/
+*.egg-info/
+*.bak
+price_tag_service/alembic_baseline_empty.db
+price_tag_service/alembic_existing_copy.db
 .vscode/
 .idea/
 *.jpeg

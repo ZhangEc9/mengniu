@@ -100,7 +100,7 @@ PRICE_SERVICE_PHOTO_SOURCES=["priceTagPhotos","productCloseupPhotos"]
 sqlite:///./price_tag_service.dev.db
 ```
 
-注意：生产建议 PostgreSQL 15+。当前一期使用 SQLAlchemy `create_all()` 初始化表，后续生产化时可补 Alembic 迁移。
+注意：生产建议 PostgreSQL 15+。当前表结构由 Alembic 基线管理；`init_db` 仅兼容本地旧流程。
 
 ## 启动
 
@@ -112,6 +112,20 @@ D:\Anaconda\python.exe -m pip install -e ".[dev,postgres]"
 cd D:\Shixi\mengniu
 
 D:\Anaconda\python.exe -m price_tag_service.scripts.init_db
+
+生产数据库和后续表结构变更使用 Alembic：
+
+```powershell
+cd D:\Shixi\mengniu\price_tag_service
+$env:PRICE_SERVICE_DATABASE_URL = "<PostgreSQL连接串>"
+D:\Anaconda\python.exe -m alembic upgrade head
+```
+
+如果数据库是由旧版 `init_db` 创建的，第一次接入 Alembic 时不要重复升级表结构，先登记当前版本：
+
+```powershell
+D:\Anaconda\python.exe -m alembic stamp head
+```
 
 # 终端 1：API
 D:\Anaconda\python.exe -m uvicorn price_tag_service.app.main:app --host 0.0.0.0 --port 8000
@@ -180,7 +194,7 @@ curl.exe -X POST http://127.0.0.1:8000/v1/tasks `
 2. 图片尺寸通过 Pillow 读取；如果下载失败，会退化为 1000×1000 归一化坐标过滤，物理尺寸规则不生效。
 3. AISM 客户端内每次外部调用尝试 1 次，worker 层统一做最多 3 次退避重试，避免双重重试放大。
 4. Excel URL 按逗号拆分；如果导出表 URL 本身包含未转义逗号，需要先确认中台导出规则。
-5. 生产数据库迁移建议下一阶段补 Alembic。
+5. 生产数据库迁移已具备 Alembic 基线，剩余工作是接入 PostgreSQL 并压测队列。
 
 ## 测试
 
