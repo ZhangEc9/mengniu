@@ -116,6 +116,8 @@ UPLOAD
 
 任务、照片、run、调用日志、OSS 缓存、导入任务是编排基础设施，不计入会议说的 6 张业务结果表。业务结果建议按以下结构落地。
 
+> 字段冻结说明：六张业务表的最终字段仍需经理确认，当前章节只是实现前草案。确认前不要把这些字段固化成生产迁移；已有任务、照片、质检和价签表可以先做 Alembic 基线。SKU 结果可以先用通用 JSON payload 打通编排流程，后续再把确认字段提升为独立列。
+
 ### 4.1 质检表 `qc_result`
 
 现有表继续使用，补充跳过语义：
@@ -185,6 +187,31 @@ UPLOAD
 | raw_payload | 原始输出 |
 
 SKU 服务未接入时，表和接口先保留，不阻塞价签链路。
+
+临时通用识别结果使用统一 JSON envelope，数据库先只保留必需索引列和 `raw_payload`，业务字段后续再升级：
+
+```json
+{
+  "status": "COMPLETED",
+  "recognition_mode": "GENERIC",
+  "items": [
+    {
+      "temp_id": "sku-001",
+      "sku_code": null,
+      "name": null,
+      "brand": null,
+      "product_role": "UNKNOWN",
+      "bbox": [120, 300, 360, 620],
+      "coordinate_scale": 1000,
+      "confidence": null,
+      "raw_text": null
+    }
+  ],
+  "raw_response": {}
+}
+```
+
+其中 `sku_code / name / brand / product_role / confidence / raw_text` 都允许为空；`bbox` 和 `coordinate_scale` 先按价签同一坐标口径保存。
 
 ### 4.5 SKU-价签匹配表 `sku_price_relation`
 
