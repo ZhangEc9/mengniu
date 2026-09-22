@@ -162,6 +162,7 @@ def refresh_task_counters(session: Session, task_id: str) -> None:
     task = session.get(RecognitionTask, task_id)
     if task is None:
         return
+    session.flush()
     rows = session.execute(
         select(RecognitionPhoto.outcome, func.count())
         .where(RecognitionPhoto.task_id == task_id)
@@ -171,7 +172,9 @@ def refresh_task_counters(session: Session, task_id: str) -> None:
     task.succeeded_photos = counts.get(PhotoOutcome.PROCESSED, 0)
     task.blocked_photos = counts.get(PhotoOutcome.BLOCKED, 0)
     task.failed_photos = counts.get(PhotoOutcome.FAILED, 0)
-    task.processed_photos = sum(counts.values())
+    task.processed_photos = (
+        task.succeeded_photos + task.blocked_photos + task.failed_photos
+    )
     pending = session.scalar(
         select(func.count())
         .select_from(RecognitionPhoto)

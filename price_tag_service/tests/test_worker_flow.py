@@ -17,6 +17,8 @@ from app.models.entities import (
     QcResult,
     ProcessStage,
     RecognitionPhoto,
+    RecognitionTask,
+    TaskStatus,
 )
 from app.services.task_service import reset_photo_for_retry
 from app.worker.processor import PhotoProcessor
@@ -157,9 +159,16 @@ def test_worker_completes_fake_flow(tmp_path: Path, monkeypatch):
 
     with database.session_factory() as session:
         photo = session.get(RecognitionPhoto, photo_id)
+        task = session.get(RecognitionTask, task_id)
         assert photo.status == PhotoStatus.COMPLETED
         assert photo.outcome == PhotoOutcome.PROCESSED
         assert photo.current_stage.value == "DONE"
+        assert task.status == TaskStatus.COMPLETED
+        assert task.total_photos == 1
+        assert task.processed_photos == 1
+        assert task.succeeded_photos == 1
+        assert task.blocked_photos == 0
+        assert task.failed_photos == 0
         qc = session.scalar(select(QcResult).where(QcResult.photo_id == photo_id))
         detail = session.scalar(select(PriceTagDetail).where(PriceTagDetail.photo_id == photo_id))
         assert qc is not None and qc.can_proceed_to_price is True
