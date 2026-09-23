@@ -1,0 +1,21 @@
+{
+  "request_id": "sample-test-request",
+  "api_request_id": "sample-test-api-request",
+  "body": {
+    "Code": "success",
+    "Success": true,
+    "RequestId": "sample-test-api-request",
+    "Data": {
+      "BoxCount": 2,
+      "Data": [
+        {
+          "Idx": 0,
+          "Bbox": [1.0, 687.0, 83.0, 800.0],
+          "Top1": {"SkuId": "君乐宝悦鲜活A2牛奶450ML", "SkuName": "君乐宝悦鲜活A2牛奶450ML", "Score": 0.57485133},
+          "Topk": [{"Rank": 1, "SkuId": "君乐宝悦鲜活A2牛奶450ML", "Score": 0.57485133}]
+        },
+        {"Idx": 1, "Bbox": [1], "Error": "embedding failed", "Top1": null, "Topk": []}
+      ]
+    }
+  }
+}

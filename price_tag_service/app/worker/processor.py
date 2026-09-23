@@ -3,18 +3,18 @@ from __future__ import annotations
 import hashlib
 import logging
 import threading
-import time
+from concurrent.futures import ThreadPoolExecutor
 from datetime import timedelta
 from pathlib import Path
-from typing import Any
 
-from sqlalchemy import delete, func, select
+from sqlalchemy import delete, func, select, update
 from sqlalchemy.orm import Session, sessionmaker
 
 from app import PIPELINE_VERSION
 from app.clients.aism import AismClient
 from app.clients.models import AismCallError, CallLog
 from app.clients.oss import OssClient
+from app.clients.sku import SampleSkuClient
 from app.core.config import Settings
 from app.models.entities import (
     AICallLog,
@@ -31,6 +31,7 @@ from app.models.entities import (
 )
 from app.processing.postprocess import parse_amount, postprocess_price_payload
 from app.processing.quality import normalize_quality_payload
+from app.processing.sku_match import match_sku_tags, normalize_sku
 from app.services.task_service import refresh_task_counters, utc_now
 from app.worker.image_size import read_image_size
 from app.worker.queue import claim_next_photo, recover_stale_photos
@@ -49,6 +50,12 @@ class PhotoProcessor:
         self.qc_client = AismClient(settings.qc_config, settings.prompt_dir)
         self.price_client = AismClient(settings.price_tag_config, settings.prompt_dir)
         self.oss_client = OssClient(settings.oss_config)
+        self.sku_client = SampleSkuClient(settings.sku_sample_dir)
+
+    def _agent_enabled(self, session: Session, photo: RecognitionPhoto, name: str) -> bool:
+        task = session.get(RecognitionTask, photo.task_id)
+        agents = ((task.task_config if task else {}).get("agent_config") or {})
+        return bool((agents.get(name) or {}).get("enabled", False))
 
     def _effective_limits(
         self, session: Session, photo: RecognitionPhoto
@@ -70,16 +77,42 @@ class PhotoProcessor:
         return bool(quality_config.get("enabled", True))
 
     def process_photo_id(self, photo_id: str) -> None:
-        with self.session_factory() as session:
-            photo = session.get(RecognitionPhoto, photo_id)
-            if photo is None or photo.status != PhotoStatus.RUNNING:
-                return
+        lease_stop = threading.Event()
+        lease_thread = None
+        try:
+            with self.session_factory() as session:
+                photo = session.get(RecognitionPhoto, photo_id)
+                if photo is None or photo.status != PhotoStatus.RUNNING:
+                    return
+                if photo.locked_by:
+                    lease_thread = threading.Thread(
+                        target=self._renew_lease, args=(photo_id, photo.locked_by, lease_stop), daemon=True
+                    )
+                    lease_thread.start()
+                try:
+                    self._process(session, photo)
+                    session.commit()
+                except Exception as exc:
+                    session.rollback()
+                    self._handle_failure(photo_id, exc)
+        finally:
+            lease_stop.set()
+            if lease_thread is not None:
+                lease_thread.join(timeout=1)
+
+    def _renew_lease(self, photo_id: str, worker_id: str, stop: threading.Event) -> None:
+        while not stop.wait(max(1, self.settings.worker_lease_sec // 3)):
             try:
-                self._process(session, photo)
-                session.commit()
-            except Exception as exc:
-                session.rollback()
-                self._handle_failure(photo_id, exc)
+                with self.session_factory() as session:
+                    session.execute(update(RecognitionPhoto).where(
+                        RecognitionPhoto.id == photo_id,
+                        RecognitionPhoto.status == PhotoStatus.RUNNING,
+                        RecognitionPhoto.locked_by == worker_id,
+                        RecognitionPhoto.locked_until.is_not(None),
+                    ).values(locked_until=utc_now() + timedelta(seconds=self.settings.worker_lease_sec)))
+                    session.commit()
+            except Exception:
+                logger.exception("Failed to renew photo lease %s", photo_id)
 
     def _process(self, session: Session, photo: RecognitionPhoto) -> None:
         run = self._get_or_create_run(session, photo)
@@ -89,10 +122,72 @@ class PhotoProcessor:
             if not self._stage_quality_check(session, photo, run):
                 return
         if photo.current_stage == ProcessStage.PRICE_RECOGNITION:
-            self._stage_price(session, photo, run)
+            if self._agent_enabled(session, photo, "sku"):
+                self._stage_parallel(session, photo, run)
+            else:
+                self._stage_price(session, photo, run)
         if photo.current_stage == ProcessStage.POSTPROCESS:
             self._stage_postprocess(session, photo, run)
+        if self._agent_enabled(session, photo, "sku_price_match"):
+            self._stage_match(session, photo, run)
         self._complete(session, photo, run, PhotoOutcome.PROCESSED, None)
+
+    def _stage_parallel(self, session: Session, photo: RecognitionPhoto, run: RecognitionRun) -> None:
+        existing = session.scalar(select(PriceResult).where(PriceResult.run_id == run.id))
+        sku_result = (run.config_snapshot or {}).get("sku_result")
+        pending = {}
+        with ThreadPoolExecutor(max_workers=2) as pool:
+            if existing is None:
+                pending["price"] = pool.submit(self.price_client.price_tag_detect, photo.oss_url or "")
+            if sku_result is None:
+                pending["sku"] = pool.submit(self.sku_client.recognize, photo.oss_url or "")
+            failures = {}
+            for branch, future in pending.items():
+                try:
+                    result = future.result()
+                    if branch == "price":
+                        self._stage_price(session, photo, run, result=result)
+                        photo.current_stage = ProcessStage.PRICE_RECOGNITION
+                        session.commit()
+                    else:
+                        normalized = normalize_sku(result)
+                        run.config_snapshot = {**run.config_snapshot, "sku_result": normalized}
+                        session.commit()
+                except Exception as exc:
+                    failures[branch] = exc
+        if failures:
+            branch, exc = next(iter(failures.items()))
+            run.config_snapshot = {**run.config_snapshot, "branch_errors": {
+                name: str(error) for name, error in failures.items()}}
+            session.commit()
+            if isinstance(exc, FileNotFoundError):
+                raise AismCallError(str(exc), error_type="CONFIG_ERROR") from exc
+            raise exc
+        if (run.config_snapshot or {}).get("branch_errors"):
+            run.config_snapshot = {key: value for key, value in run.config_snapshot.items()
+                                   if key != "branch_errors"}
+        photo.current_stage = ProcessStage.POSTPROCESS
+        session.commit()
+
+    def _stage_match(self, session: Session, photo: RecognitionPhoto, run: RecognitionRun) -> None:
+        if (run.config_snapshot or {}).get("match_result") is not None:
+            return
+        sku = (run.config_snapshot or {}).get("sku_result")
+        price = session.scalar(select(PriceResult).where(PriceResult.run_id == run.id))
+        if sku is None or price is None:
+            raise AismCallError("Both recognition branches are required for matching", error_type="CONFIG_ERROR")
+        session.flush()
+        details = session.scalars(select(PriceTagDetail).where(PriceTagDetail.price_result_id == price.id)).all()
+        tags = [{"id": detail.tag_id,
+                 "bbox": [detail.bbox_xmin, detail.bbox_ymin, detail.bbox_xmax, detail.bbox_ymax],
+                 "price": str(detail.price) if detail.price is not None else None,
+                 "score": min(value for value in (detail.confidence, detail.price_confidence) if value is not None)
+                 if detail.confidence is not None or detail.price_confidence is not None else None}
+                for detail in details]
+        run.config_snapshot = {**run.config_snapshot, "match_result": {
+            "status": "SUCCEEDED", "method_version": "SPATIAL_RULE_V0",
+            "pairs": match_sku_tags(sku["items"], tags)}}
+        session.commit()
 
     def _get_or_create_run(self, session: Session, photo: RecognitionPhoto) -> RecognitionRun:
         run = session.scalar(
@@ -250,9 +345,9 @@ class PhotoProcessor:
         return True
 
     def _stage_price(
-        self, session: Session, photo: RecognitionPhoto, run: RecognitionRun
+        self, session: Session, photo: RecognitionPhoto, run: RecognitionRun, result=None
     ) -> None:
-        result = self.price_client.price_tag_detect(photo.oss_url or "")
+        result = result or self.price_client.price_tag_detect(photo.oss_url or "")
         self._save_call_logs(session, photo, run, result.call_logs)
         run.model_version = result.model_name
         run.prompt_version = result.prompt_version

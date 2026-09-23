@@ -7,13 +7,13 @@ from sqlalchemy import select
 from app.api.deps import DbDep, Protected
 from app.api.serializers import photo_summary, price_result, qc_result
 from app.models.entities import (
-    PhotoOutcome,
     PhotoStatus,
     PriceResult,
     PriceTagDetail,
     ProcessStage,
     QcResult,
     RecognitionPhoto,
+    RecognitionRun,
 )
 from app.services.task_service import refresh_task_counters, reset_photo_for_retry
 
@@ -49,6 +49,22 @@ def _latest_price(db, photo_id: str) -> PriceResult | None:
     )
 
 
+def _latest_run(db, photo_id: str) -> RecognitionRun | None:
+    return db.scalar(select(RecognitionRun).where(RecognitionRun.photo_id == photo_id)
+                     .order_by(RecognitionRun.run_no.desc()).limit(1))
+
+
+def _branch_results(db, photo_id: str) -> tuple[dict, dict]:
+    run = _latest_run(db, photo_id)
+    snapshot = run.config_snapshot if run is not None else {}
+    sku = snapshot.get("sku_result") or {"status": "NOT_CONFIGURED", "items": []}
+    if "branch_errors" in snapshot and "sku" in snapshot["branch_errors"]:
+        sku = {"status": "FAILED", "error": snapshot["branch_errors"]["sku"],
+               "items": sku.get("items", [])}
+    match = snapshot.get("match_result") or {"status": "NOT_RUN", "pairs": []}
+    return sku, match
+
+
 @router.get("/{photo_id}")
 def get_photo(photo_id: str, db: DbDep):
     photo = _get_photo(db, photo_id)
@@ -63,13 +79,15 @@ def get_photo(photo_id: str, db: DbDep):
         if price is not None
         else []
     )
+    sku, match = _branch_results(db, photo_id)
     return {
         **photo_summary(photo),
         "qc": qc_result(qc) if qc is not None else None,
         "price": (
             price_result(photo, qc, price, details) if price is not None else None
         ),
-        "sku": {"status": "NOT_CONFIGURED", "message": "SKU识别服务暂未接入", "sku_items": []},
+        "sku": sku,
+        "match": match,
     }
 
 
@@ -99,7 +117,13 @@ def get_photo_tags(photo_id: str, db: DbDep):
 @router.get("/{photo_id}/sku")
 def get_photo_sku(photo_id: str, db: DbDep):
     _get_photo(db, photo_id)
-    return {"status": "NOT_CONFIGURED", "message": "SKU识别服务暂未接入", "sku_items": []}
+    return _branch_results(db, photo_id)[0]
+
+
+@router.get("/{photo_id}/matches")
+def get_photo_matches(photo_id: str, db: DbDep):
+    _get_photo(db, photo_id)
+    return _branch_results(db, photo_id)[1]
 
 
 @router.post("/{photo_id}/retry")

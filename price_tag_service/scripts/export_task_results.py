@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import urllib.error
 import urllib.request
@@ -54,6 +55,7 @@ def main() -> int:
     downloaded = 0
     saved_results = 0
     errors: list[str] = []
+    pair_rows: list[dict] = []
     for index, photo in enumerate(photos, 1):
         image_name = photo.get("image_name") or f"{photo['id']}.jpg"
         stem = Path(image_name).stem
@@ -67,7 +69,7 @@ def main() -> int:
             errors.append(f"download {image_name}: {exc}")
 
         record: dict = {"photo": photo}
-        for key, endpoint in (("qc", "qc"), ("price", "tags")):
+        for key, endpoint in (("qc", "qc"), ("price", "tags"), ("sku", "sku"), ("match", "matches")):
             try:
                 record[key] = _request_json(
                     f"{base_url}/v1/photos/{photo['id']}/{endpoint}", args.api_key
@@ -81,7 +83,25 @@ def main() -> int:
         (result_dir / f"{prefix}.service.json").write_text(
             json.dumps(record, ensure_ascii=False, indent=2), encoding="utf-8"
         )
+        tags_by_id = {tag["id"]: tag for tag in record.get("price", {}).get("price_tags", [])}
+        for pair in record.get("match", {}).get("pairs", []):
+            tag = tags_by_id.get(pair["tag_id"], {})
+            pair_rows.append({
+                "image_name": image_name, "photo_id": photo["id"], "tag_id": pair["tag_id"],
+                "price": tag.get("price"), "sku_idx": pair.get("sku_idx"),
+                "sku_code": pair.get("sku_code"), "sku_name": pair.get("sku_name"),
+                "match_status": pair["match_status"], "score": pair.get("score"),
+                "sku_score": pair.get("sku_score"), "price_score": pair.get("price_score"),
+                "cost": pair.get("cost"), "second_cost": pair.get("second_cost"),
+                "margin": pair.get("margin"), "match_method_version": pair.get("match_method_version"),
+            })
         saved_results += 1
+
+    if pair_rows:
+        with (output_dir / "sku_price_pairs.csv").open("w", encoding="utf-8-sig", newline="") as handle:
+            writer = csv.DictWriter(handle, fieldnames=list(pair_rows[0]))
+            writer.writeheader()
+            writer.writerows(pair_rows)
 
     print(
         f"photos={len(photos)} downloaded={downloaded} results={saved_results} "

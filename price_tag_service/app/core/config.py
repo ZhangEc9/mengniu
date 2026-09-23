@@ -51,6 +51,7 @@ class Settings(BaseSettings):
     max_price: float | None = 99.0
     legacy_config_file: Path = Path("config.json")
     database_echo: bool = False
+    sku_sample_dir: Path = Path(__file__).resolve().parents[3] / "sku_match_offline" / "sku_sample_responses"
 
     qc_config: AismEndpointConfig = Field(default_factory=AismEndpointConfig)
     price_tag_config: AismEndpointConfig = AismEndpointConfig(

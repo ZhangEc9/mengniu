@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from pydantic import BaseModel, Field, HttpUrl
+from pydantic import BaseModel, Field, HttpUrl, model_validator
 
 
 class PhotoCreate(BaseModel):
@@ -17,6 +17,14 @@ class QualityCheckConfig(BaseModel):
 
 class AgentConfig(BaseModel):
     quality_check: QualityCheckConfig = Field(default_factory=QualityCheckConfig)
+    sku: QualityCheckConfig = Field(default_factory=lambda: QualityCheckConfig(enabled=False))
+    sku_price_match: QualityCheckConfig = Field(default_factory=lambda: QualityCheckConfig(enabled=False))
+
+    @model_validator(mode="after")
+    def validate_match(self):
+        if self.sku_price_match.enabled and not self.sku.enabled:
+            raise ValueError("sku_price_match requires sku.enabled")
+        return self
 
 
 class TaskCreate(BaseModel):

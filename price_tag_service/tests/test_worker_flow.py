@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from threading import Event
 
 from fastapi.testclient import TestClient
 from sqlalchemy import select
@@ -107,6 +108,122 @@ def make_settings(database_url: str) -> Settings:
         max_price=99,
         require_api_key=False,
     )
+
+
+def test_parallel_branches_match_and_retry_only_failed_branch(tmp_path: Path, monkeypatch):
+    from app.schemas.tasks import PhotoCreate
+    from app.services.task_service import create_task
+
+    settings = make_settings(f"sqlite:///{tmp_path / 'parallel.db'}")
+    database = Database(settings)
+    database.create_all()
+    with database.session_factory() as session:
+        task, _ = create_task(
+            session, source_type="TEST",
+            photos=[PhotoCreate(image_url="https://example.com/image.jpg")],
+            task_config={"agent_config": {"quality_check": {"enabled": False},
+                                          "sku": {"enabled": True},
+                                          "sku_price_match": {"enabled": True}}},
+        )
+        photo_id = session.scalar(select(RecognitionPhoto).where(RecognitionPhoto.task_id == task.id)).id
+        session.commit()
+    with database.session_factory() as session:
+        claim_next_photo(session, worker_id="test", lease_sec=60, use_select_for_update=False)
+        session.commit()
+
+    price_started = Event()
+    sku_started = Event()
+
+    class ParallelPrice(FakePriceClient):
+        calls = 0
+
+        def price_tag_detect(self, image_url):
+            self.calls += 1
+            price_started.set()
+            assert sku_started.wait(3), "SKU must start before price finishes"
+            return super().price_tag_detect(image_url)
+
+    class FlakySku:
+        calls = 0
+
+        def recognize(self, image_url):
+            self.calls += 1
+            sku_started.set()
+            assert price_started.wait(3)
+            if self.calls == 1:
+                raise RuntimeError("temporary SKU failure")
+            return {"Code": "200", "Success": True, "Data": {"BoxCount": 1, "Data": [
+                {"Idx": 7, "Bbox": [100, 10, 180, 95],
+                 "Top1": {"SkuId": "sample", "SkuName": "Sample", "Score": 0.9}, "Topk": []},
+            ]}}
+
+    processor = PhotoProcessor(settings, database.session_factory)
+    processor.price_client = ParallelPrice()
+    processor.sku_client = FlakySku()
+    monkeypatch.setattr("app.worker.processor.read_image_size", lambda source: None)
+    processor.process_photo_id(photo_id)
+    with database.session_factory() as session:
+        photo = session.get(RecognitionPhoto, photo_id)
+        assert photo.status == PhotoStatus.QUEUED
+        assert photo.current_stage == ProcessStage.PRICE_RECOGNITION
+        assert session.scalar(select(PriceResult).where(PriceResult.photo_id == photo_id)) is not None
+        photo.status = PhotoStatus.RUNNING
+        session.commit()
+    processor.process_photo_id(photo_id)
+    assert processor.price_client.calls == 1
+    assert processor.sku_client.calls == 2
+    with database.session_factory() as session:
+        photo = session.get(RecognitionPhoto, photo_id)
+        run = session.scalar(select(RecognitionRun).where(RecognitionRun.photo_id == photo_id))
+        assert photo.status == PhotoStatus.COMPLETED
+        assert run.config_snapshot["sku_result"]["items"][0]["sku_code"] == "sample"
+        assert run.config_snapshot["match_result"]["pairs"][0]["sku_idx"] == 7
+
+    with TestClient(create_app(settings)) as client:
+        assert client.get(f"/v1/photos/{photo_id}/sku").json()["status"] == "SUCCEEDED"
+        assert client.get(f"/v1/photos/{photo_id}/matches").json()["pairs"][0]["sku_code"] == "sample"
+
+
+def test_sample_file_runs_after_qc_without_business_tables(tmp_path: Path, monkeypatch):
+    import json
+
+    from app.schemas.tasks import PhotoCreate
+    from app.services.task_service import create_task
+
+    fixture = {"Code": "200", "Success": True, "RequestId": "fixture-1",
+               "Data": {"BoxCount": 2, "Data": [
+                   {"Idx": 1, "Bbox": [100, 10, 180, 95],
+                    "Top1": {"SkuId": "sample", "SkuName": "Sample", "Score": 0.9},
+                    "Topk": [{"Rank": 1, "SkuId": "sample", "Score": 0.9}]},
+                   {"Idx": 2, "Bbox": [2], "Error": "embedding failed", "Top1": None},
+               ]}}
+    (tmp_path / "image.sku.json").write_text(json.dumps(fixture), encoding="utf-8")
+    settings = make_settings(f"sqlite:///{tmp_path / 'sample.db'}")
+    settings.sku_sample_dir = tmp_path
+    database = Database(settings)
+    database.create_all()
+    with database.session_factory() as session:
+        task, _ = create_task(session, source_type="TEST",
+                              photos=[PhotoCreate(image_url="https://example.com/image.jpg")],
+                              task_config={"agent_config": {"quality_check": {"enabled": False},
+                                                            "sku": {"enabled": True},
+                                                            "sku_price_match": {"enabled": True}}})
+        photo_id = session.scalar(select(RecognitionPhoto).where(RecognitionPhoto.task_id == task.id)).id
+        session.commit()
+    with database.session_factory() as session:
+        claim_next_photo(session, worker_id="test", lease_sec=60, use_select_for_update=False)
+        session.commit()
+    processor = PhotoProcessor(settings, database.session_factory)
+    processor.price_client = FakePriceClient()
+    monkeypatch.setattr("app.worker.processor.read_image_size", lambda source: None)
+    processor.process_photo_id(photo_id)
+    with TestClient(create_app(settings)) as client:
+        result = client.get(f"/v1/photos/{photo_id}").json()
+        assert result["status"] == "COMPLETED"
+        assert result["price"]["price_tag_count"] == 1
+        assert [item["item_status"] for item in result["sku"]["items"]] == ["OK", "INVALID"]
+        assert result["sku"]["request_id"] == "fixture-1"
+        assert result["match"]["pairs"][0]["sku_code"] == "sample"
 
 
 def test_task_api_creates_and_queries_task(tmp_path: Path):

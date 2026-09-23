@@ -155,7 +155,8 @@ GET  /v1/tasks/{task_id}/photos         任务照片列表
 GET  /v1/photos/{photo_id}              单张照片完整结果
 GET  /v1/photos/{photo_id}/qc           质检结果
 GET  /v1/photos/{photo_id}/tags         价签结果
-GET  /v1/photos/{photo_id}/sku          SKU 预留结果
+GET  /v1/photos/{photo_id}/sku          SKU 样例识别结果（启用时）
+GET  /v1/photos/{photo_id}/matches      SKU-价签匹配结果
 POST /v1/photos/{photo_id}/retry        重跑照片或指定阶段
 GET  /v1/queue/stats                    队列统计
 ```
@@ -176,6 +177,20 @@ curl.exe -X POST http://127.0.0.1:8000/v1/tasks `
 ```
 
 ## 一期已实现
+
+### SKU 样例并行串通（不写待确认的业务表）
+
+任务创建时设置 agent_config.sku.enabled=true 和 agent_config.sku_price_match.enabled=true。质检通过（或跳过）后，同一照片的 SKU 样例读取与价签模型调用并行，价签后处理完成后再匹配；默认关闭，旧任务行为不变。失败时保留成功分支，自动重试只调用失败分支。
+
+SKU 样例目录可通过 PRICE_SERVICE_SKU_SAMPLE_DIR 指定，默认使用仓库的 sku_match_offline/sku_sample_responses。每张照片按 URL 文件名去掉扩展名读取 <stem>.sku.json；缺失时该照片报 CONFIG_ERROR，不借用其他照片的框。该目录的 SKU 框依据价签构造，只用于验证编排，不能用于准确率评估。本地完整样例 sku识别/aidge_online_mengniu_rag_cb1b8993.json 可供人工对照；因照片不同，不能直接与 P1 价签结果匹配。
+
+首次运行 P1 样例前，在仓库根目录执行 D:\Anaconda\python.exe run_sku_match_offline.py 生成未纳入版本控制的同图样例。单元测试使用仓库内的 tests/fixtures/sku_response.json，不依赖本地生成物或未跟踪的完整 SKU 响应。真正的 SKU API 接入后再替换 SampleSkuClient.recognize。
+
+示例任务配置：
+
+    {"photos":[{"image_url":"https://example.com/photo.jpg"}],"agent_config":{"quality_check":{"enabled":false},"sku":{"enabled":true},"sku_price_match":{"enabled":true}}}
+
+SKU 与匹配结果暂存在服务的 recognition_run.config_snapshot（含模拟原始响应），不是最终业务表结构。单图接口返回 sku 和 match；导出脚本生成 sku_price_pairs.csv。仅一个候选、无次优时保守标为 AMBIGUOUS；阈值尚未用人工标注校准。本品/竞品、OneID、标准价格区间及五项指标仍需外部数据。
 
 - PostgreSQL/SQLite 任务与照片表
 - `FOR UPDATE SKIP LOCKED` 队列；SQLite 本地测试时降级为普通抢占
