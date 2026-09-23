@@ -63,8 +63,8 @@ class AismClient:
         return self._invoke("QUALITY_CHECK", body, prompt_version)
 
     def price_tag_detect(self, image_url: str) -> AismCallResult:
-        system_text = self._load_prompt("price_system_prompt.txt")
-        user_text = self._load_prompt("price_user_prompt.txt")
+        system_text = self._load_prompt("price_system_prompt_final.txt")
+        user_text = self._load_prompt("price_user_prompt_final.txt")
         prompt_version = self._prompt_version(system_text, user_text)
         body = self._build_body(
             image_url,

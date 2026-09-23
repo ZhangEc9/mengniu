@@ -21,7 +21,7 @@ from run_full_pipeline import (
 )
 
 EXCEL_PATH = Path(r"D:/Shixi/mengniu/2026-09-18-14-38-17_EXPORT_XLSX_27962701_827/2026-09-18-14-38-17_EXPORT_XLSX_27962701_917_0.xlsx")
-OUTPUT_BASE = Path(r"D:/Shixi/mengniu/Excel_前100张识别结果")
+OUTPUT_BASE = Path(os.getenv("EXCEL_RUN_OUTPUT_BASE", r"D:/Shixi/mengniu/Excel_前100张识别结果-最终版"))
 
 REJECTED_DIR = OUTPUT_BASE / "1_质量不合格"
 ACCEPTED_DIR = OUTPUT_BASE / "2_质量合格_价签识别"

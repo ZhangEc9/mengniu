@@ -49,6 +49,7 @@ CACHE_OSS_FILE = Path(__file__).resolve().parent / "价签识别" / "oss_image_m
 
 # ==================== 1. 提示词加载接口 (提示词与代码完全分离) ====================
 PROMPTS_DIR = Path(__file__).resolve().parent / "prompts"
+PRICE_PROMPT_SUFFIX = os.getenv("PRICE_PROMPT_SUFFIX", "_final")
 
 def load_prompt(filename: str, default: str = "") -> str:
     """从 prompts/ 目录动态读取外部提示词文件，支持用户随时直接在文本文件中修改并热更新。"""
@@ -68,8 +69,8 @@ def get_quality_prompts() -> tuple[str, str]:
     return sys_p, usr_p
 
 def get_price_prompts() -> tuple[str, str]:
-    sys_p = load_prompt("price_system_prompt.txt", "你是一个专业的零售商品价签（Price Tag）视觉识别专家。请识别图中所有真实独立的商品零售价签。")
-    usr_p = load_prompt("price_user_prompt.txt", "请识别图中所有真实独立的商品零售价签，准确定位其 bbox 并识别价格。直接返回标准 JSON 数组。")
+    sys_p = load_prompt(f"price_system_prompt{PRICE_PROMPT_SUFFIX}.txt", "你是一个专业的零售商品价签（Price Tag）视觉识别专家。请识别图中所有真实独立的商品零售价签。")
+    usr_p = load_prompt(f"price_user_prompt{PRICE_PROMPT_SUFFIX}.txt", "请识别图中所有真实独立的商品零售价签，准确定位其 bbox 并识别价格。直接返回标准 JSON 数组。")
     return sys_p, usr_p
 
 # ==================== 3. 基础通用工具 ====================
