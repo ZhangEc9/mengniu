@@ -1,0 +1,149 @@
+{
+  "image_name": "09_49097496_6_first_normal_1788761410623_16708630.jpeg",
+  "image_url": "https://ossaism.mengniu.cn/20260922/114fdecd9471db514fd5fe31d6f73fef/2102226492149862400.jpeg",
+  "processed_at": "2026-09-22 10:40:27",
+  "step1_qc": {
+    "qc_result": {
+      "is_valid": true,
+      "should_continue": true,
+      "quality_checks": {
+        "图片模糊": "合格",
+        "过度曝光": "合格",
+        "光线不足": "合格",
+        "文件损坏": "合格"
+      },
+      "invalid_reason": "",
+      "invalid_reasons": []
+    },
+    "content_info": {
+      "has_price_tag": true,
+      "scene_type": "冰箱照"
+    },
+    "elapsed_sec": 29.54
+  },
+  "step2_price_tags": {
+    "total_tags": 7,
+    "total_promotion_tags": 0,
+    "elapsed_sec": 27.35,
+    "tags": [
+      {
+        "id": 1,
+        "shelf_layer": 1,
+        "bbox": [
+          162,
+          334,
+          319,
+          395
+        ],
+        "price": "25.90",
+        "raw_price_text": "25.90",
+        "tag_type": "regular_price",
+        "confidence": 0.95,
+        "price_confidence": 0.98,
+        "confidence_reason": "白色导轨签，金额清晰无遮挡"
+      },
+      {
+        "id": 2,
+        "shelf_layer": 1,
+        "bbox": [
+          501,
+          341,
+          623,
+          402
+        ],
+        "price": "19.90",
+        "raw_price_text": "19.90",
+        "tag_type": "regular_price",
+        "confidence": 0.94,
+        "price_confidence": 0.97,
+        "confidence_reason": "白色导轨签，数字清晰，轻微反光但可辨"
+      },
+      {
+        "id": 3,
+        "shelf_layer": 2,
+        "bbox": [
+          172,
+          680,
+          294,
+          741
+        ],
+        "price": "12.90",
+        "raw_price_text": "12.90",
+        "tag_type": "regular_price",
+        "confidence": 0.92,
+        "price_confidence": 0.96,
+        "confidence_reason": "白色导轨签，价格区完整可见"
+      },
+      {
+        "id": 4,
+        "shelf_layer": 2,
+        "bbox": [
+          489,
+          668,
+          599,
+          728
+        ],
+        "price": "7.90",
+        "raw_price_text": "7.90",
+        "tag_type": "regular_price",
+        "confidence": 0.88,
+        "price_confidence": 0.91,
+        "confidence_reason": "价签部分被酸奶杯遮挡，金额基本可读"
+      },
+      {
+        "id": 5,
+        "shelf_layer": 2,
+        "bbox": [
+          602,
+          672,
+          712,
+          729
+        ],
+        "price": "5.00",
+        "raw_price_text": "5.00",
+        "tag_type": "regular_price",
+        "confidence": 0.89,
+        "price_confidence": 0.93,
+        "confidence_reason": "绿色边框价签，数字清晰，背景稍杂"
+      },
+      {
+        "id": 6,
+        "shelf_layer": 2,
+        "bbox": [
+          870,
+          658,
+          965,
+          720
+        ],
+        "price": "9.90",
+        "raw_price_text": "9.9元",
+        "tag_type": "regular_price",
+        "confidence": 0.96,
+        "price_confidence": 0.99,
+        "confidence_reason": "黄色特价签，大字‘9.9元’清晰，‘元’字略小但可辨"
+      },
+      {
+        "id": 7,
+        "shelf_layer": 3,
+        "bbox": [
+          0,
+          677,
+          172,
+          740
+        ],
+        "price": "12.90",
+        "raw_price_text": "祝你新年大吉大利 12.90",
+        "tag_type": "regular_price",
+        "confidence": 0.78,
+        "price_confidence": 0.82,
+        "confidence_reason": "价签位于盒装酸奶下方，文字较密集，12.90可辨但有轻微模糊"
+      }
+    ],
+    "promotion_tags": []
+  },
+  "step3_sku": {
+    "status": "pending_implementation",
+    "message": "SKU 识别接口已预留，待后端模型就绪后随时无缝接入",
+    "sku_items": []
+  }
+}

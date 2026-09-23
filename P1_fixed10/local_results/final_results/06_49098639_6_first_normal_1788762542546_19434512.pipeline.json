@@ -1,0 +1,242 @@
+{
+  "image_name": "06_49098639_6_first_normal_1788762542546_19434512.jpeg",
+  "image_url": "https://ossaism.mengniu.cn/20260922/6c6a76ea3c412395b890c47b75448013/2102226009477746688.jpeg",
+  "processed_at": "2026-09-22 10:38:32",
+  "step1_qc": {
+    "qc_result": {
+      "is_valid": true,
+      "should_continue": true,
+      "quality_checks": {
+        "图片模糊": "合格",
+        "过度曝光": "合格",
+        "光线不足": "合格",
+        "文件损坏": "合格"
+      },
+      "invalid_reason": "",
+      "invalid_reasons": []
+    },
+    "content_info": {
+      "has_price_tag": true,
+      "scene_type": "冰箱照"
+    },
+    "elapsed_sec": 12.58
+  },
+  "step2_price_tags": {
+    "total_tags": 10,
+    "total_promotion_tags": 2,
+    "elapsed_sec": 40.48,
+    "tags": [
+      {
+        "id": 1,
+        "shelf_layer": 1,
+        "bbox": [
+          142,
+          650,
+          238,
+          685
+        ],
+        "price": "10.90",
+        "raw_price_text": "10.90",
+        "tag_type": "regular_price",
+        "confidence": 0.95,
+        "price_confidence": 0.98,
+        "confidence_reason": "白色导轨签，数字清晰无遮挡"
+      },
+      {
+        "id": 1,
+        "shelf_layer": 1,
+        "bbox": [
+          250,
+          533,
+          385,
+          695
+        ],
+        "price": "10.90",
+        "raw_price_text": "10.9",
+        "tag_type": "bundle_promotion",
+        "bundle_quantity": 2,
+        "bundle_price": "10.90",
+        "confidence": 0.85,
+        "price_confidence": 0.82,
+        "confidence_reason": "黄色爆炸签，'10.9'与隐含'2件'同签（常见组合促销格式）",
+        "promotion_type": "bundle_promotion",
+        "raw_promotion_text": "10.9"
+      },
+      {
+        "id": 3,
+        "shelf_layer": 1,
+        "bbox": [
+          357,
+          663,
+          445,
+          695
+        ],
+        "price": "10.90",
+        "raw_price_text": "10.90",
+        "tag_type": "regular_price",
+        "confidence": 0.92,
+        "price_confidence": 0.96,
+        "confidence_reason": "白色导轨签，金额清晰，位于第二瓶原味高钙下方"
+      },
+      {
+        "id": 4,
+        "shelf_layer": 1,
+        "bbox": [
+          585,
+          678,
+          670,
+          710
+        ],
+        "price": "10.80",
+        "raw_price_text": "10.80",
+        "tag_type": "regular_price",
+        "confidence": 0.78,
+        "price_confidence": 0.8,
+        "confidence_reason": "白色导轨签局部反光，'10.80'可辨但小数点略模糊"
+      },
+      {
+        "id": 5,
+        "shelf_layer": 1,
+        "bbox": [
+          937,
+          625,
+          1000,
+          695
+        ],
+        "price": "19.90",
+        "raw_price_text": "特价 19.9",
+        "tag_type": "regular_price",
+        "confidence": 0.9,
+        "price_confidence": 0.93,
+        "confidence_reason": "红色特价签，'19.9'清晰，末位'0'省略属常见标法"
+      },
+      {
+        "id": 6,
+        "shelf_layer": 2,
+        "bbox": [
+          115,
+          950,
+          205,
+          995
+        ],
+        "price": "9.90",
+        "raw_price_text": "9.90",
+        "tag_type": "regular_price",
+        "confidence": 0.88,
+        "price_confidence": 0.94,
+        "confidence_reason": "蓝色底白字导轨签，数字清晰，位于畅轻紫米爆珠下方"
+      },
+      {
+        "id": 7,
+        "shelf_layer": 2,
+        "bbox": [
+          205,
+          955,
+          285,
+          995
+        ],
+        "price": "9.90",
+        "raw_price_text": "9.90",
+        "tag_type": "regular_price",
+        "confidence": 0.87,
+        "price_confidence": 0.92,
+        "confidence_reason": "蓝色导轨签，部分被遮挡但价格数字完整可读"
+      },
+      {
+        "id": 8,
+        "shelf_layer": 2,
+        "bbox": [
+          295,
+          960,
+          370,
+          995
+        ],
+        "price": "9.90",
+        "raw_price_text": "9.90",
+        "tag_type": "regular_price",
+        "confidence": 0.85,
+        "price_confidence": 0.88,
+        "confidence_reason": "导轨签边缘轻微模糊，'9.90'仍可确认"
+      },
+      {
+        "id": 9,
+        "shelf_layer": 2,
+        "bbox": [
+          835,
+          945,
+          918,
+          995
+        ],
+        "price": "12.90",
+        "raw_price_text": "12.9",
+        "tag_type": "regular_price",
+        "confidence": 0.82,
+        "price_confidence": 0.79,
+        "confidence_reason": "黄色爆炸签，'12.9'可见，末位'0'省略，背景有新品标识干扰"
+      },
+      {
+        "id": 10,
+        "shelf_layer": 2,
+        "bbox": [
+          445,
+          975,
+          525,
+          999
+        ],
+        "price": "9.90",
+        "raw_price_text": "9.90",
+        "tag_type": "regular_price",
+        "confidence": 0.75,
+        "price_confidence": 0.7,
+        "confidence_reason": "远景导轨签，像素低，数字勉强可辨为'9.90'"
+      }
+    ],
+    "promotion_tags": [
+      {
+        "id": 1,
+        "shelf_layer": 1,
+        "bbox": [
+          250,
+          533,
+          385,
+          695
+        ],
+        "price": "10.90",
+        "raw_price_text": "10.9",
+        "tag_type": "bundle_promotion",
+        "bundle_quantity": 2,
+        "bundle_price": "10.90",
+        "confidence": 0.85,
+        "price_confidence": 0.82,
+        "confidence_reason": "黄色爆炸签，'10.9'与隐含'2件'同签（常见组合促销格式）",
+        "promotion_type": "bundle_promotion",
+        "raw_promotion_text": "10.9"
+      },
+      {
+        "id": 2,
+        "shelf_layer": 1,
+        "bbox": [
+          445,
+          655,
+          575,
+          705
+        ],
+        "price": "10.90",
+        "raw_price_text": "惊爆价 10.9",
+        "tag_type": "bundle_promotion",
+        "bundle_quantity": 2,
+        "bundle_price": "10.90",
+        "confidence": 0.8,
+        "price_confidence": 0.75,
+        "confidence_reason": "黄色特价签，'10.9'旁无明确件数但同区域多为2件装促销，按惯例合并",
+        "promotion_type": "bundle_promotion",
+        "raw_promotion_text": "惊爆价 10.9"
+      }
+    ]
+  },
+  "step3_sku": {
+    "status": "pending_implementation",
+    "message": "SKU 识别接口已预留，待后端模型就绪后随时无缝接入",
+    "sku_items": []
+  }
+}

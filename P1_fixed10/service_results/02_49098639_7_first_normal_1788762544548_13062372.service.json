@@ -1,0 +1,42 @@
+{
+  "photo": {
+    "id": "60ba7da4e10347338d226c8722a072b1",
+    "task_id": "847aa16ae86c4a55b3ebccabbd078774",
+    "status": "COMPLETED",
+    "outcome": "BLOCKED",
+    "current_stage": "DONE",
+    "stop_reason": "NO_PRICE_TAG",
+    "retry_count": 0,
+    "image_name": "49098639_7_first_normal_1788762544548_13062372.jpeg",
+    "image_url": "http://sjimgpub.slicejobs.com/algapp/order/type_4/100/7741/49098639/49098639_7_first_normal_1788762544548_13062372.jpeg",
+    "source_row_id": "213481",
+    "source_photo_type": "priceTagPhotos",
+    "last_error_type": null,
+    "last_error_message": null
+  },
+  "qc": {
+    "photo_id": "60ba7da4e10347338d226c8722a072b1",
+    "is_valid": true,
+    "should_continue": true,
+    "quality_checks": {
+      "图片模糊": "合格",
+      "过度曝光": "合格",
+      "光线不足": "合格",
+      "文件损坏": "合格"
+    },
+    "invalid_reason": null,
+    "invalid_reasons": [],
+    "scene_type": "冰箱照",
+    "scene_group": "冰箱照",
+    "has_price_tag": false,
+    "is_quality_pass": true,
+    "is_target_scene": true,
+    "can_proceed_to_price": false,
+    "rejection_reasons": [
+      "画面内未检出有效商品价签"
+    ],
+    "model_name": "AISM_WORKFLOW",
+    "prompt_version": "sha256:082651e22658",
+    "model_cost_sec": 5.097
+  }
+}

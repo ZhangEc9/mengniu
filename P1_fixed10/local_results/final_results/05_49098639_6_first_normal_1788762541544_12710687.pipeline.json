@@ -1,0 +1,245 @@
+{
+  "image_name": "05_49098639_6_first_normal_1788762541544_12710687.jpeg",
+  "image_url": "https://ossaism.mengniu.cn/20260922/a204d514bd8ae5a3ba39ca8a4a9ef8c3/2102225714437820416.jpeg",
+  "processed_at": "2026-09-22 10:37:21",
+  "step1_qc": {
+    "qc_result": {
+      "is_valid": true,
+      "should_continue": true,
+      "quality_checks": {
+        "图片模糊": "合格",
+        "过度曝光": "合格",
+        "光线不足": "合格",
+        "文件损坏": "合格"
+      },
+      "invalid_reason": "",
+      "invalid_reasons": []
+    },
+    "content_info": {
+      "has_price_tag": true,
+      "scene_type": "冰箱照"
+    },
+    "elapsed_sec": 7.27
+  },
+  "step2_price_tags": {
+    "total_tags": 13,
+    "total_promotion_tags": 0,
+    "elapsed_sec": 60.75,
+    "tags": [
+      {
+        "id": 1,
+        "shelf_layer": 1,
+        "bbox": [
+          0,
+          135,
+          48,
+          192
+        ],
+        "price": "7.90",
+        "raw_price_text": "7.90",
+        "tag_type": "regular_price",
+        "confidence": 0.85,
+        "price_confidence": 0.92,
+        "confidence_reason": "白色导轨签，数字清晰，'7.90'可辨"
+      },
+      {
+        "id": 2,
+        "shelf_layer": 1,
+        "bbox": [
+          128,
+          128,
+          226,
+          190
+        ],
+        "price": "7.50",
+        "raw_price_text": "7.50",
+        "tag_type": "regular_price",
+        "confidence": 0.82,
+        "price_confidence": 0.88,
+        "confidence_reason": "蓝色特价签，金额清晰，小数点明确"
+      },
+      {
+        "id": 3,
+        "shelf_layer": 1,
+        "bbox": [
+          318,
+          95,
+          424,
+          158
+        ],
+        "price": "4.90",
+        "raw_price_text": "4.9",
+        "tag_type": "regular_price",
+        "confidence": 0.78,
+        "price_confidence": 0.75,
+        "confidence_reason": "手写价签，'4.9'无单位，按惯例补'.00'；小数点略模糊"
+      },
+      {
+        "id": 4,
+        "shelf_layer": 1,
+        "bbox": [
+          474,
+          122,
+          564,
+          185
+        ],
+        "price": "8.00",
+        "raw_price_text": "8.00",
+        "tag_type": "regular_price",
+        "confidence": 0.9,
+        "price_confidence": 0.95,
+        "confidence_reason": "蓝色导轨签，数字完整清晰，含两位小数"
+      },
+      {
+        "id": 5,
+        "shelf_layer": 1,
+        "bbox": [
+          596,
+          120,
+          688,
+          182
+        ],
+        "price": "9.90",
+        "raw_price_text": "9.90",
+        "tag_type": "regular_price",
+        "confidence": 0.88,
+        "price_confidence": 0.93,
+        "confidence_reason": "蓝色特价签，金额清晰，'9.90'完整可见"
+      },
+      {
+        "id": 6,
+        "shelf_layer": 1,
+        "bbox": [
+          832,
+          120,
+          922,
+          178
+        ],
+        "price": "12.90",
+        "raw_price_text": "12.90",
+        "tag_type": "regular_price",
+        "confidence": 0.84,
+        "price_confidence": 0.87,
+        "confidence_reason": "蓝色导轨签，数字清晰，但轻微反光"
+      },
+      {
+        "id": 7,
+        "shelf_layer": 2,
+        "bbox": [
+          94,
+          402,
+          176,
+          445
+        ],
+        "price": "4.50",
+        "raw_price_text": "4.50",
+        "tag_type": "regular_price",
+        "confidence": 0.76,
+        "price_confidence": 0.72,
+        "confidence_reason": "蓝色小标签，数字较小，'4.50'可辨但边缘略糊"
+      },
+      {
+        "id": 8,
+        "shelf_layer": 2,
+        "bbox": [
+          262,
+          398,
+          342,
+          442
+        ],
+        "price": "3.50",
+        "raw_price_text": "3.50",
+        "tag_type": "regular_price",
+        "confidence": 0.8,
+        "price_confidence": 0.85,
+        "confidence_reason": "蓝色导轨签，金额清晰，'3.50'完整"
+      },
+      {
+        "id": 9,
+        "shelf_layer": 2,
+        "bbox": [
+          416,
+          398,
+          496,
+          438
+        ],
+        "price": "3.20",
+        "raw_price_text": "3.20",
+        "tag_type": "regular_price",
+        "confidence": 0.79,
+        "price_confidence": 0.83,
+        "confidence_reason": "蓝色标签，数字清晰，'3.20'可确认"
+      },
+      {
+        "id": 10,
+        "shelf_layer": 3,
+        "bbox": [
+          68,
+          770,
+          148,
+          815
+        ],
+        "price": "12.50",
+        "raw_price_text": "12.50",
+        "tag_type": "regular_price",
+        "confidence": 0.81,
+        "price_confidence": 0.86,
+        "confidence_reason": "蓝色导轨签，位于底层左侧，金额清晰"
+      },
+      {
+        "id": 11,
+        "shelf_layer": 3,
+        "bbox": [
+          438,
+          745,
+          516,
+          802
+        ],
+        "price": "15.90",
+        "raw_price_text": "15.90",
+        "tag_type": "regular_price",
+        "confidence": 0.87,
+        "price_confidence": 0.91,
+        "confidence_reason": "蓝色导轨签，数字大而清晰，含两位小数"
+      },
+      {
+        "id": 12,
+        "shelf_layer": 3,
+        "bbox": [
+          656,
+          735,
+          732,
+          790
+        ],
+        "price": "9.90",
+        "raw_price_text": "9.90",
+        "tag_type": "regular_price",
+        "confidence": 0.85,
+        "price_confidence": 0.89,
+        "confidence_reason": "黄色特价签，金额清晰，'9.90'明确"
+      },
+      {
+        "id": 13,
+        "shelf_layer": 3,
+        "bbox": [
+          872,
+          728,
+          952,
+          778
+        ],
+        "price": "14.50",
+        "raw_price_text": "14.50",
+        "tag_type": "regular_price",
+        "confidence": 0.77,
+        "price_confidence": 0.74,
+        "confidence_reason": "蓝色小标签，位置偏右，数字稍小但可读"
+      }
+    ],
+    "promotion_tags": []
+  },
+  "step3_sku": {
+    "status": "pending_implementation",
+    "message": "SKU 识别接口已预留，待后端模型就绪后随时无缝接入",
+    "sku_items": []
+  }
+}

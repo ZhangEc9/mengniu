@@ -1,0 +1,13 @@
+{
+  "id": "847aa16ae86c4a55b3ebccabbd078774",
+  "task_no": "T20260922021754C272E2",
+  "source_type": "EXCEL_IMPORT",
+  "status": "COMPLETED",
+  "total_photos": 10,
+  "processed_photos": 10,
+  "succeeded_photos": 8,
+  "blocked_photos": 2,
+  "failed_photos": 0,
+  "created_at": "2026-09-22T02:17:54.984328",
+  "updated_at": "2026-09-22T02:20:25.711751"
+}

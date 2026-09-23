@@ -1,0 +1,217 @@
+{
+  "photo": {
+    "id": "8441881deffd43d696614926b30c205e",
+    "task_id": "847aa16ae86c4a55b3ebccabbd078774",
+    "status": "COMPLETED",
+    "outcome": "PROCESSED",
+    "current_stage": "DONE",
+    "stop_reason": null,
+    "retry_count": 0,
+    "image_name": "49098639_6_first_normal_1788762541544_12710687.jpeg",
+    "image_url": "http://sjimgpub.slicejobs.com/algapp/order/type_4/100/7741/49098639/49098639_6_first_normal_1788762541544_12710687.jpeg",
+    "source_row_id": "213481",
+    "source_photo_type": "productCloseupPhotos",
+    "last_error_type": null,
+    "last_error_message": null
+  },
+  "qc": {
+    "photo_id": "8441881deffd43d696614926b30c205e",
+    "is_valid": true,
+    "should_continue": true,
+    "quality_checks": {
+      "图片模糊": "合格",
+      "过度曝光": "合格",
+      "光线不足": "合格",
+      "文件损坏": "合格"
+    },
+    "invalid_reason": null,
+    "invalid_reasons": [],
+    "scene_type": "冰箱照",
+    "scene_group": "冰箱照",
+    "has_price_tag": true,
+    "is_quality_pass": true,
+    "is_target_scene": true,
+    "can_proceed_to_price": true,
+    "rejection_reasons": [],
+    "model_name": "AISM_WORKFLOW",
+    "prompt_version": "sha256:082651e22658",
+    "model_cost_sec": 4.77
+  },
+  "price": {
+    "image_name": "49098639_6_first_normal_1788762541544_12710687.jpeg",
+    "image_url": "http://sjimgpub.slicejobs.com/algapp/order/type_4/100/7741/49098639/49098639_6_first_normal_1788762541544_12710687.jpeg",
+    "scene_type": "冰箱照",
+    "price_tag_count": 13,
+    "price_tags": [
+      {
+        "id": 1,
+        "bbox": [
+          0.0,
+          135.0,
+          48.0,
+          192.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "7.90",
+        "raw_price_text": "7.90",
+        "unit": "元"
+      },
+      {
+        "id": 2,
+        "bbox": [
+          128.0,
+          130.0,
+          226.0,
+          190.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "7.50",
+        "raw_price_text": "7.50",
+        "unit": "元"
+      },
+      {
+        "id": 3,
+        "bbox": [
+          320.0,
+          95.0,
+          424.0,
+          158.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "4.90",
+        "raw_price_text": "4.9",
+        "unit": "元"
+      },
+      {
+        "id": 4,
+        "bbox": [
+          472.0,
+          125.0,
+          564.0,
+          185.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "8.00",
+        "raw_price_text": "8.00",
+        "unit": "元"
+      },
+      {
+        "id": 5,
+        "bbox": [
+          596.0,
+          128.0,
+          688.0,
+          182.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "9.90",
+        "raw_price_text": "9.90",
+        "unit": "元"
+      },
+      {
+        "id": 6,
+        "bbox": [
+          832.0,
+          122.0,
+          924.0,
+          178.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "12.90",
+        "raw_price_text": "12.90",
+        "unit": "元"
+      },
+      {
+        "id": 7,
+        "bbox": [
+          94.0,
+          402.0,
+          176.0,
+          448.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "4.50",
+        "raw_price_text": "4.50",
+        "unit": "元"
+      },
+      {
+        "id": 8,
+        "bbox": [
+          262.0,
+          398.0,
+          344.0,
+          442.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "3.50",
+        "raw_price_text": "3.50",
+        "unit": "元"
+      },
+      {
+        "id": 9,
+        "bbox": [
+          416.0,
+          398.0,
+          498.0,
+          438.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "3.20",
+        "raw_price_text": "3.20",
+        "unit": "元"
+      },
+      {
+        "id": 10,
+        "bbox": [
+          68.0,
+          770.0,
+          148.0,
+          815.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "12.50",
+        "raw_price_text": "12.50",
+        "unit": "元"
+      },
+      {
+        "id": 11,
+        "bbox": [
+          438.0,
+          750.0,
+          516.0,
+          800.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "15.90",
+        "raw_price_text": "15.90",
+        "unit": "元"
+      },
+      {
+        "id": 12,
+        "bbox": [
+          656.0,
+          735.0,
+          732.0,
+          788.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "9.90",
+        "raw_price_text": "9.90",
+        "unit": "元"
+      },
+      {
+        "id": 13,
+        "bbox": [
+          872.0,
+          730.0,
+          948.0,
+          778.0
+        ],
+        "coordinate_scale": 1000,
+        "price": "14.50",
+        "raw_price_text": "14.50",
+        "unit": "元"
+      }
+    ]
+  }
+}

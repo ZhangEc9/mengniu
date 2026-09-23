@@ -1,0 +1,32 @@
+{
+  "image_name": "08_49097496_7_first_normal_1788761411624_11498442.jpeg",
+  "image_url": "https://ossaism.mengniu.cn/20260922/12639b0981ca02f473465c356bc951d3/2102226461283979264.jpeg",
+  "checked_at": "2026-09-22 10:40:25",
+  "qc_result": {
+    "is_valid": true,
+    "should_continue": true,
+    "quality_checks": {
+      "图片模糊": "合格",
+      "过度曝光": "合格",
+      "光线不足": "合格",
+      "文件损坏": "合格"
+    },
+    "invalid_reason": "",
+    "invalid_reasons": []
+  },
+  "content_info": {
+    "has_price_tag": false,
+    "scene_type": "冰箱照"
+  },
+  "decision": {
+    "is_quality_pass": true,
+    "is_scene_valid": true,
+    "scene_type": "冰箱照",
+    "has_price_tag": false,
+    "price_gate_skipped": false,
+    "can_proceed_to_price_tag": false,
+    "rejection_reasons": [
+      "画面内未检出有效商品价签"
+    ]
+  }
+}

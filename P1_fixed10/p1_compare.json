@@ -1,0 +1,139 @@
+{
+  "iou_threshold": 0.5,
+  "totals": {
+    "images": 10,
+    "outcome_agree": 10,
+    "service_processed": 8,
+    "local_processed": 8,
+    "service_tags": 56,
+    "local_tags": 60,
+    "matched_bboxes": 54,
+    "matched_bbox_and_price": 53,
+    "service_unmatched": 2,
+    "local_unmatched": 6,
+    "bbox_match_rate": 0.9642857142857143,
+    "bbox_price_match_rate": 0.9464285714285714
+  },
+  "images": [
+    {
+      "image_name": "49098981_7_first_normal_1788763058147_19960398.jpeg",
+      "service_outcome": "PROCESSED",
+      "local_outcome": "PROCESSED",
+      "outcome_agree": true,
+      "service_tag_count": 1,
+      "local_tag_count": 1,
+      "matched_bboxes": 1,
+      "matched_bbox_and_price": 1,
+      "service_unmatched": 0,
+      "local_unmatched": 0
+    },
+    {
+      "image_name": "49098639_7_first_normal_1788762544548_13062372.jpeg",
+      "service_outcome": "BLOCKED",
+      "local_outcome": "BLOCKED",
+      "outcome_agree": true,
+      "service_tag_count": 0,
+      "local_tag_count": 0,
+      "matched_bboxes": 0,
+      "matched_bbox_and_price": 0,
+      "service_unmatched": 0,
+      "local_unmatched": 0
+    },
+    {
+      "image_name": "49098639_6_first_normal_1788762540543_10859339.jpeg",
+      "service_outcome": "PROCESSED",
+      "local_outcome": "PROCESSED",
+      "outcome_agree": true,
+      "service_tag_count": 14,
+      "local_tag_count": 14,
+      "matched_bboxes": 13,
+      "matched_bbox_and_price": 13,
+      "service_unmatched": 1,
+      "local_unmatched": 1
+    },
+    {
+      "image_name": "49098639_6_first_normal_1788762539541_15932722.jpeg",
+      "service_outcome": "PROCESSED",
+      "local_outcome": "PROCESSED",
+      "outcome_agree": true,
+      "service_tag_count": 4,
+      "local_tag_count": 4,
+      "matched_bboxes": 4,
+      "matched_bbox_and_price": 3,
+      "service_unmatched": 0,
+      "local_unmatched": 0
+    },
+    {
+      "image_name": "49098639_6_first_normal_1788762541544_12710687.jpeg",
+      "service_outcome": "PROCESSED",
+      "local_outcome": "PROCESSED",
+      "outcome_agree": true,
+      "service_tag_count": 13,
+      "local_tag_count": 13,
+      "matched_bboxes": 13,
+      "matched_bbox_and_price": 13,
+      "service_unmatched": 0,
+      "local_unmatched": 0
+    },
+    {
+      "image_name": "49098639_6_first_normal_1788762542546_19434512.jpeg",
+      "service_outcome": "PROCESSED",
+      "local_outcome": "PROCESSED",
+      "outcome_agree": true,
+      "service_tag_count": 9,
+      "local_tag_count": 10,
+      "matched_bboxes": 9,
+      "matched_bbox_and_price": 9,
+      "service_unmatched": 0,
+      "local_unmatched": 1
+    },
+    {
+      "image_name": "49098639_6_first_normal_1788762543547_12183779.jpeg",
+      "service_outcome": "PROCESSED",
+      "local_outcome": "PROCESSED",
+      "outcome_agree": true,
+      "service_tag_count": 5,
+      "local_tag_count": 6,
+      "matched_bboxes": 4,
+      "matched_bbox_and_price": 4,
+      "service_unmatched": 1,
+      "local_unmatched": 2
+    },
+    {
+      "image_name": "49097496_7_first_normal_1788761411624_11498442.jpeg",
+      "service_outcome": "BLOCKED",
+      "local_outcome": "BLOCKED",
+      "outcome_agree": true,
+      "service_tag_count": 0,
+      "local_tag_count": 0,
+      "matched_bboxes": 0,
+      "matched_bbox_and_price": 0,
+      "service_unmatched": 0,
+      "local_unmatched": 0
+    },
+    {
+      "image_name": "49097496_6_first_normal_1788761410623_16708630.jpeg",
+      "service_outcome": "PROCESSED",
+      "local_outcome": "PROCESSED",
+      "outcome_agree": true,
+      "service_tag_count": 7,
+      "local_tag_count": 7,
+      "matched_bboxes": 7,
+      "matched_bbox_and_price": 7,
+      "service_unmatched": 0,
+      "local_unmatched": 0
+    },
+    {
+      "image_name": "49097496_6_first_normal_1788761409622_10822740.jpeg",
+      "service_outcome": "PROCESSED",
+      "local_outcome": "PROCESSED",
+      "outcome_agree": true,
+      "service_tag_count": 3,
+      "local_tag_count": 5,
+      "matched_bboxes": 3,
+      "matched_bbox_and_price": 3,
+      "service_unmatched": 0,
+      "local_unmatched": 2
+    }
+  ]
+}
