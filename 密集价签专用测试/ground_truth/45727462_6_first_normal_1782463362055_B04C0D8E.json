@@ -1,0 +1,2457 @@
+{
+  "version": "4.0.6",
+  "flags": {},
+  "checked": false,
+  "shapes": [
+    {
+      "label": "23.00",
+      "score": null,
+      "points": [
+        [
+          330.0,
+          105.66666666666666
+        ],
+        [
+          418.6666666666667,
+          105.66666666666666
+        ],
+        [
+          418.6666666666667,
+          155.33333333333334
+        ],
+        [
+          330.0,
+          155.33333333333334
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "23.00元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "15.00",
+      "score": null,
+      "points": [
+        [
+          560.0,
+          105.0
+        ],
+        [
+          644.6666666666666,
+          105.0
+        ],
+        [
+          644.6666666666666,
+          152.0
+        ],
+        [
+          560.0,
+          152.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "15.00元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "18.90",
+      "score": null,
+      "points": [
+        [
+          764.0,
+          105.0
+        ],
+        [
+          850.0,
+          105.0
+        ],
+        [
+          850.0,
+          154.0
+        ],
+        [
+          764.0,
+          154.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "18.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "20.80",
+      "score": null,
+      "points": [
+        [
+          910.0,
+          105.0
+        ],
+        [
+          984.0,
+          105.0
+        ],
+        [
+          984.0,
+          154.0
+        ],
+        [
+          910.0,
+          154.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "20.80元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "12.80",
+      "score": null,
+      "points": [
+        [
+          1032.0,
+          103.66666666666666
+        ],
+        [
+          1106.0,
+          103.66666666666666
+        ],
+        [
+          1106.0,
+          152.66666666666666
+        ],
+        [
+          1032.0,
+          152.66666666666666
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "12.80元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "21.80",
+      "score": null,
+      "points": [
+        [
+          1157.3333333333333,
+          103.0
+        ],
+        [
+          1229.3333333333333,
+          103.0
+        ],
+        [
+          1229.3333333333333,
+          152.0
+        ],
+        [
+          1157.3333333333333,
+          152.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "21.80元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "18.90",
+      "score": null,
+      "points": [
+        [
+          1280.0,
+          103.0
+        ],
+        [
+          1354.0,
+          103.0
+        ],
+        [
+          1354.0,
+          152.0
+        ],
+        [
+          1280.0,
+          152.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "18.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "19.90",
+      "score": null,
+      "points": [
+        [
+          1464.0,
+          105.0
+        ],
+        [
+          1536.0,
+          105.0
+        ],
+        [
+          1536.0,
+          154.0
+        ],
+        [
+          1464.0,
+          154.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "19.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "15.90",
+      "score": null,
+      "points": [
+        [
+          1584.0,
+          105.0
+        ],
+        [
+          1660.0,
+          105.0
+        ],
+        [
+          1660.0,
+          154.0
+        ],
+        [
+          1584.0,
+          154.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "15.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "15.90",
+      "score": null,
+      "points": [
+        [
+          1704.0,
+          105.0
+        ],
+        [
+          1780.0,
+          105.0
+        ],
+        [
+          1780.0,
+          154.0
+        ],
+        [
+          1704.0,
+          154.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "15.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "18.80",
+      "score": null,
+      "points": [
+        [
+          1824.0,
+          105.0
+        ],
+        [
+          1900.0,
+          105.0
+        ],
+        [
+          1900.0,
+          154.0
+        ],
+        [
+          1824.0,
+          154.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "18.80元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "18.80",
+      "score": null,
+      "points": [
+        [
+          1936.0,
+          105.0
+        ],
+        [
+          1999.0,
+          105.0
+        ],
+        [
+          1999.0,
+          154.0
+        ],
+        [
+          1936.0,
+          154.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "18.80元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          227.33333333333334,
+          441.33333333333337
+        ],
+        [
+          313.33333333333337,
+          441.33333333333337
+        ],
+        [
+          313.33333333333337,
+          491.33333333333337
+        ],
+        [
+          227.33333333333334,
+          491.33333333333337
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "8.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "4.90",
+      "score": null,
+      "points": [
+        [
+          416.0,
+          434.0
+        ],
+        [
+          504.0,
+          434.0
+        ],
+        [
+          504.0,
+          484.0
+        ],
+        [
+          416.0,
+          484.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "4.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "4.90",
+      "score": null,
+      "points": [
+        [
+          516.0,
+          437.33333333333337
+        ],
+        [
+          588.0,
+          437.33333333333337
+        ],
+        [
+          588.0,
+          487.33333333333337
+        ],
+        [
+          516.0,
+          487.33333333333337
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "4.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "4.90",
+      "score": null,
+      "points": [
+        [
+          598.0,
+          440.6666666666667
+        ],
+        [
+          658.0,
+          440.6666666666667
+        ],
+        [
+          658.0,
+          490.6666666666667
+        ],
+        [
+          598.0,
+          490.6666666666667
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "4.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "9.90",
+      "score": null,
+      "points": [
+        [
+          776.0,
+          434.0
+        ],
+        [
+          844.0,
+          434.0
+        ],
+        [
+          844.0,
+          484.0
+        ],
+        [
+          776.0,
+          484.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "9.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "4.90",
+      "score": null,
+      "points": [
+        [
+          851.3333333333334,
+          440.66666666666663
+        ],
+        [
+          911.3333333333334,
+          440.66666666666663
+        ],
+        [
+          911.3333333333334,
+          490.66666666666663
+        ],
+        [
+          851.3333333333334,
+          490.66666666666663
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "4.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "4.90",
+      "score": null,
+      "points": [
+        [
+          924.6666666666666,
+          440.6666666666667
+        ],
+        [
+          984.6666666666666,
+          440.6666666666667
+        ],
+        [
+          984.6666666666666,
+          490.6666666666667
+        ],
+        [
+          924.6666666666666,
+          490.6666666666667
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "4.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          1085.3333333333335,
+          441.3333333333333
+        ],
+        [
+          1145.3333333333335,
+          441.3333333333333
+        ],
+        [
+          1145.3333333333335,
+          491.3333333333333
+        ],
+        [
+          1085.3333333333335,
+          491.3333333333333
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "8.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "16.90",
+      "score": null,
+      "points": [
+        [
+          1165.3333333333333,
+          440.0
+        ],
+        [
+          1225.3333333333333,
+          440.0
+        ],
+        [
+          1225.3333333333333,
+          490.0
+        ],
+        [
+          1165.3333333333333,
+          490.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "16.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "13.90",
+      "score": null,
+      "points": [
+        [
+          1264.0,
+          434.0
+        ],
+        [
+          1324.0,
+          434.0
+        ],
+        [
+          1324.0,
+          484.0
+        ],
+        [
+          1264.0,
+          484.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "13.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "6.90",
+      "score": null,
+      "points": [
+        [
+          1344.0,
+          434.0
+        ],
+        [
+          1404.0,
+          434.0
+        ],
+        [
+          1404.0,
+          484.0
+        ],
+        [
+          1344.0,
+          484.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "6.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "9.90",
+      "score": null,
+      "points": [
+        [
+          116.0,
+          675.0
+        ],
+        [
+          200.0,
+          675.0
+        ],
+        [
+          200.0,
+          724.0
+        ],
+        [
+          116.0,
+          724.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "9.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          224.0,
+          675.6666666666666
+        ],
+        [
+          304.0,
+          675.6666666666666
+        ],
+        [
+          304.0,
+          724.6666666666666
+        ],
+        [
+          224.0,
+          724.6666666666666
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "8.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "9.90",
+      "score": null,
+      "points": [
+        [
+          422.0,
+          682.3333333333333
+        ],
+        [
+          502.0,
+          682.3333333333333
+        ],
+        [
+          502.0,
+          731.3333333333333
+        ],
+        [
+          422.0,
+          731.3333333333333
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "9.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          724.0,
+          675.0
+        ],
+        [
+          804.0,
+          675.0
+        ],
+        [
+          804.0,
+          724.0
+        ],
+        [
+          724.0,
+          724.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "8.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          862.0,
+          675.6666666666667
+        ],
+        [
+          942.0,
+          675.6666666666667
+        ],
+        [
+          942.0,
+          724.6666666666667
+        ],
+        [
+          862.0,
+          724.6666666666667
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "8.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "6.90",
+      "score": null,
+      "points": [
+        [
+          1122.6666666666667,
+          680.3333333333333
+        ],
+        [
+          1202.6666666666667,
+          680.3333333333333
+        ],
+        [
+          1202.6666666666667,
+          729.3333333333333
+        ],
+        [
+          1122.6666666666667,
+          729.3333333333333
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "6.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "6.90",
+      "score": null,
+      "points": [
+        [
+          1238.6666666666667,
+          673.6666666666667
+        ],
+        [
+          1318.6666666666667,
+          673.6666666666667
+        ],
+        [
+          1318.6666666666667,
+          722.6666666666667
+        ],
+        [
+          1238.6666666666667,
+          722.6666666666667
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "6.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          1349.3333333333333,
+          672.3333333333334
+        ],
+        [
+          1429.3333333333333,
+          672.3333333333334
+        ],
+        [
+          1429.3333333333333,
+          721.3333333333334
+        ],
+        [
+          1349.3333333333333,
+          721.3333333333334
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "8.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "5.90",
+      "score": null,
+      "points": [
+        [
+          1489.3333333333335,
+          674.3333333333334
+        ],
+        [
+          1569.3333333333335,
+          674.3333333333334
+        ],
+        [
+          1569.3333333333335,
+          723.3333333333334
+        ],
+        [
+          1489.3333333333335,
+          723.3333333333334
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "5.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "4.90",
+      "score": null,
+      "points": [
+        [
+          1600.6666666666667,
+          671.6666666666666
+        ],
+        [
+          1680.6666666666667,
+          671.6666666666666
+        ],
+        [
+          1680.6666666666667,
+          720.6666666666666
+        ],
+        [
+          1600.6666666666667,
+          720.6666666666666
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "4.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "6.90",
+      "score": null,
+      "points": [
+        [
+          1724.0,
+          673.0
+        ],
+        [
+          1804.0,
+          673.0
+        ],
+        [
+          1804.0,
+          722.0
+        ],
+        [
+          1724.0,
+          722.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "6.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "5.90",
+      "score": null,
+      "points": [
+        [
+          1828.0,
+          671.0
+        ],
+        [
+          1908.0,
+          671.0
+        ],
+        [
+          1908.0,
+          720.0
+        ],
+        [
+          1828.0,
+          720.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "5.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "5.90",
+      "score": null,
+      "points": [
+        [
+          1924.0,
+          675.0
+        ],
+        [
+          1999.0,
+          675.0
+        ],
+        [
+          1999.0,
+          724.0
+        ],
+        [
+          1924.0,
+          724.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "5.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          144.0,
+          877.0
+        ],
+        [
+          224.0,
+          877.0
+        ],
+        [
+          224.0,
+          927.0
+        ],
+        [
+          144.0,
+          927.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "8.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          264.0,
+          877.0
+        ],
+        [
+          344.0,
+          877.0
+        ],
+        [
+          344.0,
+          927.0
+        ],
+        [
+          264.0,
+          927.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "8.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "5.90",
+      "score": null,
+      "points": [
+        [
+          413.2397660818714,
+          878.7543859649123
+        ],
+        [
+          493.2397660818714,
+          878.7543859649123
+        ],
+        [
+          493.2397660818714,
+          928.7543859649123
+        ],
+        [
+          413.2397660818714,
+          928.7543859649123
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "5.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "5.90",
+      "score": null,
+      "points": [
+        [
+          520.374269005848,
+          877.0
+        ],
+        [
+          600.374269005848,
+          877.0
+        ],
+        [
+          600.374269005848,
+          927.0
+        ],
+        [
+          520.374269005848,
+          927.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "5.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "13.90",
+      "score": null,
+      "points": [
+        [
+          624.0,
+          877.0
+        ],
+        [
+          704.0,
+          877.0
+        ],
+        [
+          704.0,
+          927.0
+        ],
+        [
+          624.0,
+          927.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "13.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "13.90",
+      "score": null,
+      "points": [
+        [
+          708.9122807017543,
+          877.5847953216376
+        ],
+        [
+          788.9122807017543,
+          877.5847953216376
+        ],
+        [
+          788.9122807017543,
+          927.5847953216376
+        ],
+        [
+          708.9122807017543,
+          927.5847953216376
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "13.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          803.7660818713449,
+          874.0760233918129
+        ],
+        [
+          883.7660818713449,
+          874.0760233918129
+        ],
+        [
+          883.7660818713449,
+          924.0760233918129
+        ],
+        [
+          803.7660818713449,
+          924.0760233918129
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "8.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          967.625730994152,
+          881.093567251462
+        ],
+        [
+          1047.625730994152,
+          881.093567251462
+        ],
+        [
+          1047.625730994152,
+          931.093567251462
+        ],
+        [
+          967.625730994152,
+          931.093567251462
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "8.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          1057.8011695906432,
+          877.5847953216374
+        ],
+        [
+          1137.8011695906432,
+          877.5847953216374
+        ],
+        [
+          1137.8011695906432,
+          927.5847953216374
+        ],
+        [
+          1057.8011695906432,
+          927.5847953216374
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "8.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "12.80",
+      "score": null,
+      "points": [
+        [
+          1209.3801169590643,
+          875.2456140350878
+        ],
+        [
+          1289.3801169590643,
+          875.2456140350878
+        ],
+        [
+          1289.3801169590643,
+          925.2456140350878
+        ],
+        [
+          1209.3801169590643,
+          925.2456140350878
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "12.80元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "3.90",
+      "score": null,
+      "points": [
+        [
+          1322.3625730994152,
+          873.4912280701755
+        ],
+        [
+          1402.3625730994152,
+          873.4912280701755
+        ],
+        [
+          1402.3625730994152,
+          923.4912280701755
+        ],
+        [
+          1322.3625730994152,
+          923.4912280701755
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "3.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "3.90",
+      "score": null,
+      "points": [
+        [
+          1476.280701754386,
+          873.4912280701755
+        ],
+        [
+          1556.280701754386,
+          873.4912280701755
+        ],
+        [
+          1556.280701754386,
+          923.4912280701755
+        ],
+        [
+          1476.280701754386,
+          923.4912280701755
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "3.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "3.90",
+      "score": null,
+      "points": [
+        [
+          1579.3216374269007,
+          873.4912280701753
+        ],
+        [
+          1659.3216374269007,
+          873.4912280701753
+        ],
+        [
+          1659.3216374269007,
+          923.4912280701753
+        ],
+        [
+          1579.3216374269007,
+          923.4912280701753
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "3.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "13.90",
+      "score": null,
+      "points": [
+        [
+          1876.1637426900584,
+          870.5672514619882
+        ],
+        [
+          1931.1637426900584,
+          870.5672514619882
+        ],
+        [
+          1931.1637426900584,
+          920.5672514619882
+        ],
+        [
+          1876.1637426900584,
+          920.5672514619882
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "13.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          179.2046783625731,
+          1084.093567251462
+        ],
+        [
+          259.2046783625731,
+          1084.093567251462
+        ],
+        [
+          259.2046783625731,
+          1133.093567251462
+        ],
+        [
+          179.2046783625731,
+          1133.093567251462
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "8.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "3.90",
+      "score": null,
+      "points": [
+        [
+          412.24175824175825,
+          1085.4945054945053
+        ],
+        [
+          492.24175824175825,
+          1085.4945054945053
+        ],
+        [
+          492.24175824175825,
+          1134.4945054945053
+        ],
+        [
+          412.24175824175825,
+          1134.4945054945053
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "3.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "3.90",
+      "score": null,
+      "points": [
+        [
+          507.5164835164835,
+          1086.5934065934066
+        ],
+        [
+          587.5164835164835,
+          1086.5934065934066
+        ],
+        [
+          587.5164835164835,
+          1135.5934065934066
+        ],
+        [
+          507.5164835164835,
+          1135.5934065934066
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "3.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "4.90",
+      "score": null,
+      "points": [
+        [
+          687.9560439560439,
+          1083.8461538461538
+        ],
+        [
+          767.9560439560439,
+          1083.8461538461538
+        ],
+        [
+          767.9560439560439,
+          1132.8461538461538
+        ],
+        [
+          687.9560439560439,
+          1132.8461538461538
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "4.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "2.90",
+      "score": null,
+      "points": [
+        [
+          764.0,
+          1080.0
+        ],
+        [
+          844.0,
+          1080.0
+        ],
+        [
+          844.0,
+          1129.0
+        ],
+        [
+          764.0,
+          1129.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "2.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "2.90",
+      "score": null,
+      "points": [
+        [
+          848.2857142857143,
+          1084.3956043956043
+        ],
+        [
+          928.2857142857143,
+          1084.3956043956043
+        ],
+        [
+          928.2857142857143,
+          1133.3956043956043
+        ],
+        [
+          848.2857142857143,
+          1133.3956043956043
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "2.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "4.90",
+      "score": null,
+      "points": [
+        [
+          1004.0,
+          1080.0
+        ],
+        [
+          1084.0,
+          1080.0
+        ],
+        [
+          1084.0,
+          1129.0
+        ],
+        [
+          1004.0,
+          1129.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "4.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "3.90",
+      "score": null,
+      "points": [
+        [
+          1088.2857142857144,
+          1077.2527472527472
+        ],
+        [
+          1168.2857142857144,
+          1077.2527472527472
+        ],
+        [
+          1168.2857142857144,
+          1126.2527472527472
+        ],
+        [
+          1088.2857142857144,
+          1126.2527472527472
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "3.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "3.90",
+      "score": null,
+      "points": [
+        [
+          1226.4175824175825,
+          1082.1978021978023
+        ],
+        [
+          1306.4175824175825,
+          1082.1978021978023
+        ],
+        [
+          1306.4175824175825,
+          1131.1978021978023
+        ],
+        [
+          1226.4175824175825,
+          1131.1978021978023
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "3.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "3.90",
+      "score": null,
+      "points": [
+        [
+          1321.142857142857,
+          1083.846153846154
+        ],
+        [
+          1401.142857142857,
+          1083.846153846154
+        ],
+        [
+          1401.142857142857,
+          1132.846153846154
+        ],
+        [
+          1321.142857142857,
+          1132.846153846154
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "regular_price",
+        "raw_price_text": "3.90元"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "12.80",
+      "score": null,
+      "points": [
+        [
+          1185.8713450292398,
+          783.1286549707602
+        ],
+        [
+          1285.8713450292398,
+          783.1286549707602
+        ],
+        [
+          1285.8713450292398,
+          832.1286549707602
+        ],
+        [
+          1185.8713450292398,
+          832.1286549707602
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {
+        "tag_type": "bundle_promotion",
+        "raw_price_text": "劲爆价 12.8"
+      },
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "14.90",
+      "score": null,
+      "points": [
+        [
+          236.66666666666666,
+          110.0
+        ],
+        [
+          317.3333333333333,
+          110.0
+        ],
+        [
+          317.3333333333333,
+          152.0
+        ],
+        [
+          236.66666666666666,
+          152.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "15.50",
+      "score": null,
+      "points": [
+        [
+          131.33333333333334,
+          110.66666666666667
+        ],
+        [
+          204.66666666666666,
+          110.66666666666667
+        ],
+        [
+          204.66666666666666,
+          156.0
+        ],
+        [
+          131.33333333333334,
+          156.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "14.50",
+      "score": null,
+      "points": [
+        [
+          60.0,
+          109.33333333333333
+        ],
+        [
+          111.33333333333333,
+          109.33333333333333
+        ],
+        [
+          111.33333333333333,
+          152.66666666666666
+        ],
+        [
+          60.0,
+          152.66666666666666
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "12.90",
+      "score": null,
+      "points": [
+        [
+          439.3333333333333,
+          104.0
+        ],
+        [
+          525.3333333333334,
+          104.0
+        ],
+        [
+          525.3333333333334,
+          154.0
+        ],
+        [
+          439.3333333333333,
+          154.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "33.90",
+      "score": null,
+      "points": [
+        [
+          668.0,
+          109.33333333333333
+        ],
+        [
+          754.0,
+          109.33333333333333
+        ],
+        [
+          754.0,
+          155.33333333333334
+        ],
+        [
+          668.0,
+          155.33333333333334
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.50",
+      "score": null,
+      "points": [
+        [
+          120.66666666666667,
+          437.3333333333333
+        ],
+        [
+          196.66666666666666,
+          437.3333333333333
+        ],
+        [
+          196.66666666666666,
+          490.0
+        ],
+        [
+          120.66666666666667,
+          490.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          324.0,
+          445.3333333333333
+        ],
+        [
+          408.6666666666667,
+          445.3333333333333
+        ],
+        [
+          408.6666666666667,
+          488.0
+        ],
+        [
+          324.0,
+          488.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          1002.0,
+          443.3333333333333
+        ],
+        [
+          1057.3333333333333,
+          443.3333333333333
+        ],
+        [
+          1057.3333333333333,
+          490.0
+        ],
+        [
+          1002.0,
+          490.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "5.90",
+      "score": null,
+      "points": [
+        [
+          1426.0,
+          438.6666666666667
+        ],
+        [
+          1485.3333333333333,
+          438.6666666666667
+        ],
+        [
+          1485.3333333333333,
+          485.3333333333333
+        ],
+        [
+          1426.0,
+          485.3333333333333
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "5.90",
+      "score": null,
+      "points": [
+        [
+          1497.3333333333333,
+          445.3333333333333
+        ],
+        [
+          1564.0,
+          445.3333333333333
+        ],
+        [
+          1564.0,
+          486.6666666666667
+        ],
+        [
+          1497.3333333333333,
+          486.6666666666667
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "6.80",
+      "score": null,
+      "points": [
+        [
+          1736.0,
+          440.6666666666667
+        ],
+        [
+          1803.3333333333333,
+          440.6666666666667
+        ],
+        [
+          1803.3333333333333,
+          485.3333333333333
+        ],
+        [
+          1736.0,
+          485.3333333333333
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "6.80",
+      "score": null,
+      "points": [
+        [
+          1810.6666666666667,
+          442.0
+        ],
+        [
+          1888.6666666666667,
+          442.0
+        ],
+        [
+          1888.6666666666667,
+          488.0
+        ],
+        [
+          1810.6666666666667,
+          488.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "12.50",
+      "score": null,
+      "points": [
+        [
+          328.0,
+          683.3333333333334
+        ],
+        [
+          405.3333333333333,
+          683.3333333333334
+        ],
+        [
+          405.3333333333333,
+          723.3333333333334
+        ],
+        [
+          328.0,
+          723.3333333333334
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "4.50",
+      "score": null,
+      "points": [
+        [
+          531.3333333333334,
+          681.3333333333334
+        ],
+        [
+          618.6666666666666,
+          681.3333333333334
+        ],
+        [
+          618.6666666666666,
+          723.3333333333334
+        ],
+        [
+          531.3333333333334,
+          723.3333333333334
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "6.90",
+      "score": null,
+      "points": [
+        [
+          992.0,
+          682.0
+        ],
+        [
+          1079.3333333333333,
+          682.0
+        ],
+        [
+          1079.3333333333333,
+          724.6666666666666
+        ],
+        [
+          992.0,
+          724.6666666666666
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "8.90",
+      "score": null,
+      "points": [
+        [
+          886.5497076023393,
+          877.7777777777778
+        ],
+        [
+          962.5730994152048,
+          877.7777777777778
+        ],
+        [
+          962.5730994152048,
+          919.8830409356725
+        ],
+        [
+          886.5497076023393,
+          919.8830409356725
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "16.90",
+      "score": null,
+      "points": [
+        [
+          1770.1754385964912,
+          877.7777777777778
+        ],
+        [
+          1850.877192982456,
+          877.7777777777778
+        ],
+        [
+          1850.877192982456,
+          921.0526315789474
+        ],
+        [
+          1770.1754385964912,
+          921.0526315789474
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "45727462_6_first_normal_1782463362055_B04C0D8E.jpg",
+  "imageData": null,
+  "imageHeight": 1500,
+  "imageWidth": 2000,
+  "description": ""
+}

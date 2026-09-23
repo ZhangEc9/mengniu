@@ -1,0 +1,37 @@
+{
+  "1": {
+    "id": 1,
+    "price": "8.90",
+    "readable": true
+  },
+  "2": {
+    "id": 2,
+    "price": "8.90",
+    "readable": true
+  },
+  "3": {
+    "id": 3,
+    "price": "8.90",
+    "readable": true
+  },
+  "4": {
+    "id": 4,
+    "price": "12.80",
+    "readable": true
+  },
+  "5": {
+    "id": 5,
+    "price": "3.90",
+    "readable": true
+  },
+  "6": {
+    "id": 6,
+    "price": "3.90",
+    "readable": true
+  },
+  "7": {
+    "id": 7,
+    "price": "3.90",
+    "readable": true
+  }
+}
