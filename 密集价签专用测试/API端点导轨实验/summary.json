@@ -1,0 +1,1219 @@
+[
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "rails_returned": 2,
+    "rails_accepted": 2,
+    "rejected": [],
+    "details": {
+      "0": {
+        "candidates": 18,
+        "touching": 4,
+        "entities_in_box": 34
+      },
+      "1": {
+        "candidates": 8,
+        "touching": 2,
+        "entities_in_box": 27
+      }
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "matched": false,
+        "containment": 0.0
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "matched": true,
+        "containment": 1.0,
+        "corridor": 0
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "matched": false,
+        "containment": 0.0
+      }
+    ],
+    "stage_b_eval": [
+      {
+        "rail": 1,
+        "corridor": 0,
+        "containment": 1.0,
+        "user_tags": 14,
+        "preds": 18,
+        "matched_0.3": 5,
+        "matched_0.5": 1,
+        "matched_0.7": 0,
+        "preds_covering_2plus_tags": 1
+      }
+    ],
+    "global": {
+      "preds": 26,
+      "gts": 39,
+      "m30": 5,
+      "m50": 1
+    },
+    "corridors": [
+      {
+        "rail_id": 1,
+        "x_range": [
+          0,
+          1650
+        ],
+        "angle_deg": 0.15,
+        "inner_gap": 70.9,
+        "n_entities": 34,
+        "poly": [
+          [
+            0,
+            318
+          ],
+          [
+            1650,
+            322
+          ],
+          [
+            1650,
+            393
+          ],
+          [
+            0,
+            389
+          ]
+        ],
+        "api_box_1000": [
+          0,
+          368,
+          825,
+          452
+        ]
+      },
+      {
+        "rail_id": 2,
+        "x_range": [
+          0,
+          1998
+        ],
+        "angle_deg": -0.02,
+        "inner_gap": 174.7,
+        "n_entities": 27,
+        "poly": [
+          [
+            0,
+            639
+          ],
+          [
+            1998,
+            639
+          ],
+          [
+            1998,
+            813
+          ],
+          [
+            0,
+            814
+          ]
+        ],
+        "api_box_1000": [
+          0,
+          792,
+          999,
+          999
+        ]
+      }
+    ],
+    "prompts": {
+      "system": "你是超市货架价签定位助手。只输出 JSON 数组，不输出解释、markdown 标记或其他文字。",
+      "user": "图中是超市货架照片，货架上有一条或多条价格签条（导轨），每条上贴有一排价格签。\n任务：输出每一条价格签条的边界框，框住整条价签条（含其上全部价格签，上下留少量余量）。\n要求：\n1. 只算贴着普通白色价格标签的价签条；空导轨、只有促销牌/广告牌的条、商品包装上的文字行都不算。\n2. 一条价签条输出一个框；被照片边缘截断时框到可见部分为止。\n3. bbox 格式 [x1,y1,x2,y2]，为相对图像宽高的 0-1000 归一化整数坐标。\n4. 只输出 JSON 数组：[{\"rail_id\":1,\"rail_bbox\":[x1,y1,x2,y2]},...]\n5. 只输出真实可见的价签条；如果看不清或没有，返回 []，绝对不要按固定间隔编造。"
+    },
+    "note": "端点由 API 语义识别（只要 regular_price）；几何只做走廊与找框；标注仅用于评测。"
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "rails_returned": 2,
+    "rails_accepted": 2,
+    "rejected": [],
+    "details": {
+      "0": {
+        "candidates": 6,
+        "touching": 2,
+        "entities_in_box": 30
+      },
+      "1": {
+        "candidates": 4,
+        "touching": 1,
+        "entities_in_box": 30
+      }
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "matched": true,
+        "containment": 0.9,
+        "corridor": 1
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "matched": true,
+        "containment": 1.0,
+        "corridor": 0
+      }
+    ],
+    "stage_b_eval": [
+      {
+        "rail": 0,
+        "corridor": 1,
+        "containment": 0.9,
+        "user_tags": 10,
+        "preds": 4,
+        "matched_0.3": 0,
+        "matched_0.5": 0,
+        "matched_0.7": 0,
+        "preds_covering_2plus_tags": 1
+      },
+      {
+        "rail": 1,
+        "corridor": 0,
+        "containment": 1.0,
+        "user_tags": 11,
+        "preds": 6,
+        "matched_0.3": 2,
+        "matched_0.5": 1,
+        "matched_0.7": 0,
+        "preds_covering_2plus_tags": 2
+      }
+    ],
+    "global": {
+      "preds": 10,
+      "gts": 23,
+      "m30": 2,
+      "m50": 1
+    },
+    "corridors": [
+      {
+        "rail_id": 1,
+        "x_range": [
+          0,
+          1918
+        ],
+        "angle_deg": -0.23,
+        "inner_gap": 93.9,
+        "n_entities": 30,
+        "poly": [
+          [
+            0,
+            690
+          ],
+          [
+            1918,
+            682
+          ],
+          [
+            1918,
+            776
+          ],
+          [
+            0,
+            784
+          ]
+        ],
+        "api_box_1000": [
+          0,
+          785,
+          999,
+          920
+        ]
+      },
+      {
+        "rail_id": 2,
+        "x_range": [
+          0,
+          1918
+        ],
+        "angle_deg": 2.06,
+        "inner_gap": 153.6,
+        "n_entities": 30,
+        "poly": [
+          [
+            0,
+            50
+          ],
+          [
+            1918,
+            119
+          ],
+          [
+            1918,
+            273
+          ],
+          [
+            0,
+            204
+          ]
+        ],
+        "api_box_1000": [
+          0,
+          34,
+          999,
+          260
+        ]
+      }
+    ],
+    "prompts": {
+      "system": "你是超市货架价签定位助手。只输出 JSON 数组，不输出解释、markdown 标记或其他文字。",
+      "user": "图中是超市货架照片，货架上有一条或多条价格签条（导轨），每条上贴有一排价格签。\n任务：输出每一条价格签条的边界框，框住整条价签条（含其上全部价格签，上下留少量余量）。\n要求：\n1. 只算贴着普通白色价格标签的价签条；空导轨、只有促销牌/广告牌的条、商品包装上的文字行都不算。\n2. 一条价签条输出一个框；被照片边缘截断时框到可见部分为止。\n3. bbox 格式 [x1,y1,x2,y2]，为相对图像宽高的 0-1000 归一化整数坐标。\n4. 只输出 JSON 数组：[{\"rail_id\":1,\"rail_bbox\":[x1,y1,x2,y2]},...]\n5. 只输出真实可见的价签条；如果看不清或没有，返回 []，绝对不要按固定间隔编造。"
+    },
+    "note": "端点由 API 语义识别（只要 regular_price）；几何只做走廊与找框；标注仅用于评测。"
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "rails_returned": 4,
+    "rails_accepted": 3,
+    "rejected": [
+      {
+        "rail_id": 2,
+        "reason": "duplicate_row"
+      }
+    ],
+    "details": {
+      "0": {
+        "candidates": 12,
+        "touching": 4,
+        "entities_in_box": 12
+      },
+      "1": {
+        "candidates": 14,
+        "touching": 6,
+        "entities_in_box": 16
+      },
+      "2": {
+        "candidates": 1,
+        "touching": 0,
+        "entities_in_box": 8
+      }
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "matched": false,
+        "containment": 0.0
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "matched": true,
+        "containment": 0.857,
+        "corridor": 1
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "matched": true,
+        "containment": 1.0,
+        "corridor": 2
+      }
+    ],
+    "stage_b_eval": [
+      {
+        "rail": 1,
+        "corridor": 1,
+        "containment": 0.857,
+        "user_tags": 7,
+        "preds": 14,
+        "matched_0.3": 0,
+        "matched_0.5": 0,
+        "matched_0.7": 0,
+        "preds_covering_2plus_tags": 0
+      },
+      {
+        "rail": 2,
+        "corridor": 2,
+        "containment": 1.0,
+        "user_tags": 4,
+        "preds": 1,
+        "matched_0.3": 0,
+        "matched_0.5": 0,
+        "matched_0.7": 0,
+        "preds_covering_2plus_tags": 0
+      }
+    ],
+    "global": {
+      "preds": 27,
+      "gts": 26,
+      "m30": 0,
+      "m50": 0
+    },
+    "corridors": [
+      {
+        "rail_id": 1,
+        "x_range": [
+          134,
+          1950
+        ],
+        "angle_deg": 0.73,
+        "inner_gap": 103.5,
+        "n_entities": 12,
+        "poly": [
+          [
+            134,
+            344
+          ],
+          [
+            1950,
+            368
+          ],
+          [
+            1950,
+            471
+          ],
+          [
+            134,
+            448
+          ]
+        ],
+        "api_box_1000": [
+          67,
+          209,
+          954,
+          278
+        ]
+      },
+      {
+        "rail_id": 3,
+        "x_range": [
+          0,
+          2000
+        ],
+        "angle_deg": 1.44,
+        "inner_gap": 84.0,
+        "n_entities": 16,
+        "poly": [
+          [
+            0,
+            645
+          ],
+          [
+            2000,
+            696
+          ],
+          [
+            2000,
+            780
+          ],
+          [
+            0,
+            729
+          ]
+        ],
+        "api_box_1000": [
+          0,
+          442,
+          999,
+          498
+        ]
+      },
+      {
+        "rail_id": 4,
+        "x_range": [
+          0,
+          1813
+        ],
+        "angle_deg": 1.17,
+        "inner_gap": 81.0,
+        "n_entities": 8,
+        "poly": [
+          [
+            0,
+            1116
+          ],
+          [
+            1813,
+            1153
+          ],
+          [
+            1813,
+            1234
+          ],
+          [
+            0,
+            1197
+          ]
+        ],
+        "api_box_1000": [
+          0,
+          748,
+          895,
+          802
+        ]
+      }
+    ],
+    "prompts": {
+      "system": "你是超市货架价签定位助手。只输出 JSON 数组，不输出解释、markdown 标记或其他文字。",
+      "user": "图中是超市货架照片，货架上有一条或多条价格签条（导轨），每条上贴有一排价格签。\n任务：输出每一条价格签条的边界框，框住整条价签条（含其上全部价格签，上下留少量余量）。\n要求：\n1. 只算贴着普通白色价格标签的价签条；空导轨、只有促销牌/广告牌的条、商品包装上的文字行都不算。\n2. 一条价签条输出一个框；被照片边缘截断时框到可见部分为止。\n3. bbox 格式 [x1,y1,x2,y2]，为相对图像宽高的 0-1000 归一化整数坐标。\n4. 只输出 JSON 数组：[{\"rail_id\":1,\"rail_bbox\":[x1,y1,x2,y2]},...]\n5. 只输出真实可见的价签条；如果看不清或没有，返回 []，绝对不要按固定间隔编造。"
+    },
+    "note": "端点由 API 语义识别（只要 regular_price）；几何只做走廊与找框；标注仅用于评测。"
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "rails_returned": 2,
+    "rails_accepted": 2,
+    "rejected": [],
+    "details": {
+      "0": {
+        "candidates": 21,
+        "touching": 4,
+        "entities_in_box": 27
+      },
+      "1": {
+        "candidates": 8,
+        "touching": 1,
+        "entities_in_box": 26
+      }
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "matched": true,
+        "containment": 1.0,
+        "corridor": 0
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "matched": true,
+        "containment": 1.0,
+        "corridor": 1
+      }
+    ],
+    "stage_b_eval": [
+      {
+        "rail": 0,
+        "corridor": 0,
+        "containment": 1.0,
+        "user_tags": 11,
+        "preds": 21,
+        "matched_0.3": 8,
+        "matched_0.5": 3,
+        "matched_0.7": 0,
+        "preds_covering_2plus_tags": 6
+      },
+      {
+        "rail": 1,
+        "corridor": 1,
+        "containment": 1.0,
+        "user_tags": 6,
+        "preds": 8,
+        "matched_0.3": 3,
+        "matched_0.5": 3,
+        "matched_0.7": 2,
+        "preds_covering_2plus_tags": 1
+      }
+    ],
+    "global": {
+      "preds": 29,
+      "gts": 17,
+      "m30": 11,
+      "m50": 6
+    },
+    "corridors": [
+      {
+        "rail_id": 1,
+        "x_range": [
+          0,
+          1998
+        ],
+        "angle_deg": -0.72,
+        "inner_gap": 96.0,
+        "n_entities": 27,
+        "poly": [
+          [
+            0,
+            377
+          ],
+          [
+            1998,
+            352
+          ],
+          [
+            1998,
+            448
+          ],
+          [
+            0,
+            473
+          ]
+        ],
+        "api_box_1000": [
+          0,
+          250,
+          999,
+          314
+        ]
+      },
+      {
+        "rail_id": 2,
+        "x_range": [
+          0,
+          2000
+        ],
+        "angle_deg": -0.08,
+        "inner_gap": 121.5,
+        "n_entities": 26,
+        "poly": [
+          [
+            0,
+            1226
+          ],
+          [
+            2000,
+            1223
+          ],
+          [
+            2000,
+            1345
+          ],
+          [
+            0,
+            1348
+          ]
+        ],
+        "api_box_1000": [
+          0,
+          816,
+          999,
+          897
+        ]
+      }
+    ],
+    "prompts": {
+      "system": "你是超市货架价签定位助手。只输出 JSON 数组，不输出解释、markdown 标记或其他文字。",
+      "user": "图中是超市货架照片，货架上有一条或多条价格签条（导轨），每条上贴有一排价格签。\n任务：输出每一条价格签条的边界框，框住整条价签条（含其上全部价格签，上下留少量余量）。\n要求：\n1. 只算贴着普通白色价格标签的价签条；空导轨、只有促销牌/广告牌的条、商品包装上的文字行都不算。\n2. 一条价签条输出一个框；被照片边缘截断时框到可见部分为止。\n3. bbox 格式 [x1,y1,x2,y2]，为相对图像宽高的 0-1000 归一化整数坐标。\n4. 只输出 JSON 数组：[{\"rail_id\":1,\"rail_bbox\":[x1,y1,x2,y2]},...]\n5. 只输出真实可见的价签条；如果看不清或没有，返回 []，绝对不要按固定间隔编造。"
+    },
+    "note": "端点由 API 语义识别（只要 regular_price）；几何只做走廊与找框；标注仅用于评测。"
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "rails_returned": 6,
+    "rails_accepted": 6,
+    "rejected": [],
+    "details": {
+      "0": {
+        "candidates": 28,
+        "touching": 1,
+        "entities_in_box": 34
+      },
+      "1": {
+        "candidates": 18,
+        "touching": 0,
+        "entities_in_box": 29
+      },
+      "2": {
+        "candidates": 18,
+        "touching": 5,
+        "entities_in_box": 30
+      },
+      "3": {
+        "candidates": 22,
+        "touching": 7,
+        "entities_in_box": 27
+      },
+      "4": {
+        "candidates": 15,
+        "touching": 3,
+        "entities_in_box": 16
+      },
+      "5": {
+        "candidates": 13,
+        "touching": 6,
+        "entities_in_box": 8
+      }
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "matched": true,
+        "containment": 1.0,
+        "corridor": 0
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "matched": true,
+        "containment": 1.0,
+        "corridor": 1
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "matched": true,
+        "containment": 1.0,
+        "corridor": 2
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "matched": true,
+        "containment": 1.0,
+        "corridor": 3
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "matched": true,
+        "containment": 0.875,
+        "corridor": 4
+      }
+    ],
+    "stage_b_eval": [
+      {
+        "rail": 0,
+        "corridor": 0,
+        "containment": 1.0,
+        "user_tags": 17,
+        "preds": 28,
+        "matched_0.3": 13,
+        "matched_0.5": 9,
+        "matched_0.7": 4,
+        "preds_covering_2plus_tags": 2
+      },
+      {
+        "rail": 1,
+        "corridor": 1,
+        "containment": 1.0,
+        "user_tags": 20,
+        "preds": 18,
+        "matched_0.3": 15,
+        "matched_0.5": 10,
+        "matched_0.7": 2,
+        "preds_covering_2plus_tags": 5
+      },
+      {
+        "rail": 2,
+        "corridor": 2,
+        "containment": 1.0,
+        "user_tags": 16,
+        "preds": 18,
+        "matched_0.3": 9,
+        "matched_0.5": 5,
+        "matched_0.7": 0,
+        "preds_covering_2plus_tags": 0
+      },
+      {
+        "rail": 3,
+        "corridor": 3,
+        "containment": 1.0,
+        "user_tags": 17,
+        "preds": 22,
+        "matched_0.3": 8,
+        "matched_0.5": 4,
+        "matched_0.7": 0,
+        "preds_covering_2plus_tags": 1
+      },
+      {
+        "rail": 4,
+        "corridor": 4,
+        "containment": 0.875,
+        "user_tags": 16,
+        "preds": 15,
+        "matched_0.3": 6,
+        "matched_0.5": 3,
+        "matched_0.7": 1,
+        "preds_covering_2plus_tags": 1
+      }
+    ],
+    "global": {
+      "preds": 114,
+      "gts": 87,
+      "m30": 51,
+      "m50": 31
+    },
+    "corridors": [
+      {
+        "rail_id": 1,
+        "x_range": [
+          0,
+          1998
+        ],
+        "angle_deg": -0.19,
+        "inner_gap": 52.0,
+        "n_entities": 34,
+        "poly": [
+          [
+            0,
+            105
+          ],
+          [
+            1998,
+            99
+          ],
+          [
+            1998,
+            151
+          ],
+          [
+            0,
+            157
+          ]
+        ],
+        "api_box_1000": [
+          29,
+          74,
+          999,
+          108
+        ]
+      },
+      {
+        "rail_id": 2,
+        "x_range": [
+          58,
+          1998
+        ],
+        "angle_deg": -0.09,
+        "inner_gap": 54.0,
+        "n_entities": 29,
+        "poly": [
+          [
+            58,
+            438
+          ],
+          [
+            1998,
+            435
+          ],
+          [
+            1998,
+            489
+          ],
+          [
+            58,
+            492
+          ]
+        ],
+        "api_box_1000": [
+          29,
+          290,
+          999,
+          326
+        ]
+      },
+      {
+        "rail_id": 3,
+        "x_range": [
+          98,
+          2000
+        ],
+        "angle_deg": -0.29,
+        "inner_gap": 51.0,
+        "n_entities": 30,
+        "poly": [
+          [
+            98,
+            672
+          ],
+          [
+            2000,
+            662
+          ],
+          [
+            2000,
+            713
+          ],
+          [
+            98,
+            723
+          ]
+        ],
+        "api_box_1000": [
+          53,
+          448,
+          999,
+          482
+        ]
+      },
+      {
+        "rail_id": 4,
+        "x_range": [
+          120,
+          1998
+        ],
+        "angle_deg": -0.47,
+        "inner_gap": 48.0,
+        "n_entities": 27,
+        "poly": [
+          [
+            120,
+            873
+          ],
+          [
+            1998,
+            858
+          ],
+          [
+            1998,
+            906
+          ],
+          [
+            120,
+            921
+          ]
+        ],
+        "api_box_1000": [
+          67,
+          584,
+          999,
+          616
+        ]
+      },
+      {
+        "rail_id": 5,
+        "x_range": [
+          166,
+          1998
+        ],
+        "angle_deg": -0.81,
+        "inner_gap": 54.0,
+        "n_entities": 16,
+        "poly": [
+          [
+            166,
+            1076
+          ],
+          [
+            1998,
+            1050
+          ],
+          [
+            1998,
+            1104
+          ],
+          [
+            166,
+            1130
+          ]
+        ],
+        "api_box_1000": [
+          87,
+          720,
+          999,
+          756
+        ]
+      },
+      {
+        "rail_id": 6,
+        "x_range": [
+          126,
+          1998
+        ],
+        "angle_deg": -0.3,
+        "inner_gap": 54.0,
+        "n_entities": 8,
+        "poly": [
+          [
+            126,
+            1384
+          ],
+          [
+            1998,
+            1374
+          ],
+          [
+            1998,
+            1428
+          ],
+          [
+            126,
+            1438
+          ]
+        ],
+        "api_box_1000": [
+          75,
+          928,
+          999,
+          964
+        ]
+      }
+    ],
+    "prompts": {
+      "system": "你是超市货架价签定位助手。只输出 JSON 数组，不输出解释、markdown 标记或其他文字。",
+      "user": "图中是超市货架照片，货架上有一条或多条价格签条（导轨），每条上贴有一排价格签。\n任务：输出每一条价格签条的边界框，框住整条价签条（含其上全部价格签，上下留少量余量）。\n要求：\n1. 只算贴着普通白色价格标签的价签条；空导轨、只有促销牌/广告牌的条、商品包装上的文字行都不算。\n2. 一条价签条输出一个框；被照片边缘截断时框到可见部分为止。\n3. bbox 格式 [x1,y1,x2,y2]，为相对图像宽高的 0-1000 归一化整数坐标。\n4. 只输出 JSON 数组：[{\"rail_id\":1,\"rail_bbox\":[x1,y1,x2,y2]},...]\n5. 只输出真实可见的价签条；如果看不清或没有，返回 []，绝对不要按固定间隔编造。"
+    },
+    "note": "端点由 API 语义识别（只要 regular_price）；几何只做走廊与找框；标注仅用于评测。"
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "rails_returned": 3,
+    "rails_accepted": 3,
+    "rejected": [],
+    "details": {
+      "0": {
+        "candidates": 3,
+        "touching": 0,
+        "entities_in_box": 11
+      },
+      "1": {
+        "candidates": 11,
+        "touching": 3,
+        "entities_in_box": 25
+      },
+      "2": {
+        "candidates": 9,
+        "touching": 3,
+        "entities_in_box": 22
+      }
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "matched": true,
+        "containment": 0.9,
+        "corridor": 0
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "matched": true,
+        "containment": 1.0,
+        "corridor": 1
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "matched": true,
+        "containment": 1.0,
+        "corridor": 2
+      }
+    ],
+    "stage_b_eval": [
+      {
+        "rail": 0,
+        "corridor": 0,
+        "containment": 0.9,
+        "user_tags": 10,
+        "preds": 3,
+        "matched_0.3": 0,
+        "matched_0.5": 0,
+        "matched_0.7": 0,
+        "preds_covering_2plus_tags": 1
+      },
+      {
+        "rail": 1,
+        "corridor": 1,
+        "containment": 1.0,
+        "user_tags": 11,
+        "preds": 11,
+        "matched_0.3": 7,
+        "matched_0.5": 4,
+        "matched_0.7": 1,
+        "preds_covering_2plus_tags": 1
+      },
+      {
+        "rail": 2,
+        "corridor": 2,
+        "containment": 1.0,
+        "user_tags": 9,
+        "preds": 9,
+        "matched_0.3": 4,
+        "matched_0.5": 2,
+        "matched_0.7": 1,
+        "preds_covering_2plus_tags": 1
+      }
+    ],
+    "global": {
+      "preds": 23,
+      "gts": 30,
+      "m30": 11,
+      "m50": 6
+    },
+    "corridors": [
+      {
+        "rail_id": 1,
+        "x_range": [
+          180,
+          1774
+        ],
+        "angle_deg": 0.13,
+        "inner_gap": 64.1,
+        "n_entities": 11,
+        "poly": [
+          [
+            180,
+            315
+          ],
+          [
+            1774,
+            319
+          ],
+          [
+            1774,
+            383
+          ],
+          [
+            180,
+            379
+          ]
+        ],
+        "api_box_1000": [
+          90,
+          305,
+          887,
+          362
+        ]
+      },
+      {
+        "rail_id": 2,
+        "x_range": [
+          147,
+          1812
+        ],
+        "angle_deg": -0.6,
+        "inner_gap": 102.4,
+        "n_entities": 25,
+        "poly": [
+          [
+            147,
+            656
+          ],
+          [
+            1812,
+            638
+          ],
+          [
+            1812,
+            741
+          ],
+          [
+            147,
+            758
+          ]
+        ],
+        "api_box_1000": [
+          80,
+          584,
+          906,
+          675
+        ]
+      },
+      {
+        "rail_id": 3,
+        "x_range": [
+          118,
+          1830
+        ],
+        "angle_deg": -0.19,
+        "inner_gap": 97.9,
+        "n_entities": 22,
+        "poly": [
+          [
+            118,
+            1027
+          ],
+          [
+            1830,
+            1021
+          ],
+          [
+            1830,
+            1119
+          ],
+          [
+            118,
+            1125
+          ]
+        ],
+        "api_box_1000": [
+          63,
+          912,
+          915,
+          999
+        ]
+      }
+    ],
+    "prompts": {
+      "system": "你是超市货架价签定位助手。只输出 JSON 数组，不输出解释、markdown 标记或其他文字。",
+      "user": "图中是超市货架照片，货架上有一条或多条价格签条（导轨），每条上贴有一排价格签。\n任务：输出每一条价格签条的边界框，框住整条价签条（含其上全部价格签，上下留少量余量）。\n要求：\n1. 只算贴着普通白色价格标签的价签条；空导轨、只有促销牌/广告牌的条、商品包装上的文字行都不算。\n2. 一条价签条输出一个框；被照片边缘截断时框到可见部分为止。\n3. bbox 格式 [x1,y1,x2,y2]，为相对图像宽高的 0-1000 归一化整数坐标。\n4. 只输出 JSON 数组：[{\"rail_id\":1,\"rail_bbox\":[x1,y1,x2,y2]},...]\n5. 只输出真实可见的价签条；如果看不清或没有，返回 []，绝对不要按固定间隔编造。"
+    },
+    "note": "端点由 API 语义识别（只要 regular_price）；几何只做走廊与找框；标注仅用于评测。"
+  }
+]

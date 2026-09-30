@@ -1,0 +1,147 @@
+{
+  "image": "45566458_6_first_normal_1782006172632_15944804",
+  "rails_returned": 2,
+  "rails_accepted": 2,
+  "rejected": [],
+  "details": {
+    "0": {
+      "candidates": 21,
+      "touching": 4,
+      "entities_in_box": 27
+    },
+    "1": {
+      "candidates": 8,
+      "touching": 1,
+      "entities_in_box": 26
+    }
+  },
+  "rail_eval": [
+    {
+      "user_x": [
+        30.0,
+        1968.3
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 11,
+      "matched": true,
+      "containment": 1.0,
+      "corridor": 0
+    },
+    {
+      "user_x": [
+        40.0,
+        1999.0
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 6,
+      "matched": true,
+      "containment": 1.0,
+      "corridor": 1
+    }
+  ],
+  "stage_b_eval": [
+    {
+      "rail": 0,
+      "corridor": 0,
+      "containment": 1.0,
+      "user_tags": 11,
+      "preds": 21,
+      "matched_0.3": 8,
+      "matched_0.5": 3,
+      "matched_0.7": 0,
+      "preds_covering_2plus_tags": 6
+    },
+    {
+      "rail": 1,
+      "corridor": 1,
+      "containment": 1.0,
+      "user_tags": 6,
+      "preds": 8,
+      "matched_0.3": 3,
+      "matched_0.5": 3,
+      "matched_0.7": 2,
+      "preds_covering_2plus_tags": 1
+    }
+  ],
+  "global": {
+    "preds": 29,
+    "gts": 17,
+    "m30": 11,
+    "m50": 6
+  },
+  "corridors": [
+    {
+      "rail_id": 1,
+      "x_range": [
+        0,
+        1998
+      ],
+      "angle_deg": -0.72,
+      "inner_gap": 96.0,
+      "n_entities": 27,
+      "poly": [
+        [
+          0,
+          377
+        ],
+        [
+          1998,
+          352
+        ],
+        [
+          1998,
+          448
+        ],
+        [
+          0,
+          473
+        ]
+      ],
+      "api_box_1000": [
+        0,
+        250,
+        999,
+        314
+      ]
+    },
+    {
+      "rail_id": 2,
+      "x_range": [
+        0,
+        2000
+      ],
+      "angle_deg": -0.08,
+      "inner_gap": 121.5,
+      "n_entities": 26,
+      "poly": [
+        [
+          0,
+          1226
+        ],
+        [
+          2000,
+          1223
+        ],
+        [
+          2000,
+          1345
+        ],
+        [
+          0,
+          1348
+        ]
+      ],
+      "api_box_1000": [
+        0,
+        816,
+        999,
+        897
+      ]
+    }
+  ],
+  "prompts": {
+    "system": "你是超市货架价签定位助手。只输出 JSON 数组，不输出解释、markdown 标记或其他文字。",
+    "user": "图中是超市货架照片，货架上有一条或多条价格签条（导轨），每条上贴有一排价格签。\n任务：输出每一条价格签条的边界框，框住整条价签条（含其上全部价格签，上下留少量余量）。\n要求：\n1. 只算贴着普通白色价格标签的价签条；空导轨、只有促销牌/广告牌的条、商品包装上的文字行都不算。\n2. 一条价签条输出一个框；被照片边缘截断时框到可见部分为止。\n3. bbox 格式 [x1,y1,x2,y2]，为相对图像宽高的 0-1000 归一化整数坐标。\n4. 只输出 JSON 数组：[{\"rail_id\":1,\"rail_bbox\":[x1,y1,x2,y2]},...]\n5. 只输出真实可见的价签条；如果看不清或没有，返回 []，绝对不要按固定间隔编造。"
+  },
+  "note": "端点由 API 语义识别（只要 regular_price）；几何只做走廊与找框；标注仅用于评测。"
+}

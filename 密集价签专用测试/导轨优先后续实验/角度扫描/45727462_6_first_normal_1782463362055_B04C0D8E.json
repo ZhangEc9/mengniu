@@ -1,0 +1,481 @@
+{
+  "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+  "entities": 743,
+  "rows": 35,
+  "auto_rails": 35,
+  "false_auto_rails": 28,
+  "predictions": 282,
+  "gt": 87,
+  "matched": {
+    "0.3": 52,
+    "0.5": 36,
+    "0.7": 6
+  },
+  "rail_eval": [
+    {
+      "user_x": [
+        41.7,
+        1990.7
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 17,
+      "segments": [
+        4
+      ],
+      "matched": false,
+      "containment": 0.0,
+      "union_x_coverage": 0.98,
+      "angle_err_deg": -0.53
+    },
+    {
+      "user_x": [
+        60.0,
+        1999.0
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 20,
+      "segments": [
+        8,
+        9
+      ],
+      "matched": true,
+      "containment": 1.0,
+      "union_x_coverage": 0.978,
+      "angle_err_deg": 0.68
+    },
+    {
+      "user_x": [
+        100.0,
+        1992.3
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 16,
+      "segments": [
+        13,
+        15,
+        17
+      ],
+      "matched": true,
+      "containment": 1.0,
+      "union_x_coverage": 1.0,
+      "angle_err_deg": -0.5
+    },
+    {
+      "user_x": [
+        133.3,
+        1999.0
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 17,
+      "segments": [
+        20
+      ],
+      "matched": true,
+      "containment": 1.0,
+      "union_x_coverage": 0.966,
+      "angle_err_deg": -0.55
+    },
+    {
+      "user_x": [
+        173.3,
+        1986.7
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 16,
+      "segments": [
+        26
+      ],
+      "matched": true,
+      "containment": 1.0,
+      "union_x_coverage": 0.67,
+      "angle_err_deg": -0.67
+    }
+  ],
+  "rail_debug": [
+    {
+      "index": 0,
+      "angle": 9.608,
+      "x_range": [
+        1119.0,
+        1809.0
+      ],
+      "n_entities": 6,
+      "bot_edge_sup": 0.78,
+      "candidates": 2
+    },
+    {
+      "index": 1,
+      "angle": 0.561,
+      "x_range": [
+        0.0,
+        1841.0
+      ],
+      "n_entities": 17,
+      "bot_edge_sup": 0.57,
+      "candidates": 1
+    },
+    {
+      "index": 2,
+      "angle": -1.577,
+      "x_range": [
+        57.0,
+        1897.0
+      ],
+      "n_entities": 13,
+      "bot_edge_sup": 0.9,
+      "candidates": 3
+    },
+    {
+      "index": 3,
+      "angle": 1.629,
+      "x_range": [
+        64.0,
+        1978.0
+      ],
+      "n_entities": 14,
+      "bot_edge_sup": 0.7,
+      "candidates": 10
+    },
+    {
+      "index": 4,
+      "angle": -0.526,
+      "x_range": [
+        64.0,
+        1974.0
+      ],
+      "n_entities": 32,
+      "bot_edge_sup": 0.8,
+      "candidates": 20
+    },
+    {
+      "index": 5,
+      "angle": -11.564,
+      "x_range": [
+        29.0,
+        1077.0
+      ],
+      "n_entities": 12,
+      "bot_edge_sup": 0.6,
+      "candidates": 5
+    },
+    {
+      "index": 6,
+      "angle": 1.486,
+      "x_range": [
+        178.0,
+        1970.0
+      ],
+      "n_entities": 13,
+      "bot_edge_sup": 0.62,
+      "candidates": 3
+    },
+    {
+      "index": 7,
+      "angle": -7.95,
+      "x_range": [
+        47.0,
+        1477.0
+      ],
+      "n_entities": 13,
+      "bot_edge_sup": 0.65,
+      "candidates": 3
+    },
+    {
+      "index": 8,
+      "angle": -0.125,
+      "x_range": [
+        72.0,
+        1892.0
+      ],
+      "n_entities": 29,
+      "bot_edge_sup": 1.0,
+      "candidates": 19
+    },
+    {
+      "index": 9,
+      "angle": 1.469,
+      "x_range": [
+        108.0,
+        1969.0
+      ],
+      "n_entities": 13,
+      "bot_edge_sup": 0.68,
+      "candidates": 6
+    },
+    {
+      "index": 10,
+      "angle": -1.341,
+      "x_range": [
+        175.0,
+        1969.0
+      ],
+      "n_entities": 11,
+      "bot_edge_sup": 0.75,
+      "candidates": 7
+    },
+    {
+      "index": 11,
+      "angle": 0.588,
+      "x_range": [
+        175.0,
+        1905.0
+      ],
+      "n_entities": 17,
+      "bot_edge_sup": 0.78,
+      "candidates": 8
+    },
+    {
+      "index": 12,
+      "angle": 11.721,
+      "x_range": [
+        107.0,
+        1696.0
+      ],
+      "n_entities": 22,
+      "bot_edge_sup": 0.75,
+      "candidates": 8
+    },
+    {
+      "index": 13,
+      "angle": -0.457,
+      "x_range": [
+        107.0,
+        1995.0
+      ],
+      "n_entities": 30,
+      "bot_edge_sup": 0.97,
+      "candidates": 19
+    },
+    {
+      "index": 14,
+      "angle": 7.34,
+      "x_range": [
+        124.0,
+        1825.0
+      ],
+      "n_entities": 24,
+      "bot_edge_sup": 0.68,
+      "candidates": 4
+    },
+    {
+      "index": 15,
+      "angle": -0.514,
+      "x_range": [
+        118.0,
+        1893.0
+      ],
+      "n_entities": 21,
+      "bot_edge_sup": 0.8,
+      "candidates": 5
+    },
+    {
+      "index": 16,
+      "angle": 3.357,
+      "x_range": [
+        0.0,
+        1985.0
+      ],
+      "n_entities": 22,
+      "bot_edge_sup": 0.68,
+      "candidates": 4
+    },
+    {
+      "index": 17,
+      "angle": -0.523,
+      "x_range": [
+        0.0,
+        1916.0
+      ],
+      "n_entities": 27,
+      "bot_edge_sup": 0.78,
+      "candidates": 6
+    },
+    {
+      "index": 18,
+      "angle": 0.5,
+      "x_range": [
+        17.0,
+        1982.0
+      ],
+      "n_entities": 29,
+      "bot_edge_sup": 0.85,
+      "candidates": 5
+    },
+    {
+      "index": 19,
+      "angle": -3.523,
+      "x_range": [
+        0.0,
+        1916.0
+      ],
+      "n_entities": 23,
+      "bot_edge_sup": 0.9,
+      "candidates": 6
+    },
+    {
+      "index": 20,
+      "angle": -0.553,
+      "x_range": [
+        0.0,
+        1936.0
+      ],
+      "n_entities": 28,
+      "bot_edge_sup": 0.93,
+      "candidates": 13
+    },
+    {
+      "index": 21,
+      "angle": -2.205,
+      "x_range": [
+        0.0,
+        1982.0
+      ],
+      "n_entities": 20,
+      "bot_edge_sup": 0.78,
+      "candidates": 13
+    },
+    {
+      "index": 22,
+      "angle": -7.672,
+      "x_range": [
+        21.0,
+        1893.0
+      ],
+      "n_entities": 26,
+      "bot_edge_sup": 0.88,
+      "candidates": 10
+    },
+    {
+      "index": 23,
+      "angle": -1.268,
+      "x_range": [
+        87.0,
+        1696.0
+      ],
+      "n_entities": 26,
+      "bot_edge_sup": 0.78,
+      "candidates": 7
+    },
+    {
+      "index": 24,
+      "angle": 1.142,
+      "x_range": [
+        38.0,
+        1630.0
+      ],
+      "n_entities": 15,
+      "bot_edge_sup": 0.85,
+      "candidates": 7
+    },
+    {
+      "index": 25,
+      "angle": -10.232,
+      "x_range": [
+        38.0,
+        1995.0
+      ],
+      "n_entities": 22,
+      "bot_edge_sup": 0.62,
+      "candidates": 6
+    },
+    {
+      "index": 26,
+      "angle": -0.666,
+      "x_range": [
+        176.0,
+        1391.0
+      ],
+      "n_entities": 16,
+      "bot_edge_sup": 0.97,
+      "candidates": 7
+    },
+    {
+      "index": 27,
+      "angle": -12.015,
+      "x_range": [
+        293.0,
+        1893.0
+      ],
+      "n_entities": 27,
+      "bot_edge_sup": 0.8,
+      "candidates": 9
+    },
+    {
+      "index": 28,
+      "angle": -6.193,
+      "x_range": [
+        176.0,
+        1985.0
+      ],
+      "n_entities": 23,
+      "bot_edge_sup": 0.6,
+      "candidates": 13
+    },
+    {
+      "index": 29,
+      "angle": -8.661,
+      "x_range": [
+        76.0,
+        1936.0
+      ],
+      "n_entities": 23,
+      "bot_edge_sup": 0.62,
+      "candidates": 9
+    },
+    {
+      "index": 30,
+      "angle": 0.932,
+      "x_range": [
+        34.0,
+        2000.0
+      ],
+      "n_entities": 25,
+      "bot_edge_sup": 0.9,
+      "candidates": 11
+    },
+    {
+      "index": 31,
+      "angle": -1.787,
+      "x_range": [
+        40.0,
+        1863.0
+      ],
+      "n_entities": 19,
+      "bot_edge_sup": 0.8,
+      "candidates": 6
+    },
+    {
+      "index": 32,
+      "angle": 6.513,
+      "x_range": [
+        46.0,
+        660.0
+      ],
+      "n_entities": 10,
+      "bot_edge_sup": 0.95,
+      "candidates": 0
+    },
+    {
+      "index": 33,
+      "angle": 1.308,
+      "x_range": [
+        30.0,
+        1719.0
+      ],
+      "n_entities": 15,
+      "bot_edge_sup": 0.93,
+      "candidates": 22
+    },
+    {
+      "index": 34,
+      "angle": -2.829,
+      "x_range": [
+        1023.0,
+        1859.0
+      ],
+      "n_entities": 7,
+      "bot_edge_sup": 1.0,
+      "candidates": 5
+    }
+  ]
+}

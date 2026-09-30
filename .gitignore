@@ -43,3 +43,19 @@ price_tag_service/alembic_existing_copy.db
 *.jpeg
 *.jpg
 *.png
+
+# ---- 2026-09-30 追加：业务数据与运行产物不入库 ----
+uploads/
+output/
+63张照片/
+excel前100张/
+2026-09-18-14-38-17_EXPORT_XLSX_27962701_827/
+sku识别/
+sku_match_offline/
+two_stage_price_tag_experiment/
+产品对象导出结果_*.xlsx
+执行结果*.xlsx
+照片表字段.xlsx
+密集价签专用测试/新数据/*.jpeg
+密集价签专用测试/新数据/*.jpg
+密集价签专用测试/images/

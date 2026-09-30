@@ -1247,6 +1247,95 @@
       "flags": {},
       "attributes": {},
       "kie_linking": []
+    },
+    {
+      "label": "框",
+      "score": null,
+      "points": [
+        [
+          15.464704428014443,
+          31.9724758782139
+        ],
+        [
+          1973.3704549426084,
+          110.8427386169158
+        ],
+        [
+          1969.3454221542643,
+          210.76170133697593
+        ],
+        [
+          11.439671639670223,
+          131.89143859827408
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rotation",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": [],
+      "direction": 0.040261203999305106
+    },
+    {
+      "label": "框",
+      "score": null,
+      "points": [
+        [
+          15.198736176475563,
+          280.41885146958646
+        ],
+        [
+          1980.708478109128,
+          315.49983843516884
+        ],
+        [
+          1978.4721498994736,
+          440.7963384038313
+        ],
+        [
+          12.962407966821274,
+          405.71535143824883
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rotation",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": [],
+      "direction": 0.01784639464215587
+    },
+    {
+      "label": "框",
+      "score": null,
+      "points": [
+        [
+          13.924050632911392,
+          770.1012658227847
+        ],
+        [
+          1996.2025316455695,
+          770.1012658227847
+        ],
+        [
+          1996.2025316455695,
+          843.0
+        ],
+        [
+          13.924050632911392,
+          843.0
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
     }
   ],
   "imagePath": "45035165_6_first_normal_1781144340103_10029317.jpeg",

@@ -723,6 +723,66 @@
       "flags": {},
       "attributes": {},
       "kie_linking": []
+    },
+    {
+      "label": "框",
+      "score": null,
+      "points": [
+        [
+          15.105739484154128,
+          -21.18092878223584
+        ],
+        [
+          1899.9404344482223,
+          151.00163180598375
+        ],
+        [
+          1887.8210897841386,
+          283.6687336602847
+        ],
+        [
+          2.9863948200707,
+          111.48617307206499
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rotation",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": [],
+      "direction": 0.0910986966291536
+    },
+    {
+      "label": "框",
+      "score": null,
+      "points": [
+        [
+          -5.988869222500625,
+          707.5875284109657
+        ],
+        [
+          1890.177097442578,
+          646.5327881744008
+        ],
+        [
+          1894.1463414634145,
+          769.8048780487804
+        ],
+        [
+          -2.0196252016642946,
+          830.859618285345
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rotation",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": [],
+      "direction": 6.250997379360999
     }
   ],
   "imagePath": "45524464_6_first_normal_1781829504624_12327780.jpeg",

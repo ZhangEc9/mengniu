@@ -1,0 +1,35 @@
+{
+  "image_sha256": "a25b94957aec48488618489095db168c1574ce533f8bbf30beb98195204c013d",
+  "slot_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "model_note": "现有 AISM 价签 API（项目配置的 Qwen3-VL-Plus）",
+  "api_endpoint_sha256": "183ee07a97935dab8a43c7496971770d024ca861ab8a4771d9191cd7b6bb1ab4",
+  "prompts": {
+    "system": "你是价签数字转录助手。图像是单张零售价签的右上价格区域，不要猜测看不清的数字，也不要补全小数。",
+    "user": "仅转录图中完整清晰的价格数字，返回JSON对象 {\"price\": \"xx.xx\" 或 null, \"readable\": true 或 false}。若不完整或模糊，则返回 null 和 false。不要解释。"
+  },
+  "timeout": 180,
+  "price_region": true,
+  "crop_margin": {
+    "horizontal_width_fraction": 0.08,
+    "vertical_height_fraction": 0.15
+  },
+  "scale": 4.0,
+  "note": "该次仅为单尺度诊断，不满足多次共识验收；GT 不参与裁剪或推理。"
+}

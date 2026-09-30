@@ -1,0 +1,63 @@
+{
+  "metadata": "metadata.json",
+  "attempts": [
+    {
+      "index": 1,
+      "started_at": "2026-09-23T14:59:12.734668+08:00",
+      "elapsed_sec": 88.647,
+      "http_status": 200,
+      "business_status": 0,
+      "stage_counts": {
+        "raw_regular": 34,
+        "nonempty_price": 34,
+        "filtered_regular": 16,
+        "filtered_promotion": 0
+      },
+      "raw_top_eval": {
+        "candidate_count": 34,
+        "top_gt": 17,
+        "matched": 5,
+        "price_matched": 3,
+        "matches": [
+          {
+            "gt_index": 6,
+            "pred_index": 11,
+            "iou": 0.5904923599320883,
+            "price_ok": true
+          },
+          {
+            "gt_index": 12,
+            "pred_index": 2,
+            "iou": 0.5900383141762453,
+            "price_ok": true
+          },
+          {
+            "gt_index": 13,
+            "pred_index": 1,
+            "iou": 0.5492898913951546,
+            "price_ok": true
+          },
+          {
+            "gt_index": 5,
+            "pred_index": 10,
+            "iou": 0.5420871686813786,
+            "price_ok": false
+          },
+          {
+            "gt_index": 0,
+            "pred_index": 3,
+            "iou": 0.5154512563481266,
+            "price_ok": false
+          }
+        ]
+      },
+      "filtered_top_eval": {
+        "candidate_count": 16,
+        "top_gt": 17,
+        "matched": 0,
+        "price_matched": 0,
+        "matches": []
+      }
+    }
+  ]
+}

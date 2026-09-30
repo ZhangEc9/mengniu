@@ -224,6 +224,10 @@ def test_sample_file_runs_after_qc_without_business_tables(tmp_path: Path, monke
         assert [item["item_status"] for item in result["sku"]["items"]] == ["OK", "INVALID"]
         assert result["sku"]["request_id"] == "fixture-1"
         assert result["match"]["pairs"][0]["sku_code"] == "sample"
+        assert result["qc"]["score"] is None
+        assert "confidence" not in result["qc"]
+        assert result["price"]["price_tags"][0]["score"] == 0.88
+        assert "confidence" not in result["price"]["price_tags"][0]
 
 
 def test_task_api_creates_and_queries_task(tmp_path: Path):
@@ -317,7 +321,8 @@ def test_worker_completes_fake_flow(tmp_path: Path, monkeypatch):
     with TestClient(app) as client:
         qc_response = client.get(f"/v1/photos/{photo_id}/qc")
         assert qc_response.status_code == 200
-        assert qc_response.json()["confidence"] == 0.93
+        assert qc_response.json()["score"] == 0.93
+        assert "confidence" not in qc_response.json()
 
         tags_response = client.get(f"/v1/photos/{photo_id}/tags")
         assert tags_response.status_code == 200
@@ -329,7 +334,7 @@ def test_worker_completes_fake_flow(tmp_path: Path, monkeypatch):
                 "bbox": [100, 100, 180, 130],
                 "coordinate_scale": 1000,
                 "price": "8.90",
-                "confidence": 0.88,
+                "score": 0.88,
                 "raw_price_text": "8.90元",
                 "unit": "元",
             }

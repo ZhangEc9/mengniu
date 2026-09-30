@@ -1,0 +1,12 @@
+{
+  "ground_truth": "D:\\Shixi\\mengniu\\密集价签专用测试\\ground_truth\\45727462_6_first_normal_1782463362055_B04C0D8E.json",
+  "prediction": "D:\\Shixi\\mengniu\\密集价签专用测试\\密集型组合实验_顶部价格置信度\\standard_pred\\45727462_6_first_normal_1782463362055_B04C0D8E.pipeline.json",
+  "ground_truth_count": 78,
+  "prediction_count": 99,
+  "position_matches": 54,
+  "exact_price": 27,
+  "within_0_10": 35,
+  "same_integer_yuan": 53,
+  "unmatched_predictions": 45,
+  "rule": "IoU>=0.5 one-to-one position matching; amount tolerance <=0.10 versus same floor integer yuan; no confidence filtering."
+}

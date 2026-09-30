@@ -1,0 +1,551 @@
+{
+  "image": "45544469_6_first_normal_1781918871704_15870503",
+  "size": [
+    2000,
+    1500
+  ],
+  "lines_total": 275,
+  "pairs_total": 11,
+  "auto_rails": [
+    {
+      "index": 0,
+      "angle_deg": 0.426,
+      "x_range": [
+        323.0,
+        936.0
+      ],
+      "gap": 151.6,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1245,
+      "poly": [
+        [
+          323.0,
+          5.89313470347831
+        ],
+        [
+          936.0,
+          4.963106269175453
+        ],
+        [
+          936.0,
+          158.17698028672388
+        ],
+        [
+          323.0,
+          148.12745012133192
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 3,
+        "main_pass": 2,
+        "touching_corridor_edge": 3,
+        "flattened_h": 151.6287338281961,
+        "band_edge_density": 0.1245
+      }
+    },
+    {
+      "index": 1,
+      "angle_deg": 4.361,
+      "x_range": [
+        910.0,
+        1003.0
+      ],
+      "gap": 155.2,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1646,
+      "poly": [
+        [
+          910.0,
+          75.46510065153245
+        ],
+        [
+          1003.0,
+          82.49709293832359
+        ],
+        [
+          1003.0,
+          237.74433379532988
+        ],
+        [
+          910.0,
+          230.5929307493048
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 0,
+        "main_pass": 0,
+        "touching_corridor_edge": 0,
+        "flattened_h": 155.1875354773893,
+        "band_edge_density": 0.1646
+      }
+    },
+    {
+      "index": 2,
+      "angle_deg": 5.129,
+      "x_range": [
+        1132.0,
+        1986.0
+      ],
+      "gap": 156.0,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1537,
+      "poly": [
+        [
+          1132.0,
+          247.66402189142917
+        ],
+        [
+          1986.0,
+          313.3338950237454
+        ],
+        [
+          1986.0,
+          493.86400140215886
+        ],
+        [
+          1132.0,
+          406.2122683904581
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 3,
+        "main_pass": 3,
+        "touching_corridor_edge": 3,
+        "flattened_h": 155.97425822275443,
+        "band_edge_density": 0.1537
+      }
+    },
+    {
+      "index": 3,
+      "angle_deg": 0.262,
+      "x_range": [
+        571.0,
+        1677.0
+      ],
+      "gap": 159.6,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1575,
+      "poly": [
+        [
+          571.0,
+          342.84832296846696
+        ],
+        [
+          1677.0,
+          349.68651902392486
+        ],
+        [
+          1677.0,
+          507.50453824723263
+        ],
+        [
+          571.0,
+          504.234329115134
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 6,
+        "main_pass": 4,
+        "touching_corridor_edge": 3,
+        "flattened_h": 159.60201268498741,
+        "band_edge_density": 0.1575
+      }
+    },
+    {
+      "index": 4,
+      "angle_deg": 0.085,
+      "x_range": [
+        202.0,
+        334.0
+      ],
+      "gap": 157.2,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1752,
+      "poly": [
+        [
+          202.0,
+          503.143273807951
+        ],
+        [
+          334.0,
+          503.5335700153986
+        ],
+        [
+          334.0,
+          663.0000000000002
+        ],
+        [
+          202.0,
+          663.0000000000002
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 1,
+        "main_pass": 1,
+        "touching_corridor_edge": 1,
+        "flattened_h": 157.21039963397686,
+        "band_edge_density": 0.1752
+      }
+    },
+    {
+      "index": 5,
+      "angle_deg": 11.037,
+      "x_range": [
+        1524.0,
+        1692.0
+      ],
+      "gap": 120.9,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1281,
+      "poly": [
+        [
+          1524.0,
+          607.1742457840093
+        ],
+        [
+          1692.0,
+          639.3227123346865
+        ],
+        [
+          1692.0,
+          760.8455992693476
+        ],
+        [
+          1524.0,
+          727.457169372929
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 2,
+        "main_pass": 2,
+        "touching_corridor_edge": 2,
+        "flattened_h": 120.90290526179047,
+        "band_edge_density": 0.1281
+      }
+    },
+    {
+      "index": 6,
+      "angle_deg": -1.294,
+      "x_range": [
+        265.0,
+        737.0
+      ],
+      "gap": 157.5,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.0693,
+      "poly": [
+        [
+          265.0,
+          687.8835039361915
+        ],
+        [
+          737.0,
+          680.6623929556338
+        ],
+        [
+          737.0,
+          834.7261826590691
+        ],
+        [
+          265.0,
+          848.8264019784608
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 2,
+        "main_pass": 0,
+        "touching_corridor_edge": 1,
+        "flattened_h": 157.50334387285227,
+        "band_edge_density": 0.0693
+      }
+    },
+    {
+      "index": 7,
+      "angle_deg": -4.554,
+      "x_range": [
+        1721.0,
+        1854.0
+      ],
+      "gap": 123.5,
+      "sources": [
+        "inferred",
+        "detected"
+      ],
+      "band_edge_density": 0.1737,
+      "poly": [
+        [
+          1721.0,
+          847.0
+        ],
+        [
+          1854.0,
+          835.0
+        ],
+        [
+          1854.0,
+          959.9222371443383
+        ],
+        [
+          1721.0,
+          969.1124988843429
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 0,
+        "main_pass": 0,
+        "touching_corridor_edge": 0,
+        "flattened_h": 123.5173680143406,
+        "band_edge_density": 0.1737
+      }
+    },
+    {
+      "index": 8,
+      "angle_deg": -0.795,
+      "x_range": [
+        963.0,
+        1105.0
+      ],
+      "gap": 80.6,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1451,
+      "poly": [
+        [
+          963.0,
+          968.3319562191131
+        ],
+        [
+          1105.0,
+          966.3898232950967
+        ],
+        [
+          1105.0,
+          1046.9999999999998
+        ],
+        [
+          963.0,
+          1048.9999999999998
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 1,
+        "main_pass": 1,
+        "touching_corridor_edge": 1,
+        "flattened_h": 80.55292090084902,
+        "band_edge_density": 0.1451
+      }
+    },
+    {
+      "index": 9,
+      "angle_deg": 1.58,
+      "x_range": [
+        16.0,
+        1802.0
+      ],
+      "gap": 83.2,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1091,
+      "poly": [
+        [
+          16.0,
+          1175.143399287077
+        ],
+        [
+          1802.0,
+          1202.8992462250012
+        ],
+        [
+          1802.0,
+          1307.6126115840807
+        ],
+        [
+          16.0,
+          1236.8311332368398
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 0,
+        "main_pass": 0,
+        "touching_corridor_edge": 0,
+        "flattened_h": 83.20054965442114,
+        "band_edge_density": 0.1091
+      }
+    },
+    {
+      "index": 10,
+      "angle_deg": 0.561,
+      "x_range": [
+        1200.0,
+        1329.0
+      ],
+      "gap": 80.5,
+      "sources": [
+        "inferred",
+        "detected"
+      ],
+      "band_edge_density": 0.1131,
+      "poly": [
+        [
+          1200.0,
+          1310.0000000000002
+        ],
+        [
+          1329.0,
+          1310.0000000000002
+        ],
+        [
+          1329.0,
+          1391.7443896432517
+        ],
+        [
+          1200.0,
+          1389.218021567361
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 1,
+        "main_pass": 1,
+        "touching_corridor_edge": 0,
+        "flattened_h": 80.48120560530606,
+        "band_edge_density": 0.1131
+      }
+    }
+  ],
+  "rail_eval": [
+    {
+      "user_x": [
+        140.2,
+        1921.5
+      ],
+      "user_angle": -2.24,
+      "tags_in_rail": 12,
+      "matched_auto": null,
+      "containment": 0.0,
+      "iou": 0.0
+    },
+    {
+      "user_x": [
+        -9.1,
+        1965.7
+      ],
+      "user_angle": -1.02,
+      "tags_in_rail": 7,
+      "matched_auto": 6,
+      "containment": 1.0,
+      "iou": 0.179,
+      "truncated": 0,
+      "angle_err_deg": -0.27,
+      "top_offset_px": 14.1,
+      "bottom_offset_px": 71.6,
+      "x_coverage": 0.239
+    },
+    {
+      "user_x": [
+        990.0,
+        1761.7
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 4,
+      "matched_auto": null,
+      "containment": 0.0,
+      "iou": 0.0
+    }
+  ],
+  "false_auto_rails": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10
+  ],
+  "stage_b_eval": [
+    {
+      "rail": 1,
+      "iou": 0.179,
+      "user_tags": 7,
+      "preds": 2,
+      "matched_0.3": 0,
+      "matched_0.5": 0,
+      "matched_0.7": 0,
+      "preds_covering_2plus_tags": 0
+    }
+  ],
+  "params": {
+    "canny": [
+      60,
+      160
+    ],
+    "hough": {
+      "rho": 1,
+      "theta": 0.0175,
+      "threshold": 70,
+      "minLineLength": 90,
+      "maxLineGap": 18
+    },
+    "tag_h_rel": [
+      0.4,
+      0.92
+    ],
+    "tag_w_over_h": [
+      0.9,
+      5.0
+    ],
+    "thresh_passes": [
+      [
+        21,
+        5
+      ],
+      [
+        31,
+        1
+      ],
+      [
+        41,
+        3
+      ]
+    ]
+  },
+  "note": "标注仅用于评测；参数冻结；单图结果不证明泛化。"
+}

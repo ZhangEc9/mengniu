@@ -1,0 +1,107 @@
+{
+  "gt_dir": "D:\\Shixi\\mengniu\\密集价签专用测试\\ground_truth",
+  "pred_dir": "D:\\Shixi\\mengniu\\密集价签专用测试\\密集条带放大复检结果\\standard_pred",
+  "vis_dir": "D:\\Shixi\\mengniu\\密集价签专用测试\\密集条带放大复检结果",
+  "iou_threshold": 0.5,
+  "check_price": true,
+  "exclude_second_item": true,
+  "gt_images": 1,
+  "paired_images": 1,
+  "missing_prediction_images": 0,
+  "extra_prediction_images": 0,
+  "duplicate_gt_files": [],
+  "errors": [],
+  "paired_only_main_iou": {
+    "gt_boxes": 78,
+    "pred_boxes": 80,
+    "matched": 37,
+    "price_matched": 16,
+    "gt_price_defined": 78,
+    "recall": 0.47435897435897434,
+    "hit_rate": 0.4625,
+    "price_recall": 0.20512820512820512
+  },
+  "missing_as_fn_main_iou": {
+    "gt_boxes": 78,
+    "pred_boxes": 80,
+    "matched": 37,
+    "price_matched": 16,
+    "gt_price_defined": 78,
+    "recall": 0.47435897435897434,
+    "hit_rate": 0.4625,
+    "price_recall": 0.20512820512820512
+  },
+  "threshold_results": {
+    "0.3": {
+      "paired_only": {
+        "gt_boxes": 78,
+        "pred_boxes": 80,
+        "matched": 53,
+        "price_matched": 19,
+        "gt_price_defined": 78,
+        "recall": 0.6794871794871795,
+        "hit_rate": 0.6625,
+        "price_recall": 0.24358974358974358
+      },
+      "missing_as_fn": {
+        "gt_boxes": 78,
+        "pred_boxes": 80,
+        "matched": 53,
+        "price_matched": 19,
+        "gt_price_defined": 78,
+        "recall": 0.6794871794871795,
+        "hit_rate": 0.6625,
+        "price_recall": 0.24358974358974358
+      }
+    },
+    "0.5": {
+      "paired_only": {
+        "gt_boxes": 78,
+        "pred_boxes": 80,
+        "matched": 37,
+        "price_matched": 16,
+        "gt_price_defined": 78,
+        "recall": 0.47435897435897434,
+        "hit_rate": 0.4625,
+        "price_recall": 0.20512820512820512
+      },
+      "missing_as_fn": {
+        "gt_boxes": 78,
+        "pred_boxes": 80,
+        "matched": 37,
+        "price_matched": 16,
+        "gt_price_defined": 78,
+        "recall": 0.47435897435897434,
+        "hit_rate": 0.4625,
+        "price_recall": 0.20512820512820512
+      }
+    },
+    "0.7": {
+      "paired_only": {
+        "gt_boxes": 78,
+        "pred_boxes": 80,
+        "matched": 7,
+        "price_matched": 4,
+        "gt_price_defined": 78,
+        "recall": 0.08974358974358974,
+        "hit_rate": 0.0875,
+        "price_recall": 0.05128205128205128
+      },
+      "missing_as_fn": {
+        "gt_boxes": 78,
+        "pred_boxes": 80,
+        "matched": 7,
+        "price_matched": 4,
+        "gt_price_defined": 78,
+        "recall": 0.08974358974358974,
+        "hit_rate": 0.0875,
+        "price_recall": 0.05128205128205128
+      }
+    }
+  },
+  "metric_definition": {
+    "recall": "命中的人工标注框数 / 人工标注框总数",
+    "hit_rate": "命中的预测框数 / 预测框总数，等价 detection precision",
+    "price_recall": "位置命中且价格/件数正确的人数 / 有人工金额的标注框数"
+  }
+}

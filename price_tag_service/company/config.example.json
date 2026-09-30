@@ -1,0 +1,12 @@
+{
+  "qc_config": {
+    "api_url": "REPLACE_WITH_QC_ENDPOINT",
+    "appid": "REPLACE_WITH_QC_APPID",
+    "secret": "REPLACE_WITH_QC_SECRET"
+  },
+  "price_tag_config": {
+    "api_url": "REPLACE_WITH_PRICE_ENDPOINT",
+    "appid": "REPLACE_WITH_PRICE_APPID",
+    "secret": "REPLACE_WITH_PRICE_SECRET"
+  }
+}

@@ -1,0 +1,1678 @@
+{
+  "experiment": "leave_one_image_out_geometry_row_classifier",
+  "warning": "Only six annotated images; diagnostic, not a production classifier. Annotation used for offline labels/evaluation only.",
+  "label_rule": "auto corridor contains at least half of in-rail tag boxes and overlaps at least half of rail width; labels only train/evaluate, never generate image features.",
+  "features": [
+    "n",
+    "h_med",
+    "h_cv",
+    "w_med",
+    "w_cv",
+    "w_over_h",
+    "gap_med",
+    "gap_ratio",
+    "ent_per_100px",
+    "span_ratio",
+    "angle",
+    "bot_align",
+    "top_align",
+    "bot_edge_sup"
+  ],
+  "dataset": {
+    "images": [
+      "45035165_6_first_normal_1781144340103_10029317",
+      "45524464_6_first_normal_1781829504624_12327780",
+      "45544469_6_first_normal_1781918871704_15870503",
+      "45566458_6_first_normal_1782006172632_15944804",
+      "45727462_6_first_normal_1782463362055_B04C0D8E",
+      "45789553_6_first_normal_1782722591061_19199382"
+    ],
+    "rows": 193,
+    "positive_rows": 17,
+    "negative_rows": 176
+  },
+  "folds": [
+    {
+      "held_out_image": "45035165_6_first_normal_1781144340103_10029317",
+      "train_rows": 163,
+      "train_positive_rows": 13,
+      "threshold_selected_on_training_only": 0.2575412828891564,
+      "training_f1_at_threshold": 0.7333333333333333,
+      "test_rows": 30,
+      "test_positive_rows": 4,
+      "tp": 1,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.25,
+      "rows": [
+        {
+          "row": 0,
+          "label": 0,
+          "probability": 0.06986,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 1,
+          "label": 0,
+          "probability": 0.0142,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 2,
+          "label": 0,
+          "probability": 0.03655,
+          "predicted": false,
+          "containment_score": 0.125
+        },
+        {
+          "row": 3,
+          "label": 0,
+          "probability": 0.02466,
+          "predicted": false,
+          "containment_score": 0.4965
+        },
+        {
+          "row": 4,
+          "label": 1,
+          "probability": 0.55806,
+          "predicted": true,
+          "containment_score": 0.875
+        },
+        {
+          "row": 5,
+          "label": 1,
+          "probability": 0.01495,
+          "predicted": false,
+          "containment_score": 0.5
+        },
+        {
+          "row": 6,
+          "label": 0,
+          "probability": 0.01935,
+          "predicted": false,
+          "containment_score": 0.25
+        },
+        {
+          "row": 7,
+          "label": 0,
+          "probability": 0.0008,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 8,
+          "label": 0,
+          "probability": 0.00253,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 9,
+          "label": 0,
+          "probability": 0.00464,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 10,
+          "label": 0,
+          "probability": 0.0015,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 11,
+          "label": 0,
+          "probability": 0.00972,
+          "predicted": false,
+          "containment_score": 0.2129
+        },
+        {
+          "row": 12,
+          "label": 0,
+          "probability": 0.00856,
+          "predicted": false,
+          "containment_score": 0.212
+        },
+        {
+          "row": 13,
+          "label": 1,
+          "probability": 0.05419,
+          "predicted": false,
+          "containment_score": 0.8516
+        },
+        {
+          "row": 14,
+          "label": 0,
+          "probability": 0.01279,
+          "predicted": false,
+          "containment_score": 0.2143
+        },
+        {
+          "row": 15,
+          "label": 0,
+          "probability": 0.05063,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 16,
+          "label": 0,
+          "probability": 0.0132,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 17,
+          "label": 0,
+          "probability": 0.00024,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 18,
+          "label": 0,
+          "probability": 0.00016,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 19,
+          "label": 0,
+          "probability": 0.00535,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 20,
+          "label": 0,
+          "probability": 0.00055,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 21,
+          "label": 0,
+          "probability": 0.00285,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 22,
+          "label": 0,
+          "probability": 0.00222,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 23,
+          "label": 0,
+          "probability": 0.00979,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 24,
+          "label": 0,
+          "probability": 0.00666,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 25,
+          "label": 0,
+          "probability": 0.17784,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 26,
+          "label": 0,
+          "probability": 0.00834,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 27,
+          "label": 0,
+          "probability": 0.18848,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 28,
+          "label": 0,
+          "probability": 0.2184,
+          "predicted": false,
+          "containment_score": 0.2353
+        },
+        {
+          "row": 29,
+          "label": 1,
+          "probability": 0.00698,
+          "predicted": false,
+          "containment_score": 0.9981
+        }
+      ]
+    },
+    {
+      "held_out_image": "45524464_6_first_normal_1781829504624_12327780",
+      "train_rows": 162,
+      "train_positive_rows": 17,
+      "threshold_selected_on_training_only": 0.24783069875065578,
+      "training_f1_at_threshold": 0.7142857142857143,
+      "test_rows": 31,
+      "test_positive_rows": 0,
+      "tp": 0,
+      "fp": 4,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "rows": [
+        {
+          "row": 0,
+          "label": 0,
+          "probability": 0.04188,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 1,
+          "label": 0,
+          "probability": 0.01206,
+          "predicted": false,
+          "containment_score": 0.1
+        },
+        {
+          "row": 2,
+          "label": 0,
+          "probability": 0.07962,
+          "predicted": false,
+          "containment_score": 0.0998
+        },
+        {
+          "row": 3,
+          "label": 0,
+          "probability": 0.13845,
+          "predicted": false,
+          "containment_score": 0.1
+        },
+        {
+          "row": 4,
+          "label": 0,
+          "probability": 0.01545,
+          "predicted": false,
+          "containment_score": 0.2
+        },
+        {
+          "row": 5,
+          "label": 0,
+          "probability": 0.0296,
+          "predicted": false,
+          "containment_score": 0.1
+        },
+        {
+          "row": 6,
+          "label": 0,
+          "probability": 0.0483,
+          "predicted": false,
+          "containment_score": 0.3
+        },
+        {
+          "row": 7,
+          "label": 0,
+          "probability": 0.01443,
+          "predicted": false,
+          "containment_score": 0.2
+        },
+        {
+          "row": 8,
+          "label": 0,
+          "probability": 0.04599,
+          "predicted": false,
+          "containment_score": 0.2995
+        },
+        {
+          "row": 9,
+          "label": 0,
+          "probability": 0.04114,
+          "predicted": false,
+          "containment_score": 0.2
+        },
+        {
+          "row": 10,
+          "label": 0,
+          "probability": 0.00244,
+          "predicted": false,
+          "containment_score": 0.0989
+        },
+        {
+          "row": 11,
+          "label": 0,
+          "probability": 0.00111,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 12,
+          "label": 0,
+          "probability": 0.00025,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 13,
+          "label": 0,
+          "probability": 0.00501,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 14,
+          "label": 0,
+          "probability": 0.00146,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 15,
+          "label": 0,
+          "probability": 0.04462,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 16,
+          "label": 0,
+          "probability": 0.26297,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 17,
+          "label": 0,
+          "probability": 0.02874,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 18,
+          "label": 0,
+          "probability": 0.03606,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 19,
+          "label": 0,
+          "probability": 0.01134,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 20,
+          "label": 0,
+          "probability": 0.01162,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 21,
+          "label": 0,
+          "probability": 0.05027,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 22,
+          "label": 0,
+          "probability": 0.04166,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 23,
+          "label": 0,
+          "probability": 0.08764,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 24,
+          "label": 0,
+          "probability": 0.04388,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 25,
+          "label": 0,
+          "probability": 0.34343,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 26,
+          "label": 0,
+          "probability": 0.60072,
+          "predicted": true,
+          "containment_score": 0.1818
+        },
+        {
+          "row": 27,
+          "label": 0,
+          "probability": 0.01442,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 28,
+          "label": 0,
+          "probability": 0.05563,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 29,
+          "label": 0,
+          "probability": 0.32451,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 30,
+          "label": 0,
+          "probability": 0.02358,
+          "predicted": false,
+          "containment_score": 0.0
+        }
+      ]
+    },
+    {
+      "held_out_image": "45544469_6_first_normal_1781918871704_15870503",
+      "train_rows": 163,
+      "train_positive_rows": 15,
+      "threshold_selected_on_training_only": 0.19894413105688769,
+      "training_f1_at_threshold": 0.6666666666666666,
+      "test_rows": 30,
+      "test_positive_rows": 2,
+      "tp": 1,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "rows": [
+        {
+          "row": 0,
+          "label": 0,
+          "probability": 0.00252,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 1,
+          "label": 0,
+          "probability": 0.00214,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 2,
+          "label": 0,
+          "probability": 0.01153,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 3,
+          "label": 0,
+          "probability": 0.00078,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 4,
+          "label": 0,
+          "probability": 0.0053,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 5,
+          "label": 0,
+          "probability": 0.00068,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 6,
+          "label": 0,
+          "probability": 0.00098,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 7,
+          "label": 0,
+          "probability": 0.00426,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 8,
+          "label": 0,
+          "probability": 0.00547,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 9,
+          "label": 1,
+          "probability": 0.18687,
+          "predicted": false,
+          "containment_score": 0.6591
+        },
+        {
+          "row": 10,
+          "label": 0,
+          "probability": 0.02711,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 11,
+          "label": 0,
+          "probability": 0.00835,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 12,
+          "label": 0,
+          "probability": 0.00072,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 13,
+          "label": 0,
+          "probability": 0.00185,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 14,
+          "label": 0,
+          "probability": 0.07633,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 15,
+          "label": 0,
+          "probability": 0.08832,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 16,
+          "label": 0,
+          "probability": 0.43734,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 17,
+          "label": 0,
+          "probability": 0.0059,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 18,
+          "label": 0,
+          "probability": 0.00302,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 19,
+          "label": 0,
+          "probability": 0.00445,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 20,
+          "label": 0,
+          "probability": 0.00173,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 21,
+          "label": 0,
+          "probability": 0.001,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 22,
+          "label": 0,
+          "probability": 0.00513,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 23,
+          "label": 0,
+          "probability": 0.02826,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 24,
+          "label": 1,
+          "probability": 0.7252,
+          "predicted": true,
+          "containment_score": 1.0
+        },
+        {
+          "row": 25,
+          "label": 0,
+          "probability": 0.00085,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 26,
+          "label": 0,
+          "probability": 0.00464,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 27,
+          "label": 0,
+          "probability": 0.00049,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 28,
+          "label": 0,
+          "probability": 0.00013,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 29,
+          "label": 0,
+          "probability": 0.00012,
+          "predicted": false,
+          "containment_score": 0.0
+        }
+      ]
+    },
+    {
+      "held_out_image": "45566458_6_first_normal_1782006172632_15944804",
+      "train_rows": 157,
+      "train_positive_rows": 15,
+      "threshold_selected_on_training_only": 0.36132557979256097,
+      "training_f1_at_threshold": 0.7586206896551724,
+      "test_rows": 36,
+      "test_positive_rows": 2,
+      "tp": 0,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.0,
+      "recall": 0.0,
+      "rows": [
+        {
+          "row": 0,
+          "label": 0,
+          "probability": 0.20571,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 1,
+          "label": 0,
+          "probability": 0.0093,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 2,
+          "label": 0,
+          "probability": 0.00943,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 3,
+          "label": 0,
+          "probability": 0.00625,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 4,
+          "label": 0,
+          "probability": 0.00125,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 5,
+          "label": 0,
+          "probability": 0.00033,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 6,
+          "label": 0,
+          "probability": 9e-05,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 7,
+          "label": 0,
+          "probability": 0.00321,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 8,
+          "label": 0,
+          "probability": 0.0103,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 9,
+          "label": 1,
+          "probability": 0.31057,
+          "predicted": false,
+          "containment_score": 0.9072
+        },
+        {
+          "row": 10,
+          "label": 0,
+          "probability": 0.01041,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 11,
+          "label": 0,
+          "probability": 0.00037,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 12,
+          "label": 0,
+          "probability": 0.00053,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 13,
+          "label": 0,
+          "probability": 0.00543,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 14,
+          "label": 0,
+          "probability": 0.0007,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 15,
+          "label": 0,
+          "probability": 8e-05,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 16,
+          "label": 0,
+          "probability": 4e-05,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 17,
+          "label": 0,
+          "probability": 0.00012,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 18,
+          "label": 0,
+          "probability": 0.00145,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 19,
+          "label": 0,
+          "probability": 0.00509,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 20,
+          "label": 0,
+          "probability": 0.00294,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 21,
+          "label": 0,
+          "probability": 0.00396,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 22,
+          "label": 0,
+          "probability": 0.00019,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 23,
+          "label": 0,
+          "probability": 0.00107,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 24,
+          "label": 0,
+          "probability": 0.001,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 25,
+          "label": 0,
+          "probability": 0.00852,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 26,
+          "label": 0,
+          "probability": 0.20051,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 27,
+          "label": 0,
+          "probability": 0.98667,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 28,
+          "label": 0,
+          "probability": 0.87904,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 29,
+          "label": 1,
+          "probability": 0.04932,
+          "predicted": false,
+          "containment_score": 0.8333
+        },
+        {
+          "row": 30,
+          "label": 0,
+          "probability": 3e-05,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 31,
+          "label": 0,
+          "probability": 6e-05,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 32,
+          "label": 0,
+          "probability": 0.00018,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 33,
+          "label": 0,
+          "probability": 2e-05,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 34,
+          "label": 0,
+          "probability": 0.00021,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 35,
+          "label": 0,
+          "probability": 0.00019,
+          "predicted": false,
+          "containment_score": 0.0
+        }
+      ]
+    },
+    {
+      "held_out_image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+      "train_rows": 160,
+      "train_positive_rows": 12,
+      "threshold_selected_on_training_only": 0.2230713229031817,
+      "training_f1_at_threshold": 0.6451612903225806,
+      "test_rows": 33,
+      "test_positive_rows": 5,
+      "tp": 5,
+      "fp": 9,
+      "fn": 0,
+      "precision": 0.35714285714285715,
+      "recall": 1.0,
+      "rows": [
+        {
+          "row": 0,
+          "label": 0,
+          "probability": 0.03731,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 1,
+          "label": 0,
+          "probability": 0.06095,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 2,
+          "label": 1,
+          "probability": 0.81225,
+          "predicted": true,
+          "containment_score": 0.9948
+        },
+        {
+          "row": 3,
+          "label": 0,
+          "probability": 0.00124,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 4,
+          "label": 0,
+          "probability": 0.1015,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 5,
+          "label": 0,
+          "probability": 0.06879,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 6,
+          "label": 0,
+          "probability": 0.00945,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 7,
+          "label": 0,
+          "probability": 0.00989,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 8,
+          "label": 0,
+          "probability": 0.00354,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 9,
+          "label": 0,
+          "probability": 0.04857,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 10,
+          "label": 0,
+          "probability": 0.22748,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 11,
+          "label": 1,
+          "probability": 0.86212,
+          "predicted": true,
+          "containment_score": 1.0
+        },
+        {
+          "row": 12,
+          "label": 0,
+          "probability": 0.0124,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 13,
+          "label": 0,
+          "probability": 0.32264,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 14,
+          "label": 0,
+          "probability": 0.32838,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 15,
+          "label": 0,
+          "probability": 0.01522,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 16,
+          "label": 1,
+          "probability": 0.63008,
+          "predicted": true,
+          "containment_score": 0.9986
+        },
+        {
+          "row": 17,
+          "label": 0,
+          "probability": 0.57869,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 18,
+          "label": 0,
+          "probability": 0.19552,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 19,
+          "label": 1,
+          "probability": 0.50288,
+          "predicted": true,
+          "containment_score": 0.9662
+        },
+        {
+          "row": 20,
+          "label": 0,
+          "probability": 0.10763,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 21,
+          "label": 0,
+          "probability": 0.14251,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 22,
+          "label": 0,
+          "probability": 0.10268,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 23,
+          "label": 0,
+          "probability": 0.11128,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 24,
+          "label": 1,
+          "probability": 0.57692,
+          "predicted": true,
+          "containment_score": 1.0
+        },
+        {
+          "row": 25,
+          "label": 0,
+          "probability": 0.20655,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 26,
+          "label": 0,
+          "probability": 0.33449,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 27,
+          "label": 0,
+          "probability": 0.3048,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 28,
+          "label": 0,
+          "probability": 0.33086,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 29,
+          "label": 0,
+          "probability": 0.48312,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 30,
+          "label": 0,
+          "probability": 0.43037,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 31,
+          "label": 0,
+          "probability": 0.1776,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 32,
+          "label": 0,
+          "probability": 0.10438,
+          "predicted": false,
+          "containment_score": 0.0
+        }
+      ]
+    },
+    {
+      "held_out_image": "45789553_6_first_normal_1782722591061_19199382",
+      "train_rows": 160,
+      "train_positive_rows": 13,
+      "threshold_selected_on_training_only": 0.5229117192639963,
+      "training_f1_at_threshold": 0.8333333333333334,
+      "test_rows": 33,
+      "test_positive_rows": 4,
+      "tp": 0,
+      "fp": 1,
+      "fn": 4,
+      "precision": 0.0,
+      "recall": 0.0,
+      "rows": [
+        {
+          "row": 0,
+          "label": 0,
+          "probability": 0.00201,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 1,
+          "label": 0,
+          "probability": 0.00116,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 2,
+          "label": 0,
+          "probability": 0.00931,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 3,
+          "label": 0,
+          "probability": 5e-05,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 4,
+          "label": 0,
+          "probability": 8e-05,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 5,
+          "label": 0,
+          "probability": 0.00367,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 6,
+          "label": 0,
+          "probability": 0.00711,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 7,
+          "label": 0,
+          "probability": 0.05223,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 8,
+          "label": 0,
+          "probability": 0.78965,
+          "predicted": true,
+          "containment_score": 0.0
+        },
+        {
+          "row": 9,
+          "label": 0,
+          "probability": 0.41136,
+          "predicted": false,
+          "containment_score": 0.193
+        },
+        {
+          "row": 10,
+          "label": 1,
+          "probability": 0.01172,
+          "predicted": false,
+          "containment_score": 0.7251
+        },
+        {
+          "row": 11,
+          "label": 0,
+          "probability": 0.001,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 12,
+          "label": 0,
+          "probability": 0.30323,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 13,
+          "label": 0,
+          "probability": 0.00285,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 14,
+          "label": 0,
+          "probability": 0.0075,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 15,
+          "label": 0,
+          "probability": 0.00052,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 16,
+          "label": 0,
+          "probability": 6e-05,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 17,
+          "label": 0,
+          "probability": 0.00353,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 18,
+          "label": 0,
+          "probability": 0.01935,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 19,
+          "label": 0,
+          "probability": 0.2405,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 20,
+          "label": 0,
+          "probability": 0.02256,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 21,
+          "label": 1,
+          "probability": 0.12855,
+          "predicted": false,
+          "containment_score": 0.6351
+        },
+        {
+          "row": 22,
+          "label": 0,
+          "probability": 0.01247,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 23,
+          "label": 0,
+          "probability": 0.0351,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 24,
+          "label": 0,
+          "probability": 0.08439,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 25,
+          "label": 0,
+          "probability": 0.01363,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 26,
+          "label": 0,
+          "probability": 5e-05,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 27,
+          "label": 0,
+          "probability": 0.0067,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 28,
+          "label": 0,
+          "probability": 0.00039,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 29,
+          "label": 0,
+          "probability": 0.00991,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 30,
+          "label": 0,
+          "probability": 0.19728,
+          "predicted": false,
+          "containment_score": 0.0
+        },
+        {
+          "row": 31,
+          "label": 1,
+          "probability": 0.30374,
+          "predicted": false,
+          "containment_score": 0.8889
+        },
+        {
+          "row": 32,
+          "label": 1,
+          "probability": 0.03086,
+          "predicted": false,
+          "containment_score": 0.6667
+        }
+      ]
+    }
+  ],
+  "detection": [
+    {
+      "image": "45035165_6_first_normal_1781144340103_10029317",
+      "all_rows": {
+        "predictions": 298,
+        "ground_truth": 39,
+        "matched_0.3": 15,
+        "precision_0.3": 0.050335570469798654,
+        "recall_0.3": 0.38461538461538464,
+        "matched_0.5": 2,
+        "precision_0.5": 0.006711409395973154,
+        "recall_0.5": 0.05128205128205128,
+        "matched_0.7": 0,
+        "precision_0.7": 0.0,
+        "recall_0.7": 0.0
+      },
+      "model_selected_rows": {
+        "predictions": 7,
+        "ground_truth": 39,
+        "matched_0.3": 5,
+        "precision_0.3": 0.7142857142857143,
+        "recall_0.3": 0.1282051282051282,
+        "matched_0.5": 1,
+        "precision_0.5": 0.14285714285714285,
+        "recall_0.5": 0.02564102564102564,
+        "matched_0.7": 0,
+        "precision_0.7": 0.0,
+        "recall_0.7": 0.0
+      },
+      "selected_rows": 1,
+      "candidate_rows": 30
+    },
+    {
+      "image": "45524464_6_first_normal_1781829504624_12327780",
+      "all_rows": {
+        "predictions": 223,
+        "ground_truth": 23,
+        "matched_0.3": 2,
+        "precision_0.3": 0.008968609865470852,
+        "recall_0.3": 0.08695652173913043,
+        "matched_0.5": 2,
+        "precision_0.5": 0.008968609865470852,
+        "recall_0.5": 0.08695652173913043,
+        "matched_0.7": 0,
+        "precision_0.7": 0.0,
+        "recall_0.7": 0.0
+      },
+      "model_selected_rows": {
+        "predictions": 38,
+        "ground_truth": 23,
+        "matched_0.3": 0,
+        "precision_0.3": 0.0,
+        "recall_0.3": 0.0,
+        "matched_0.5": 0,
+        "precision_0.5": 0.0,
+        "recall_0.5": 0.0,
+        "matched_0.7": 0,
+        "precision_0.7": 0.0,
+        "recall_0.7": 0.0
+      },
+      "selected_rows": 4,
+      "candidate_rows": 31
+    },
+    {
+      "image": "45544469_6_first_normal_1781918871704_15870503",
+      "all_rows": {
+        "predictions": 178,
+        "ground_truth": 26,
+        "matched_0.3": 2,
+        "precision_0.3": 0.011235955056179775,
+        "recall_0.3": 0.07692307692307693,
+        "matched_0.5": 0,
+        "precision_0.5": 0.0,
+        "recall_0.5": 0.0,
+        "matched_0.7": 0,
+        "precision_0.7": 0.0,
+        "recall_0.7": 0.0
+      },
+      "model_selected_rows": {
+        "predictions": 11,
+        "ground_truth": 26,
+        "matched_0.3": 1,
+        "precision_0.3": 0.09090909090909091,
+        "recall_0.3": 0.038461538461538464,
+        "matched_0.5": 0,
+        "precision_0.5": 0.0,
+        "recall_0.5": 0.0,
+        "matched_0.7": 0,
+        "precision_0.7": 0.0,
+        "recall_0.7": 0.0
+      },
+      "selected_rows": 2,
+      "candidate_rows": 30
+    },
+    {
+      "image": "45566458_6_first_normal_1782006172632_15944804",
+      "all_rows": {
+        "predictions": 143,
+        "ground_truth": 17,
+        "matched_0.3": 12,
+        "precision_0.3": 0.08391608391608392,
+        "recall_0.3": 0.7058823529411765,
+        "matched_0.5": 5,
+        "precision_0.5": 0.03496503496503497,
+        "recall_0.5": 0.29411764705882354,
+        "matched_0.7": 3,
+        "precision_0.7": 0.02097902097902098,
+        "recall_0.7": 0.17647058823529413
+      },
+      "model_selected_rows": {
+        "predictions": 52,
+        "ground_truth": 17,
+        "matched_0.3": 0,
+        "precision_0.3": 0.0,
+        "recall_0.3": 0.0,
+        "matched_0.5": 0,
+        "precision_0.5": 0.0,
+        "recall_0.5": 0.0,
+        "matched_0.7": 0,
+        "precision_0.7": 0.0,
+        "recall_0.7": 0.0
+      },
+      "selected_rows": 2,
+      "candidate_rows": 36
+    },
+    {
+      "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+      "all_rows": {
+        "predictions": 297,
+        "ground_truth": 87,
+        "matched_0.3": 56,
+        "precision_0.3": 0.18855218855218855,
+        "recall_0.3": 0.6436781609195402,
+        "matched_0.5": 49,
+        "precision_0.5": 0.16498316498316498,
+        "recall_0.5": 0.5632183908045977,
+        "matched_0.7": 13,
+        "precision_0.7": 0.04377104377104377,
+        "recall_0.7": 0.14942528735632185
+      },
+      "model_selected_rows": {
+        "predictions": 144,
+        "ground_truth": 87,
+        "matched_0.3": 56,
+        "precision_0.3": 0.3888888888888889,
+        "recall_0.3": 0.6436781609195402,
+        "matched_0.5": 49,
+        "precision_0.5": 0.3402777777777778,
+        "recall_0.5": 0.5632183908045977,
+        "matched_0.7": 13,
+        "precision_0.7": 0.09027777777777778,
+        "recall_0.7": 0.14942528735632185
+      },
+      "selected_rows": 14,
+      "candidate_rows": 33
+    },
+    {
+      "image": "45789553_6_first_normal_1782722591061_19199382",
+      "all_rows": {
+        "predictions": 182,
+        "ground_truth": 30,
+        "matched_0.3": 8,
+        "precision_0.3": 0.04395604395604396,
+        "recall_0.3": 0.26666666666666666,
+        "matched_0.5": 3,
+        "precision_0.5": 0.016483516483516484,
+        "recall_0.5": 0.1,
+        "matched_0.7": 1,
+        "precision_0.7": 0.005494505494505495,
+        "recall_0.7": 0.03333333333333333
+      },
+      "model_selected_rows": {
+        "predictions": 5,
+        "ground_truth": 30,
+        "matched_0.3": 0,
+        "precision_0.3": 0.0,
+        "recall_0.3": 0.0,
+        "matched_0.5": 0,
+        "precision_0.5": 0.0,
+        "recall_0.5": 0.0,
+        "matched_0.7": 0,
+        "precision_0.7": 0.0,
+        "recall_0.7": 0.0
+      },
+      "selected_rows": 1,
+      "candidate_rows": 33
+    }
+  ],
+  "detection_totals": {
+    "predictions": 257,
+    "ground_truth": 222,
+    "matched_0.3": 62,
+    "matched_0.5": 50,
+    "matched_0.7": 13
+  }
+}

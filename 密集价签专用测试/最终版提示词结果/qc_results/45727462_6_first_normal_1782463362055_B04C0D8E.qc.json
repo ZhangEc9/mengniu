@@ -1,0 +1,31 @@
+{
+  "image_name": "45727462_6_first_normal_1782463362055_B04C0D8E.jpg",
+  "image_url": "https://ossaism.mengniu.cn/20260915/9d7f577b9f840e4bbda53255110bc510/2099769278227156992.jpg",
+  "checked_at": "2026-09-22 16:29:14",
+  "qc_result": {
+    "is_valid": true,
+    "should_continue": true,
+    "confidence": 0.98,
+    "quality_checks": {
+      "图片模糊": "合格",
+      "过度曝光": "合格",
+      "光线不足": "合格",
+      "文件损坏": "合格"
+    },
+    "invalid_reason": "",
+    "invalid_reasons": []
+  },
+  "content_info": {
+    "has_price_tag": true,
+    "scene_type": "冰箱照"
+  },
+  "decision": {
+    "is_quality_pass": true,
+    "is_scene_valid": true,
+    "scene_type": "冰箱照",
+    "has_price_tag": true,
+    "price_gate_skipped": false,
+    "can_proceed_to_price_tag": true,
+    "rejection_reasons": []
+  }
+}

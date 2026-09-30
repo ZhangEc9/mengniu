@@ -1,0 +1,107 @@
+{
+  "image": "D:\\Shixi\\mengniu\\63张照片\\标注数据集_AnyLabeling\\有价签\\45035165_6_first_normal_1781144340103_10029317.jpeg",
+  "image_sha256": "af212f480a2842d8e7849d28d12536513d556d4f149e6ec2da1aef300237eb50",
+  "gt": "D:\\Shixi\\mengniu\\63张照片\\标注数据集_AnyLabeling\\有价签\\45035165_6_first_normal_1781144340103_10029317.json",
+  "rail_pixels": [
+    65,
+    170
+  ],
+  "rail_selection": "image-only visual selection before running detector; GT not used in inference",
+  "rail_gt_count": 8,
+  "predicted_count": 13,
+  "matched_iou_05": 1,
+  "precision": 0.07692307692307693,
+  "recall": 0.125,
+  "boxes": [
+    [
+      25,
+      66,
+      100,
+      111
+    ],
+    [
+      120,
+      117,
+      179,
+      162
+    ],
+    [
+      184,
+      128,
+      253,
+      170
+    ],
+    [
+      312,
+      78,
+      386,
+      121
+    ],
+    [
+      386,
+      79,
+      488,
+      124
+    ],
+    [
+      488,
+      130,
+      560,
+      170
+    ],
+    [
+      489,
+      84,
+      561,
+      128
+    ],
+    [
+      662,
+      106,
+      734,
+      144
+    ],
+    [
+      991,
+      115,
+      1063,
+      157
+    ],
+    [
+      1215,
+      116,
+      1285,
+      153
+    ],
+    [
+      1420,
+      83,
+      1482,
+      113
+    ],
+    [
+      1473,
+      120,
+      1541,
+      160
+    ],
+    [
+      1891,
+      75,
+      1999,
+      115
+    ]
+  ],
+  "matched_gt_indices": [
+    5
+  ],
+  "missed_gt_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7
+  ]
+}

@@ -1,5 +1,7 @@
 # 蒙牛价签识别 Python 服务
 
+> 当前 A/B 双服务的交付边界见 `TWO_SERVICES.md`；仅代码上传到公司平台时使用 `scripts/prepare_company_export.ps1` 生成独立的最小交付目录。下面的 `app.main`、worker 和 Alembic 迁移属于早期价签服务，**不是**当前六表双服务的部署入口；不要将实验仓库及其个人 GitHub 历史直接推送到公司平台。
+
 一期最小识别编排服务。它复用现有 AISM 质检、价签识别接口和提示词，把本地脚本流程迁移为可查询、可重试、可留痕的任务服务。
 
 当前状态与下一步以仓库根目录的 `价签识别服务当前状态与下一步.md` 为准；项目基础约束以 `价签识别服务核心规则与边界.md` 为准。
@@ -49,7 +51,7 @@
 }
 ```
 
-质检结果对外输出一个 `confidence` 整体置信度。价签候选模型内部可保留 `confidence`、`price_confidence` 和 `confidence_reason` 用于审计；交付 API 只输出一个 `confidence`，取 bbox/候选置信度和金额读取置信度中的较低值，避免高估整体风险。
+质检结果对外输出一个 `score` 整体置信度。价签候选模型内部可保留 `confidence`、`price_confidence` 和 `confidence_reason` 用于审计；交付 API 只输出一个 `score`，取 bbox/候选置信度和金额读取置信度中的较低值，避免高估整体风险。
 
 促销候选、剔除原因和原始响应仍保留在数据库中，用于审计和回归分析，但不作为交付字段输出。AISM 签名与 HTTP 请求体使用同一条序列化 JSON 字符串，避免因 `requests` 与 `httpx` 序列化差异导致验签失败。
 

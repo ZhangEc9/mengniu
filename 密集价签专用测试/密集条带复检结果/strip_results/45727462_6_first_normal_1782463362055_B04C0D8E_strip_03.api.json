@@ -1,0 +1,173 @@
+{
+  "api_result": {
+    "price_tags": [
+      {
+        "id": 1,
+        "shelf_layer": 1,
+        "bbox": [
+          85,
+          90,
+          132,
+          175
+        ],
+        "price": "8.00",
+        "raw_price_text": "8.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.98,
+        "price_confidence": 0.99
+      },
+      {
+        "id": 2,
+        "shelf_layer": 1,
+        "bbox": [
+          154,
+          90,
+          201,
+          175
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.97,
+        "price_confidence": 0.99
+      },
+      {
+        "id": 3,
+        "shelf_layer": 1,
+        "bbox": [
+          216,
+          90,
+          263,
+          175
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.96,
+        "price_confidence": 0.98
+      },
+      {
+        "id": 4,
+        "shelf_layer": 1,
+        "bbox": [
+          280,
+          90,
+          327,
+          175
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.95,
+        "price_confidence": 0.97
+      },
+      {
+        "id": 5,
+        "shelf_layer": 1,
+        "bbox": [
+          344,
+          90,
+          391,
+          175
+        ],
+        "price": "4.00",
+        "raw_price_text": "4.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.96,
+        "price_confidence": 0.98
+      },
+      {
+        "id": 6,
+        "shelf_layer": 1,
+        "bbox": [
+          406,
+          90,
+          453,
+          175
+        ],
+        "price": "2.00",
+        "raw_price_text": "2.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.95,
+        "price_confidence": 0.97
+      },
+      {
+        "id": 7,
+        "shelf_layer": 1,
+        "bbox": [
+          468,
+          90,
+          515,
+          175
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.94,
+        "price_confidence": 0.96
+      },
+      {
+        "id": 8,
+        "shelf_layer": 1,
+        "bbox": [
+          530,
+          90,
+          577,
+          175
+        ],
+        "price": "4.00",
+        "raw_price_text": "4.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.93,
+        "price_confidence": 0.95
+      },
+      {
+        "id": 9,
+        "shelf_layer": 1,
+        "bbox": [
+          592,
+          90,
+          639,
+          175
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.92,
+        "price_confidence": 0.94
+      },
+      {
+        "id": 10,
+        "shelf_layer": 1,
+        "bbox": [
+          654,
+          90,
+          701,
+          175
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.91,
+        "price_confidence": 0.93
+      },
+      {
+        "id": 11,
+        "shelf_layer": 1,
+        "bbox": [
+          716,
+          90,
+          763,
+          175
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.9,
+        "price_confidence": 0.92
+      }
+    ],
+    "promotion_tags": []
+  },
+  "elapsed_sec": 77.79583621025085
+}

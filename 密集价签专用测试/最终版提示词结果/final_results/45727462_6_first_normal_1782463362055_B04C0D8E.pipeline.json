@@ -1,0 +1,263 @@
+{
+  "image_name": "45727462_6_first_normal_1782463362055_B04C0D8E.jpg",
+  "image_url": "https://ossaism.mengniu.cn/20260915/9d7f577b9f840e4bbda53255110bc510/2099769278227156992.jpg",
+  "processed_at": "2026-09-22 16:29:08",
+  "step1_qc": {
+    "qc_result": {
+      "is_valid": true,
+      "should_continue": true,
+      "confidence": 0.98,
+      "quality_checks": {
+        "图片模糊": "合格",
+        "过度曝光": "合格",
+        "光线不足": "合格",
+        "文件损坏": "合格"
+      },
+      "invalid_reason": "",
+      "invalid_reasons": []
+    },
+    "content_info": {
+      "has_price_tag": true,
+      "scene_type": "冰箱照"
+    },
+    "elapsed_sec": 5.44
+  },
+  "step2_price_tags": {
+    "total_tags": 15,
+    "total_promotion_tags": 0,
+    "elapsed_sec": 57.69,
+    "tags": [
+      {
+        "id": 1,
+        "shelf_layer": 1,
+        "bbox": [
+          512,
+          72,
+          575,
+          103
+        ],
+        "price": "21.00",
+        "raw_price_text": "21.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.9,
+        "price_confidence": 0.91
+      },
+      {
+        "id": 2,
+        "shelf_layer": 1,
+        "bbox": [
+          165,
+          70,
+          228,
+          102
+        ],
+        "price": "23.00",
+        "raw_price_text": "23.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.89,
+        "price_confidence": 0.9
+      },
+      {
+        "id": 3,
+        "shelf_layer": 1,
+        "bbox": [
+          415,
+          72,
+          478,
+          102
+        ],
+        "price": "18.00",
+        "raw_price_text": "18.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.82,
+        "price_confidence": 0.83
+      },
+      {
+        "id": 4,
+        "shelf_layer": 2,
+        "bbox": [
+          612,
+          295,
+          675,
+          323
+        ],
+        "price": "16.00",
+        "raw_price_text": "16.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.91,
+        "price_confidence": 0.92
+      },
+      {
+        "id": 5,
+        "shelf_layer": 2,
+        "bbox": [
+          165,
+          292,
+          228,
+          322
+        ],
+        "price": "8.00",
+        "raw_price_text": "8.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.88,
+        "price_confidence": 0.89
+      },
+      {
+        "id": 6,
+        "shelf_layer": 2,
+        "bbox": [
+          415,
+          292,
+          478,
+          322
+        ],
+        "price": "4.90",
+        "raw_price_text": "4.90元",
+        "tag_type": "regular_price",
+        "confidence": 0.83,
+        "price_confidence": 0.84
+      },
+      {
+        "id": 7,
+        "shelf_layer": 3,
+        "bbox": [
+          347,
+          452,
+          412,
+          480
+        ],
+        "price": "8.00",
+        "raw_price_text": "8.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.92,
+        "price_confidence": 0.93
+      },
+      {
+        "id": 8,
+        "shelf_layer": 3,
+        "bbox": [
+          165,
+          450,
+          228,
+          480
+        ],
+        "price": "8.00",
+        "raw_price_text": "8.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.87,
+        "price_confidence": 0.88
+      },
+      {
+        "id": 9,
+        "shelf_layer": 3,
+        "bbox": [
+          415,
+          452,
+          478,
+          480
+        ],
+        "price": "8.00",
+        "raw_price_text": "8.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.84,
+        "price_confidence": 0.85
+      },
+      {
+        "id": 10,
+        "shelf_layer": 3,
+        "bbox": [
+          585,
+          450,
+          648,
+          480
+        ],
+        "price": "6.00",
+        "raw_price_text": "6.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.79,
+        "price_confidence": 0.8
+      },
+      {
+        "id": 11,
+        "shelf_layer": 4,
+        "bbox": [
+          585,
+          520,
+          652,
+          555
+        ],
+        "price": "12.80",
+        "raw_price_text": "劲爆价 12.8",
+        "tag_type": "regular_price",
+        "confidence": 0.93,
+        "price_confidence": 0.94
+      },
+      {
+        "id": 12,
+        "shelf_layer": 4,
+        "bbox": [
+          165,
+          585,
+          228,
+          615
+        ],
+        "price": "8.00",
+        "raw_price_text": "8.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.86,
+        "price_confidence": 0.87
+      },
+      {
+        "id": 13,
+        "shelf_layer": 4,
+        "bbox": [
+          585,
+          585,
+          648,
+          615
+        ],
+        "price": "12.00",
+        "raw_price_text": "12.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.81,
+        "price_confidence": 0.82
+      },
+      {
+        "id": 14,
+        "shelf_layer": 5,
+        "bbox": [
+          165,
+          722,
+          228,
+          752
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.85,
+        "price_confidence": 0.86
+      },
+      {
+        "id": 15,
+        "shelf_layer": 5,
+        "bbox": [
+          585,
+          722,
+          648,
+          752
+        ],
+        "price": "4.00",
+        "raw_price_text": "4.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.8,
+        "price_confidence": 0.81
+      }
+    ],
+    "promotion_tags": []
+  },
+  "step3_sku": {
+    "status": "pending_implementation",
+    "message": "SKU 识别接口已预留，待后端模型就绪后随时无缝接入",
+    "sku_items": []
+  }
+}

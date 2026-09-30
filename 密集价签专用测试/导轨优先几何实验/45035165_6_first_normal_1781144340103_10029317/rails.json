@@ -1,0 +1,331 @@
+{
+  "image": "45035165_6_first_normal_1781144340103_10029317",
+  "size": [
+    2000,
+    844
+  ],
+  "lines_total": 236,
+  "pairs_total": 6,
+  "auto_rails": [
+    {
+      "index": 0,
+      "angle_deg": -1.344,
+      "x_range": [
+        1830.0,
+        1951.0
+      ],
+      "gap": 158.9,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.2438,
+      "poly": [
+        [
+          1830.0,
+          61.1341715931068
+        ],
+        [
+          1951.0,
+          57.95637634169218
+        ],
+        [
+          1951.0,
+          218.4999999999999
+        ],
+        [
+          1830.0,
+          220.9999999999999
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 0,
+        "main_pass": 0,
+        "touching_corridor_edge": 0,
+        "flattened_h": 158.93876134813996,
+        "band_edge_density": 0.2438
+      }
+    },
+    {
+      "index": 1,
+      "angle_deg": -2.106,
+      "x_range": [
+        730.0,
+        1903.0
+      ],
+      "gap": 159.0,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1384,
+      "poly": [
+        [
+          730.0,
+          126.87504440923989
+        ],
+        [
+          1903.0,
+          103.41347956516336
+        ],
+        [
+          1903.0,
+          238.63674826064204
+        ],
+        [
+          730.0,
+          301.45845653904377
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 1,
+        "main_pass": 1,
+        "touching_corridor_edge": 1,
+        "flattened_h": 158.980286215941,
+        "band_edge_density": 0.1384
+      }
+    },
+    {
+      "index": 2,
+      "angle_deg": 5.402,
+      "x_range": [
+        787.0,
+        1232.0
+      ],
+      "gap": 145.0,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1573,
+      "poly": [
+        [
+          787.0,
+          191.8260412223414
+        ],
+        [
+          1232.0,
+          233.59748582645534
+        ],
+        [
+          1232.0,
+          379.10291827610166
+        ],
+        [
+          787.0,
+          336.7199529737236
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 2,
+        "main_pass": 2,
+        "touching_corridor_edge": 1,
+        "flattened_h": 144.98667050898405,
+        "band_edge_density": 0.1573
+      }
+    },
+    {
+      "index": 3,
+      "angle_deg": 0.748,
+      "x_range": [
+        235.0,
+        1782.0
+      ],
+      "gap": 145.3,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.0977,
+      "poly": [
+        [
+          235.0,
+          434.89837432464964
+        ],
+        [
+          1782.0,
+          476.7103954861961
+        ],
+        [
+          1782.0,
+          599.0823716240028
+        ],
+        [
+          235.0,
+          600.5112303030844
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 7,
+        "main_pass": 4,
+        "touching_corridor_edge": 6,
+        "flattened_h": 145.27818236236692,
+        "band_edge_density": 0.0977
+      }
+    },
+    {
+      "index": 4,
+      "angle_deg": -2.837,
+      "x_range": [
+        1290.0,
+        1734.0
+      ],
+      "gap": 150.9,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.149,
+      "poly": [
+        [
+          1290.0,
+          593.8638625546456
+        ],
+        [
+          1734.0,
+          578.9362923158334
+        ],
+        [
+          1734.0,
+          725.9445350462524
+        ],
+        [
+          1290.0,
+          755.0351445953471
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 2,
+        "main_pass": 2,
+        "touching_corridor_edge": 2,
+        "flattened_h": 150.91583803562082,
+        "band_edge_density": 0.149
+      }
+    },
+    {
+      "index": 5,
+      "angle_deg": 1.179,
+      "x_range": [
+        1125.0,
+        1780.0
+      ],
+      "gap": 79.3,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1743,
+      "poly": [
+        [
+          1125.0,
+          666.5043323227528
+        ],
+        [
+          1780.0,
+          676.7169496152824
+        ],
+        [
+          1780.0,
+          764.8365687659543
+        ],
+        [
+          1125.0,
+          748.0854070631992
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 3,
+        "main_pass": 2,
+        "touching_corridor_edge": 2,
+        "flattened_h": 79.25514978230501,
+        "band_edge_density": 0.1743
+      }
+    }
+  ],
+  "rail_eval": [
+    {
+      "user_x": [
+        11.4,
+        1973.4
+      ],
+      "user_angle": 2.31,
+      "tags_in_rail": 8,
+      "matched_auto": null,
+      "containment": 0.0,
+      "iou": 0.0
+    },
+    {
+      "user_x": [
+        13.0,
+        1980.7
+      ],
+      "user_angle": 1.02,
+      "tags_in_rail": 14,
+      "matched_auto": null,
+      "containment": 0.0,
+      "iou": 0.0
+    },
+    {
+      "user_x": [
+        13.9,
+        1996.2
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 17,
+      "matched_auto": null,
+      "containment": 0.0,
+      "iou": 0.0
+    }
+  ],
+  "false_auto_rails": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "stage_b_eval": [],
+  "params": {
+    "canny": [
+      60,
+      160
+    ],
+    "hough": {
+      "rho": 1,
+      "theta": 0.0175,
+      "threshold": 70,
+      "minLineLength": 90,
+      "maxLineGap": 18
+    },
+    "tag_h_rel": [
+      0.4,
+      0.92
+    ],
+    "tag_w_over_h": [
+      0.9,
+      5.0
+    ],
+    "thresh_passes": [
+      [
+        21,
+        5
+      ],
+      [
+        31,
+        1
+      ],
+      [
+        41,
+        3
+      ]
+    ]
+  },
+  "note": "标注仅用于评测；参数冻结；单图结果不证明泛化。"
+}

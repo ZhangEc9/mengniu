@@ -1,0 +1,216 @@
+{
+  "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+  "image_sha256": "a25b94957aec48488618489095db168c1574ce533f8bbf30beb98195204c013d",
+  "api_requests": 0,
+  "scope": "Frozen legacy geometry reproduction and cached-price replay; NOT a new API reading or automatic region localization.",
+  "legacy_99": {
+    "original_gt": {
+      "gt": 78,
+      "predictions": 99,
+      "matched_0.5": 54,
+      "cached_price_matched": 27,
+      "annotation_sha256": "d296e24c5688fedbfb23e1ba7c46fe9e8c556fbde3d6c0bdf90600effd6c51d4"
+    },
+    "new_gt": {
+      "gt": 87,
+      "predictions": 99,
+      "matched_0.5": 58,
+      "cached_price_matched": 30,
+      "annotation_sha256": "1b8107e7915a05676c4832cfd102c7182be6c60d619d948282da7c445a5cb416"
+    }
+  },
+  "top": {
+    "region_source": "legacy manually chosen image region",
+    "rail": [
+      93,
+      160
+    ],
+    "boxes": [
+      [
+        45,
+        117,
+        116,
+        156
+      ],
+      [
+        117,
+        108,
+        202,
+        151
+      ],
+      [
+        234,
+        108,
+        319,
+        158
+      ],
+      [
+        340,
+        108,
+        425,
+        157
+      ],
+      [
+        442,
+        107,
+        526,
+        157
+      ],
+      [
+        565,
+        107,
+        655,
+        156
+      ],
+      [
+        673,
+        107,
+        755,
+        149
+      ],
+      [
+        768,
+        107,
+        850,
+        156
+      ],
+      [
+        905,
+        107,
+        986,
+        157
+      ],
+      [
+        1033,
+        107,
+        1114,
+        156
+      ],
+      [
+        1144,
+        107,
+        1240,
+        159
+      ],
+      [
+        1240,
+        104,
+        1334,
+        159
+      ],
+      [
+        1254,
+        98,
+        1369,
+        145
+      ],
+      [
+        1361,
+        112,
+        1451,
+        145
+      ],
+      [
+        1463,
+        105,
+        1570,
+        157
+      ],
+      [
+        1578,
+        106,
+        1678,
+        157
+      ],
+      [
+        1685,
+        106,
+        1770,
+        155
+      ],
+      [
+        1814,
+        107,
+        1897,
+        149
+      ],
+      [
+        1938,
+        102,
+        2000,
+        153
+      ]
+    ],
+    "predictions": 19,
+    "gt": 17,
+    "matched_0.5": 17
+  },
+  "red": {
+    "region_source": "legacy manually chosen continuous segment",
+    "rail": [
+      865,
+      935
+    ],
+    "x_range": [
+      970,
+      1665
+    ],
+    "boxes": [
+      [
+        971,
+        876,
+        1050,
+        925
+      ],
+      [
+        1051,
+        874,
+        1110,
+        924
+      ],
+      [
+        1097,
+        872,
+        1185,
+        923
+      ],
+      [
+        1216,
+        873,
+        1276,
+        920
+      ],
+      [
+        1304,
+        868,
+        1392,
+        920
+      ],
+      [
+        1475,
+        871,
+        1556,
+        920
+      ],
+      [
+        1573,
+        871,
+        1661,
+        920
+      ]
+    ],
+    "predictions": 7,
+    "gt": 6,
+    "matched_0.5": 6,
+    "cached_price_matched": 6
+  },
+  "source_sha256": {
+    "dense_baseline_anchor.py": "8cd189654a5db4a6533c5cae97d7223cf3075b04e5a30ff826fa19a039cf86cd",
+    "top_rail_slot_experiment.py": "beb90a3bf8b9ed47fcec09313fbae6d636a409c9596cbbbe6f5c5585fc8af955",
+    "rail_numbered_read.py": "41db73f9f3c48afd85eecfdb52a57844887473d6d4449395469f5e7f83702942"
+  },
+  "cached_response_sha256": {
+    "legacy_pipeline": "b8ca71ac668cd0f07acdb5b805b2932af5c5dcbbfc6edc67f977365daf53a53f",
+    "red_readings": "9a8e77f0fca3e09281b9423ae9c28f68bcc492a506195c76936b564e3760c00f"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "request_id": "SYNTHETIC-FLOW-49098981",
+  "body": {
+    "Code": "success",
+    "Data": {
+      "BoxCount": 2,
+      "Data": [
+        {
+          "Idx": 0,
+          "Bbox": [124.9, 602.8, 287.9, 749.4],
+          "Top1": {
+            "SkuId": "130200001752",
+            "SkuName": "每日鲜语鲜牛奶PET瓶装250mL",
+            "Score": 0.8
+          },
+          "Topk": [
+            {
+              "Rank": 1,
+              "SkuId": "130200001752",
+              "SkuName": "每日鲜语鲜牛奶PET瓶装250mL",
+              "Score": 0.8
+            }
+          ]
+        },
+        {
+          "Idx": 1,
+          "Bbox": [420.0, 600.0, 550.0, 750.0],
+          "Top1": {
+            "SkuId": "1157703",
+            "SkuName": "君乐宝悦鲜活牛奶250+10ML",
+            "Score": 0.55
+          },
+          "Topk": [
+            {
+              "Rank": 1,
+              "SkuId": "1157703",
+              "SkuName": "君乐宝悦鲜活牛奶250+10ML",
+              "Score": 0.55
+            }
+          ]
+        }
+      ]
+    },
+    "Message": "Synthetic fixture for end-to-end integration; not a model prediction"
+  }
+}

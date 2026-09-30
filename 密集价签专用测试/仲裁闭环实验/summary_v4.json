@@ -1,0 +1,132 @@
+[
+  {
+    "image": "45035165",
+    "v1": {
+      "preds": 39,
+      "gts": 39,
+      "m30": 22,
+      "m50": 14,
+      "price_ok": 14
+    },
+    "v1_dup_with_view2": 0,
+    "view2": 0,
+    "view2_per_rail": {},
+    "final": {
+      "preds": 39,
+      "gts": 39,
+      "m30": 22,
+      "m50": 14,
+      "price_ok": 14
+    }
+  },
+  {
+    "image": "45524464",
+    "v1": {
+      "preds": 12,
+      "gts": 23,
+      "m30": 9,
+      "m50": 4,
+      "price_ok": 4
+    },
+    "v1_dup_with_view2": 0,
+    "view2": 0,
+    "view2_per_rail": {},
+    "final": {
+      "preds": 12,
+      "gts": 23,
+      "m30": 9,
+      "m50": 4,
+      "price_ok": 4
+    }
+  },
+  {
+    "image": "45544469",
+    "v1": {
+      "preds": 23,
+      "gts": 26,
+      "m30": 19,
+      "m50": 13,
+      "price_ok": 9
+    },
+    "v1_dup_with_view2": 0,
+    "view2": 0,
+    "view2_per_rail": {},
+    "final": {
+      "preds": 23,
+      "gts": 26,
+      "m30": 19,
+      "m50": 13,
+      "price_ok": 9
+    }
+  },
+  {
+    "image": "45566458",
+    "v1": {
+      "preds": 17,
+      "gts": 17,
+      "m30": 16,
+      "m50": 15,
+      "price_ok": 13
+    },
+    "v1_dup_with_view2": 3,
+    "view2": 19,
+    "view2_per_rail": {
+      "0": 13,
+      "1": 6
+    },
+    "final": {
+      "preds": 33,
+      "gts": 17,
+      "m30": 17,
+      "m50": 14,
+      "price_ok": 12
+    }
+  },
+  {
+    "image": "45727462",
+    "v1": {
+      "preds": 78,
+      "gts": 87,
+      "m30": 59,
+      "m50": 13,
+      "price_ok": 5
+    },
+    "v1_dup_with_view2": 12,
+    "view2": 70,
+    "view2_per_rail": {
+      "0": 18,
+      "1": 18,
+      "3": 22,
+      "4": 12
+    },
+    "final": {
+      "preds": 136,
+      "gts": 87,
+      "m30": 71,
+      "m50": 35,
+      "price_ok": 15
+    }
+  },
+  {
+    "image": "45789553",
+    "v1": {
+      "preds": 30,
+      "gts": 30,
+      "m30": 23,
+      "m50": 10,
+      "price_ok": 9
+    },
+    "v1_dup_with_view2": 1,
+    "view2": 11,
+    "view2_per_rail": {
+      "1": 11
+    },
+    "final": {
+      "preds": 40,
+      "gts": 30,
+      "m30": 26,
+      "m50": 13,
+      "price_ok": 12
+    }
+  }
+]

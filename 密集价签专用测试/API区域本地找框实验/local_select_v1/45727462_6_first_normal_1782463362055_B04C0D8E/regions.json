@@ -1,0 +1,29 @@
+{
+  "image": "D:\\Shixi\\mengniu\\密集价签专用测试\\新数据\\45727462_6_first_normal_1782463362055_B04C0D8E.jpg",
+  "image_size": [
+    2000,
+    1500
+  ],
+  "regions": [],
+  "selected_ids": [],
+  "uncertain_ids": [],
+  "failures": [
+    {
+      "page": 0,
+      "error": "Expected selected_ids array"
+    },
+    {
+      "page": 2,
+      "error": "Expected selected_ids array"
+    },
+    {
+      "page": 1,
+      "error": "Expected selected_ids array"
+    },
+    {
+      "page": 3,
+      "error": "HTTPSConnectionPool(host='aismapi.mengniu.cn', port=443): Max retries exceeded with url: /brcapi/brain/api/v1/flowApi/45c1d7fe3c?version=dev (Caused by ConnectTimeoutError(<HTTPSConnection(host='aismapi.mengniu.cn', port=443) at 0x1c0eb770b90>, 'Connection to aismapi.mengniu.cn timed out. (connect timeout=12)'))"
+    }
+  ],
+  "gt_used_in_inference": false
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "index": 2,
+    "slot_bbox": [
+      340,
+      108,
+      425,
+      157
+    ],
+    "crop_bbox": [
+      333,
+      101,
+      432,
+      164
+    ],
+    "crop_sha256": "357a40d509ffd576c1e8b4b42a58264ba090bbc6877d749121a21fddecae4b94",
+    "gt_price_for_evaluation_only": "23.00",
+    "gt_match_iou_for_evaluation_only": "0.7696",
+    "uploaded_url_sha256": "8c4aa7e192f7bdcb219aac29f375a0cd7e2838db08dbffe46348d7202f3d3e8f",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"23.60\", \"readable\": true}",
+    "parsed": {
+      "price": "23.60",
+      "readable": true
+    },
+    "price": "23.60",
+    "readable": true,
+    "price_matches_gt": false,
+    "elapsed_sec": 2.55
+  },
+  {
+    "index": 3,
+    "slot_bbox": [
+      442,
+      107,
+      526,
+      157
+    ],
+    "crop_bbox": [
+      435,
+      99,
+      533,
+      165
+    ],
+    "crop_sha256": "ed4e377b9afb08a18561024e4f381b902d24bffb860977a667d3edfbe9893a88",
+    "gt_price_for_evaluation_only": "12.90",
+    "gt_match_iou_for_evaluation_only": "0.8557",
+    "uploaded_url_sha256": "f92b02376b7e057526b2c16ac89cee66e313dbe1361441a179f5a18e07497fd1",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"12.90\", \"readable\": true}",
+    "parsed": {
+      "price": "12.90",
+      "readable": true
+    },
+    "price": "12.90",
+    "readable": true,
+    "price_matches_gt": true,
+    "elapsed_sec": 2.775
+  },
+  {
+    "index": 5,
+    "slot_bbox": [
+      673,
+      107,
+      755,
+      149
+    ],
+    "crop_bbox": [
+      666,
+      101,
+      762,
+      155
+    ],
+    "crop_sha256": "c27621979931f4520e29fb47116415b762a123c5e3c91648acfabf009fa1ac3e",
+    "gt_price_for_evaluation_only": "33.90",
+    "gt_match_iou_for_evaluation_only": "0.7517",
+    "uploaded_url_sha256": "bdd239d5adf5b468ada2242065bb4cfcf2f1235f4fa3ca3c2f1551b8bc2f7016",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"33.20\", \"readable\": true}",
+    "parsed": {
+      "price": "33.20",
+      "readable": true
+    },
+    "price": "33.20",
+    "readable": true,
+    "price_matches_gt": false,
+    "elapsed_sec": 2.473
+  }
+]

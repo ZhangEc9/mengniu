@@ -1,0 +1,2 @@
+﻿image,gt_boxes,pred_boxes,matched,recall,hit_rate,missing_prediction
+45727462_6_first_normal_1782463362055_B04C0D8E,78,99,54,0.6923076923076923,0.5454545454545454,0

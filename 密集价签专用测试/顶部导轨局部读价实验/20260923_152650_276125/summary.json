@@ -1,0 +1,482 @@
+[
+  {
+    "index": 0,
+    "slot_bbox": [
+      117,
+      108,
+      202,
+      151
+    ],
+    "crop_bbox": [
+      110,
+      102,
+      209,
+      157
+    ],
+    "crop_sha256": "29288db9ad455801a45d218bf60ce86ac0c7ed8715fb09e5817aa7d799d6b812",
+    "gt_price_for_evaluation_only": "15.50",
+    "gt_match_iou_for_evaluation_only": "0.6903",
+    "uploaded_url_sha256": "42dd1ae323bb923e94e41b94172030074a1f0f4edebfffadbd2562f91c15c135",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"15.60\", \"readable\": true}",
+    "parsed": {
+      "price": "15.60",
+      "readable": true
+    },
+    "price": "15.60",
+    "readable": true,
+    "price_matches_gt": false,
+    "elapsed_sec": 10.843
+  },
+  {
+    "index": 1,
+    "slot_bbox": [
+      234,
+      108,
+      319,
+      158
+    ],
+    "crop_bbox": [
+      227,
+      100,
+      326,
+      166
+    ],
+    "crop_sha256": "5cffd71c7c30689fe214f8cb5abe4cd905c287e6e40c9dd310c4bb75a21ee781",
+    "gt_price_for_evaluation_only": "14.90",
+    "gt_match_iou_for_evaluation_only": "0.7959",
+    "uploaded_url_sha256": "3d53a6abc40d737cef2e18b262e074f15c22b397931fc6da9872cf88920670c0",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"14.90\", \"readable\": true}",
+    "parsed": {
+      "price": "14.90",
+      "readable": true
+    },
+    "price": "14.90",
+    "readable": true,
+    "price_matches_gt": true,
+    "elapsed_sec": 2.843
+  },
+  {
+    "index": 2,
+    "slot_bbox": [
+      340,
+      108,
+      425,
+      157
+    ],
+    "crop_bbox": [
+      333,
+      101,
+      432,
+      164
+    ],
+    "crop_sha256": "357a40d509ffd576c1e8b4b42a58264ba090bbc6877d749121a21fddecae4b94",
+    "gt_price_for_evaluation_only": "23.00",
+    "gt_match_iou_for_evaluation_only": "0.7696",
+    "uploaded_url_sha256": "8c4aa7e192f7bdcb219aac29f375a0cd7e2838db08dbffe46348d7202f3d3e8f",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"23.60\", \"readable\": true}",
+    "parsed": {
+      "price": "23.60",
+      "readable": true
+    },
+    "price": "23.60",
+    "readable": true,
+    "price_matches_gt": false,
+    "elapsed_sec": 2.04
+  },
+  {
+    "index": 3,
+    "slot_bbox": [
+      442,
+      107,
+      526,
+      157
+    ],
+    "crop_bbox": [
+      435,
+      99,
+      533,
+      165
+    ],
+    "crop_sha256": "ed4e377b9afb08a18561024e4f381b902d24bffb860977a667d3edfbe9893a88",
+    "gt_price_for_evaluation_only": "12.90",
+    "gt_match_iou_for_evaluation_only": "0.8557",
+    "uploaded_url_sha256": "f92b02376b7e057526b2c16ac89cee66e313dbe1361441a179f5a18e07497fd1",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"12.90\", \"readable\": true}",
+    "parsed": {
+      "price": "12.90",
+      "readable": true
+    },
+    "price": "12.90",
+    "readable": true,
+    "price_matches_gt": true,
+    "elapsed_sec": 3.1
+  },
+  {
+    "index": 4,
+    "slot_bbox": [
+      565,
+      107,
+      655,
+      156
+    ],
+    "crop_bbox": [
+      558,
+      100,
+      662,
+      163
+    ],
+    "crop_sha256": "371edcee798e6e2aa9ff0d7469bd6c705c98220197b811c8b7bdc64cb7d445f0",
+    "gt_price_for_evaluation_only": "15.00",
+    "gt_match_iou_for_evaluation_only": "0.7547",
+    "uploaded_url_sha256": "6ef7f16d627b630e3d7d9ead01b5cb7f57471b94af32495f646395d1ee89b63c",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"15.00\", \"readable\": true}",
+    "parsed": {
+      "price": "15.00",
+      "readable": true
+    },
+    "price": "15.00",
+    "readable": true,
+    "price_matches_gt": true,
+    "elapsed_sec": 2.8
+  },
+  {
+    "index": 5,
+    "slot_bbox": [
+      673,
+      107,
+      755,
+      149
+    ],
+    "crop_bbox": [
+      666,
+      101,
+      762,
+      155
+    ],
+    "crop_sha256": "c27621979931f4520e29fb47116415b762a123c5e3c91648acfabf009fa1ac3e",
+    "gt_price_for_evaluation_only": "33.90",
+    "gt_match_iou_for_evaluation_only": "0.7517",
+    "uploaded_url_sha256": "bdd239d5adf5b468ada2242065bb4cfcf2f1235f4fa3ca3c2f1551b8bc2f7016",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"33.20\", \"readable\": true}",
+    "parsed": {
+      "price": "33.20",
+      "readable": true
+    },
+    "price": "33.20",
+    "readable": true,
+    "price_matches_gt": false,
+    "elapsed_sec": 2.71
+  },
+  {
+    "index": 6,
+    "slot_bbox": [
+      768,
+      107,
+      850,
+      156
+    ],
+    "crop_bbox": [
+      761,
+      100,
+      857,
+      163
+    ],
+    "crop_sha256": "0b064da52693b44abc32cbac278d33ce136fb33b557db072b23fd2f0bea0ab11",
+    "gt_price_for_evaluation_only": "18.90",
+    "gt_match_iou_for_evaluation_only": "0.8897",
+    "uploaded_url_sha256": "1ad2bb1f5286c97fdfacc8e5c141d880607a1cf4f499834a122155965452e6b5",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"18.80\", \"readable\": true}",
+    "parsed": {
+      "price": "18.80",
+      "readable": true
+    },
+    "price": "18.80",
+    "readable": true,
+    "price_matches_gt": false,
+    "elapsed_sec": 17.537
+  },
+  {
+    "index": 7,
+    "slot_bbox": [
+      905,
+      107,
+      986,
+      157
+    ],
+    "crop_bbox": [
+      899,
+      99,
+      992,
+      165
+    ],
+    "crop_sha256": "ac93ab3a825be101ef56cdd4a0b64f93e3b976b4a64787e36cf9a7ac3b9193c3",
+    "gt_price_for_evaluation_only": "20.80",
+    "gt_match_iou_for_evaluation_only": "0.8188",
+    "uploaded_url_sha256": "de6b68496ca71c0b4e94e2053e2e6d574ff017743e5aaa034904d006d094da77",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"20.80\", \"readable\": true}",
+    "parsed": {
+      "price": "20.80",
+      "readable": true
+    },
+    "price": "20.80",
+    "readable": true,
+    "price_matches_gt": true,
+    "elapsed_sec": 2.847
+  },
+  {
+    "index": 8,
+    "slot_bbox": [
+      1033,
+      107,
+      1114,
+      156
+    ],
+    "crop_bbox": [
+      1027,
+      100,
+      1120,
+      163
+    ],
+    "crop_sha256": "f31d511d128b5852a56814a694adae8087b4603ab62df35210169839c5f857a6",
+    "gt_price_for_evaluation_only": "12.80",
+    "gt_match_iou_for_evaluation_only": "0.8003",
+    "uploaded_url_sha256": "12c7371aa06e4c9b6964808bce663710f67e746b98d37f841d2faa1c3f3685d5",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"12.90\", \"readable\": true}",
+    "parsed": {
+      "price": "12.90",
+      "readable": true
+    },
+    "price": "12.90",
+    "readable": true,
+    "price_matches_gt": false,
+    "elapsed_sec": 2.216
+  },
+  {
+    "index": 9,
+    "slot_bbox": [
+      1144,
+      107,
+      1240,
+      159
+    ],
+    "crop_bbox": [
+      1136,
+      99,
+      1248,
+      167
+    ],
+    "crop_sha256": "a3564d37b60c1b64371e65734abe501c57db794263c3acf864961b0e913b1111",
+    "gt_price_for_evaluation_only": "21.80",
+    "gt_match_iou_for_evaluation_only": "0.619",
+    "uploaded_url_sha256": "5e5cfb88f295b1ffade9311ba4325504bac3d8b3e4740c11061cde3a67ed4fa5",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"21.90\", \"readable\": true}",
+    "parsed": {
+      "price": "21.90",
+      "readable": true
+    },
+    "price": "21.90",
+    "readable": true,
+    "price_matches_gt": false,
+    "elapsed_sec": 3.396
+  },
+  {
+    "index": 10,
+    "slot_bbox": [
+      1240,
+      104,
+      1334,
+      159
+    ],
+    "crop_bbox": [
+      1232,
+      96,
+      1342,
+      167
+    ],
+    "crop_sha256": "cfb2e3ee35fb371c99b7c6c5345f0f36101a4fe94155dc8a29d1c2b0ad20a3d4",
+    "gt_price_for_evaluation_only": null,
+    "gt_match_iou_for_evaluation_only": null,
+    "uploaded_url_sha256": "b04a9aacde9278fcac1c8fdda0a6a22b50c8599e214660369d1874991140efc1",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"18.\", \"readable\": false}",
+    "parsed": {
+      "price": "18.",
+      "readable": false
+    },
+    "price": "18.",
+    "readable": false,
+    "price_matches_gt": null,
+    "elapsed_sec": 3.015
+  },
+  {
+    "index": 11,
+    "slot_bbox": [
+      1254,
+      98,
+      1369,
+      145
+    ],
+    "crop_bbox": [
+      1245,
+      91,
+      1378,
+      152
+    ],
+    "crop_sha256": "87481135ab52f673d8e20c3299926f261ea749526a65384f83f92c84e8f02b1b",
+    "gt_price_for_evaluation_only": "18.90",
+    "gt_match_iou_for_evaluation_only": "0.5283",
+    "uploaded_url_sha256": "3342dc0e961d7b708749a996c26600704e7d8645b4053752c97a96f200415307",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"18.90\", \"readable\": true}",
+    "parsed": {
+      "price": "18.90",
+      "readable": true
+    },
+    "price": "18.90",
+    "readable": true,
+    "price_matches_gt": true,
+    "elapsed_sec": 3.128
+  },
+  {
+    "index": 12,
+    "slot_bbox": [
+      1361,
+      112,
+      1451,
+      145
+    ],
+    "crop_bbox": [
+      1354,
+      107,
+      1458,
+      150
+    ],
+    "crop_sha256": "4a6e16e745ff54bcb71f9e0887aa9f2385f659627dfed1790b3e66db4c63f425",
+    "gt_price_for_evaluation_only": null,
+    "gt_match_iou_for_evaluation_only": null,
+    "uploaded_url_sha256": "6ef12751b9d815f53f69c11d45ada3806aa340c339c8631334f60f08b8c9cddb",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": null, \"readable\": false}",
+    "parsed": {
+      "price": null,
+      "readable": false
+    },
+    "price": null,
+    "readable": false,
+    "price_matches_gt": null,
+    "elapsed_sec": 5.563
+  },
+  {
+    "index": 13,
+    "slot_bbox": [
+      1463,
+      105,
+      1570,
+      157
+    ],
+    "crop_bbox": [
+      1454,
+      97,
+      1579,
+      165
+    ],
+    "crop_sha256": "e1d1ee65f8d47901297340f213ce871314434ca6db0993b7abaf97153675cf33",
+    "gt_price_for_evaluation_only": "19.90",
+    "gt_match_iou_for_evaluation_only": "0.634",
+    "uploaded_url_sha256": "8d4ebd66696bcb37f92a76cb03a9d4b1f8543cc850680288c8e5e20070ea0bdd",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"19.90\", \"readable\": true}",
+    "parsed": {
+      "price": "19.90",
+      "readable": true
+    },
+    "price": "19.90",
+    "readable": true,
+    "price_matches_gt": true,
+    "elapsed_sec": 3.148
+  },
+  {
+    "index": 14,
+    "slot_bbox": [
+      1578,
+      106,
+      1678,
+      157
+    ],
+    "crop_bbox": [
+      1570,
+      98,
+      1686,
+      165
+    ],
+    "crop_sha256": "42d57519a4ef795a127dbfa4ed7829e18b8b9b51d79ebda5fc277a6e1c788893",
+    "gt_price_for_evaluation_only": "15.90",
+    "gt_match_iou_for_evaluation_only": "0.6924",
+    "uploaded_url_sha256": "be25d5c0809041e851e9f45c5a7c8ae45eb88465062a6c3f888049e85db1013a",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"15.90\", \"readable\": true}",
+    "parsed": {
+      "price": "15.90",
+      "readable": true
+    },
+    "price": "15.90",
+    "readable": true,
+    "price_matches_gt": true,
+    "elapsed_sec": 5.236
+  },
+  {
+    "index": 15,
+    "slot_bbox": [
+      1814,
+      107,
+      1897,
+      149
+    ],
+    "crop_bbox": [
+      1807,
+      101,
+      1904,
+      155
+    ],
+    "crop_sha256": "74e60129cfb3b565ac9f304a644c9072593ce706e49458b4f10b29a8f6ebe004",
+    "gt_price_for_evaluation_only": "18.80",
+    "gt_match_iou_for_evaluation_only": "0.7297",
+    "uploaded_url_sha256": "6ea69fc98b3275117fea0ddf780c6040efbb8e57fa9d25bf864e993b1e135567",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"18.60\", \"readable\": true}",
+    "parsed": {
+      "price": "18.60",
+      "readable": true
+    },
+    "price": "18.60",
+    "readable": true,
+    "price_matches_gt": false,
+    "elapsed_sec": 2.371
+  }
+]

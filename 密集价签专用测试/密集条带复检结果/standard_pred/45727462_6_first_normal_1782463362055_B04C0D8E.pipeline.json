@@ -1,0 +1,1663 @@
+{
+  "image_name": "45727462_6_first_normal_1782463362055_B04C0D8E.jpg",
+  "step2_price_tags": {
+    "total_tags": 53,
+    "total_promotion_tags": 0,
+    "tags": [
+      {
+        "id": 1,
+        "shelf_layer": 1,
+        "bbox": [
+          28,
+          290,
+          154,
+          323
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90元",
+        "tag_type": "price",
+        "confidence": 0.98,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          56,
+          435,
+          308,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 2,
+        "shelf_layer": 1,
+        "bbox": [
+          156,
+          290,
+          212,
+          323
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90元",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          312,
+          435,
+          424,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 3,
+        "shelf_layer": 1,
+        "bbox": [
+          214,
+          290,
+          268,
+          323
+        ],
+        "price": "4.90",
+        "raw_price_text": "4.90元",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          428,
+          435,
+          536,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 4,
+        "shelf_layer": 1,
+        "bbox": [
+          270,
+          290,
+          324,
+          323
+        ],
+        "price": "4.90",
+        "raw_price_text": "4.90元",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          540,
+          435,
+          648,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 5,
+        "shelf_layer": 1,
+        "bbox": [
+          326,
+          290,
+          380,
+          323
+        ],
+        "price": "4.90",
+        "raw_price_text": "4.90元",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          652,
+          435,
+          760,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 6,
+        "shelf_layer": 1,
+        "bbox": [
+          382,
+          290,
+          436,
+          323
+        ],
+        "price": "9.90",
+        "raw_price_text": "9.90元",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          764,
+          435,
+          872,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 7,
+        "shelf_layer": 1,
+        "bbox": [
+          438,
+          290,
+          492,
+          323
+        ],
+        "price": "4.90",
+        "raw_price_text": "4.90元",
+        "tag_type": "price",
+        "confidence": 0.93,
+        "price_confidence": 0.94,
+        "pixel_bbox": [
+          876,
+          435,
+          984,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 8,
+        "shelf_layer": 1,
+        "bbox": [
+          494,
+          290,
+          548,
+          323
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90元",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          988,
+          435,
+          1096,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 9,
+        "shelf_layer": 1,
+        "bbox": [
+          550,
+          290,
+          604,
+          323
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90元",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          1100,
+          435,
+          1208,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 10,
+        "shelf_layer": 1,
+        "bbox": [
+          606,
+          290,
+          660,
+          323
+        ],
+        "price": "16.90",
+        "raw_price_text": "16.90元",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          1212,
+          435,
+          1320,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 11,
+        "shelf_layer": 1,
+        "bbox": [
+          662,
+          290,
+          716,
+          323
+        ],
+        "price": "13.90",
+        "raw_price_text": "13.90元",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          1324,
+          435,
+          1432,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 12,
+        "shelf_layer": 1,
+        "bbox": [
+          718,
+          290,
+          772,
+          323
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          1436,
+          435,
+          1544,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 13,
+        "shelf_layer": 1,
+        "bbox": [
+          774,
+          290,
+          828,
+          323
+        ],
+        "price": "5.90",
+        "raw_price_text": "5.90元",
+        "tag_type": "price",
+        "confidence": 0.93,
+        "price_confidence": 0.94,
+        "pixel_bbox": [
+          1548,
+          435,
+          1656,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 14,
+        "shelf_layer": 1,
+        "bbox": [
+          830,
+          290,
+          884,
+          323
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.92,
+        "price_confidence": 0.93,
+        "pixel_bbox": [
+          1660,
+          435,
+          1768,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 15,
+        "shelf_layer": 1,
+        "bbox": [
+          886,
+          290,
+          940,
+          323
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.91,
+        "price_confidence": 0.92,
+        "pixel_bbox": [
+          1772,
+          435,
+          1880,
+          485
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 16,
+        "shelf_layer": 2,
+        "bbox": [
+          56,
+          450,
+          154,
+          480
+        ],
+        "price": "9.90",
+        "raw_price_text": "9.90元",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          112,
+          675,
+          308,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 17,
+        "shelf_layer": 2,
+        "bbox": [
+          156,
+          450,
+          212,
+          480
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90元",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          312,
+          675,
+          424,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 18,
+        "shelf_layer": 2,
+        "bbox": [
+          214,
+          450,
+          268,
+          480
+        ],
+        "price": "12.90",
+        "raw_price_text": "12.90元",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          428,
+          675,
+          536,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 19,
+        "shelf_layer": 2,
+        "bbox": [
+          270,
+          450,
+          324,
+          480
+        ],
+        "price": "9.90",
+        "raw_price_text": "9.90元",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          540,
+          675,
+          648,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 20,
+        "shelf_layer": 2,
+        "bbox": [
+          326,
+          450,
+          380,
+          480
+        ],
+        "price": "3.90",
+        "raw_price_text": "3.90元",
+        "tag_type": "price",
+        "confidence": 0.93,
+        "price_confidence": 0.94,
+        "pixel_bbox": [
+          652,
+          675,
+          760,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 21,
+        "shelf_layer": 2,
+        "bbox": [
+          382,
+          450,
+          436,
+          480
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90元",
+        "tag_type": "price",
+        "confidence": 0.92,
+        "price_confidence": 0.93,
+        "pixel_bbox": [
+          764,
+          675,
+          872,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 22,
+        "shelf_layer": 2,
+        "bbox": [
+          438,
+          450,
+          492,
+          480
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90元",
+        "tag_type": "price",
+        "confidence": 0.91,
+        "price_confidence": 0.92,
+        "pixel_bbox": [
+          876,
+          675,
+          984,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 23,
+        "shelf_layer": 2,
+        "bbox": [
+          494,
+          450,
+          548,
+          480
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.9,
+        "price_confidence": 0.91,
+        "pixel_bbox": [
+          988,
+          675,
+          1096,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 24,
+        "shelf_layer": 2,
+        "bbox": [
+          550,
+          450,
+          604,
+          480
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.89,
+        "price_confidence": 0.9,
+        "pixel_bbox": [
+          1100,
+          675,
+          1208,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 25,
+        "shelf_layer": 2,
+        "bbox": [
+          606,
+          450,
+          660,
+          480
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.88,
+        "price_confidence": 0.89,
+        "pixel_bbox": [
+          1212,
+          675,
+          1320,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 26,
+        "shelf_layer": 2,
+        "bbox": [
+          662,
+          450,
+          716,
+          480
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90元",
+        "tag_type": "price",
+        "confidence": 0.87,
+        "price_confidence": 0.88,
+        "pixel_bbox": [
+          1324,
+          675,
+          1432,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 27,
+        "shelf_layer": 2,
+        "bbox": [
+          718,
+          450,
+          772,
+          480
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.86,
+        "price_confidence": 0.87,
+        "pixel_bbox": [
+          1436,
+          675,
+          1544,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 28,
+        "shelf_layer": 2,
+        "bbox": [
+          774,
+          450,
+          828,
+          480
+        ],
+        "price": "4.90",
+        "raw_price_text": "4.90元",
+        "tag_type": "price",
+        "confidence": 0.85,
+        "price_confidence": 0.86,
+        "pixel_bbox": [
+          1548,
+          675,
+          1656,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 29,
+        "shelf_layer": 2,
+        "bbox": [
+          830,
+          450,
+          884,
+          480
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.84,
+        "price_confidence": 0.85,
+        "pixel_bbox": [
+          1660,
+          675,
+          1768,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 30,
+        "shelf_layer": 2,
+        "bbox": [
+          886,
+          450,
+          940,
+          480
+        ],
+        "price": "5.90",
+        "raw_price_text": "5.90元",
+        "tag_type": "price",
+        "confidence": 0.83,
+        "price_confidence": 0.84,
+        "pixel_bbox": [
+          1772,
+          675,
+          1880,
+          720
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 31,
+        "shelf_layer": 3,
+        "bbox": [
+          56,
+          540,
+          154,
+          567
+        ],
+        "price": "5.90",
+        "raw_price_text": "5.90元",
+        "tag_type": "price",
+        "confidence": 0.9,
+        "price_confidence": 0.91,
+        "pixel_bbox": [
+          112,
+          810,
+          308,
+          850
+        ],
+        "source_strip": 1,
+        "partial": true,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "strip_edge_partial",
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 32,
+        "shelf_layer": 3,
+        "bbox": [
+          156,
+          540,
+          212,
+          567
+        ],
+        "price": "5.90",
+        "raw_price_text": "5.90元",
+        "tag_type": "price",
+        "confidence": 0.89,
+        "price_confidence": 0.9,
+        "pixel_bbox": [
+          312,
+          810,
+          424,
+          850
+        ],
+        "source_strip": 1,
+        "partial": true,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "strip_edge_partial",
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 33,
+        "shelf_layer": 3,
+        "bbox": [
+          214,
+          540,
+          268,
+          567
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.88,
+        "price_confidence": 0.89,
+        "pixel_bbox": [
+          428,
+          810,
+          536,
+          850
+        ],
+        "source_strip": 1,
+        "partial": true,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "strip_edge_partial",
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 34,
+        "shelf_layer": 3,
+        "bbox": [
+          270,
+          540,
+          324,
+          567
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.87,
+        "price_confidence": 0.88,
+        "pixel_bbox": [
+          540,
+          810,
+          648,
+          850
+        ],
+        "source_strip": 1,
+        "partial": true,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "strip_edge_partial",
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 35,
+        "shelf_layer": 3,
+        "bbox": [
+          326,
+          540,
+          380,
+          567
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.86,
+        "price_confidence": 0.87,
+        "pixel_bbox": [
+          652,
+          810,
+          760,
+          850
+        ],
+        "source_strip": 1,
+        "partial": true,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "strip_edge_partial",
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 36,
+        "shelf_layer": 3,
+        "bbox": [
+          550,
+          540,
+          604,
+          567
+        ],
+        "price": "12.80",
+        "raw_price_text": "劲爆价 12.8",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          1100,
+          810,
+          1208,
+          850
+        ],
+        "source_strip": 1,
+        "partial": true,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "strip_edge_partial",
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 37,
+        "shelf_layer": 3,
+        "bbox": [
+          606,
+          540,
+          660,
+          567
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.82,
+        "price_confidence": 0.83,
+        "pixel_bbox": [
+          1212,
+          810,
+          1320,
+          850
+        ],
+        "source_strip": 1,
+        "partial": true,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "strip_edge_partial",
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 38,
+        "shelf_layer": 3,
+        "bbox": [
+          662,
+          540,
+          716,
+          567
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.81,
+        "price_confidence": 0.82,
+        "pixel_bbox": [
+          1324,
+          810,
+          1432,
+          850
+        ],
+        "source_strip": 1,
+        "partial": true,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "strip_edge_partial",
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 39,
+        "shelf_layer": 3,
+        "bbox": [
+          718,
+          540,
+          772,
+          567
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90元",
+        "tag_type": "price",
+        "confidence": 0.8,
+        "price_confidence": 0.81,
+        "pixel_bbox": [
+          1436,
+          810,
+          1544,
+          850
+        ],
+        "source_strip": 1,
+        "partial": true,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "strip_edge_partial",
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 40,
+        "shelf_layer": 3,
+        "bbox": [
+          886,
+          540,
+          940,
+          567
+        ],
+        "price": "5.90",
+        "raw_price_text": "5.90元",
+        "tag_type": "price",
+        "confidence": 0.77,
+        "price_confidence": 0.78,
+        "pixel_bbox": [
+          1772,
+          810,
+          1880,
+          850
+        ],
+        "source_strip": 1,
+        "partial": true,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "strip_edge_partial",
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 41,
+        "shelf_layer": 3,
+        "bbox": [
+          924,
+          723,
+          984,
+          743
+        ],
+        "price": "18.00",
+        "raw_price_text": "18.00元",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          1848,
+          1085,
+          1968,
+          1115
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 42,
+        "shelf_layer": 3,
+        "bbox": [
+          984,
+          723,
+          1000,
+          743
+        ],
+        "price": "13.90",
+        "raw_price_text": "13.90元",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          1968,
+          1085,
+          2000,
+          1115
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 43,
+        "shelf_layer": 1,
+        "bbox": [
+          85,
+          727,
+          132,
+          753
+        ],
+        "price": "8.00",
+        "raw_price_text": "8.00元",
+        "tag_type": "price",
+        "confidence": 0.98,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          170,
+          1090,
+          264,
+          1129
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 44,
+        "shelf_layer": 1,
+        "bbox": [
+          154,
+          727,
+          201,
+          753
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          308,
+          1090,
+          402,
+          1129
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 45,
+        "shelf_layer": 1,
+        "bbox": [
+          216,
+          727,
+          263,
+          753
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          432,
+          1090,
+          526,
+          1129
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 46,
+        "shelf_layer": 1,
+        "bbox": [
+          280,
+          727,
+          327,
+          753
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          560,
+          1090,
+          654,
+          1129
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 47,
+        "shelf_layer": 1,
+        "bbox": [
+          344,
+          727,
+          391,
+          753
+        ],
+        "price": "4.00",
+        "raw_price_text": "4.00元",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          688,
+          1090,
+          782,
+          1129
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 48,
+        "shelf_layer": 1,
+        "bbox": [
+          406,
+          727,
+          453,
+          753
+        ],
+        "price": "2.00",
+        "raw_price_text": "2.00元",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          812,
+          1090,
+          906,
+          1129
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 49,
+        "shelf_layer": 1,
+        "bbox": [
+          468,
+          727,
+          515,
+          753
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          936,
+          1090,
+          1030,
+          1129
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 50,
+        "shelf_layer": 1,
+        "bbox": [
+          530,
+          727,
+          577,
+          753
+        ],
+        "price": "4.00",
+        "raw_price_text": "4.00元",
+        "tag_type": "price",
+        "confidence": 0.93,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          1060,
+          1090,
+          1154,
+          1129
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 51,
+        "shelf_layer": 1,
+        "bbox": [
+          592,
+          727,
+          639,
+          753
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.92,
+        "price_confidence": 0.94,
+        "pixel_bbox": [
+          1184,
+          1090,
+          1278,
+          1129
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 52,
+        "shelf_layer": 1,
+        "bbox": [
+          654,
+          727,
+          701,
+          753
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.91,
+        "price_confidence": 0.93,
+        "pixel_bbox": [
+          1308,
+          1090,
+          1402,
+          1129
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 53,
+        "shelf_layer": 1,
+        "bbox": [
+          716,
+          727,
+          763,
+          753
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.9,
+        "price_confidence": 0.92,
+        "pixel_bbox": [
+          1432,
+          1090,
+          1526,
+          1129
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      }
+    ],
+    "promotion_tags": []
+  }
+}

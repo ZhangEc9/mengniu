@@ -1,0 +1,2955 @@
+{
+  "image_name": "45727462_6_first_normal_1782463362055_B04C0D8E.jpg",
+  "step2_price_tags": {
+    "total_tags": 99,
+    "total_promotion_tags": 0,
+    "tags": [
+      {
+        "id": 1,
+        "shelf_layer": 2,
+        "bbox": [
+          34,
+          295,
+          102,
+          325
+        ],
+        "price": "8.50",
+        "raw_price_text": "8.50",
+        "tag_type": "price",
+        "confidence": 0.98,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          68,
+          442,
+          204,
+          488
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          0,
+          1
+        ],
+        "max_iou": 0.6981358989777511,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 2,
+        "shelf_layer": 2,
+        "bbox": [
+          88,
+          293,
+          146,
+          323
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90",
+        "tag_type": "price",
+        "confidence": 0.98,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          176,
+          440,
+          292,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          0,
+          1
+        ],
+        "max_iou": 0.37543655413271243,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 3,
+        "shelf_layer": 2,
+        "bbox": [
+          146,
+          293,
+          204,
+          323
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          292,
+          440,
+          408,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          0,
+          1
+        ],
+        "max_iou": 0.599721059972106,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 4,
+        "shelf_layer": 2,
+        "bbox": [
+          204,
+          293,
+          262,
+          323
+        ],
+        "price": "4.80",
+        "raw_price_text": "4.80",
+        "tag_type": "price",
+        "confidence": 0.98,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          408,
+          440,
+          524,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          0,
+          1
+        ],
+        "max_iou": 0.6450786681302598,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 5,
+        "shelf_layer": 2,
+        "bbox": [
+          262,
+          293,
+          320,
+          323
+        ],
+        "price": "4.80",
+        "raw_price_text": "4.80",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          524,
+          440,
+          640,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          0,
+          1
+        ],
+        "max_iou": 0.43461781427668983,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 6,
+        "shelf_layer": 2,
+        "bbox": [
+          320,
+          293,
+          378,
+          323
+        ],
+        "price": "4.80",
+        "raw_price_text": "4.80",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          640,
+          440,
+          756,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          0
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 7,
+        "shelf_layer": 2,
+        "bbox": [
+          378,
+          293,
+          436,
+          323
+        ],
+        "price": "9.90",
+        "raw_price_text": "9.90",
+        "tag_type": "price",
+        "confidence": 0.98,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          756,
+          440,
+          872,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          0,
+          1
+        ],
+        "max_iou": 0.6450786681302598,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 8,
+        "shelf_layer": 2,
+        "bbox": [
+          436,
+          293,
+          494,
+          323
+        ],
+        "price": "4.90",
+        "raw_price_text": "4.90",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          872,
+          440,
+          988,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 3,
+        "source_strips": [
+          0,
+          1
+        ],
+        "max_iou": 0.4023705552089832,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 9,
+        "shelf_layer": 2,
+        "bbox": [
+          494,
+          293,
+          552,
+          323
+        ],
+        "price": "4.90",
+        "raw_price_text": "4.90",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          988,
+          440,
+          1104,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          0
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 10,
+        "shelf_layer": 2,
+        "bbox": [
+          552,
+          293,
+          610,
+          323
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          1104,
+          440,
+          1220,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          0
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 11,
+        "shelf_layer": 2,
+        "bbox": [
+          610,
+          293,
+          668,
+          323
+        ],
+        "price": "8.80",
+        "raw_price_text": "8.80",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          1220,
+          440,
+          1336,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          0
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 12,
+        "shelf_layer": 2,
+        "bbox": [
+          668,
+          293,
+          726,
+          323
+        ],
+        "price": "16.90",
+        "raw_price_text": "16.90",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          1336,
+          440,
+          1452,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          0
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 13,
+        "shelf_layer": 2,
+        "bbox": [
+          726,
+          293,
+          784,
+          323
+        ],
+        "price": "13.90",
+        "raw_price_text": "13.90",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          1452,
+          440,
+          1568,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          0
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 14,
+        "shelf_layer": 2,
+        "bbox": [
+          784,
+          293,
+          842,
+          323
+        ],
+        "price": "6.50",
+        "raw_price_text": "6.50",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          1568,
+          440,
+          1684,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          0
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 15,
+        "shelf_layer": 2,
+        "bbox": [
+          842,
+          293,
+          900,
+          323
+        ],
+        "price": "5.90",
+        "raw_price_text": "5.90",
+        "tag_type": "price",
+        "confidence": 0.93,
+        "price_confidence": 0.94,
+        "pixel_bbox": [
+          1684,
+          440,
+          1800,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          0
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 16,
+        "shelf_layer": 2,
+        "bbox": [
+          900,
+          293,
+          958,
+          323
+        ],
+        "price": "6.80",
+        "raw_price_text": "6.80",
+        "tag_type": "price",
+        "confidence": 0.93,
+        "price_confidence": 0.94,
+        "pixel_bbox": [
+          1800,
+          440,
+          1916,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          0,
+          1
+        ],
+        "max_iou": 0.5948918056048244,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 17,
+        "shelf_layer": 2,
+        "bbox": [
+          958,
+          293,
+          1000,
+          323
+        ],
+        "price": "6.80",
+        "raw_price_text": "6.80",
+        "tag_type": "price",
+        "confidence": 0.92,
+        "price_confidence": 0.93,
+        "pixel_bbox": [
+          1916,
+          440,
+          2000,
+          485
+        ],
+        "source_strip": 0,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          0
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 18,
+        "shelf_layer": 1,
+        "bbox": [
+          296,
+          295,
+          337,
+          325
+        ],
+        "price": "4.80",
+        "raw_price_text": "4.80",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          592,
+          442,
+          674,
+          488
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 19,
+        "shelf_layer": 1,
+        "bbox": [
+          339,
+          295,
+          380,
+          325
+        ],
+        "price": "4.90",
+        "raw_price_text": "4.90",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          678,
+          442,
+          760,
+          488
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 20,
+        "shelf_layer": 1,
+        "bbox": [
+          511,
+          295,
+          552,
+          325
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          1022,
+          442,
+          1104,
+          488
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 21,
+        "shelf_layer": 1,
+        "bbox": [
+          554,
+          295,
+          595,
+          325
+        ],
+        "price": "8.80",
+        "raw_price_text": "8.80",
+        "tag_type": "price",
+        "confidence": 0.93,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          1108,
+          442,
+          1190,
+          488
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 22,
+        "shelf_layer": 1,
+        "bbox": [
+          597,
+          295,
+          638,
+          325
+        ],
+        "price": "16.90",
+        "raw_price_text": "16.90",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          1194,
+          442,
+          1276,
+          488
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 23,
+        "shelf_layer": 1,
+        "bbox": [
+          640,
+          295,
+          681,
+          325
+        ],
+        "price": "13.90",
+        "raw_price_text": "13.90",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          1280,
+          442,
+          1362,
+          488
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 24,
+        "shelf_layer": 1,
+        "bbox": [
+          683,
+          295,
+          724,
+          325
+        ],
+        "price": "6.50",
+        "raw_price_text": "6.50",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          1366,
+          442,
+          1448,
+          488
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 25,
+        "shelf_layer": 1,
+        "bbox": [
+          726,
+          295,
+          767,
+          325
+        ],
+        "price": "5.90",
+        "raw_price_text": "5.90",
+        "tag_type": "price",
+        "confidence": 0.93,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          1452,
+          442,
+          1534,
+          488
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 26,
+        "shelf_layer": 1,
+        "bbox": [
+          769,
+          295,
+          810,
+          325
+        ],
+        "price": "5.90",
+        "raw_price_text": "5.90",
+        "tag_type": "price",
+        "confidence": 0.92,
+        "price_confidence": 0.94,
+        "pixel_bbox": [
+          1538,
+          442,
+          1620,
+          488
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 27,
+        "shelf_layer": 1,
+        "bbox": [
+          812,
+          295,
+          853,
+          325
+        ],
+        "price": "6.80",
+        "raw_price_text": "6.80",
+        "tag_type": "price",
+        "confidence": 0.91,
+        "price_confidence": 0.93,
+        "pixel_bbox": [
+          1624,
+          442,
+          1706,
+          488
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 28,
+        "shelf_layer": 1,
+        "bbox": [
+          855,
+          295,
+          896,
+          325
+        ],
+        "price": "6.80",
+        "raw_price_text": "6.80",
+        "tag_type": "price",
+        "confidence": 0.9,
+        "price_confidence": 0.92,
+        "pixel_bbox": [
+          1710,
+          442,
+          1792,
+          488
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 29,
+        "shelf_layer": 2,
+        "bbox": [
+          62,
+          453,
+          104,
+          481
+        ],
+        "price": "9.90",
+        "raw_price_text": "9.90",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          124,
+          680,
+          208,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 30,
+        "shelf_layer": 2,
+        "bbox": [
+          116,
+          453,
+          157,
+          481
+        ],
+        "price": "8.50",
+        "raw_price_text": "8.50",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          232,
+          680,
+          314,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 31,
+        "shelf_layer": 2,
+        "bbox": [
+          160,
+          453,
+          201,
+          481
+        ],
+        "price": "12.50",
+        "raw_price_text": "12.50",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          320,
+          680,
+          402,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 32,
+        "shelf_layer": 2,
+        "bbox": [
+          204,
+          453,
+          245,
+          481
+        ],
+        "price": "9.60",
+        "raw_price_text": "9.60",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          408,
+          680,
+          490,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 33,
+        "shelf_layer": 2,
+        "bbox": [
+          258,
+          453,
+          300,
+          481
+        ],
+        "price": "4.50",
+        "raw_price_text": "4.50",
+        "tag_type": "price",
+        "confidence": 0.93,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          516,
+          680,
+          600,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 34,
+        "shelf_layer": 2,
+        "bbox": [
+          312,
+          453,
+          353,
+          481
+        ],
+        "price": "3.90",
+        "raw_price_text": "3.90",
+        "tag_type": "price",
+        "confidence": 0.92,
+        "price_confidence": 0.94,
+        "pixel_bbox": [
+          624,
+          680,
+          706,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 35,
+        "shelf_layer": 2,
+        "bbox": [
+          366,
+          453,
+          407,
+          481
+        ],
+        "price": "8.00",
+        "raw_price_text": "8.00",
+        "tag_type": "price",
+        "confidence": 0.91,
+        "price_confidence": 0.93,
+        "pixel_bbox": [
+          732,
+          680,
+          814,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 36,
+        "shelf_layer": 2,
+        "bbox": [
+          410,
+          453,
+          451,
+          481
+        ],
+        "price": "8.50",
+        "raw_price_text": "8.50",
+        "tag_type": "price",
+        "confidence": 0.9,
+        "price_confidence": 0.92,
+        "pixel_bbox": [
+          820,
+          680,
+          902,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 37,
+        "shelf_layer": 2,
+        "bbox": [
+          464,
+          453,
+          505,
+          481
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90",
+        "tag_type": "price",
+        "confidence": 0.89,
+        "price_confidence": 0.91,
+        "pixel_bbox": [
+          928,
+          680,
+          1010,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 38,
+        "shelf_layer": 2,
+        "bbox": [
+          508,
+          453,
+          549,
+          481
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90",
+        "tag_type": "price",
+        "confidence": 0.88,
+        "price_confidence": 0.9,
+        "pixel_bbox": [
+          1016,
+          680,
+          1098,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 39,
+        "shelf_layer": 2,
+        "bbox": [
+          562,
+          453,
+          603,
+          481
+        ],
+        "price": "6.90",
+        "raw_price_text": "6.90",
+        "tag_type": "price",
+        "confidence": 0.87,
+        "price_confidence": 0.89,
+        "pixel_bbox": [
+          1124,
+          680,
+          1206,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 40,
+        "shelf_layer": 2,
+        "bbox": [
+          670,
+          453,
+          711,
+          481
+        ],
+        "price": "8.30",
+        "raw_price_text": "8.30",
+        "tag_type": "price",
+        "confidence": 0.85,
+        "price_confidence": 0.87,
+        "pixel_bbox": [
+          1340,
+          680,
+          1422,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 41,
+        "shelf_layer": 2,
+        "bbox": [
+          724,
+          453,
+          765,
+          481
+        ],
+        "price": "5.90",
+        "raw_price_text": "5.90",
+        "tag_type": "price",
+        "confidence": 0.84,
+        "price_confidence": 0.86,
+        "pixel_bbox": [
+          1448,
+          680,
+          1530,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 42,
+        "shelf_layer": 2,
+        "bbox": [
+          778,
+          453,
+          819,
+          481
+        ],
+        "price": "4.90",
+        "raw_price_text": "4.90",
+        "tag_type": "price",
+        "confidence": 0.83,
+        "price_confidence": 0.85,
+        "pixel_bbox": [
+          1556,
+          680,
+          1638,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 43,
+        "shelf_layer": 2,
+        "bbox": [
+          832,
+          453,
+          873,
+          481
+        ],
+        "price": "6.50",
+        "raw_price_text": "6.50",
+        "tag_type": "price",
+        "confidence": 0.82,
+        "price_confidence": 0.84,
+        "pixel_bbox": [
+          1664,
+          680,
+          1746,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 44,
+        "shelf_layer": 2,
+        "bbox": [
+          886,
+          453,
+          927,
+          481
+        ],
+        "price": "5.90",
+        "raw_price_text": "5.90",
+        "tag_type": "price",
+        "confidence": 0.81,
+        "price_confidence": 0.83,
+        "pixel_bbox": [
+          1772,
+          680,
+          1854,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 45,
+        "shelf_layer": 2,
+        "bbox": [
+          940,
+          453,
+          981,
+          481
+        ],
+        "price": "5.90",
+        "raw_price_text": "5.90",
+        "tag_type": "price",
+        "confidence": 0.8,
+        "price_confidence": 0.82,
+        "pixel_bbox": [
+          1880,
+          680,
+          1962,
+          722
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          1
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 46,
+        "shelf_layer": 3,
+        "bbox": [
+          592,
+          517,
+          642,
+          557
+        ],
+        "price": "12.80",
+        "raw_price_text": "劲爆价 12.8",
+        "tag_type": "price",
+        "confidence": 0.98,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          1184,
+          775,
+          1284,
+          835
+        ],
+        "source_strip": 1,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          1,
+          2
+        ],
+        "max_iou": 0.8,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 47,
+        "shelf_layer": 1,
+        "bbox": [
+          67,
+          589,
+          115,
+          613
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90元",
+        "tag_type": "price",
+        "confidence": 0.98,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          134,
+          884,
+          230,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 48,
+        "shelf_layer": 1,
+        "bbox": [
+          138,
+          589,
+          182,
+          613
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90元",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          276,
+          884,
+          364,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 49,
+        "shelf_layer": 1,
+        "bbox": [
+          210,
+          589,
+          252,
+          613
+        ],
+        "price": "5.00",
+        "raw_price_text": "5.00元",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          420,
+          884,
+          504,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 50,
+        "shelf_layer": 1,
+        "bbox": [
+          260,
+          589,
+          304,
+          613
+        ],
+        "price": "5.00",
+        "raw_price_text": "5.00元",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          520,
+          884,
+          608,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 51,
+        "shelf_layer": 1,
+        "bbox": [
+          310,
+          589,
+          354,
+          613
+        ],
+        "price": "13.90",
+        "raw_price_text": "13.90元",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          620,
+          884,
+          708,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 52,
+        "shelf_layer": 1,
+        "bbox": [
+          358,
+          589,
+          402,
+          613
+        ],
+        "price": "13.90",
+        "raw_price_text": "13.90元",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          716,
+          884,
+          804,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 53,
+        "shelf_layer": 1,
+        "bbox": [
+          406,
+          589,
+          448,
+          613
+        ],
+        "price": "8.80",
+        "raw_price_text": "8.80元",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          812,
+          884,
+          896,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 54,
+        "shelf_layer": 1,
+        "bbox": [
+          452,
+          589,
+          494,
+          613
+        ],
+        "price": "8.80",
+        "raw_price_text": "8.80元",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          904,
+          884,
+          988,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 55,
+        "shelf_layer": 1,
+        "bbox": [
+          498,
+          589,
+          540,
+          613
+        ],
+        "price": "8.50",
+        "raw_price_text": "8.50元",
+        "tag_type": "price",
+        "confidence": 0.93,
+        "price_confidence": 0.94,
+        "pixel_bbox": [
+          996,
+          884,
+          1080,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 56,
+        "shelf_layer": 1,
+        "bbox": [
+          544,
+          589,
+          586,
+          613
+        ],
+        "price": "8.50",
+        "raw_price_text": "8.50元",
+        "tag_type": "price",
+        "confidence": 0.92,
+        "price_confidence": 0.93,
+        "pixel_bbox": [
+          1088,
+          884,
+          1172,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 57,
+        "shelf_layer": 1,
+        "bbox": [
+          590,
+          589,
+          632,
+          613
+        ],
+        "price": "8.50",
+        "raw_price_text": "8.50元",
+        "tag_type": "price",
+        "confidence": 0.91,
+        "price_confidence": 0.92,
+        "pixel_bbox": [
+          1180,
+          884,
+          1264,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 58,
+        "shelf_layer": 1,
+        "bbox": [
+          652,
+          589,
+          694,
+          613
+        ],
+        "price": "12.80",
+        "raw_price_text": "12.80元",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          1304,
+          884,
+          1388,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 59,
+        "shelf_layer": 1,
+        "bbox": [
+          698,
+          589,
+          740,
+          613
+        ],
+        "price": "3.50",
+        "raw_price_text": "3.50元",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          1396,
+          884,
+          1480,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 60,
+        "shelf_layer": 1,
+        "bbox": [
+          744,
+          589,
+          786,
+          613
+        ],
+        "price": "3.50",
+        "raw_price_text": "3.50元",
+        "tag_type": "price",
+        "confidence": 0.93,
+        "price_confidence": 0.94,
+        "pixel_bbox": [
+          1488,
+          884,
+          1572,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 61,
+        "shelf_layer": 1,
+        "bbox": [
+          790,
+          589,
+          832,
+          613
+        ],
+        "price": "3.50",
+        "raw_price_text": "3.50元",
+        "tag_type": "price",
+        "confidence": 0.92,
+        "price_confidence": 0.93,
+        "pixel_bbox": [
+          1580,
+          884,
+          1664,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 62,
+        "shelf_layer": 1,
+        "bbox": [
+          882,
+          589,
+          924,
+          613
+        ],
+        "price": "16.80",
+        "raw_price_text": "16.80元",
+        "tag_type": "price",
+        "confidence": 0.9,
+        "price_confidence": 0.91,
+        "pixel_bbox": [
+          1764,
+          884,
+          1848,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 63,
+        "shelf_layer": 1,
+        "bbox": [
+          928,
+          589,
+          970,
+          613
+        ],
+        "price": "13.00",
+        "raw_price_text": "13.00元",
+        "tag_type": "price",
+        "confidence": 0.89,
+        "price_confidence": 0.9,
+        "pixel_bbox": [
+          1856,
+          884,
+          1940,
+          920
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 64,
+        "shelf_layer": 2,
+        "bbox": [
+          87,
+          727,
+          131,
+          751
+        ],
+        "price": "8.90",
+        "raw_price_text": "8.90元",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          174,
+          1090,
+          262,
+          1126
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 65,
+        "shelf_layer": 2,
+        "bbox": [
+          154,
+          729,
+          196,
+          754
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          308,
+          1093,
+          392,
+          1131
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          2,
+          3
+        ],
+        "max_iou": 0.7725752508361204,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 66,
+        "shelf_layer": 2,
+        "bbox": [
+          208,
+          729,
+          250,
+          754
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          416,
+          1093,
+          500,
+          1131
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          2,
+          3
+        ],
+        "max_iou": 0.738255033557047,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 67,
+        "shelf_layer": 2,
+        "bbox": [
+          256,
+          729,
+          298,
+          754
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          512,
+          1093,
+          596,
+          1131
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          2,
+          3
+        ],
+        "max_iou": 0.6763754045307443,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 68,
+        "shelf_layer": 2,
+        "bbox": [
+          348,
+          729,
+          390,
+          754
+        ],
+        "price": "4.90",
+        "raw_price_text": "4.90元",
+        "tag_type": "price",
+        "confidence": 0.97,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          696,
+          1093,
+          780,
+          1131
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          2,
+          3
+        ],
+        "max_iou": 0.6763754045307443,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 69,
+        "shelf_layer": 2,
+        "bbox": [
+          398,
+          727,
+          440,
+          751
+        ],
+        "price": "2.50",
+        "raw_price_text": "2.50元",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          796,
+          1090,
+          880,
+          1126
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          2,
+          3
+        ],
+        "max_iou": 0.4588235294117647,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 70,
+        "shelf_layer": 2,
+        "bbox": [
+          444,
+          727,
+          486,
+          751
+        ],
+        "price": "2.50",
+        "raw_price_text": "2.50元",
+        "tag_type": "price",
+        "confidence": 0.91,
+        "price_confidence": 0.92,
+        "pixel_bbox": [
+          888,
+          1090,
+          972,
+          1126
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 71,
+        "shelf_layer": 2,
+        "bbox": [
+          490,
+          727,
+          532,
+          751
+        ],
+        "price": "3.50",
+        "raw_price_text": "3.50元",
+        "tag_type": "price",
+        "confidence": 0.9,
+        "price_confidence": 0.91,
+        "pixel_bbox": [
+          980,
+          1090,
+          1064,
+          1126
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 72,
+        "shelf_layer": 2,
+        "bbox": [
+          536,
+          727,
+          578,
+          751
+        ],
+        "price": "4.50",
+        "raw_price_text": "4.50元",
+        "tag_type": "price",
+        "confidence": 0.89,
+        "price_confidence": 0.9,
+        "pixel_bbox": [
+          1072,
+          1090,
+          1156,
+          1126
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 73,
+        "shelf_layer": 2,
+        "bbox": [
+          582,
+          727,
+          624,
+          751
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.88,
+        "price_confidence": 0.89,
+        "pixel_bbox": [
+          1164,
+          1090,
+          1248,
+          1126
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          2
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 74,
+        "shelf_layer": 2,
+        "bbox": [
+          628,
+          727,
+          670,
+          751
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.93,
+        "price_confidence": 0.95,
+        "pixel_bbox": [
+          1256,
+          1090,
+          1340,
+          1126
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          2,
+          3
+        ],
+        "max_iou": 0.42433234421364985,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 75,
+        "shelf_layer": 2,
+        "bbox": [
+          674,
+          727,
+          716,
+          751
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00元",
+        "tag_type": "price",
+        "confidence": 0.92,
+        "price_confidence": 0.94,
+        "pixel_bbox": [
+          1348,
+          1090,
+          1432,
+          1126
+        ],
+        "source_strip": 2,
+        "partial": false,
+        "consensus_count": 2,
+        "source_strips": [
+          2,
+          3
+        ],
+        "max_iou": 0.3370473537604457,
+        "need_review": false,
+        "review_reason": []
+      },
+      {
+        "id": 76,
+        "shelf_layer": 1,
+        "bbox": [
+          87,
+          729,
+          130,
+          754
+        ],
+        "price": "8.00",
+        "raw_price_text": "8.00",
+        "tag_type": "price",
+        "confidence": 0.98,
+        "price_confidence": 0.99,
+        "pixel_bbox": [
+          174,
+          1093,
+          260,
+          1131
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 77,
+        "shelf_layer": 1,
+        "bbox": [
+          428,
+          729,
+          462,
+          754
+        ],
+        "price": "2.00",
+        "raw_price_text": "2.00",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          856,
+          1093,
+          924,
+          1131
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 78,
+        "shelf_layer": 1,
+        "bbox": [
+          466,
+          729,
+          500,
+          754
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00",
+        "tag_type": "price",
+        "confidence": 0.96,
+        "price_confidence": 0.98,
+        "pixel_bbox": [
+          932,
+          1093,
+          1000,
+          1131
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 79,
+        "shelf_layer": 1,
+        "bbox": [
+          504,
+          729,
+          540,
+          754
+        ],
+        "price": "4.00",
+        "raw_price_text": "4.00",
+        "tag_type": "price",
+        "confidence": 0.95,
+        "price_confidence": 0.97,
+        "pixel_bbox": [
+          1008,
+          1093,
+          1080,
+          1131
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 80,
+        "shelf_layer": 1,
+        "bbox": [
+          544,
+          729,
+          582,
+          754
+        ],
+        "price": "3.00",
+        "raw_price_text": "3.00",
+        "tag_type": "price",
+        "confidence": 0.94,
+        "price_confidence": 0.96,
+        "pixel_bbox": [
+          1088,
+          1093,
+          1164,
+          1131
+        ],
+        "source_strip": 3,
+        "partial": false,
+        "consensus_count": 1,
+        "source_strips": [
+          3
+        ],
+        "need_review": true,
+        "review_reason": [
+          "single_strip_candidate"
+        ]
+      },
+      {
+        "id": 81,
+        "bbox": [
+          22,
+          78,
+          58,
+          104
+        ],
+        "pixel_bbox": [
+          45,
+          117,
+          116,
+          156
+        ],
+        "tag_type": "price",
+        "price": "14.50",
+        "raw_price_text": "{\"price\": \"14.50\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 0
+      },
+      {
+        "id": 82,
+        "bbox": [
+          58,
+          72,
+          101,
+          101
+        ],
+        "pixel_bbox": [
+          117,
+          108,
+          202,
+          151
+        ],
+        "tag_type": "price",
+        "price": "15.50",
+        "raw_price_text": "{\"price\": \"15.50\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 1
+      },
+      {
+        "id": 83,
+        "bbox": [
+          117,
+          72,
+          160,
+          105
+        ],
+        "pixel_bbox": [
+          234,
+          108,
+          319,
+          158
+        ],
+        "tag_type": "price",
+        "price": "14.90",
+        "raw_price_text": "{\"price\": \"14.90\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 2
+      },
+      {
+        "id": 84,
+        "bbox": [
+          170,
+          72,
+          212,
+          105
+        ],
+        "pixel_bbox": [
+          340,
+          108,
+          425,
+          157
+        ],
+        "tag_type": "price",
+        "price": "23.60",
+        "raw_price_text": "{\"price\": \"23.60\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 3
+      },
+      {
+        "id": 85,
+        "bbox": [
+          221,
+          71,
+          263,
+          105
+        ],
+        "pixel_bbox": [
+          442,
+          107,
+          526,
+          157
+        ],
+        "tag_type": "price",
+        "price": "12.90",
+        "raw_price_text": "{\"price\": \"12.90\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 4
+      },
+      {
+        "id": 86,
+        "bbox": [
+          282,
+          71,
+          328,
+          104
+        ],
+        "pixel_bbox": [
+          565,
+          107,
+          655,
+          156
+        ],
+        "tag_type": "price",
+        "price": "15.00",
+        "raw_price_text": "{\"price\": \"15.00\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 5
+      },
+      {
+        "id": 87,
+        "bbox": [
+          336,
+          71,
+          378,
+          99
+        ],
+        "pixel_bbox": [
+          673,
+          107,
+          755,
+          149
+        ],
+        "tag_type": "price",
+        "price": "33.90",
+        "raw_price_text": "{\"price\": \"33.90\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 6
+      },
+      {
+        "id": 88,
+        "bbox": [
+          384,
+          71,
+          425,
+          104
+        ],
+        "pixel_bbox": [
+          768,
+          107,
+          850,
+          156
+        ],
+        "tag_type": "price",
+        "price": "18.80",
+        "raw_price_text": "{\"price\": \"18.80\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 7
+      },
+      {
+        "id": 89,
+        "bbox": [
+          452,
+          71,
+          493,
+          105
+        ],
+        "pixel_bbox": [
+          905,
+          107,
+          986,
+          157
+        ],
+        "tag_type": "price",
+        "price": "20.80",
+        "raw_price_text": "{\"price\": \"20.80\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 8
+      },
+      {
+        "id": 90,
+        "bbox": [
+          516,
+          71,
+          557,
+          104
+        ],
+        "pixel_bbox": [
+          1033,
+          107,
+          1114,
+          156
+        ],
+        "tag_type": "price",
+        "price": "12.90",
+        "raw_price_text": "{\"price\": \"12.90\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 9
+      },
+      {
+        "id": 91,
+        "bbox": [
+          572,
+          71,
+          620,
+          106
+        ],
+        "pixel_bbox": [
+          1144,
+          107,
+          1240,
+          159
+        ],
+        "tag_type": "price",
+        "price": "21.90",
+        "raw_price_text": "{\"price\": \"21.90\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 10
+      },
+      {
+        "id": 92,
+        "bbox": [
+          620,
+          69,
+          667,
+          106
+        ],
+        "pixel_bbox": [
+          1240,
+          104,
+          1334,
+          159
+        ],
+        "tag_type": "price",
+        "price": "",
+        "raw_price_text": "{\"price\": \"18\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "unreadable_or_invalid_price"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 11
+      },
+      {
+        "id": 93,
+        "bbox": [
+          627,
+          65,
+          684,
+          97
+        ],
+        "pixel_bbox": [
+          1254,
+          98,
+          1369,
+          145
+        ],
+        "tag_type": "price",
+        "price": "18.90",
+        "raw_price_text": "{\"price\": \"18.90\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 12
+      },
+      {
+        "id": 94,
+        "bbox": [
+          680,
+          75,
+          726,
+          97
+        ],
+        "pixel_bbox": [
+          1361,
+          112,
+          1451,
+          145
+        ],
+        "tag_type": "price",
+        "price": "",
+        "raw_price_text": "{\"price\": null, \"readable\": false}",
+        "need_review": true,
+        "review_reason": [
+          "unreadable_or_invalid_price"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 13
+      },
+      {
+        "id": 95,
+        "bbox": [
+          732,
+          70,
+          785,
+          105
+        ],
+        "pixel_bbox": [
+          1463,
+          105,
+          1570,
+          157
+        ],
+        "tag_type": "price",
+        "price": "19.90",
+        "raw_price_text": "{\"price\": \"19.90\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 14
+      },
+      {
+        "id": 96,
+        "bbox": [
+          789,
+          71,
+          839,
+          105
+        ],
+        "pixel_bbox": [
+          1578,
+          106,
+          1678,
+          157
+        ],
+        "tag_type": "price",
+        "price": "15.90",
+        "raw_price_text": "{\"price\": \"15.90\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 15
+      },
+      {
+        "id": 97,
+        "bbox": [
+          842,
+          71,
+          885,
+          103
+        ],
+        "pixel_bbox": [
+          1685,
+          106,
+          1770,
+          155
+        ],
+        "tag_type": "price",
+        "price": "15.90",
+        "raw_price_text": "{\"price\": \"15.90\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 16
+      },
+      {
+        "id": 98,
+        "bbox": [
+          907,
+          71,
+          948,
+          99
+        ],
+        "pixel_bbox": [
+          1814,
+          107,
+          1897,
+          149
+        ],
+        "tag_type": "price",
+        "price": "18.50",
+        "raw_price_text": "{\"price\": \"18.50\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 17
+      },
+      {
+        "id": 99,
+        "bbox": [
+          969,
+          68,
+          1000,
+          102
+        ],
+        "pixel_bbox": [
+          1938,
+          102,
+          2000,
+          153
+        ],
+        "tag_type": "price",
+        "price": "18.50",
+        "raw_price_text": "{\"price\": \"18.50\", \"readable\": true}",
+        "need_review": true,
+        "review_reason": [
+          "single_crop_read_no_consensus"
+        ],
+        "source": "top_rail_contour_slot_and_single_crop_api",
+        "source_slot_index": 18
+      }
+    ],
+    "promotion_tags": []
+  },
+  "experiment": {
+    "baseline": "D:\\Shixi\\mengniu\\密集价签专用测试\\密集条带放大复检结果\\dense_result.pipeline.json",
+    "top_probes": [
+      "D:\\Shixi\\mengniu\\密集价签专用测试\\顶部导轨局部读价实验\\20260923_152937_345352\\summary.json",
+      "D:\\Shixi\\mengniu\\密集价签专用测试\\顶部导轨局部读价实验\\20260923_153711_350205\\summary.json"
+    ],
+    "slots_csv": "D:\\Shixi\\mengniu\\密集价签专用测试\\顶部导轨多阈值找框实验\\slots.csv",
+    "note": "离线组合评测。顶部价格仅单次读取，全部标为 need_review；非生产可接受结果。"
+  }
+}

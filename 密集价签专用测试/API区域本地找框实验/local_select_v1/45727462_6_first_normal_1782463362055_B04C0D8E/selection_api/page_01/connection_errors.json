@@ -1,0 +1,6 @@
+[
+  {
+    "attempt": 1,
+    "error": "HTTPSConnectionPool(host='aismapi.mengniu.cn', port=443): Max retries exceeded with url: /brcapi/brain/api/v1/flowApi/45c1d7fe3c?version=dev (Caused by ConnectTimeoutError(<HTTPSConnection(host='aismapi.mengniu.cn', port=443) at 0x1c0eb647ed0>, 'Connection to aismapi.mengniu.cn timed out. (connect timeout=12)'))"
+  }
+]

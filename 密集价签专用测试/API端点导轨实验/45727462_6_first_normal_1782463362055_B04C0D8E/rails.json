@@ -1,0 +1,369 @@
+{
+  "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+  "rails_returned": 6,
+  "rails_accepted": 6,
+  "rejected": [],
+  "details": {
+    "0": {
+      "candidates": 28,
+      "touching": 1,
+      "entities_in_box": 34
+    },
+    "1": {
+      "candidates": 18,
+      "touching": 0,
+      "entities_in_box": 29
+    },
+    "2": {
+      "candidates": 18,
+      "touching": 5,
+      "entities_in_box": 30
+    },
+    "3": {
+      "candidates": 22,
+      "touching": 7,
+      "entities_in_box": 27
+    },
+    "4": {
+      "candidates": 15,
+      "touching": 3,
+      "entities_in_box": 16
+    },
+    "5": {
+      "candidates": 13,
+      "touching": 6,
+      "entities_in_box": 8
+    }
+  },
+  "rail_eval": [
+    {
+      "user_x": [
+        41.7,
+        1990.7
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 17,
+      "matched": true,
+      "containment": 1.0,
+      "corridor": 0
+    },
+    {
+      "user_x": [
+        60.0,
+        1999.0
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 20,
+      "matched": true,
+      "containment": 1.0,
+      "corridor": 1
+    },
+    {
+      "user_x": [
+        100.0,
+        1992.3
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 16,
+      "matched": true,
+      "containment": 1.0,
+      "corridor": 2
+    },
+    {
+      "user_x": [
+        133.3,
+        1999.0
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 17,
+      "matched": true,
+      "containment": 1.0,
+      "corridor": 3
+    },
+    {
+      "user_x": [
+        173.3,
+        1986.7
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 16,
+      "matched": true,
+      "containment": 0.875,
+      "corridor": 4
+    }
+  ],
+  "stage_b_eval": [
+    {
+      "rail": 0,
+      "corridor": 0,
+      "containment": 1.0,
+      "user_tags": 17,
+      "preds": 28,
+      "matched_0.3": 13,
+      "matched_0.5": 9,
+      "matched_0.7": 4,
+      "preds_covering_2plus_tags": 2
+    },
+    {
+      "rail": 1,
+      "corridor": 1,
+      "containment": 1.0,
+      "user_tags": 20,
+      "preds": 18,
+      "matched_0.3": 15,
+      "matched_0.5": 10,
+      "matched_0.7": 2,
+      "preds_covering_2plus_tags": 5
+    },
+    {
+      "rail": 2,
+      "corridor": 2,
+      "containment": 1.0,
+      "user_tags": 16,
+      "preds": 18,
+      "matched_0.3": 9,
+      "matched_0.5": 5,
+      "matched_0.7": 0,
+      "preds_covering_2plus_tags": 0
+    },
+    {
+      "rail": 3,
+      "corridor": 3,
+      "containment": 1.0,
+      "user_tags": 17,
+      "preds": 22,
+      "matched_0.3": 8,
+      "matched_0.5": 4,
+      "matched_0.7": 0,
+      "preds_covering_2plus_tags": 1
+    },
+    {
+      "rail": 4,
+      "corridor": 4,
+      "containment": 0.875,
+      "user_tags": 16,
+      "preds": 15,
+      "matched_0.3": 6,
+      "matched_0.5": 3,
+      "matched_0.7": 1,
+      "preds_covering_2plus_tags": 1
+    }
+  ],
+  "global": {
+    "preds": 114,
+    "gts": 87,
+    "m30": 51,
+    "m50": 31
+  },
+  "corridors": [
+    {
+      "rail_id": 1,
+      "x_range": [
+        0,
+        1998
+      ],
+      "angle_deg": -0.19,
+      "inner_gap": 52.0,
+      "n_entities": 34,
+      "poly": [
+        [
+          0,
+          105
+        ],
+        [
+          1998,
+          99
+        ],
+        [
+          1998,
+          151
+        ],
+        [
+          0,
+          157
+        ]
+      ],
+      "api_box_1000": [
+        29,
+        74,
+        999,
+        108
+      ]
+    },
+    {
+      "rail_id": 2,
+      "x_range": [
+        58,
+        1998
+      ],
+      "angle_deg": -0.09,
+      "inner_gap": 54.0,
+      "n_entities": 29,
+      "poly": [
+        [
+          58,
+          438
+        ],
+        [
+          1998,
+          435
+        ],
+        [
+          1998,
+          489
+        ],
+        [
+          58,
+          492
+        ]
+      ],
+      "api_box_1000": [
+        29,
+        290,
+        999,
+        326
+      ]
+    },
+    {
+      "rail_id": 3,
+      "x_range": [
+        98,
+        2000
+      ],
+      "angle_deg": -0.29,
+      "inner_gap": 51.0,
+      "n_entities": 30,
+      "poly": [
+        [
+          98,
+          672
+        ],
+        [
+          2000,
+          662
+        ],
+        [
+          2000,
+          713
+        ],
+        [
+          98,
+          723
+        ]
+      ],
+      "api_box_1000": [
+        53,
+        448,
+        999,
+        482
+      ]
+    },
+    {
+      "rail_id": 4,
+      "x_range": [
+        120,
+        1998
+      ],
+      "angle_deg": -0.47,
+      "inner_gap": 48.0,
+      "n_entities": 27,
+      "poly": [
+        [
+          120,
+          873
+        ],
+        [
+          1998,
+          858
+        ],
+        [
+          1998,
+          906
+        ],
+        [
+          120,
+          921
+        ]
+      ],
+      "api_box_1000": [
+        67,
+        584,
+        999,
+        616
+      ]
+    },
+    {
+      "rail_id": 5,
+      "x_range": [
+        166,
+        1998
+      ],
+      "angle_deg": -0.81,
+      "inner_gap": 54.0,
+      "n_entities": 16,
+      "poly": [
+        [
+          166,
+          1076
+        ],
+        [
+          1998,
+          1050
+        ],
+        [
+          1998,
+          1104
+        ],
+        [
+          166,
+          1130
+        ]
+      ],
+      "api_box_1000": [
+        87,
+        720,
+        999,
+        756
+      ]
+    },
+    {
+      "rail_id": 6,
+      "x_range": [
+        126,
+        1998
+      ],
+      "angle_deg": -0.3,
+      "inner_gap": 54.0,
+      "n_entities": 8,
+      "poly": [
+        [
+          126,
+          1384
+        ],
+        [
+          1998,
+          1374
+        ],
+        [
+          1998,
+          1428
+        ],
+        [
+          126,
+          1438
+        ]
+      ],
+      "api_box_1000": [
+        75,
+        928,
+        999,
+        964
+      ]
+    }
+  ],
+  "prompts": {
+    "system": "你是超市货架价签定位助手。只输出 JSON 数组，不输出解释、markdown 标记或其他文字。",
+    "user": "图中是超市货架照片，货架上有一条或多条价格签条（导轨），每条上贴有一排价格签。\n任务：输出每一条价格签条的边界框，框住整条价签条（含其上全部价格签，上下留少量余量）。\n要求：\n1. 只算贴着普通白色价格标签的价签条；空导轨、只有促销牌/广告牌的条、商品包装上的文字行都不算。\n2. 一条价签条输出一个框；被照片边缘截断时框到可见部分为止。\n3. bbox 格式 [x1,y1,x2,y2]，为相对图像宽高的 0-1000 归一化整数坐标。\n4. 只输出 JSON 数组：[{\"rail_id\":1,\"rail_bbox\":[x1,y1,x2,y2]},...]\n5. 只输出真实可见的价签条；如果看不清或没有，返回 []，绝对不要按固定间隔编造。"
+  },
+  "note": "端点由 API 语义识别（只要 regular_price）；几何只做走廊与找框；标注仅用于评测。"
+}

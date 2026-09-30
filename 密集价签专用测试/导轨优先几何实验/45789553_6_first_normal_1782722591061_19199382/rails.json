@@ -1,0 +1,450 @@
+{
+  "image": "45789553_6_first_normal_1782722591061_19199382",
+  "size": [
+    2000,
+    1125
+  ],
+  "lines_total": 147,
+  "pairs_total": 9,
+  "auto_rails": [
+    {
+      "index": 0,
+      "angle_deg": -2.141,
+      "x_range": [
+        1844.0,
+        1949.0
+      ],
+      "gap": 115.7,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.0436,
+      "poly": [
+        [
+          1844.0,
+          8.938619688045932
+        ],
+        [
+          1949.0,
+          4.258423251584759
+        ],
+        [
+          1949.0,
+          132.9373736893412
+        ],
+        [
+          1844.0,
+          136.10791982690986
+        ]
+      ],
+      "detail": {
+        "stage_b": "skipped_not_dense",
+        "band_edge_density": 0.0436
+      }
+    },
+    {
+      "index": 1,
+      "angle_deg": -1.865,
+      "x_range": [
+        368.0,
+        803.0
+      ],
+      "gap": 120.9,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.0553,
+      "poly": [
+        [
+          368.0,
+          141.19398954291438
+        ],
+        [
+          803.0,
+          121.00627259733405
+        ],
+        [
+          803.0,
+          232.9498081176626
+        ],
+        [
+          368.0,
+          241.09521333913074
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 1,
+        "main_pass": 1,
+        "touching_corridor_edge": 1,
+        "flattened_h": 120.8714562813083,
+        "band_edge_density": 0.0553
+      }
+    },
+    {
+      "index": 2,
+      "angle_deg": -0.168,
+      "x_range": [
+        368.0,
+        803.0
+      ],
+      "gap": 141.4,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1565,
+      "poly": [
+        [
+          368.0,
+          241.09521333913074
+        ],
+        [
+          803.0,
+          232.9498081176626
+        ],
+        [
+          803.0,
+          381.1977998141899
+        ],
+        [
+          368.0,
+          375.60538364909314
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 1,
+        "main_pass": 1,
+        "touching_corridor_edge": 1,
+        "flattened_h": 141.37908100324486,
+        "band_edge_density": 0.1565
+      }
+    },
+    {
+      "index": 3,
+      "angle_deg": -4.329,
+      "x_range": [
+        403.0,
+        1069.0
+      ],
+      "gap": 159.1,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1098,
+      "poly": [
+        [
+          403.0,
+          374.7282097770372
+        ],
+        [
+          1069.0,
+          317.37479903444756
+        ],
+        [
+          1069.0,
+          476.09889777905863
+        ],
+        [
+          403.0,
+          519.5849230676274
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 0,
+        "main_pass": 0,
+        "touching_corridor_edge": 0,
+        "flattened_h": 159.09889294607115,
+        "band_edge_density": 0.1098
+      }
+    },
+    {
+      "index": 4,
+      "angle_deg": -3.621,
+      "x_range": [
+        259.0,
+        676.0
+      ],
+      "gap": 126.7,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1095,
+      "poly": [
+        [
+          259.0,
+          546.684369971883
+        ],
+        [
+          676.0,
+          525.9440491475564
+        ],
+        [
+          676.0,
+          659.6129093884399
+        ],
+        [
+          259.0,
+          691.6589504272039
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 1,
+        "main_pass": 1,
+        "touching_corridor_edge": 1,
+        "flattened_h": 126.68751022837125,
+        "band_edge_density": 0.1095
+      }
+    },
+    {
+      "index": 5,
+      "angle_deg": -1.075,
+      "x_range": [
+        1285.0,
+        1562.0
+      ],
+      "gap": 131.9,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1808,
+      "poly": [
+        [
+          1285.0,
+          609.938594571629
+        ],
+        [
+          1562.0,
+          600.0507043940493
+        ],
+        [
+          1562.0,
+          736.6015451358705
+        ],
+        [
+          1285.0,
+          737.113463931549
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 3,
+        "main_pass": 3,
+        "touching_corridor_edge": 3,
+        "flattened_h": 131.86285505087062,
+        "band_edge_density": 0.1808
+      }
+    },
+    {
+      "index": 6,
+      "angle_deg": 4.024,
+      "x_range": [
+        930.0,
+        1055.0
+      ],
+      "gap": 130.5,
+      "sources": [
+        "detected",
+        "inferred"
+      ],
+      "band_edge_density": 0.1212,
+      "poly": [
+        [
+          930.0,
+          673.4169269325645
+        ],
+        [
+          1055.0,
+          681.0045147764075
+        ],
+        [
+          1055.0,
+          813.9999999999999
+        ],
+        [
+          930.0,
+          804.0
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 1,
+        "main_pass": 1,
+        "touching_corridor_edge": 1,
+        "flattened_h": 130.50587587843847,
+        "band_edge_density": 0.1212
+      }
+    },
+    {
+      "index": 7,
+      "angle_deg": 4.205,
+      "x_range": [
+        930.0,
+        1036.0
+      ],
+      "gap": 55.8,
+      "sources": [
+        "inferred",
+        "detected"
+      ],
+      "band_edge_density": 0.1419,
+      "poly": [
+        [
+          930.0,
+          804.0
+        ],
+        [
+          1036.0,
+          812.4799999999999
+        ],
+        [
+          1036.0,
+          867.669285343067
+        ],
+        [
+          930.0,
+          860.5628180181054
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 0,
+        "main_pass": 0,
+        "touching_corridor_edge": 0,
+        "flattened_h": 55.75295205404984,
+        "band_edge_density": 0.1419
+      }
+    },
+    {
+      "index": 8,
+      "angle_deg": 1.001,
+      "x_range": [
+        583.0,
+        1711.0
+      ],
+      "gap": 76.1,
+      "sources": [
+        "detected",
+        "detected"
+      ],
+      "band_edge_density": 0.1521,
+      "poly": [
+        [
+          583.0,
+          997.2784729921739
+        ],
+        [
+          1711.0,
+          1014.5320478810454
+        ],
+        [
+          1711.0,
+          1093.071566733692
+        ],
+        [
+          583.0,
+          1070.898089458491
+        ]
+      ],
+      "detail": {
+        "stage_b": "ran",
+        "candidates": 4,
+        "main_pass": 1,
+        "touching_corridor_edge": 4,
+        "flattened_h": 76.07956765948177,
+        "band_edge_density": 0.1521
+      }
+    }
+  ],
+  "rail_eval": [
+    {
+      "user_x": [
+        179.0,
+        1985.6
+      ],
+      "user_angle": -1.08,
+      "tags_in_rail": 10,
+      "matched_auto": null,
+      "containment": 0.0,
+      "iou": 0.0
+    },
+    {
+      "user_x": [
+        170.9,
+        1998.7
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 11,
+      "matched_auto": null,
+      "containment": 0.0,
+      "iou": 0.0
+    },
+    {
+      "user_x": [
+        129.1,
+        1994.9
+      ],
+      "user_angle": 0.0,
+      "tags_in_rail": 9,
+      "matched_auto": null,
+      "containment": 0.0,
+      "iou": 0.0
+    }
+  ],
+  "false_auto_rails": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "stage_b_eval": [],
+  "params": {
+    "canny": [
+      60,
+      160
+    ],
+    "hough": {
+      "rho": 1,
+      "theta": 0.0175,
+      "threshold": 70,
+      "minLineLength": 90,
+      "maxLineGap": 18
+    },
+    "tag_h_rel": [
+      0.4,
+      0.92
+    ],
+    "tag_w_over_h": [
+      0.9,
+      5.0
+    ],
+    "thresh_passes": [
+      [
+        21,
+        5
+      ],
+      [
+        31,
+        1
+      ],
+      [
+        41,
+        3
+      ]
+    ]
+  },
+  "note": "标注仅用于评测；参数冻结；单图结果不证明泛化。"
+}

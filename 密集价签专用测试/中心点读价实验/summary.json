@@ -1,0 +1,477 @@
+[
+  {
+    "image": "45524464",
+    "rails": [
+      {
+        "rail": 0,
+        "corridor": 1,
+        "strip_wh": [
+          3884,
+          522
+        ],
+        "centers": 10,
+        "components": 4,
+        "a": {
+          "kept": 2,
+          "deleted_components": 2,
+          "expand_failed": 8,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "b": {
+          "kept": 8,
+          "expand_failed": 2,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "user_tags": 10
+      },
+      {
+        "rail": 1,
+        "corridor": 0,
+        "strip_wh": [
+          3884,
+          276
+        ],
+        "centers": 8,
+        "components": 16,
+        "a": {
+          "kept": 6,
+          "deleted_components": 10,
+          "expand_failed": 2,
+          "m30": 2,
+          "m50": 1,
+          "m70": 0,
+          "price_cmp": 1,
+          "price_ok": 1
+        },
+        "b": {
+          "kept": 8,
+          "expand_failed": 0,
+          "m30": 2,
+          "m50": 1,
+          "m70": 0,
+          "price_cmp": 1,
+          "price_ok": 1
+        },
+        "user_tags": 11
+      }
+    ]
+  },
+  {
+    "image": "45544469",
+    "rails": [
+      {
+        "rail": 0,
+        "corridor": 0,
+        "strip_wh": [
+          3680,
+          352
+        ],
+        "centers": 13,
+        "components": 13,
+        "a": {
+          "kept": 0,
+          "deleted_components": 13,
+          "expand_failed": 13,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "b": {
+          "kept": 13,
+          "expand_failed": 0,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "user_tags": 12
+      },
+      {
+        "rail": 1,
+        "corridor": 1,
+        "strip_wh": [
+          4048,
+          286
+        ],
+        "centers": 7,
+        "components": 17,
+        "a": {
+          "kept": 0,
+          "deleted_components": 17,
+          "expand_failed": 7,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "b": {
+          "kept": 6,
+          "expand_failed": 1,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "user_tags": 7
+      },
+      {
+        "rail": 2,
+        "corridor": 2,
+        "strip_wh": [
+          3674,
+          276
+        ],
+        "centers": 5,
+        "components": 1,
+        "a": {
+          "kept": 0,
+          "deleted_components": 1,
+          "expand_failed": 5,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "b": {
+          "kept": 0,
+          "expand_failed": 5,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "user_tags": 4
+      }
+    ]
+  },
+  {
+    "image": "45566458",
+    "rails": [
+      {
+        "rail": 0,
+        "corridor": 0,
+        "strip_wh": [
+          4044,
+          326
+        ],
+        "centers": 11,
+        "components": 23,
+        "a": {
+          "kept": 8,
+          "deleted_components": 15,
+          "expand_failed": 3,
+          "m30": 4,
+          "m50": 2,
+          "m70": 0,
+          "price_cmp": 2,
+          "price_ok": 1
+        },
+        "b": {
+          "kept": 11,
+          "expand_failed": 0,
+          "m30": 2,
+          "m50": 1,
+          "m70": 0,
+          "price_cmp": 1,
+          "price_ok": 0
+        },
+        "user_tags": 11
+      },
+      {
+        "rail": 1,
+        "corridor": 1,
+        "strip_wh": [
+          4048,
+          414
+        ],
+        "centers": 8,
+        "components": 9,
+        "a": {
+          "kept": 4,
+          "deleted_components": 5,
+          "expand_failed": 4,
+          "m30": 3,
+          "m50": 3,
+          "m70": 2,
+          "price_cmp": 3,
+          "price_ok": 2
+        },
+        "b": {
+          "kept": 6,
+          "expand_failed": 2,
+          "m30": 1,
+          "m50": 1,
+          "m70": 0,
+          "price_cmp": 1,
+          "price_ok": 1
+        },
+        "user_tags": 6
+      }
+    ]
+  },
+  {
+    "image": "45727462",
+    "rails": [
+      {
+        "rail": 0,
+        "corridor": 0,
+        "strip_wh": [
+          4044,
+          176
+        ],
+        "centers": 17,
+        "components": 31,
+        "a": {
+          "kept": 5,
+          "deleted_components": 26,
+          "expand_failed": 12,
+          "m30": 4,
+          "m50": 2,
+          "m70": 1,
+          "price_cmp": 2,
+          "price_ok": 0
+        },
+        "b": {
+          "kept": 13,
+          "expand_failed": 4,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "user_tags": 17
+      },
+      {
+        "rail": 1,
+        "corridor": 1,
+        "strip_wh": [
+          3928,
+          184
+        ],
+        "centers": 17,
+        "components": 21,
+        "a": {
+          "kept": 7,
+          "deleted_components": 14,
+          "expand_failed": 10,
+          "m30": 5,
+          "m50": 3,
+          "m70": 0,
+          "price_cmp": 3,
+          "price_ok": 1
+        },
+        "b": {
+          "kept": 6,
+          "expand_failed": 11,
+          "m30": 1,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "user_tags": 20
+      },
+      {
+        "rail": 2,
+        "corridor": 2,
+        "strip_wh": [
+          3852,
+          174
+        ],
+        "centers": 16,
+        "components": 22,
+        "a": {
+          "kept": 4,
+          "deleted_components": 18,
+          "expand_failed": 12,
+          "m30": 2,
+          "m50": 1,
+          "m70": 0,
+          "price_cmp": 1,
+          "price_ok": 0
+        },
+        "b": {
+          "kept": 8,
+          "expand_failed": 8,
+          "m30": 1,
+          "m50": 1,
+          "m70": 0,
+          "price_cmp": 1,
+          "price_ok": 0
+        },
+        "user_tags": 16
+      },
+      {
+        "rail": 3,
+        "corridor": 3,
+        "strip_wh": [
+          3804,
+          164
+        ],
+        "centers": 14,
+        "components": 24,
+        "a": {
+          "kept": 5,
+          "deleted_components": 19,
+          "expand_failed": 9,
+          "m30": 3,
+          "m50": 1,
+          "m70": 0,
+          "price_cmp": 1,
+          "price_ok": 0
+        },
+        "b": {
+          "kept": 6,
+          "expand_failed": 8,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "user_tags": 17
+      },
+      {
+        "rail": 4,
+        "corridor": 4,
+        "strip_wh": [
+          3712,
+          184
+        ],
+        "centers": 12,
+        "components": 17,
+        "a": {
+          "kept": 3,
+          "deleted_components": 14,
+          "expand_failed": 9,
+          "m30": 1,
+          "m50": 1,
+          "m70": 0,
+          "price_cmp": 1,
+          "price_ok": 0
+        },
+        "b": {
+          "kept": 10,
+          "expand_failed": 2,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "user_tags": 16
+      }
+    ]
+  },
+  {
+    "image": "45789553",
+    "rails": [
+      {
+        "rail": 0,
+        "corridor": 0,
+        "strip_wh": [
+          3236,
+          218
+        ],
+        "centers": 9,
+        "components": 3,
+        "a": {
+          "kept": 1,
+          "deleted_components": 2,
+          "expand_failed": 8,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "b": {
+          "kept": 7,
+          "expand_failed": 2,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "user_tags": 10
+      },
+      {
+        "rail": 1,
+        "corridor": 1,
+        "strip_wh": [
+          3378,
+          348
+        ],
+        "centers": 8,
+        "components": 12,
+        "a": {
+          "kept": 6,
+          "deleted_components": 6,
+          "expand_failed": 2,
+          "m30": 6,
+          "m50": 4,
+          "m70": 1,
+          "price_cmp": 4,
+          "price_ok": 4
+        },
+        "b": {
+          "kept": 6,
+          "expand_failed": 2,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "user_tags": 11
+      },
+      {
+        "rail": 2,
+        "corridor": 2,
+        "strip_wh": [
+          3472,
+          332
+        ],
+        "centers": 10,
+        "components": 9,
+        "a": {
+          "kept": 5,
+          "deleted_components": 4,
+          "expand_failed": 5,
+          "m30": 3,
+          "m50": 2,
+          "m70": 1,
+          "price_cmp": 2,
+          "price_ok": 2
+        },
+        "b": {
+          "kept": 10,
+          "expand_failed": 0,
+          "m30": 0,
+          "m50": 0,
+          "m70": 0,
+          "price_cmp": 0,
+          "price_ok": 0
+        },
+        "user_tags": 9
+      }
+    ]
+  }
+]

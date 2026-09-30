@@ -7,6 +7,8 @@ from typing import Literal
 from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+RESOURCES_DIR = Path(__file__).resolve().parents[1] / "resources"
+
 
 class AismEndpointConfig(BaseSettings):
     api_url: str = ""
@@ -38,7 +40,7 @@ class Settings(BaseSettings):
     api_key: SecretStr = SecretStr("")
     require_api_key: bool = False
     upload_dir: Path = Path("./uploads")
-    prompt_dir: Path = Path("prompts")
+    prompt_dir: Path = RESOURCES_DIR / "prompts"
     worker_concurrency: int = Field(default=4, ge=1, le=8)
     worker_poll_interval_sec: float = Field(default=1.0, ge=0.1)
     worker_max_retries: int = Field(default=3, ge=0)
@@ -51,7 +53,7 @@ class Settings(BaseSettings):
     max_price: float | None = 99.0
     legacy_config_file: Path = Path("config.json")
     database_echo: bool = False
-    sku_sample_dir: Path = Path(__file__).resolve().parents[3] / "sku_match_offline" / "sku_sample_responses"
+    sku_sample_dir: Path = RESOURCES_DIR / "sku_samples"
 
     qc_config: AismEndpointConfig = Field(default_factory=AismEndpointConfig)
     price_tag_config: AismEndpointConfig = AismEndpointConfig(

@@ -1,0 +1,30 @@
+{
+  "api_calls_this_run": 7,
+  "images": [
+    {
+      "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+      "long_lines": 282,
+      "line_pairs": 763,
+      "proposals": 36,
+      "selected_ids": [],
+      "failures": [
+        {
+          "page": 0,
+          "error": "Expected selected_ids array"
+        },
+        {
+          "page": 2,
+          "error": "Expected selected_ids array"
+        },
+        {
+          "page": 1,
+          "error": "Expected selected_ids array"
+        },
+        {
+          "page": 3,
+          "error": "HTTPSConnectionPool(host='aismapi.mengniu.cn', port=443): Max retries exceeded with url: /brcapi/brain/api/v1/flowApi/45c1d7fe3c?version=dev (Caused by ConnectTimeoutError(<HTTPSConnection(host='aismapi.mengniu.cn', port=443) at 0x1c0eb770b90>, 'Connection to aismapi.mengniu.cn timed out. (connect timeout=12)'))"
+        }
+      ]
+    }
+  ]
+}

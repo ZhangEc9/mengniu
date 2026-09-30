@@ -1,0 +1,38 @@
+{
+  "api_result": {
+    "price_tags": [
+      {
+        "id": 1,
+        "shelf_layer": 3,
+        "bbox": [
+          924,
+          770,
+          984,
+          830
+        ],
+        "price": "18.00",
+        "raw_price_text": "18.00元",
+        "tag_type": "regular_price",
+        "confidence": 0.95,
+        "price_confidence": 0.96
+      },
+      {
+        "id": 2,
+        "shelf_layer": 3,
+        "bbox": [
+          984,
+          770,
+          1000,
+          830
+        ],
+        "price": "13.90",
+        "raw_price_text": "13.90元",
+        "tag_type": "regular_price",
+        "confidence": 0.94,
+        "price_confidence": 0.95
+      }
+    ],
+    "promotion_tags": []
+  },
+  "elapsed_sec": 74.70012307167053
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "index": 0,
+    "slot_bbox": [
+      45,
+      117,
+      116,
+      156
+    ],
+    "crop_bbox": [
+      44,
+      114,
+      117,
+      159
+    ],
+    "crop_sha256": "6f8c11bd8758b2db59179bd82fb0d31e2f3b0f8f3c93aba47e42881f2f338d80",
+    "gt_price_for_evaluation_only": "14.50",
+    "gt_match_iou_for_evaluation_only": "0.5719",
+    "uploaded_url_sha256": "34e7495ff56c1385b68be834ec0b141f0709d10333b0f29c93ddfbc71e38bcba",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"14.50\", \"readable\": true}",
+    "parsed": {
+      "price": "14.50",
+      "readable": true
+    },
+    "price": "14.50",
+    "readable": true,
+    "price_matches_gt": true,
+    "elapsed_sec": 2.456
+  },
+  {
+    "index": 16,
+    "slot_bbox": [
+      1685,
+      106,
+      1770,
+      155
+    ],
+    "crop_bbox": [
+      1683,
+      102,
+      1772,
+      159
+    ],
+    "crop_sha256": "d8fff40de466e37c68fb2098bd4fc93d54f260828d3f462de347738a4599c13e",
+    "gt_price_for_evaluation_only": "15.90",
+    "gt_match_iou_for_evaluation_only": "0.6646",
+    "uploaded_url_sha256": "25ad67e0224aa0e1666e2cb91f2a199ac4692bd51590db20b439f2e1041e4ee3",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"15.90\", \"readable\": true}",
+    "parsed": {
+      "price": "15.90",
+      "readable": true
+    },
+    "price": "15.90",
+    "readable": true,
+    "price_matches_gt": true,
+    "elapsed_sec": 2.553
+  },
+  {
+    "index": 18,
+    "slot_bbox": [
+      1938,
+      102,
+      2000,
+      153
+    ],
+    "crop_bbox": [
+      1937,
+      98,
+      2000,
+      157
+    ],
+    "crop_sha256": "ee191b6d21d767965f08af0f119b3c86b0e3733065a38bd90bc09c8b6a0138ac",
+    "gt_price_for_evaluation_only": "18.80",
+    "gt_match_iou_for_evaluation_only": "0.8817",
+    "uploaded_url_sha256": "ba7e6a300c88aafc10cdc55b9aad4a969fadcac187da2cb0174fc067ab91a3ae",
+    "http_status": 200,
+    "business_status": 0,
+    "page_content": "{\"price\": \"18.50\", \"readable\": true}",
+    "parsed": {
+      "price": "18.50",
+      "readable": true
+    },
+    "price": "18.50",
+    "readable": true,
+    "price_matches_gt": false,
+    "elapsed_sec": 3.913
+  }
+]

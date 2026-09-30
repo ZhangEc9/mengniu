@@ -1,0 +1,1797 @@
+{
+  "parsed": [
+    {
+      "id": 1,
+      "shelf_layer": 1,
+      "bbox": [
+        0,
+        210,
+        58,
+        310
+      ],
+      "price": "14.50",
+      "raw_price_text": "14.50",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 2,
+      "shelf_layer": 1,
+      "bbox": [
+        58,
+        210,
+        116,
+        310
+      ],
+      "price": "15.50",
+      "raw_price_text": "15.50",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 3,
+      "shelf_layer": 1,
+      "bbox": [
+        116,
+        210,
+        174,
+        310
+      ],
+      "price": "14.90",
+      "raw_price_text": "14.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 4,
+      "shelf_layer": 1,
+      "bbox": [
+        174,
+        210,
+        232,
+        310
+      ],
+      "price": "23.90",
+      "raw_price_text": "23.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 5,
+      "shelf_layer": 1,
+      "bbox": [
+        232,
+        210,
+        290,
+        310
+      ],
+      "price": "12.90",
+      "raw_price_text": "12.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 6,
+      "shelf_layer": 1,
+      "bbox": [
+        290,
+        210,
+        348,
+        310
+      ],
+      "price": "15.60",
+      "raw_price_text": "15.60",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 7,
+      "shelf_layer": 1,
+      "bbox": [
+        348,
+        210,
+        406,
+        310
+      ],
+      "price": "33.90",
+      "raw_price_text": "33.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 8,
+      "shelf_layer": 1,
+      "bbox": [
+        406,
+        210,
+        464,
+        310
+      ],
+      "price": "18.80",
+      "raw_price_text": "18.80",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 9,
+      "shelf_layer": 1,
+      "bbox": [
+        464,
+        210,
+        522,
+        310
+      ],
+      "price": "20.80",
+      "raw_price_text": "20.80",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 10,
+      "shelf_layer": 1,
+      "bbox": [
+        522,
+        210,
+        580,
+        310
+      ],
+      "price": "12.90",
+      "raw_price_text": "12.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 11,
+      "shelf_layer": 1,
+      "bbox": [
+        580,
+        210,
+        638,
+        310
+      ],
+      "price": "21.90",
+      "raw_price_text": "21.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 12,
+      "shelf_layer": 1,
+      "bbox": [
+        638,
+        210,
+        696,
+        310
+      ],
+      "price": "18.90",
+      "raw_price_text": "18.90",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 13,
+      "shelf_layer": 1,
+      "bbox": [
+        696,
+        210,
+        754,
+        310
+      ],
+      "price": "19.90",
+      "raw_price_text": "19.90",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 14,
+      "shelf_layer": 1,
+      "bbox": [
+        754,
+        210,
+        812,
+        310
+      ],
+      "price": "15.90",
+      "raw_price_text": "15.90",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 15,
+      "shelf_layer": 1,
+      "bbox": [
+        812,
+        210,
+        870,
+        310
+      ],
+      "price": "15.30",
+      "raw_price_text": "15.30",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 16,
+      "shelf_layer": 1,
+      "bbox": [
+        870,
+        210,
+        928,
+        310
+      ],
+      "price": "18.50",
+      "raw_price_text": "18.50",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 17,
+      "shelf_layer": 1,
+      "bbox": [
+        928,
+        210,
+        986,
+        310
+      ],
+      "price": "18.30",
+      "raw_price_text": "18.30",
+      "tag_type": "regular_price",
+      "confidence": 0.93,
+      "price_confidence": 0.94
+    },
+    {
+      "id": 1,
+      "shelf_layer": 2,
+      "bbox": [
+        32,
+        870,
+        88,
+        970
+      ],
+      "price": "8.50",
+      "raw_price_text": "8.50",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 2,
+      "shelf_layer": 2,
+      "bbox": [
+        88,
+        870,
+        146,
+        970
+      ],
+      "price": "8.90",
+      "raw_price_text": "8.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 3,
+      "shelf_layer": 2,
+      "bbox": [
+        146,
+        870,
+        204,
+        970
+      ],
+      "price": "8.90",
+      "raw_price_text": "8.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 4,
+      "shelf_layer": 2,
+      "bbox": [
+        204,
+        870,
+        262,
+        970
+      ],
+      "price": "4.80",
+      "raw_price_text": "4.80",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 5,
+      "shelf_layer": 2,
+      "bbox": [
+        262,
+        870,
+        320,
+        970
+      ],
+      "price": "4.80",
+      "raw_price_text": "4.80",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 6,
+      "shelf_layer": 2,
+      "bbox": [
+        320,
+        870,
+        378,
+        970
+      ],
+      "price": "4.80",
+      "raw_price_text": "4.80",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 7,
+      "shelf_layer": 2,
+      "bbox": [
+        378,
+        870,
+        436,
+        970
+      ],
+      "price": "9.90",
+      "raw_price_text": "9.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 8,
+      "shelf_layer": 2,
+      "bbox": [
+        436,
+        870,
+        494,
+        970
+      ],
+      "price": "4.90",
+      "raw_price_text": "4.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 9,
+      "shelf_layer": 2,
+      "bbox": [
+        494,
+        870,
+        552,
+        970
+      ],
+      "price": "4.90",
+      "raw_price_text": "4.90",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 10,
+      "shelf_layer": 2,
+      "bbox": [
+        552,
+        870,
+        610,
+        970
+      ],
+      "price": "8.90",
+      "raw_price_text": "8.90",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 11,
+      "shelf_layer": 2,
+      "bbox": [
+        610,
+        870,
+        668,
+        970
+      ],
+      "price": "8.80",
+      "raw_price_text": "8.80",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 12,
+      "shelf_layer": 2,
+      "bbox": [
+        668,
+        870,
+        726,
+        970
+      ],
+      "price": "16.90",
+      "raw_price_text": "16.90",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 13,
+      "shelf_layer": 2,
+      "bbox": [
+        726,
+        870,
+        784,
+        970
+      ],
+      "price": "13.90",
+      "raw_price_text": "13.90",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 14,
+      "shelf_layer": 2,
+      "bbox": [
+        784,
+        870,
+        842,
+        970
+      ],
+      "price": "6.50",
+      "raw_price_text": "6.50",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 15,
+      "shelf_layer": 2,
+      "bbox": [
+        842,
+        870,
+        900,
+        970
+      ],
+      "price": "5.90",
+      "raw_price_text": "5.90",
+      "tag_type": "regular_price",
+      "confidence": 0.93,
+      "price_confidence": 0.94
+    },
+    {
+      "id": 16,
+      "shelf_layer": 2,
+      "bbox": [
+        900,
+        870,
+        958,
+        970
+      ],
+      "price": "6.80",
+      "raw_price_text": "6.80",
+      "tag_type": "regular_price",
+      "confidence": 0.93,
+      "price_confidence": 0.94
+    },
+    {
+      "id": 17,
+      "shelf_layer": 2,
+      "bbox": [
+        958,
+        870,
+        1000,
+        970
+      ],
+      "price": "6.80",
+      "raw_price_text": "6.80",
+      "tag_type": "regular_price",
+      "confidence": 0.92,
+      "price_confidence": 0.93
+    }
+  ],
+  "raw_regular": [
+    {
+      "id": 1,
+      "shelf_layer": 1,
+      "bbox": [
+        0,
+        210,
+        58,
+        310
+      ],
+      "price": "14.50",
+      "raw_price_text": "14.50",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 2,
+      "shelf_layer": 1,
+      "bbox": [
+        58,
+        210,
+        116,
+        310
+      ],
+      "price": "15.50",
+      "raw_price_text": "15.50",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 3,
+      "shelf_layer": 1,
+      "bbox": [
+        116,
+        210,
+        174,
+        310
+      ],
+      "price": "14.90",
+      "raw_price_text": "14.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 4,
+      "shelf_layer": 1,
+      "bbox": [
+        174,
+        210,
+        232,
+        310
+      ],
+      "price": "23.90",
+      "raw_price_text": "23.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 5,
+      "shelf_layer": 1,
+      "bbox": [
+        232,
+        210,
+        290,
+        310
+      ],
+      "price": "12.90",
+      "raw_price_text": "12.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 6,
+      "shelf_layer": 1,
+      "bbox": [
+        290,
+        210,
+        348,
+        310
+      ],
+      "price": "15.60",
+      "raw_price_text": "15.60",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 7,
+      "shelf_layer": 1,
+      "bbox": [
+        348,
+        210,
+        406,
+        310
+      ],
+      "price": "33.90",
+      "raw_price_text": "33.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 8,
+      "shelf_layer": 1,
+      "bbox": [
+        406,
+        210,
+        464,
+        310
+      ],
+      "price": "18.80",
+      "raw_price_text": "18.80",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 9,
+      "shelf_layer": 1,
+      "bbox": [
+        464,
+        210,
+        522,
+        310
+      ],
+      "price": "20.80",
+      "raw_price_text": "20.80",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 10,
+      "shelf_layer": 1,
+      "bbox": [
+        522,
+        210,
+        580,
+        310
+      ],
+      "price": "12.90",
+      "raw_price_text": "12.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 11,
+      "shelf_layer": 1,
+      "bbox": [
+        580,
+        210,
+        638,
+        310
+      ],
+      "price": "21.90",
+      "raw_price_text": "21.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 12,
+      "shelf_layer": 1,
+      "bbox": [
+        638,
+        210,
+        696,
+        310
+      ],
+      "price": "18.90",
+      "raw_price_text": "18.90",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 13,
+      "shelf_layer": 1,
+      "bbox": [
+        696,
+        210,
+        754,
+        310
+      ],
+      "price": "19.90",
+      "raw_price_text": "19.90",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 14,
+      "shelf_layer": 1,
+      "bbox": [
+        754,
+        210,
+        812,
+        310
+      ],
+      "price": "15.90",
+      "raw_price_text": "15.90",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 15,
+      "shelf_layer": 1,
+      "bbox": [
+        812,
+        210,
+        870,
+        310
+      ],
+      "price": "15.30",
+      "raw_price_text": "15.30",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 16,
+      "shelf_layer": 1,
+      "bbox": [
+        870,
+        210,
+        928,
+        310
+      ],
+      "price": "18.50",
+      "raw_price_text": "18.50",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 17,
+      "shelf_layer": 1,
+      "bbox": [
+        928,
+        210,
+        986,
+        310
+      ],
+      "price": "18.30",
+      "raw_price_text": "18.30",
+      "tag_type": "regular_price",
+      "confidence": 0.93,
+      "price_confidence": 0.94
+    },
+    {
+      "id": 1,
+      "shelf_layer": 2,
+      "bbox": [
+        32,
+        870,
+        88,
+        970
+      ],
+      "price": "8.50",
+      "raw_price_text": "8.50",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 2,
+      "shelf_layer": 2,
+      "bbox": [
+        88,
+        870,
+        146,
+        970
+      ],
+      "price": "8.90",
+      "raw_price_text": "8.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 3,
+      "shelf_layer": 2,
+      "bbox": [
+        146,
+        870,
+        204,
+        970
+      ],
+      "price": "8.90",
+      "raw_price_text": "8.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 4,
+      "shelf_layer": 2,
+      "bbox": [
+        204,
+        870,
+        262,
+        970
+      ],
+      "price": "4.80",
+      "raw_price_text": "4.80",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 5,
+      "shelf_layer": 2,
+      "bbox": [
+        262,
+        870,
+        320,
+        970
+      ],
+      "price": "4.80",
+      "raw_price_text": "4.80",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 6,
+      "shelf_layer": 2,
+      "bbox": [
+        320,
+        870,
+        378,
+        970
+      ],
+      "price": "4.80",
+      "raw_price_text": "4.80",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 7,
+      "shelf_layer": 2,
+      "bbox": [
+        378,
+        870,
+        436,
+        970
+      ],
+      "price": "9.90",
+      "raw_price_text": "9.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 8,
+      "shelf_layer": 2,
+      "bbox": [
+        436,
+        870,
+        494,
+        970
+      ],
+      "price": "4.90",
+      "raw_price_text": "4.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 9,
+      "shelf_layer": 2,
+      "bbox": [
+        494,
+        870,
+        552,
+        970
+      ],
+      "price": "4.90",
+      "raw_price_text": "4.90",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 10,
+      "shelf_layer": 2,
+      "bbox": [
+        552,
+        870,
+        610,
+        970
+      ],
+      "price": "8.90",
+      "raw_price_text": "8.90",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 11,
+      "shelf_layer": 2,
+      "bbox": [
+        610,
+        870,
+        668,
+        970
+      ],
+      "price": "8.80",
+      "raw_price_text": "8.80",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 12,
+      "shelf_layer": 2,
+      "bbox": [
+        668,
+        870,
+        726,
+        970
+      ],
+      "price": "16.90",
+      "raw_price_text": "16.90",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 13,
+      "shelf_layer": 2,
+      "bbox": [
+        726,
+        870,
+        784,
+        970
+      ],
+      "price": "13.90",
+      "raw_price_text": "13.90",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 14,
+      "shelf_layer": 2,
+      "bbox": [
+        784,
+        870,
+        842,
+        970
+      ],
+      "price": "6.50",
+      "raw_price_text": "6.50",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 15,
+      "shelf_layer": 2,
+      "bbox": [
+        842,
+        870,
+        900,
+        970
+      ],
+      "price": "5.90",
+      "raw_price_text": "5.90",
+      "tag_type": "regular_price",
+      "confidence": 0.93,
+      "price_confidence": 0.94
+    },
+    {
+      "id": 16,
+      "shelf_layer": 2,
+      "bbox": [
+        900,
+        870,
+        958,
+        970
+      ],
+      "price": "6.80",
+      "raw_price_text": "6.80",
+      "tag_type": "regular_price",
+      "confidence": 0.93,
+      "price_confidence": 0.94
+    },
+    {
+      "id": 17,
+      "shelf_layer": 2,
+      "bbox": [
+        958,
+        870,
+        1000,
+        970
+      ],
+      "price": "6.80",
+      "raw_price_text": "6.80",
+      "tag_type": "regular_price",
+      "confidence": 0.92,
+      "price_confidence": 0.93
+    }
+  ],
+  "raw_promotion": [],
+  "nonempty_price": [
+    {
+      "id": 1,
+      "shelf_layer": 1,
+      "bbox": [
+        0,
+        210,
+        58,
+        310
+      ],
+      "price": "14.50",
+      "raw_price_text": "14.50",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 2,
+      "shelf_layer": 1,
+      "bbox": [
+        58,
+        210,
+        116,
+        310
+      ],
+      "price": "15.50",
+      "raw_price_text": "15.50",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 3,
+      "shelf_layer": 1,
+      "bbox": [
+        116,
+        210,
+        174,
+        310
+      ],
+      "price": "14.90",
+      "raw_price_text": "14.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 4,
+      "shelf_layer": 1,
+      "bbox": [
+        174,
+        210,
+        232,
+        310
+      ],
+      "price": "23.90",
+      "raw_price_text": "23.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 5,
+      "shelf_layer": 1,
+      "bbox": [
+        232,
+        210,
+        290,
+        310
+      ],
+      "price": "12.90",
+      "raw_price_text": "12.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 6,
+      "shelf_layer": 1,
+      "bbox": [
+        290,
+        210,
+        348,
+        310
+      ],
+      "price": "15.60",
+      "raw_price_text": "15.60",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 7,
+      "shelf_layer": 1,
+      "bbox": [
+        348,
+        210,
+        406,
+        310
+      ],
+      "price": "33.90",
+      "raw_price_text": "33.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 8,
+      "shelf_layer": 1,
+      "bbox": [
+        406,
+        210,
+        464,
+        310
+      ],
+      "price": "18.80",
+      "raw_price_text": "18.80",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 9,
+      "shelf_layer": 1,
+      "bbox": [
+        464,
+        210,
+        522,
+        310
+      ],
+      "price": "20.80",
+      "raw_price_text": "20.80",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 10,
+      "shelf_layer": 1,
+      "bbox": [
+        522,
+        210,
+        580,
+        310
+      ],
+      "price": "12.90",
+      "raw_price_text": "12.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 11,
+      "shelf_layer": 1,
+      "bbox": [
+        580,
+        210,
+        638,
+        310
+      ],
+      "price": "21.90",
+      "raw_price_text": "21.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 12,
+      "shelf_layer": 1,
+      "bbox": [
+        638,
+        210,
+        696,
+        310
+      ],
+      "price": "18.90",
+      "raw_price_text": "18.90",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 13,
+      "shelf_layer": 1,
+      "bbox": [
+        696,
+        210,
+        754,
+        310
+      ],
+      "price": "19.90",
+      "raw_price_text": "19.90",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 14,
+      "shelf_layer": 1,
+      "bbox": [
+        754,
+        210,
+        812,
+        310
+      ],
+      "price": "15.90",
+      "raw_price_text": "15.90",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 15,
+      "shelf_layer": 1,
+      "bbox": [
+        812,
+        210,
+        870,
+        310
+      ],
+      "price": "15.30",
+      "raw_price_text": "15.30",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 16,
+      "shelf_layer": 1,
+      "bbox": [
+        870,
+        210,
+        928,
+        310
+      ],
+      "price": "18.50",
+      "raw_price_text": "18.50",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 17,
+      "shelf_layer": 1,
+      "bbox": [
+        928,
+        210,
+        986,
+        310
+      ],
+      "price": "18.30",
+      "raw_price_text": "18.30",
+      "tag_type": "regular_price",
+      "confidence": 0.93,
+      "price_confidence": 0.94
+    },
+    {
+      "id": 1,
+      "shelf_layer": 2,
+      "bbox": [
+        32,
+        870,
+        88,
+        970
+      ],
+      "price": "8.50",
+      "raw_price_text": "8.50",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 2,
+      "shelf_layer": 2,
+      "bbox": [
+        88,
+        870,
+        146,
+        970
+      ],
+      "price": "8.90",
+      "raw_price_text": "8.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 3,
+      "shelf_layer": 2,
+      "bbox": [
+        146,
+        870,
+        204,
+        970
+      ],
+      "price": "8.90",
+      "raw_price_text": "8.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 4,
+      "shelf_layer": 2,
+      "bbox": [
+        204,
+        870,
+        262,
+        970
+      ],
+      "price": "4.80",
+      "raw_price_text": "4.80",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 5,
+      "shelf_layer": 2,
+      "bbox": [
+        262,
+        870,
+        320,
+        970
+      ],
+      "price": "4.80",
+      "raw_price_text": "4.80",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 6,
+      "shelf_layer": 2,
+      "bbox": [
+        320,
+        870,
+        378,
+        970
+      ],
+      "price": "4.80",
+      "raw_price_text": "4.80",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 7,
+      "shelf_layer": 2,
+      "bbox": [
+        378,
+        870,
+        436,
+        970
+      ],
+      "price": "9.90",
+      "raw_price_text": "9.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 8,
+      "shelf_layer": 2,
+      "bbox": [
+        436,
+        870,
+        494,
+        970
+      ],
+      "price": "4.90",
+      "raw_price_text": "4.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 9,
+      "shelf_layer": 2,
+      "bbox": [
+        494,
+        870,
+        552,
+        970
+      ],
+      "price": "4.90",
+      "raw_price_text": "4.90",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 10,
+      "shelf_layer": 2,
+      "bbox": [
+        552,
+        870,
+        610,
+        970
+      ],
+      "price": "8.90",
+      "raw_price_text": "8.90",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 11,
+      "shelf_layer": 2,
+      "bbox": [
+        610,
+        870,
+        668,
+        970
+      ],
+      "price": "8.80",
+      "raw_price_text": "8.80",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 12,
+      "shelf_layer": 2,
+      "bbox": [
+        668,
+        870,
+        726,
+        970
+      ],
+      "price": "16.90",
+      "raw_price_text": "16.90",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 13,
+      "shelf_layer": 2,
+      "bbox": [
+        726,
+        870,
+        784,
+        970
+      ],
+      "price": "13.90",
+      "raw_price_text": "13.90",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 14,
+      "shelf_layer": 2,
+      "bbox": [
+        784,
+        870,
+        842,
+        970
+      ],
+      "price": "6.50",
+      "raw_price_text": "6.50",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 15,
+      "shelf_layer": 2,
+      "bbox": [
+        842,
+        870,
+        900,
+        970
+      ],
+      "price": "5.90",
+      "raw_price_text": "5.90",
+      "tag_type": "regular_price",
+      "confidence": 0.93,
+      "price_confidence": 0.94
+    },
+    {
+      "id": 16,
+      "shelf_layer": 2,
+      "bbox": [
+        900,
+        870,
+        958,
+        970
+      ],
+      "price": "6.80",
+      "raw_price_text": "6.80",
+      "tag_type": "regular_price",
+      "confidence": 0.93,
+      "price_confidence": 0.94
+    },
+    {
+      "id": 17,
+      "shelf_layer": 2,
+      "bbox": [
+        958,
+        870,
+        1000,
+        970
+      ],
+      "price": "6.80",
+      "raw_price_text": "6.80",
+      "tag_type": "regular_price",
+      "confidence": 0.92,
+      "price_confidence": 0.93
+    }
+  ],
+  "filtered_regular": [
+    {
+      "id": 1,
+      "shelf_layer": 2,
+      "bbox": [
+        32,
+        870,
+        88,
+        970
+      ],
+      "price": "8.50",
+      "raw_price_text": "8.50",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 2,
+      "shelf_layer": 2,
+      "bbox": [
+        88,
+        870,
+        146,
+        970
+      ],
+      "price": "8.90",
+      "raw_price_text": "8.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 3,
+      "shelf_layer": 2,
+      "bbox": [
+        146,
+        870,
+        204,
+        970
+      ],
+      "price": "8.90",
+      "raw_price_text": "8.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 4,
+      "shelf_layer": 2,
+      "bbox": [
+        204,
+        870,
+        262,
+        970
+      ],
+      "price": "4.80",
+      "raw_price_text": "4.80",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 5,
+      "shelf_layer": 2,
+      "bbox": [
+        262,
+        870,
+        320,
+        970
+      ],
+      "price": "4.80",
+      "raw_price_text": "4.80",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 6,
+      "shelf_layer": 2,
+      "bbox": [
+        320,
+        870,
+        378,
+        970
+      ],
+      "price": "4.80",
+      "raw_price_text": "4.80",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 7,
+      "shelf_layer": 2,
+      "bbox": [
+        378,
+        870,
+        436,
+        970
+      ],
+      "price": "9.90",
+      "raw_price_text": "9.90",
+      "tag_type": "regular_price",
+      "confidence": 0.98,
+      "price_confidence": 0.99
+    },
+    {
+      "id": 8,
+      "shelf_layer": 2,
+      "bbox": [
+        436,
+        870,
+        494,
+        970
+      ],
+      "price": "4.90",
+      "raw_price_text": "4.90",
+      "tag_type": "regular_price",
+      "confidence": 0.97,
+      "price_confidence": 0.98
+    },
+    {
+      "id": 9,
+      "shelf_layer": 2,
+      "bbox": [
+        494,
+        870,
+        552,
+        970
+      ],
+      "price": "4.90",
+      "raw_price_text": "4.90",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 10,
+      "shelf_layer": 2,
+      "bbox": [
+        552,
+        870,
+        610,
+        970
+      ],
+      "price": "8.90",
+      "raw_price_text": "8.90",
+      "tag_type": "regular_price",
+      "confidence": 0.96,
+      "price_confidence": 0.97
+    },
+    {
+      "id": 11,
+      "shelf_layer": 2,
+      "bbox": [
+        610,
+        870,
+        668,
+        970
+      ],
+      "price": "8.80",
+      "raw_price_text": "8.80",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 12,
+      "shelf_layer": 2,
+      "bbox": [
+        668,
+        870,
+        726,
+        970
+      ],
+      "price": "16.90",
+      "raw_price_text": "16.90",
+      "tag_type": "regular_price",
+      "confidence": 0.95,
+      "price_confidence": 0.96
+    },
+    {
+      "id": 13,
+      "shelf_layer": 2,
+      "bbox": [
+        726,
+        870,
+        784,
+        970
+      ],
+      "price": "13.90",
+      "raw_price_text": "13.90",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 14,
+      "shelf_layer": 2,
+      "bbox": [
+        784,
+        870,
+        842,
+        970
+      ],
+      "price": "6.50",
+      "raw_price_text": "6.50",
+      "tag_type": "regular_price",
+      "confidence": 0.94,
+      "price_confidence": 0.95
+    },
+    {
+      "id": 15,
+      "shelf_layer": 2,
+      "bbox": [
+        842,
+        870,
+        900,
+        970
+      ],
+      "price": "5.90",
+      "raw_price_text": "5.90",
+      "tag_type": "regular_price",
+      "confidence": 0.93,
+      "price_confidence": 0.94
+    },
+    {
+      "id": 16,
+      "shelf_layer": 2,
+      "bbox": [
+        900,
+        870,
+        958,
+        970
+      ],
+      "price": "6.80",
+      "raw_price_text": "6.80",
+      "tag_type": "regular_price",
+      "confidence": 0.93,
+      "price_confidence": 0.94
+    },
+    {
+      "id": 17,
+      "shelf_layer": 2,
+      "bbox": [
+        958,
+        870,
+        1000,
+        970
+      ],
+      "price": "6.80",
+      "raw_price_text": "6.80",
+      "tag_type": "regular_price",
+      "confidence": 0.92,
+      "price_confidence": 0.93
+    }
+  ],
+  "filtered_promotion": []
+}

@@ -1,0 +1,4231 @@
+[
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "threshold": 30,
+    "kind": "entities",
+    "rails": 7,
+    "false_rails": 3,
+    "predictions": 65,
+    "gt": 39,
+    "matches": {
+      "0.3": 10,
+      "0.5": 2,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.5,
+        "union_x_coverage": 0.977,
+        "angle_err_deg": -2.08
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "segments": [
+          2,
+          3,
+          4
+        ],
+        "matched": true,
+        "containment": 0.929,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.89
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          6
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 0.24
+      }
+    ]
+  },
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "threshold": 30,
+    "kind": "coverage",
+    "rails": 7,
+    "false_rails": 3,
+    "predictions": 85,
+    "gt": 39,
+    "matches": {
+      "0.3": 10,
+      "0.5": 2,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.5,
+        "union_x_coverage": 0.977,
+        "angle_err_deg": -2.08
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "segments": [
+          2,
+          3,
+          4
+        ],
+        "matched": true,
+        "containment": 0.929,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.89
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          6
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 0.24
+      }
+    ]
+  },
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "threshold": 30,
+    "kind": "geometry",
+    "rails": 7,
+    "false_rails": 3,
+    "predictions": 65,
+    "gt": 39,
+    "matches": {
+      "0.3": 10,
+      "0.5": 2,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.5,
+        "union_x_coverage": 0.977,
+        "angle_err_deg": -2.08
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "segments": [
+          2,
+          3,
+          4
+        ],
+        "matched": true,
+        "containment": 0.929,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.89
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          6
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 0.24
+      }
+    ]
+  },
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "threshold": 45,
+    "kind": "entities",
+    "rails": 4,
+    "false_rails": 3,
+    "predictions": 40,
+    "gt": 39,
+    "matches": {
+      "0.3": 7,
+      "0.5": 2,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "segments": [
+          0
+        ],
+        "matched": false,
+        "containment": 0.5,
+        "union_x_coverage": 0.977,
+        "angle_err_deg": -2.08
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.214,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -1.03
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 0.24
+      }
+    ]
+  },
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "threshold": 45,
+    "kind": "coverage",
+    "rails": 4,
+    "false_rails": 3,
+    "predictions": 60,
+    "gt": 39,
+    "matches": {
+      "0.3": 7,
+      "0.5": 2,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "segments": [
+          0
+        ],
+        "matched": false,
+        "containment": 0.5,
+        "union_x_coverage": 0.977,
+        "angle_err_deg": -2.08
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.214,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -1.03
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 0.24
+      }
+    ]
+  },
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "threshold": 45,
+    "kind": "geometry",
+    "rails": 4,
+    "false_rails": 3,
+    "predictions": 40,
+    "gt": 39,
+    "matches": {
+      "0.3": 7,
+      "0.5": 2,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "segments": [
+          0
+        ],
+        "matched": false,
+        "containment": 0.5,
+        "union_x_coverage": 0.977,
+        "angle_err_deg": -2.08
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.214,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -1.03
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 0.24
+      }
+    ]
+  },
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "threshold": 60,
+    "kind": "entities",
+    "rails": 1,
+    "false_rails": 0,
+    "predictions": 9,
+    "gt": 39,
+    "matches": {
+      "0.3": 4,
+      "0.5": 1,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          0
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 0.24
+      }
+    ]
+  },
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "threshold": 60,
+    "kind": "coverage",
+    "rails": 1,
+    "false_rails": 0,
+    "predictions": 9,
+    "gt": 39,
+    "matches": {
+      "0.3": 4,
+      "0.5": 1,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          0
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 0.24
+      }
+    ]
+  },
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "threshold": 60,
+    "kind": "geometry",
+    "rails": 1,
+    "false_rails": 1,
+    "predictions": 11,
+    "gt": 39,
+    "matches": {
+      "0.3": 3,
+      "0.5": 1,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "segments": [
+          0
+        ],
+        "matched": false,
+        "containment": 0.5,
+        "union_x_coverage": 0.977,
+        "angle_err_deg": -2.08
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "threshold": 75,
+    "kind": "entities",
+    "rails": 1,
+    "false_rails": 0,
+    "predictions": 9,
+    "gt": 39,
+    "matches": {
+      "0.3": 4,
+      "0.5": 1,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          0
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 0.24
+      }
+    ]
+  },
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "threshold": 75,
+    "kind": "coverage",
+    "rails": 1,
+    "false_rails": 0,
+    "predictions": 9,
+    "gt": 39,
+    "matches": {
+      "0.3": 4,
+      "0.5": 1,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          0
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 0.24
+      }
+    ]
+  },
+  {
+    "image": "45035165_6_first_normal_1781144340103_10029317",
+    "threshold": 75,
+    "kind": "geometry",
+    "rails": 1,
+    "false_rails": 1,
+    "predictions": 11,
+    "gt": 39,
+    "matches": {
+      "0.3": 3,
+      "0.5": 1,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          11.4,
+          1973.4
+        ],
+        "user_angle": 2.31,
+        "tags_in_rail": 8,
+        "segments": [
+          0
+        ],
+        "matched": false,
+        "containment": 0.5,
+        "union_x_coverage": 0.977,
+        "angle_err_deg": -2.08
+      },
+      {
+        "user_x": [
+          13.0,
+          1980.7
+        ],
+        "user_angle": 1.02,
+        "tags_in_rail": 14,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          13.9,
+          1996.2
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "threshold": 30,
+    "kind": "entities",
+    "rails": 10,
+    "false_rails": 10,
+    "predictions": 86,
+    "gt": 23,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "segments": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "matched": false,
+        "containment": 0.182,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 1.91
+      }
+    ]
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "threshold": 30,
+    "kind": "coverage",
+    "rails": 10,
+    "false_rails": 10,
+    "predictions": 86,
+    "gt": 23,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "segments": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "matched": false,
+        "containment": 0.182,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 1.91
+      }
+    ]
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "threshold": 30,
+    "kind": "geometry",
+    "rails": 10,
+    "false_rails": 10,
+    "predictions": 102,
+    "gt": 23,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "segments": [
+          6,
+          7,
+          8,
+          9
+        ],
+        "matched": false,
+        "containment": 0.182,
+        "union_x_coverage": 0.997,
+        "angle_err_deg": 1.91
+      }
+    ]
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "threshold": 45,
+    "kind": "entities",
+    "rails": 4,
+    "false_rails": 4,
+    "predictions": 51,
+    "gt": 23,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "segments": [
+          3
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.946,
+        "angle_err_deg": 1.71
+      }
+    ]
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "threshold": 45,
+    "kind": "coverage",
+    "rails": 4,
+    "false_rails": 4,
+    "predictions": 51,
+    "gt": 23,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "segments": [
+          3
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.946,
+        "angle_err_deg": 1.71
+      }
+    ]
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "threshold": 45,
+    "kind": "geometry",
+    "rails": 4,
+    "false_rails": 4,
+    "predictions": 59,
+    "gt": 23,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "segments": [
+          3
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.946,
+        "angle_err_deg": 1.71
+      }
+    ]
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "threshold": 60,
+    "kind": "entities",
+    "rails": 2,
+    "false_rails": 2,
+    "predictions": 28,
+    "gt": 23,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.946,
+        "angle_err_deg": 1.71
+      }
+    ]
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "threshold": 60,
+    "kind": "coverage",
+    "rails": 2,
+    "false_rails": 2,
+    "predictions": 28,
+    "gt": 23,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.946,
+        "angle_err_deg": 1.71
+      }
+    ]
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "threshold": 60,
+    "kind": "geometry",
+    "rails": 2,
+    "false_rails": 2,
+    "predictions": 32,
+    "gt": 23,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "threshold": 75,
+    "kind": "entities",
+    "rails": 2,
+    "false_rails": 2,
+    "predictions": 28,
+    "gt": 23,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.946,
+        "angle_err_deg": 1.71
+      }
+    ]
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "threshold": 75,
+    "kind": "coverage",
+    "rails": 2,
+    "false_rails": 2,
+    "predictions": 28,
+    "gt": 23,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.946,
+        "angle_err_deg": 1.71
+      }
+    ]
+  },
+  {
+    "image": "45524464_6_first_normal_1781829504624_12327780",
+    "threshold": 75,
+    "kind": "geometry",
+    "rails": 2,
+    "false_rails": 2,
+    "predictions": 32,
+    "gt": 23,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          3.0,
+          1899.9
+        ],
+        "user_angle": 5.22,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -6.0,
+          1894.1
+        ],
+        "user_angle": -1.84,
+        "tags_in_rail": 11,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "threshold": 30,
+    "kind": "entities",
+    "rails": 21,
+    "false_rails": 20,
+    "predictions": 119,
+    "gt": 26,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "segments": [
+          3,
+          4
+        ],
+        "matched": false,
+        "containment": 0.667,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 2.09
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "segments": [
+          9,
+          10
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.983,
+        "angle_err_deg": 1.05
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "segments": [
+          16
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 0.33
+      }
+    ]
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "threshold": 30,
+    "kind": "coverage",
+    "rails": 21,
+    "false_rails": 20,
+    "predictions": 119,
+    "gt": 26,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "segments": [
+          3,
+          4
+        ],
+        "matched": false,
+        "containment": 0.667,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 2.09
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "segments": [
+          9,
+          10
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.983,
+        "angle_err_deg": 1.05
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "segments": [
+          16
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 0.33
+      }
+    ]
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "threshold": 30,
+    "kind": "geometry",
+    "rails": 21,
+    "false_rails": 20,
+    "predictions": 119,
+    "gt": 26,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "segments": [
+          3,
+          4
+        ],
+        "matched": false,
+        "containment": 0.667,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 2.09
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "segments": [
+          9,
+          10
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.983,
+        "angle_err_deg": 1.05
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "segments": [
+          16
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 0.33
+      }
+    ]
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "threshold": 45,
+    "kind": "entities",
+    "rails": 11,
+    "false_rails": 10,
+    "predictions": 51,
+    "gt": 26,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 1.78
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "segments": [
+          4
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.85,
+        "angle_err_deg": 1.35
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "segments": [
+          7
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 0.33
+      }
+    ]
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "threshold": 45,
+    "kind": "coverage",
+    "rails": 11,
+    "false_rails": 10,
+    "predictions": 51,
+    "gt": 26,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 1.78
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "segments": [
+          4
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.85,
+        "angle_err_deg": 1.35
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "segments": [
+          7
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 0.33
+      }
+    ]
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "threshold": 45,
+    "kind": "geometry",
+    "rails": 11,
+    "false_rails": 10,
+    "predictions": 51,
+    "gt": 26,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 1.78
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "segments": [
+          4
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.85,
+        "angle_err_deg": 1.35
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "segments": [
+          7
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 0.33
+      }
+    ]
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "threshold": 60,
+    "kind": "entities",
+    "rails": 6,
+    "false_rails": 5,
+    "predictions": 20,
+    "gt": 26,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "segments": [
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 0.33
+      }
+    ]
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "threshold": 60,
+    "kind": "coverage",
+    "rails": 6,
+    "false_rails": 5,
+    "predictions": 20,
+    "gt": 26,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "segments": [
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 0.33
+      }
+    ]
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "threshold": 60,
+    "kind": "geometry",
+    "rails": 6,
+    "false_rails": 5,
+    "predictions": 30,
+    "gt": 26,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "segments": [
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 0.33
+      }
+    ]
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "threshold": 75,
+    "kind": "entities",
+    "rails": 5,
+    "false_rails": 4,
+    "predictions": 20,
+    "gt": 26,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "segments": [
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 0.33
+      }
+    ]
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "threshold": 75,
+    "kind": "coverage",
+    "rails": 5,
+    "false_rails": 4,
+    "predictions": 20,
+    "gt": 26,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "segments": [
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 0.33
+      }
+    ]
+  },
+  {
+    "image": "45544469_6_first_normal_1781918871704_15870503",
+    "threshold": 75,
+    "kind": "geometry",
+    "rails": 5,
+    "false_rails": 4,
+    "predictions": 30,
+    "gt": 26,
+    "matches": {
+      "0.3": 1,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          140.2,
+          1921.5
+        ],
+        "user_angle": -2.24,
+        "tags_in_rail": 12,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          -9.1,
+          1965.7
+        ],
+        "user_angle": -1.02,
+        "tags_in_rail": 7,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          990.0,
+          1761.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 4,
+        "segments": [
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": 0.33
+      }
+    ]
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "threshold": 30,
+    "kind": "entities",
+    "rails": 24,
+    "false_rails": 19,
+    "predictions": 118,
+    "gt": 17,
+    "matches": {
+      "0.3": 12,
+      "0.5": 5,
+      "0.7": 3
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          6,
+          7,
+          8
+        ],
+        "matched": true,
+        "containment": 0.909,
+        "union_x_coverage": 0.99,
+        "angle_err_deg": -0.54
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "segments": [
+          21,
+          22
+        ],
+        "matched": true,
+        "containment": 0.833,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.43
+      }
+    ]
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "threshold": 30,
+    "kind": "coverage",
+    "rails": 24,
+    "false_rails": 19,
+    "predictions": 118,
+    "gt": 17,
+    "matches": {
+      "0.3": 12,
+      "0.5": 5,
+      "0.7": 3
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          6,
+          7,
+          8
+        ],
+        "matched": true,
+        "containment": 0.909,
+        "union_x_coverage": 0.99,
+        "angle_err_deg": -0.54
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "segments": [
+          21,
+          22
+        ],
+        "matched": true,
+        "containment": 0.833,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.43
+      }
+    ]
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "threshold": 30,
+    "kind": "geometry",
+    "rails": 24,
+    "false_rails": 19,
+    "predictions": 121,
+    "gt": 17,
+    "matches": {
+      "0.3": 12,
+      "0.5": 5,
+      "0.7": 3
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          6,
+          7,
+          8
+        ],
+        "matched": true,
+        "containment": 0.909,
+        "union_x_coverage": 0.99,
+        "angle_err_deg": -0.54
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "segments": [
+          21,
+          22
+        ],
+        "matched": true,
+        "containment": 0.833,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.43
+      }
+    ]
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "threshold": 45,
+    "kind": "entities",
+    "rails": 11,
+    "false_rails": 9,
+    "predictions": 96,
+    "gt": 17,
+    "matches": {
+      "0.3": 12,
+      "0.5": 5,
+      "0.7": 3
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          5
+        ],
+        "matched": true,
+        "containment": 0.909,
+        "union_x_coverage": 0.99,
+        "angle_err_deg": -1.02
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "segments": [
+          9
+        ],
+        "matched": true,
+        "containment": 0.833,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.91
+      }
+    ]
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "threshold": 45,
+    "kind": "coverage",
+    "rails": 11,
+    "false_rails": 9,
+    "predictions": 96,
+    "gt": 17,
+    "matches": {
+      "0.3": 12,
+      "0.5": 5,
+      "0.7": 3
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          5
+        ],
+        "matched": true,
+        "containment": 0.909,
+        "union_x_coverage": 0.99,
+        "angle_err_deg": -1.02
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "segments": [
+          9
+        ],
+        "matched": true,
+        "containment": 0.833,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.91
+      }
+    ]
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "threshold": 45,
+    "kind": "geometry",
+    "rails": 11,
+    "false_rails": 9,
+    "predictions": 104,
+    "gt": 17,
+    "matches": {
+      "0.3": 12,
+      "0.5": 5,
+      "0.7": 3
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          5
+        ],
+        "matched": true,
+        "containment": 0.909,
+        "union_x_coverage": 0.99,
+        "angle_err_deg": -1.02
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "segments": [
+          9
+        ],
+        "matched": true,
+        "containment": 0.833,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.91
+      }
+    ]
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "threshold": 60,
+    "kind": "entities",
+    "rails": 5,
+    "false_rails": 4,
+    "predictions": 55,
+    "gt": 17,
+    "matches": {
+      "0.3": 9,
+      "0.5": 3,
+      "0.7": 1
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          2
+        ],
+        "matched": true,
+        "containment": 0.909,
+        "union_x_coverage": 0.99,
+        "angle_err_deg": -1.02
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "threshold": 60,
+    "kind": "coverage",
+    "rails": 5,
+    "false_rails": 3,
+    "predictions": 69,
+    "gt": 17,
+    "matches": {
+      "0.3": 12,
+      "0.5": 5,
+      "0.7": 3
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          2
+        ],
+        "matched": true,
+        "containment": 0.909,
+        "union_x_coverage": 0.99,
+        "angle_err_deg": -1.02
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "segments": [
+          4
+        ],
+        "matched": true,
+        "containment": 0.833,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.91
+      }
+    ]
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "threshold": 60,
+    "kind": "geometry",
+    "rails": 5,
+    "false_rails": 3,
+    "predictions": 81,
+    "gt": 17,
+    "matches": {
+      "0.3": 12,
+      "0.5": 5,
+      "0.7": 3
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          2
+        ],
+        "matched": true,
+        "containment": 0.909,
+        "union_x_coverage": 0.99,
+        "angle_err_deg": -1.02
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "segments": [
+          4
+        ],
+        "matched": true,
+        "containment": 0.833,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.91
+      }
+    ]
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "threshold": 75,
+    "kind": "entities",
+    "rails": 3,
+    "false_rails": 3,
+    "predictions": 34,
+    "gt": 17,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "threshold": 75,
+    "kind": "coverage",
+    "rails": 3,
+    "false_rails": 1,
+    "predictions": 69,
+    "gt": 17,
+    "matches": {
+      "0.3": 12,
+      "0.5": 5,
+      "0.7": 3
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          0
+        ],
+        "matched": true,
+        "containment": 0.909,
+        "union_x_coverage": 0.99,
+        "angle_err_deg": -1.02
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "segments": [
+          2
+        ],
+        "matched": true,
+        "containment": 0.833,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.91
+      }
+    ]
+  },
+  {
+    "image": "45566458_6_first_normal_1782006172632_15944804",
+    "threshold": 75,
+    "kind": "geometry",
+    "rails": 3,
+    "false_rails": 1,
+    "predictions": 69,
+    "gt": 17,
+    "matches": {
+      "0.3": 12,
+      "0.5": 5,
+      "0.7": 3
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          30.0,
+          1968.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          0
+        ],
+        "matched": true,
+        "containment": 0.909,
+        "union_x_coverage": 0.99,
+        "angle_err_deg": -1.02
+      },
+      {
+        "user_x": [
+          40.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 6,
+        "segments": [
+          2
+        ],
+        "matched": true,
+        "containment": 0.833,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.91
+      }
+    ]
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "threshold": 30,
+    "kind": "entities",
+    "rails": 30,
+    "false_rails": 16,
+    "predictions": 286,
+    "gt": 87,
+    "matches": {
+      "0.3": 56,
+      "0.5": 49,
+      "0.7": 13
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          1,
+          2,
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.991,
+        "angle_err_deg": 0.03
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "segments": [
+          9,
+          10,
+          11
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.989,
+        "angle_err_deg": -0.0
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          14,
+          15
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.996,
+        "angle_err_deg": -0.23
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          17,
+          18,
+          19
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.992,
+        "angle_err_deg": -0.26
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          22,
+          23,
+          24
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.999,
+        "angle_err_deg": -0.19
+      }
+    ]
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "threshold": 30,
+    "kind": "coverage",
+    "rails": 30,
+    "false_rails": 16,
+    "predictions": 286,
+    "gt": 87,
+    "matches": {
+      "0.3": 56,
+      "0.5": 49,
+      "0.7": 13
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          1,
+          2,
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.991,
+        "angle_err_deg": 0.03
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "segments": [
+          9,
+          10,
+          11
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.989,
+        "angle_err_deg": -0.0
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          14,
+          15
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.996,
+        "angle_err_deg": -0.23
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          17,
+          18,
+          19
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.992,
+        "angle_err_deg": -0.26
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          22,
+          23,
+          24
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.999,
+        "angle_err_deg": -0.19
+      }
+    ]
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "threshold": 30,
+    "kind": "geometry",
+    "rails": 30,
+    "false_rails": 16,
+    "predictions": 286,
+    "gt": 87,
+    "matches": {
+      "0.3": 56,
+      "0.5": 49,
+      "0.7": 13
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          1,
+          2,
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.991,
+        "angle_err_deg": 0.03
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "segments": [
+          9,
+          10,
+          11
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.989,
+        "angle_err_deg": -0.0
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          14,
+          15
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.996,
+        "angle_err_deg": -0.23
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          17,
+          18,
+          19
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.992,
+        "angle_err_deg": -0.26
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          22,
+          23,
+          24
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.999,
+        "angle_err_deg": -0.19
+      }
+    ]
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "threshold": 45,
+    "kind": "entities",
+    "rails": 14,
+    "false_rails": 5,
+    "predictions": 181,
+    "gt": 87,
+    "matches": {
+      "0.3": 56,
+      "0.5": 49,
+      "0.7": 13
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          1,
+          2
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.991,
+        "angle_err_deg": -0.08
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "segments": [
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.939,
+        "angle_err_deg": -0.13
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          5,
+          6
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.996,
+        "angle_err_deg": -0.23
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          8,
+          9
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.966,
+        "angle_err_deg": -0.14
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          10,
+          11
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.892,
+        "angle_err_deg": -0.22
+      }
+    ]
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "threshold": 45,
+    "kind": "coverage",
+    "rails": 14,
+    "false_rails": 5,
+    "predictions": 181,
+    "gt": 87,
+    "matches": {
+      "0.3": 56,
+      "0.5": 49,
+      "0.7": 13
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          1,
+          2
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.991,
+        "angle_err_deg": -0.08
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "segments": [
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.939,
+        "angle_err_deg": -0.13
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          5,
+          6
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.996,
+        "angle_err_deg": -0.23
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          8,
+          9
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.966,
+        "angle_err_deg": -0.14
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          10,
+          11
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.892,
+        "angle_err_deg": -0.22
+      }
+    ]
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "threshold": 45,
+    "kind": "geometry",
+    "rails": 14,
+    "false_rails": 5,
+    "predictions": 181,
+    "gt": 87,
+    "matches": {
+      "0.3": 56,
+      "0.5": 49,
+      "0.7": 13
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          1,
+          2
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.991,
+        "angle_err_deg": -0.08
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "segments": [
+          3
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.939,
+        "angle_err_deg": -0.13
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          5,
+          6
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.996,
+        "angle_err_deg": -0.23
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          8,
+          9
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.966,
+        "angle_err_deg": -0.14
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          10,
+          11
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.892,
+        "angle_err_deg": -0.22
+      }
+    ]
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "threshold": 60,
+    "kind": "entities",
+    "rails": 7,
+    "false_rails": 4,
+    "predictions": 104,
+    "gt": 87,
+    "matches": {
+      "0.3": 28,
+      "0.5": 25,
+      "0.7": 9
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          1,
+          2
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.991,
+        "angle_err_deg": -0.08
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          4
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.996,
+        "angle_err_deg": -0.46
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          5
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.892,
+        "angle_err_deg": 0.08
+      }
+    ]
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "threshold": 60,
+    "kind": "coverage",
+    "rails": 7,
+    "false_rails": 4,
+    "predictions": 93,
+    "gt": 87,
+    "matches": {
+      "0.3": 28,
+      "0.5": 25,
+      "0.7": 9
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          1,
+          2
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.991,
+        "angle_err_deg": -0.08
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          4
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.996,
+        "angle_err_deg": -0.46
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "threshold": 60,
+    "kind": "geometry",
+    "rails": 7,
+    "false_rails": 3,
+    "predictions": 91,
+    "gt": 87,
+    "matches": {
+      "0.3": 50,
+      "0.5": 43,
+      "0.7": 12
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          1
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.952,
+        "angle_err_deg": -0.14
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "segments": [
+          2
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.939,
+        "angle_err_deg": -0.13
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          4
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.996,
+        "angle_err_deg": -0.46
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          5
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.966,
+        "angle_err_deg": -0.55
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "threshold": 75,
+    "kind": "entities",
+    "rails": 3,
+    "false_rails": 3,
+    "predictions": 42,
+    "gt": 87,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.991,
+        "angle_err_deg": -0.02
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "threshold": 75,
+    "kind": "coverage",
+    "rails": 3,
+    "false_rails": 3,
+    "predictions": 42,
+    "gt": 87,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.991,
+        "angle_err_deg": -0.02
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45727462_6_first_normal_1782463362055_B04C0D8E",
+    "threshold": 75,
+    "kind": "geometry",
+    "rails": 3,
+    "false_rails": 2,
+    "predictions": 36,
+    "gt": 87,
+    "matches": {
+      "0.3": 14,
+      "0.5": 11,
+      "0.7": 2
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          41.7,
+          1990.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          60.0,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 20,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          100.0,
+          1992.3
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [
+          1
+        ],
+        "matched": true,
+        "containment": 1.0,
+        "union_x_coverage": 0.996,
+        "angle_err_deg": -0.46
+      },
+      {
+        "user_x": [
+          133.3,
+          1999.0
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 17,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          173.3,
+          1986.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 16,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "threshold": 30,
+    "kind": "entities",
+    "rails": 15,
+    "false_rails": 14,
+    "predictions": 75,
+    "gt": 30,
+    "matches": {
+      "0.3": 6,
+      "0.5": 3,
+      "0.7": 1
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "segments": [
+          5,
+          6
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.858,
+        "angle_err_deg": 1.05
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          9,
+          10
+        ],
+        "matched": false,
+        "containment": 0.636,
+        "union_x_coverage": 0.998,
+        "angle_err_deg": -0.37
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "segments": [
+          14
+        ],
+        "matched": true,
+        "containment": 0.889,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.18
+      }
+    ]
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "threshold": 30,
+    "kind": "coverage",
+    "rails": 15,
+    "false_rails": 14,
+    "predictions": 75,
+    "gt": 30,
+    "matches": {
+      "0.3": 6,
+      "0.5": 3,
+      "0.7": 1
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "segments": [
+          5,
+          6
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.858,
+        "angle_err_deg": 1.05
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          9,
+          10
+        ],
+        "matched": false,
+        "containment": 0.636,
+        "union_x_coverage": 0.998,
+        "angle_err_deg": -0.37
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "segments": [
+          14
+        ],
+        "matched": true,
+        "containment": 0.889,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.18
+      }
+    ]
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "threshold": 30,
+    "kind": "geometry",
+    "rails": 15,
+    "false_rails": 14,
+    "predictions": 75,
+    "gt": 30,
+    "matches": {
+      "0.3": 6,
+      "0.5": 3,
+      "0.7": 1
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "segments": [
+          5,
+          6
+        ],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.858,
+        "angle_err_deg": 1.05
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          9,
+          10
+        ],
+        "matched": false,
+        "containment": 0.636,
+        "union_x_coverage": 0.998,
+        "angle_err_deg": -0.37
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "segments": [
+          14
+        ],
+        "matched": true,
+        "containment": 0.889,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.18
+      }
+    ]
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "threshold": 45,
+    "kind": "entities",
+    "rails": 6,
+    "false_rails": 5,
+    "predictions": 26,
+    "gt": 30,
+    "matches": {
+      "0.3": 4,
+      "0.5": 3,
+      "0.7": 1
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "segments": [
+          5
+        ],
+        "matched": true,
+        "containment": 0.889,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.18
+      }
+    ]
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "threshold": 45,
+    "kind": "coverage",
+    "rails": 6,
+    "false_rails": 5,
+    "predictions": 26,
+    "gt": 30,
+    "matches": {
+      "0.3": 4,
+      "0.5": 3,
+      "0.7": 1
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "segments": [
+          5
+        ],
+        "matched": true,
+        "containment": 0.889,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.18
+      }
+    ]
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "threshold": 45,
+    "kind": "geometry",
+    "rails": 6,
+    "false_rails": 5,
+    "predictions": 34,
+    "gt": 30,
+    "matches": {
+      "0.3": 6,
+      "0.5": 3,
+      "0.7": 1
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          2
+        ],
+        "matched": false,
+        "containment": 0.636,
+        "union_x_coverage": 0.998,
+        "angle_err_deg": -0.55
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "segments": [
+          5
+        ],
+        "matched": true,
+        "containment": 0.889,
+        "union_x_coverage": 1.0,
+        "angle_err_deg": -0.18
+      }
+    ]
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "threshold": 60,
+    "kind": "entities",
+    "rails": 4,
+    "false_rails": 4,
+    "predictions": 18,
+    "gt": 30,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "threshold": 60,
+    "kind": "coverage",
+    "rails": 4,
+    "false_rails": 4,
+    "predictions": 18,
+    "gt": 30,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "threshold": 60,
+    "kind": "geometry",
+    "rails": 4,
+    "false_rails": 4,
+    "predictions": 26,
+    "gt": 30,
+    "matches": {
+      "0.3": 2,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          2
+        ],
+        "matched": false,
+        "containment": 0.636,
+        "union_x_coverage": 0.998,
+        "angle_err_deg": -0.55
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "threshold": 75,
+    "kind": "entities",
+    "rails": 2,
+    "false_rails": 2,
+    "predictions": 0,
+    "gt": 30,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "threshold": 75,
+    "kind": "coverage",
+    "rails": 2,
+    "false_rails": 2,
+    "predictions": 0,
+    "gt": 30,
+    "matches": {
+      "0.3": 0,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45789553_6_first_normal_1782722591061_19199382",
+    "threshold": 75,
+    "kind": "geometry",
+    "rails": 2,
+    "false_rails": 2,
+    "predictions": 8,
+    "gt": 30,
+    "matches": {
+      "0.3": 2,
+      "0.5": 0,
+      "0.7": 0
+    },
+    "rail_eval": [
+      {
+        "user_x": [
+          179.0,
+          1985.6
+        ],
+        "user_angle": -1.08,
+        "tags_in_rail": 10,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      },
+      {
+        "user_x": [
+          170.9,
+          1998.7
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 11,
+        "segments": [
+          1
+        ],
+        "matched": false,
+        "containment": 0.636,
+        "union_x_coverage": 0.998,
+        "angle_err_deg": -0.55
+      },
+      {
+        "user_x": [
+          129.1,
+          1994.9
+        ],
+        "user_angle": 0.0,
+        "tags_in_rail": 9,
+        "segments": [],
+        "matched": false,
+        "containment": 0.0,
+        "union_x_coverage": 0.0
+      }
+    ]
+  }
+]

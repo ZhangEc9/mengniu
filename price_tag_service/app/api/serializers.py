@@ -70,7 +70,7 @@ def qc_result(qc: QcResult) -> dict[str, Any]:
         "is_quality_pass": qc.is_quality_pass,
         "is_target_scene": qc.is_target_scene,
         "can_proceed_to_price": qc.can_proceed_to_price,
-        "confidence": qc.confidence,
+        "score": qc.confidence,
         "rejection_reasons": qc.rejection_reasons,
         "model_name": qc.model_name,
         "prompt_version": qc.prompt_version,
@@ -80,13 +80,13 @@ def qc_result(qc: QcResult) -> dict[str, Any]:
 
 def price_tag_detail(detail: PriceTagDetail) -> dict[str, Any]:
     confidences = [value for value in (detail.confidence, detail.price_confidence) if value is not None]
-    confidence = min(confidences) if confidences else None
+    score = min(confidences) if confidences else None
     return {
         "id": detail.tag_id,
         "bbox": [detail.bbox_xmin, detail.bbox_ymin, detail.bbox_xmax, detail.bbox_ymax],
         "coordinate_scale": detail.coordinate_scale,
         "price": f"{detail.price:.2f}" if detail.price is not None else None,
-        "confidence": confidence,
+        "score": score,
         "raw_price_text": detail.raw_price_text,
         "unit": detail.unit,
     }
