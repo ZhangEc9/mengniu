@@ -1,0 +1,336 @@
+[
+  {
+    "image": "45566458",
+    "rail": 0,
+    "corridor": 0,
+    "anchors": 13,
+    "anchor_prices": 13,
+    "model_seq": 11,
+    "align_cost": 1.6,
+    "anchor_m50": 3,
+    "anchor_price_ok": 3,
+    "fills": 0,
+    "fills_interpolated": 0,
+    "fills_pos_ok": 0,
+    "fill_price_ok": 0,
+    "fill_price_cmp": 0,
+    "gt_tags": 11,
+    "gt_pitch": 173.0,
+    "completed_m50": 3,
+    "completed_price_ok": 3,
+    "fills_detail": []
+  },
+  {
+    "image": "45566458",
+    "rail": 1,
+    "corridor": 1,
+    "anchors": 6,
+    "anchor_prices": 6,
+    "model_seq": 8,
+    "align_cost": 1.6,
+    "anchor_m50": 3,
+    "anchor_price_ok": 2,
+    "fills": 4,
+    "fills_interpolated": 3,
+    "fills_pos_ok": 2,
+    "fill_price_ok": 0,
+    "fill_price_cmp": 2,
+    "gt_tags": 6,
+    "gt_pitch": 242.0,
+    "completed_m50": 3,
+    "completed_price_ok": 2,
+    "fills_detail": [
+      {
+        "src": "interpolated",
+        "price": "17.20",
+        "cx": 346,
+        "pos_ratio": 0.49,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "9.80",
+        "cx": 662,
+        "pos_ratio": 0.83,
+        "pos_ok": 0.0
+      },
+      {
+        "src": "interpolated",
+        "price": "29.90",
+        "cx": 977,
+        "pos_ratio": 0.47,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "extrapolated",
+        "price": "17.90",
+        "cx": 2002,
+        "pos_ratio": 1.01,
+        "pos_ok": 0.0
+      }
+    ]
+  },
+  {
+    "image": "45727462",
+    "rail": 0,
+    "corridor": 0,
+    "anchors": 18,
+    "anchor_prices": 18,
+    "model_seq": 17,
+    "align_cost": 7.2,
+    "anchor_m50": 9,
+    "anchor_price_ok": 2,
+    "fills": 8,
+    "fills_interpolated": 8,
+    "fills_pos_ok": 8,
+    "fill_price_ok": 6,
+    "fill_price_cmp": 8,
+    "gt_tags": 17,
+    "gt_pitch": 120.0,
+    "completed_m50": 11,
+    "completed_price_ok": 5,
+    "fills_detail": [
+      {
+        "src": "interpolated",
+        "price": "14.90",
+        "cx": 280,
+        "pos_ratio": 0.03,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "15.00",
+        "cx": 604,
+        "pos_ratio": 0.02,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "33.90",
+        "cx": 724,
+        "pos_ratio": 0.11,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "18.80",
+        "cx": 844,
+        "pos_ratio": 0.31,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "18.90",
+        "cx": 1321,
+        "pos_ratio": 0.03,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "19.90",
+        "cx": 1457,
+        "pos_ratio": 0.36,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "15.90",
+        "cx": 1593,
+        "pos_ratio": 0.24,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "18.60",
+        "cx": 1759,
+        "pos_ratio": 0.14,
+        "pos_ok": 1.0
+      }
+    ]
+  },
+  {
+    "image": "45727462",
+    "rail": 1,
+    "corridor": 1,
+    "anchors": 18,
+    "anchor_prices": 18,
+    "model_seq": 17,
+    "align_cost": 5.6,
+    "anchor_m50": 10,
+    "anchor_price_ok": 7,
+    "fills": 6,
+    "fills_interpolated": 6,
+    "fills_pos_ok": 4,
+    "fill_price_ok": 0,
+    "fill_price_cmp": 4,
+    "gt_tags": 20,
+    "gt_pitch": 85.7,
+    "completed_m50": 13,
+    "completed_price_ok": 7,
+    "fills_detail": [
+      {
+        "src": "interpolated",
+        "price": "4.80",
+        "cx": 411,
+        "pos_ratio": 0.52,
+        "pos_ok": 0.0
+      },
+      {
+        "src": "interpolated",
+        "price": "9.90",
+        "cx": 712,
+        "pos_ratio": 0.05,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "8.90",
+        "cx": 958,
+        "pos_ratio": 0.04,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "13.90",
+        "cx": 1245,
+        "pos_ratio": 0.51,
+        "pos_ok": 0.0
+      },
+      {
+        "src": "interpolated",
+        "price": "6.50",
+        "cx": 1312,
+        "pos_ratio": 0.27,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "5.90",
+        "cx": 1379,
+        "pos_ratio": 0.12,
+        "pos_ok": 1.0
+      }
+    ]
+  },
+  {
+    "image": "45727462",
+    "rail": 3,
+    "corridor": 3,
+    "anchors": 22,
+    "anchor_prices": 22,
+    "model_seq": 14,
+    "align_cost": 10.4,
+    "anchor_m50": 4,
+    "anchor_price_ok": 0,
+    "fills": 5,
+    "fills_interpolated": 3,
+    "fills_pos_ok": 3,
+    "fill_price_ok": 1,
+    "fill_price_cmp": 3,
+    "gt_tags": 17,
+    "gt_pitch": 103.3,
+    "completed_m50": 4,
+    "completed_price_ok": 0,
+    "fills_detail": [
+      {
+        "src": "extrapolated",
+        "price": "8.90",
+        "cx": 365,
+        "pos_ratio": 0.59,
+        "pos_ok": 0.0
+      },
+      {
+        "src": "extrapolated",
+        "price": "8.90",
+        "cx": 365,
+        "pos_ratio": 0.59,
+        "pos_ok": 0.0
+      },
+      {
+        "src": "interpolated",
+        "price": "13.90",
+        "cx": 693,
+        "pos_ratio": 0.28,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "8.80",
+        "cx": 942,
+        "pos_ratio": 0.17,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "8.80",
+        "cx": 1110,
+        "pos_ratio": 0.24,
+        "pos_ok": 1.0
+      }
+    ]
+  },
+  {
+    "image": "45727462",
+    "rail": 4,
+    "corridor": 4,
+    "anchors": 12,
+    "anchor_prices": 12,
+    "model_seq": 12,
+    "align_cost": 2.4,
+    "anchor_m50": 3,
+    "anchor_price_ok": 3,
+    "fills": 3,
+    "fills_interpolated": 3,
+    "fills_pos_ok": 3,
+    "fill_price_ok": 0,
+    "fill_price_cmp": 3,
+    "gt_tags": 16,
+    "gt_pitch": 92.3,
+    "completed_m50": 3,
+    "completed_price_ok": 3,
+    "fills_detail": [
+      {
+        "src": "interpolated",
+        "price": "2.50",
+        "cx": 853,
+        "pos_ratio": 0.38,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "2.50",
+        "cx": 911,
+        "pos_ratio": 0.25,
+        "pos_ok": 1.0
+      },
+      {
+        "src": "interpolated",
+        "price": "4.00",
+        "cx": 1051,
+        "pos_ratio": 0.08,
+        "pos_ok": 1.0
+      }
+    ]
+  },
+  {
+    "image": "45789553",
+    "rail": 1,
+    "corridor": 1,
+    "anchors": 11,
+    "anchor_prices": 11,
+    "model_seq": 8,
+    "align_cost": 2.4,
+    "anchor_m50": 4,
+    "anchor_price_ok": 4,
+    "fills": 0,
+    "fills_interpolated": 0,
+    "fills_pos_ok": 0,
+    "fill_price_ok": 0,
+    "fill_price_cmp": 0,
+    "gt_tags": 11,
+    "gt_pitch": 133.6,
+    "completed_m50": 4,
+    "completed_price_ok": 4,
+    "fills_detail": []
+  }
+]
